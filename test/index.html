@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>漢字テスト</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script src="test.js"></script>
+	<link rel="stylesheet" media="all" href="test.min.css">
+	<meta name="robots" content="noindex">
+</head>
+<body>
+<div>
+	<h1>ランダム漢字テスト</h1>
+	<!-- 学習年: -->
+	<label><input type="checkbox" name="studyYear" checked value="1">1年生</label>
+	<label><input type="checkbox" name="studyYear" checked value="2">2年生</label>
+	<label><input type="checkbox" name="studyYear" checked value="3">3年生</label>
+	<hr>
+	<label>問題数: <input type="number" id="qNum" min="1" max="4" value="4"></label>
+	<hr>
+	<label><input type="checkbox" id="answer">答えを表示</label>
+	<hr>
+	<button id="makeTest">テストを作成</button>
+	<hr>
+	<button id="printTest">印刷する</button>
+	<hr>
+	<section id="testArea" hidden>
+		<div id="testTitle">
+			<h2>
+				<span data-year="1" hidden>かんじてすと</span>
+				<span data-year="2" hidden>かん字テスト</span>
+				<span data-year="3" hidden>かん字テスト</span>
+			</h2>
+			<p id="name">
+				<span data-year="1" hidden>なまえ</span>
+				<span data-year="2" hidden>名まえ</span>
+				<span data-year="3" hidden>名前</span>
+			</p>
+			<div id="score">
+				<span>/ 100</span>
+			</div>
+		</div>
+		<p>
+			<span data-year="1" hidden>かんじをかきましょう。<span class="dash">―――</span>のことばは、かんじとおくりがなでかきましょう。</span>
+			<span data-year="2" hidden>かん字をかきましょう。<span class="dash">―――</span>のことばは、かん字とおくりがなでかきましょう。</span>
+			<span data-year="3" hidden>かん字を書きましょう。<span class="dash">―――</span>のことばは、かん字とおくりがなで書きましょう。</span>
+		</p>
+		<template id="questionTemp">
+			<div class="question">
+				<span class="counter"></span>
+				<div class="phrase"></div>
+			</div>
+		</template>
+		<div id="questionsDiv">
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+			<div class="question okurigana">
+				<span class="counter"></span>
+				<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+			<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+		</div>
+	</section>
+</div>
+</body>

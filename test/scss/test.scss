@@ -1,0 +1,195 @@
+html {
+	--fontColor: #333;
+	--testFontSize: 18px;
+	font: 400 16px/1.8 "游教科書体", "HG教科書体", sans-serif;
+	// font: 400 16px/1.8 -apple-system, BlinkMacSystemFont, sans-serif;
+	color: var(--fontColor);
+	font-feature-settings: "pkna";
+	@media print {
+		--fontColor: black;
+		-webkit-print-color-adjust: exact;
+		color-adjust: exact;
+	}
+}
+
+// 100vwを使うと横スクロールが発生する問題の解決法
+body > div {
+	overflow: hidden;
+}
+
+$blankWide: 3em;
+$phraseWide: 1.6em;
+
+// 印刷
+@page {
+	// size: A4;
+	size: A4 landscape;
+	margin: 2em 0 1em;
+}
+@page :first {
+	margin-top: 0;
+}
+
+#testArea {
+	@media screen {
+		width: 297mm;
+	}
+	padding: 2em;
+	#testTitle {
+		display: grid;
+		grid-template-columns: calc(40px * 6) 1fr 150px;
+		border: 1px solid var(--fontColor);
+		border-radius: 1em;
+		padding: 0 1em 0 1.5em;
+		h2 {
+			font-size: 40px;
+			margin: 0;
+		}
+		#name {
+			font-size: var(--testFontSize);
+			writing-mode: vertical-lr;
+			text-align: center;
+			padding-left: 1em;
+			border-left: 1px solid var(--fontColor);
+		}
+		#score {
+			font-size: var(--testFontSize);
+			text-align: end;
+			border-left: 1px solid var(--fontColor);
+			position: relative;
+			span {
+				position: absolute;
+				right: 0;
+				bottom: 5px;
+			}
+		}
+	}
+	> p {
+		margin-bottom: 2em;
+		.dash {
+			letter-spacing: -0.1em;
+			margin-right: 0.2em;
+		}
+	}
+	#questionsDiv {
+		font-size: var(--testFontSize);
+		font-feature-settings: normal;
+		@mixin grid() {
+			display: grid;
+			grid-template-rows: calc(var(--testFontSize)*10);
+			grid-template-columns: repeat(8, calc(#{$phraseWide} + #{$blankWide}));
+			gap: 3em;
+		}
+		@media screen {
+			@include grid();
+			gap: auto;
+			padding-bottom: 1em;
+		}
+		.row {
+			@include grid();
+			@media print {
+				padding: 1em 0 2em 5px;
+				break-inside: avoid;
+			}
+		}
+	}
+}
+
+@media print {
+	_::-webkit-full-page-media, _:future, :root .row {
+		padding-bottom: 1em !important;
+	}
+	_::-webkit-full-page-media, _:future, :root #testArea {
+		padding: 1em 2em;
+	}
+	@-moz-document url-prefix() {
+		.row {
+			column-gap: 2.4em !important;
+		}
+	}
+}
+
+.question {
+	grid-template-columns: 2em 1fr;
+	grid-template-rows: $phraseWide $blankWide;
+	writing-mode: vertical-rl;
+	height: calc(var(--testFontSize)*10);
+	display: grid;
+	.counter {
+		writing-mode: horizontal-tb;
+		text-align: center;
+		grid-column: 1;
+		grid-row: 2;
+		// font-family: "Hiragino";
+	}
+	.blank {
+		grid-column: 2;
+		position: relative;
+		.answer {
+			font-size: 2em;
+			letter-spacing: 0.3em;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+.okurigana {
+	.phrase {
+		grid-column: 2;
+		margin-top: 4px;
+		vertical-align: bottom;
+	}
+	.yomigana {
+		grid-column: 2;
+		border-right: 1px solid var(--fontColor);
+	}
+	.blank {
+		width: $blankWide;
+		height: 100%;
+		margin-top: 4px;
+		&::before, &::after {
+			position: absolute;
+			content: "";
+			left: 0;
+			width: calc(#{$blankWide} - 2px);
+			height: 0.5em;
+			border-left: 1px solid var(--fontColor);
+			border-right: 1px solid var(--fontColor);
+		}
+		&::before {
+			border-top: 1px solid var(--fontColor);
+			top: 0;
+		}
+		&::after {
+			border-bottom: 1px solid var(--fontColor);
+			bottom: 0;
+		}
+	}
+}
+
+.tango {
+	.phrase {
+		grid-column: 2;
+		grid-row: 2;
+	}
+	.blank {
+		display: inline-block;
+		width: calc(#{$blankWide} - 2px);
+		height: $blankWide;
+		border: 1px solid var(--fontColor);
+		margin: 4px 0;
+		position: relative;
+		.answer {
+			letter-spacing: 0;
+		}
+		.yomigana {
+			position: absolute;
+			right: calc(-#{$phraseWide} - 1px);
+			text-align: center;
+			height: 100%;
+		}
+	}
+}

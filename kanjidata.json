@@ -1,0 +1,165 @@
+{
+	"一": {
+		"studyYear": 1,
+		"bushu": "一",
+		"strokesCount": "1画",
+		"onyomi": [
+			"イチ",
+			"イツ"
+		],
+		"kunyomi": [
+			"ひと",
+			"ひと（つ）",
+			"はじ（め）"
+		],
+		"meaning": [
+			"ひとつ。",
+			"はじめ。もっともすぐれている。"
+		],
+		"examples": [
+			"一ねんせいになる。",
+			"一つだけもらう。",
+			"一いになる。"
+		],
+		"test": [
+			{
+				"phrase": [
+					{
+						"text": "ひとつ",
+						"answer": "一つ"
+					},
+					{
+						"text": "だけ"
+					}
+				],
+				"hasOkurigana": true
+			},
+			{
+				"phrase": [
+					{
+						"text": "いち",
+						"answer": "一"
+					},
+					{
+						"text": "年生"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"短": {
+		"studyYear": 3,
+		"test": [
+			{
+				"phrase": [
+					{
+						"text": "みじかい",
+						"answer": "短い"
+					},
+					{
+						"text": "文"
+					}
+				],
+				"hasOkurigana": true
+			},
+			{
+				"phrase": [
+					{
+						"text": "たん",
+						"answer": "短"
+					},
+					{
+						"text": "きょり走"
+					}
+				],
+				"hasOkurigana": false
+			},
+			{
+				"phrase": [
+					{
+						"text": "たん",
+						"answer": "短"
+					},
+					{
+						"text": "歌"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"全": {
+		"studyYear": 3,
+		"test": [
+			{
+				"phrase": [
+					{
+						"text": "クラス"
+					},
+					{
+						"text": "ぜん",
+						"answer": "全"
+					},
+					{
+						"text": "体"
+					}
+				],
+				"hasOkurigana": false
+			},
+			{
+				"phrase": [
+					{
+						"text": "すべて",
+						"answer": "全て"
+					},
+					{
+						"text": "見える"
+					}
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
+	"遊": {
+		"studyYear": 3,
+		"test": [
+			{
+				"phrase": [
+					{
+						"text": "友だちと"
+					},
+					{
+						"text": "あそぶ",
+						"answer": "遊ぶ"
+					}
+				],
+				"hasOkurigana": true
+			},
+			{
+				"phrase": [
+					{
+						"text": "ゆう",
+						"answer": "遊"
+					},
+					{
+						"text": "園地"
+					}
+				],
+				"hasOkurigana": false
+			},
+			{
+				"phrase": [
+					{
+						"text": "ゆう",
+						"answer": "遊"
+					},
+					{
+						"text": "ぐを作る"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	}
+}
