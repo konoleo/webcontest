@@ -30,6 +30,11 @@ $phraseWide: 1.6em;
 	margin-top: 0;
 }
 
+.dash {
+	letter-spacing: -1em;
+	margin-right: 0.2em;
+}
+
 #testArea {
 	@media screen {
 		width: 297mm;
@@ -66,10 +71,6 @@ $phraseWide: 1.6em;
 	}
 	> p {
 		margin-bottom: 2em;
-		.dash {
-			letter-spacing: -0.1em;
-			margin-right: 0.2em;
-		}
 	}
 	#questionsDiv {
 		font-size: var(--testFontSize);
