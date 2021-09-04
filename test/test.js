@@ -56,17 +56,28 @@ window.addEventListener("load", () => {
 		const studyYearElem = document.getElementsByName("studyYear");
 		const qNumElem = document.getElementById("qNum");
 		const answerBtn = document.getElementById("answer");
+		const maxScoreElem = document.getElementById("maxScore");
 
 		// テストを作る
-		function makeTest() {
+		function makeTest(kind) {
 			document.getElementById("testArea").removeAttribute("hidden");
 			// 今ある問題を削除
-			// while (questionsDiv.firstChild) {
-			// 	questionsDiv.firstChild.remove();
-			// }
+			while (questionsDiv.firstChild) {
+				questionsDiv.firstChild.remove();
+			}
+			// 学習年を取得
 			const studyYear = getMultiple(studyYearElem);
+			// 問題数を取得
 			const qNum = qNumElem.value;
-			const qKanji = ramdomSelect(qNum, studyYear);
+			// 問題数を表示
+			maxScoreElem.textContent = qNum;
+			let qKanji;
+			if (kind === "ramdom") {
+				// 漢字をランダムに選ぶ
+				qKanji = ramdomSelect(qNum, studyYear);
+			} else {
+				// 選ばれた漢字を取得
+			}
 			qKanji.forEach(kanji => {
 				const test = kanjiData[kanji].test;
 				// どのフレーズを使うのか
@@ -135,7 +146,7 @@ window.addEventListener("load", () => {
 			showAnswer();
 		}
 		
-		makeTest();
+		makeTest("ramdom");
 	
 		// 学習年を選び直したとき
 		for (let i = 0; i < studyYearElem.length; i++) {
@@ -172,7 +183,9 @@ window.addEventListener("load", () => {
 		studyYearElem[0].dispatchEvent(new Event("change"));
 
 		// テスト作成
-		document.getElementById("makeTest").addEventListener("click", makeTest);
+		document.getElementById("makeTest").addEventListener("click", () => {
+			makeTest("ramdom");
+		});
 
 		// 印刷するとき
 		document.getElementById("printTest").addEventListener("click", () => {

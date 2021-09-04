@@ -61,7 +61,7 @@ $phraseWide: 1.6em;
 			text-align: end;
 			border-left: 1px solid var(--fontColor);
 			position: relative;
-			span {
+			> span {
 				position: absolute;
 				right: 0;
 				bottom: 5px;
