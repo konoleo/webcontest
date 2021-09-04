@@ -1,0 +1,29 @@
+@import "var";
+
+html {
+	font: 400 16px/1.8 -apple-system, BlinkMacSystemFont, sans-serif;
+	color: $textColor;
+	font-feature-settings: "pkna";
+}
+
+// 100vwを使うと横スクロールが発生する問題の解決法
+body > div {
+	overflow: hidden;
+}
+
+main {
+	max-width: 1016px;
+	width: 90vw;
+	margin: auto;
+}
+
+.hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	overflow: hidden;
+	padding: 0;
+	clip: rect(0, 0, 0, 0);
+}

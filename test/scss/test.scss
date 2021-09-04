@@ -1,20 +1,15 @@
+@import "../../scss/var";
+
 html {
-	--fontColor: #333;
 	--testFontSize: 18px;
-	font: 400 16px/1.8 "游教科書体", "HG教科書体", sans-serif;
-	// font: 400 16px/1.8 -apple-system, BlinkMacSystemFont, sans-serif;
-	color: var(--fontColor);
-	font-feature-settings: "pkna";
 	@media print {
+		main {
+			width: initial;
+		}
 		--fontColor: black;
 		-webkit-print-color-adjust: exact;
 		color-adjust: exact;
 	}
-}
-
-// 100vwを使うと横スクロールが発生する問題の解決法
-body > div {
-	overflow: hidden;
 }
 
 $blankWide: 3em;
@@ -29,32 +24,46 @@ $phraseWide: 1.6em;
 	margin-top: 0;
 }
 
+.tabLabel {
+	display: inline-block;
+	// background: #fff;
+	border: 2px solid #333;
+	border-bottom: none;
+	border-radius: 5px 5px 0 0;
+	padding: $spacing2 $spacing4;
+	margin: $spacing2 $spacing1 auto;
+	cursor: pointer;
+	&#activeTab {
+		background: #fff;
+		border-color: red;
+		cursor: default;
+	}
+}
+
+#tabBorder {
+	border: 1px solid #333;
+	margin: -2px 0 $spacing2;
+}
+
 .dash {
 	letter-spacing: -0.1em;
 	margin-right: 0.2em;
 }
 
-.hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	overflow: hidden;
-	padding: 0;
-	clip: rect(0, 0, 0, 0);
-}
-
 #testArea {
+	font-family: "游教科書体", "HG教科書体", sans-serif;
+	padding: $spacing4 0;
 	@media screen {
 		width: 297mm;
 	}
-	padding: 2em;
+	@media print {
+		padding: $spacing4;
+	}
 	#testTitle {
 		display: grid;
 		grid-template-columns: calc(40px * 6) 1fr 150px;
-		border: 1px solid var(--fontColor);
-		border-radius: 1em;
+		border: 1px solid $textColor;
+		border-radius: 16px;
 		padding: 0 1em 0 1.5em;
 		h2 {
 			font-size: 40px;
@@ -65,12 +74,12 @@ $phraseWide: 1.6em;
 			writing-mode: vertical-lr;
 			text-align: center;
 			padding-left: 1em;
-			border-left: 1px solid var(--fontColor);
+			border-left: 1px solid $textColor;
 		}
 		#score {
 			font-size: var(--testFontSize);
 			text-align: end;
-			border-left: 1px solid var(--fontColor);
+			border-left: 1px solid $textColor;
 			position: relative;
 			> span {
 				position: absolute;
@@ -109,6 +118,7 @@ $phraseWide: 1.6em;
 @media print {
 	_::-webkit-full-page-media, _:future, :root .row {
 		padding-bottom: 1em !important;
+		gap: 2em !important;
 	}
 	_::-webkit-full-page-media, _:future, :root #testArea {
 		padding: 1em 2em;
@@ -138,7 +148,6 @@ $phraseWide: 1.6em;
 		position: relative;
 		.answer {
 			font-size: 2em;
-			letter-spacing: 0.3em;
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -155,7 +164,7 @@ $phraseWide: 1.6em;
 	}
 	.yomigana {
 		grid-column: 2;
-		border-right: 1px solid var(--fontColor);
+		border-right: 1px solid $textColor;
 	}
 	.blank {
 		width: $blankWide;
@@ -167,15 +176,15 @@ $phraseWide: 1.6em;
 			left: 0;
 			width: calc(#{$blankWide} - 2px);
 			height: 0.5em;
-			border-left: 1px solid var(--fontColor);
-			border-right: 1px solid var(--fontColor);
+			border-left: 1px solid $textColor;
+			border-right: 1px solid $textColor;
 		}
 		&::before {
-			border-top: 1px solid var(--fontColor);
+			border-top: 1px solid $textColor;
 			top: 0;
 		}
 		&::after {
-			border-bottom: 1px solid var(--fontColor);
+			border-bottom: 1px solid $textColor;
 			bottom: 0;
 		}
 	}
@@ -190,7 +199,7 @@ $phraseWide: 1.6em;
 		display: inline-block;
 		width: calc(#{$blankWide} - 2px);
 		height: $blankWide;
-		border: 1px solid var(--fontColor);
+		border: 1px solid $textColor;
 		margin: 4px 0;
 		position: relative;
 		.answer {

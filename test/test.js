@@ -68,6 +68,7 @@ window.addEventListener("load", () => {
 		const kanjiChoicesDiv = document.getElementById("kanjiChoicesDiv");
 		const kanjiChoicesElems = document.getElementsByName("kanjiChoices");
 		const answerBtn = document.getElementById("answer");
+		const testAreaElem = document.getElementById("testArea");
 		const maxScoreElem = document.getElementById("maxScore");
 
 		// 設定タブの動き
@@ -75,6 +76,8 @@ window.addEventListener("load", () => {
 			settingTabs[i].addEventListener("click", () => {
 				settingTabpanel[i].removeAttribute("hidden");
 				settingTabpanel[Math.pow(0,i)].setAttribute("hidden", "");
+				settingTabs[i].parentElement.id = "activeTab";
+				settingTabs[Math.pow(0,i)].parentElement.removeAttribute("id");
 			});
 		}
 
@@ -103,7 +106,6 @@ window.addEventListener("load", () => {
 
 		// テストを作る
 		function makeTest() {
-
 			// ランダムか選択か判定
 			let kind;
 			const hiddenElem = settingTabpanel.filter(elem => elem.hasAttribute("hidden"));
@@ -112,7 +114,7 @@ window.addEventListener("load", () => {
 			} else {
 				kind = "select";
 			}
-			document.getElementById("testArea").removeAttribute("hidden");
+			testAreaElem.removeAttribute("hidden");
 
 			// 今ある問題を削除
 			while (questionsDiv.firstChild) {
@@ -247,17 +249,18 @@ window.addEventListener("load", () => {
 
 		// 印刷するとき
 		document.getElementById("printTest").addEventListener("click", () => {
-			const elems = document.querySelectorAll("body > div > *:not(#testArea)");
+			const elems = document.querySelectorAll("main > *:not(#testArea)");
 			for (let i = 0; i < elems.length; i++) {
 				elems[i].setAttribute("hidden", "");
 			}
+			// const printArea = document.createElement("div");
 			// 8問ずつグルーピング
 			function sliceByNumber(array, number) {
 				const elements = Array.from(array);
-				const length = Math.ceil(elements.length / number)
+				const length = Math.ceil(elements.length / number);
 				return new Array(length).fill().map((_, i) =>
 					elements.slice(i * number, (i + 1) * number)
-				)
+				);
 			}
 			sliceByNumber(questionsDiv.children, 8).forEach(elemGroup => {
 				const div = document.createElement("div");
@@ -267,7 +270,12 @@ window.addEventListener("load", () => {
 				});
 				questionsDiv.appendChild(div);
 			});
+			// document.body.appendChild(printArea);
+			// printArea.appendChild(testAreaElem);
+			// document.body.firstElementChild.setAttribute("hidden", "");
 			window.print();
+			// document.body.firstElementChild.removeAttribute("hidden");
+			// printArea.remove();
 			for (let i = 0; i < elems.length; i++) {
 				elems[i].removeAttribute("hidden");
 			}

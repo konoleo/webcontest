@@ -5,91 +5,226 @@
 	<title>漢字テストの作成</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<script src="test.js"></script>
+	<link rel="stylesheet" media="all" href="/website.min.css">
 	<link rel="stylesheet" media="all" href="test.min.css">
 	<meta name="robots" content="noindex">
 </head>
 <body>
 <div>
-	<h1>漢字テストの作成</h1>
-	<section>
-		<h2>テストの設定</h2>
-		<label class="inputLabel tabLabel">
-			<!-- <input type="radio" id="ramdomTab" name="settingTab" class="hidden" checked> -->
-			<input type="radio" id="ramdomTab" name="settingTab">
-			ランダム
-		</label>
-		<label class="inputLabel tabLabel">
-			<!-- <input type="radio" id="selectTab" name="settingTab" class="hidden"> -->
-			<input type="radio" id="selectTab" name="settingTab" checked>
-			漢字を選択
-		</label>
-		<div id="ramdomSetting" hidden>
-			学習年:
-			<label><input type="checkbox" name="studyYear1" checked value="1">1年生</label>
-			<label><input type="checkbox" name="studyYear1" checked value="2">2年生</label>
-			<label><input type="checkbox" name="studyYear1" checked value="3">3年生</label>
-			<label>問題数: <input type="number" id="qNum" min="1" max="4" value="4"></label>
-		</div>
-		<div id="selectSetting">
-			学習年:
-			<label><input type="checkbox" name="studyYear2" checked value="1">1年生</label>
-			<label><input type="checkbox" name="studyYear2" checked value="2">2年生</label>
-			<label><input type="checkbox" name="studyYear2" checked value="3">3年生</label>
-			<div id="kanjiChoicesDiv">
-				<p>テストに入れる漢字を選んでください。</p>
-				<label>
-					<input type="checkbox" name="kanjiChoices" value="一">一
-				</label>
-				<label>
-					<input type="checkbox" name="kanjiChoices" value="短">短
-				</label>
-				<label>
-					<input type="checkbox" name="kanjiChoices" value="全">全
-				</label>
-				<label>
-					<input type="checkbox" name="kanjiChoices" value="遊">遊
-				</label>
+	<main>
+		<h1>漢字テストの作成</h1>
+		<section>
+			<h2>テストの設定</h2>
+			<label class="inputLabel tabLabel" id="activeTab">
+				<input type="radio" id="ramdomTab" name="settingTab" class="hidden" checked>
+				ランダム
+			</label>
+			<label class="inputLabel tabLabel">
+				<input type="radio" id="selectTab" name="settingTab" class="hidden">
+				漢字を選択
+			</label>
+			<hr id="tabBorder" noshade>
+			<div id="ramdomSetting">
+				学習年:
+				<label><input type="checkbox" name="studyYear1" checked value="1">1年生</label>
+				<label><input type="checkbox" name="studyYear1" checked value="2">2年生</label>
+				<label><input type="checkbox" name="studyYear1" checked value="3">3年生</label>
+				<label>問題数: <input type="number" id="qNum" min="1" max="4" value="4"></label>
 			</div>
-			<template id="kanjiChoicesTemp">
-				<label>
-					<input type="checkbox" name="kanjiChoices" value="">
-				</label>
-			</template>
-		</div>
-		<button id="makeTest">テストを作成</button>
-	</section>
-	<label><input type="checkbox" id="answer">答えを表示</label>
-	<hr>
-	<button id="printTest">印刷する</button>
-	<hr>
-	<section id="testArea" hidden>
-		<div id="testTitle">
-			<h2>
-				<span data-year="1" hidden>かんじてすと</span>
-				<span data-year="2" hidden>かん字テスト</span>
-				<span data-year="3" hidden>かん字テスト</span>
-			</h2>
-			<p id="name">
-				<span data-year="1" hidden>なまえ</span>
-				<span data-year="2" hidden>名まえ</span>
-				<span data-year="3" hidden>名前</span>
+			<div id="selectSetting" hidden>
+				学習年:
+				<label><input type="checkbox" name="studyYear2" checked value="1">1年生</label>
+				<label><input type="checkbox" name="studyYear2" checked value="2">2年生</label>
+				<label><input type="checkbox" name="studyYear2" checked value="3">3年生</label>
+				<div id="kanjiChoicesDiv">
+					<p>テストに入れる漢字を選んでください。</p>
+					<label>
+						<input type="checkbox" name="kanjiChoices" value="一">一
+					</label>
+					<label>
+						<input type="checkbox" name="kanjiChoices" value="短">短
+					</label>
+					<label>
+						<input type="checkbox" name="kanjiChoices" value="全">全
+					</label>
+					<label>
+						<input type="checkbox" name="kanjiChoices" value="遊">遊
+					</label>
+				</div>
+				<template id="kanjiChoicesTemp">
+					<label>
+						<input type="checkbox" name="kanjiChoices" value="">
+					</label>
+				</template>
+			</div>
+			<button id="makeTest">テストを作成</button>
+		</section>
+		<label><input type="checkbox" id="answer">答えを表示</label>
+		<hr>
+		<button id="printTest">印刷する</button>
+		<hr>
+		<section id="testArea" hidden>
+			<div id="testTitle">
+				<h2>
+					<span data-year="1" hidden>かんじてすと</span>
+					<span data-year="2" hidden>かん字テスト</span>
+					<span data-year="3" hidden>かん字テスト</span>
+				</h2>
+				<p id="name">
+					<span data-year="1" hidden>なまえ</span>
+					<span data-year="2" hidden>名まえ</span>
+					<span data-year="3" hidden>名前</span>
+				</p>
+				<div id="score">
+					<span>/ <span id="maxScore"></span></span>
+				</div>
+			</div>
+			<p>
+				<span data-year="1" hidden>かんじをかきましょう。<span class="dash">―――</span>のことばは、かんじとおくりがなでかきましょう。</span>
+				<span data-year="2" hidden>かん字をかきましょう。<span class="dash">―――</span>のことばは、かん字とおくりがなでかきましょう。</span>
+				<span data-year="3" hidden>かん字を書きましょう。<span class="dash">―――</span>のことばは、かん字とおくりがなで書きましょう。</span>
 			</p>
-			<div id="score">
-				<span>/ <span id="maxScore"></span></span>
+			<template id="questionTemp">
+				<div class="question">
+					<span class="counter"></span>
+					<div class="phrase"></div>
+				</div>
+			</template>
+			<div id="questionsDiv">
+				<!-- <div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div>
+				<div class="question okurigana">
+					<span class="counter"></span>
+					<div class="phrase"><span class="yomigana">みじかい</span>文</div>
+				<div class="blank"><span class="answer" hidden="">短い</span></div></div> -->
 			</div>
-		</div>
-		<p>
-			<span data-year="1" hidden>かんじをかきましょう。<span class="dash">―――</span>のことばは、かんじとおくりがなでかきましょう。</span>
-			<span data-year="2" hidden>かん字をかきましょう。<span class="dash">―――</span>のことばは、かん字とおくりがなでかきましょう。</span>
-			<span data-year="3" hidden>かん字を書きましょう。<span class="dash">―――</span>のことばは、かん字とおくりがなで書きましょう。</span>
-		</p>
-		<template id="questionTemp">
-			<div class="question">
-				<span class="counter"></span>
-				<div class="phrase"></div>
-			</div>
-		</template>
-		<div id="questionsDiv"></div>
-	</section>
+		</section>
+	</main>
 </div>
 </body>
