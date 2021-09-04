@@ -34,6 +34,17 @@ $phraseWide: 1.6em;
 	margin-right: 0.2em;
 }
 
+.hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	overflow: hidden;
+	padding: 0;
+	clip: rect(0, 0, 0, 0);
+}
+
 #testArea {
 	@media screen {
 		width: 297mm;

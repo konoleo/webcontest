@@ -11,16 +11,54 @@
 <body>
 <div>
 	<h1>漢字テストの作成</h1>
-	<!-- 学習年: -->
-	<label><input type="checkbox" name="studyYear" checked value="1">1年生</label>
-	<label><input type="checkbox" name="studyYear" checked value="2">2年生</label>
-	<label><input type="checkbox" name="studyYear" checked value="3">3年生</label>
-	<hr>
-	<label>問題数: <input type="number" id="qNum" min="1" max="4" value="4"></label>
-	<hr>
+	<section>
+		<h2>テストの設定</h2>
+		<label class="inputLabel tabLabel">
+			<!-- <input type="radio" id="ramdomTab" name="settingTab" class="hidden" checked> -->
+			<input type="radio" id="ramdomTab" name="settingTab">
+			ランダム
+		</label>
+		<label class="inputLabel tabLabel">
+			<!-- <input type="radio" id="selectTab" name="settingTab" class="hidden"> -->
+			<input type="radio" id="selectTab" name="settingTab" checked>
+			漢字を選択
+		</label>
+		<div id="ramdomSetting" hidden>
+			学習年:
+			<label><input type="checkbox" name="studyYear1" checked value="1">1年生</label>
+			<label><input type="checkbox" name="studyYear1" checked value="2">2年生</label>
+			<label><input type="checkbox" name="studyYear1" checked value="3">3年生</label>
+			<label>問題数: <input type="number" id="qNum" min="1" max="4" value="4"></label>
+		</div>
+		<div id="selectSetting">
+			学習年:
+			<label><input type="checkbox" name="studyYear2" checked value="1">1年生</label>
+			<label><input type="checkbox" name="studyYear2" checked value="2">2年生</label>
+			<label><input type="checkbox" name="studyYear2" checked value="3">3年生</label>
+			<div id="kanjiChoicesDiv">
+				<p>テストに入れる漢字を選んでください。</p>
+				<label>
+					<input type="checkbox" name="kanjiChoices" value="一">一
+				</label>
+				<label>
+					<input type="checkbox" name="kanjiChoices" value="短">短
+				</label>
+				<label>
+					<input type="checkbox" name="kanjiChoices" value="全">全
+				</label>
+				<label>
+					<input type="checkbox" name="kanjiChoices" value="遊">遊
+				</label>
+			</div>
+			<template id="kanjiChoicesTemp">
+				<label>
+					<input type="checkbox" name="kanjiChoices" value="">
+				</label>
+			</template>
+		</div>
+		<button id="makeTest">テストを作成</button>
+	</section>
 	<label><input type="checkbox" id="answer">答えを表示</label>
-	<hr>
-	<button id="makeTest">テストを作成</button>
 	<hr>
 	<button id="printTest">印刷する</button>
 	<hr>
