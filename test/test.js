@@ -67,9 +67,7 @@ window.addEventListener("load", () => {
 			}
 			// 学習年を取得
 			const studyYear = getMultiple(studyYearElem);
-			// 問題数を取得
 			const qNum = qNumElem.value;
-			// 問題数を表示
 			maxScoreElem.textContent = qNum;
 			let qKanji;
 			if (kind === "ramdom") {
@@ -80,8 +78,7 @@ window.addEventListener("load", () => {
 			}
 			qKanji.forEach(kanji => {
 				const test = kanjiData[kanji].test;
-				// どのフレーズを使うのか
-				const phraseNum = Math.floor(Math.random() * test.length);
+				const phraseNum = Math.floor(Math.random() * test.length);	// 何番目のフレーズか
 				const clone = document.getElementById("questionTemp").content.cloneNode(true);
 				const questionElem = clone.querySelectorAll(".question")[0];
 				const phraseElem = questionElem.getElementsByClassName("phrase")[0];
