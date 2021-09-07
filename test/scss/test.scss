@@ -26,24 +26,26 @@ $phraseWide: 1.6em;
 
 .tabLabel {
 	display: inline-block;
-	// background: #fff;
 	border: 2px solid #333;
 	border-bottom: none;
-	border-radius: 5px 5px 0 0;
 	padding: $spacing2 $spacing4;
-	margin: $spacing2 $spacing1 auto;
+	margin: $spacing2 $spacing2 auto 0;
 	cursor: pointer;
 	&#activeTab {
 		background: #fff;
-		border-color: red;
 		cursor: default;
 	}
 }
 
-#tabBorder {
-	border: 1px solid #333;
+.settings {
+	border: 2px solid #333;
 	margin: -2px 0 $spacing2;
 }
+
+// #tabBorder {
+// 	border: 1px solid #333;
+// 	margin: -2px 0 $spacing2;
+// }
 
 .dash {
 	letter-spacing: -0.1em;

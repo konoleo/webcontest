@@ -87,20 +87,27 @@ window.addEventListener("load", () => {
 			const first = kanjiChoicesDiv.firstElementChild;
 			kanjiChoicesDiv.innerHTML = first.outerHTML;
 
-			// 選択肢を決定
+			// 選択肢を表示
 			const studyYear = getMultiple(studyYearElems.select);
-			const choices = filterByYear(studyYear);
-			const temp = document.getElementById("kanjiChoicesTemp");
-			for (let i = 0; i < choices.length; i++) {
-				const clone = temp.content.cloneNode(true);
-				const labelElem = clone.querySelector("label");
-				labelElem.children[0].value = choices[i];
-				let html = labelElem.innerHTML;
-				html = html.trim();
-				html += choices[i];
-				labelElem.innerHTML = html;
-				kanjiChoicesDiv.appendChild(clone);
-			}
+			studyYear.forEach(year => {
+				const choices = filterByYear([year]);
+				if (choices.length) {
+					const element = document.createElement("h3");
+					element.textContent = `${year}年生`;
+					kanjiChoicesDiv.appendChild(element);
+				}
+				const temp = document.getElementById("kanjiChoicesTemp");
+				choices.forEach(choice => {
+					const clone = temp.content.cloneNode(true);
+					const labelElem = clone.querySelector("label");
+					labelElem.children[0].value = choice;
+					let html = labelElem.innerHTML;
+					html = html.trim();
+					html += choice;
+					labelElem.innerHTML = html;
+					kanjiChoicesDiv.appendChild(clone);
+				});
+			});
 		}
 		choices();
 

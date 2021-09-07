@@ -15,32 +15,33 @@
 		<h1>漢字テストの作成</h1>
 		<section>
 			<h2>テストの設定</h2>
-			<label class="inputLabel tabLabel" id="activeTab">
-				<input type="radio" id="ramdomTab" name="settingTab" class="hidden" checked>
+			<label class="inputLabel tabLabel">
+				<input type="radio" id="ramdomTab" name="settingTab" class="hidden">
 				ランダム
 			</label>
-			<label class="inputLabel tabLabel">
-				<input type="radio" id="selectTab" name="settingTab" class="hidden">
+			<label class="inputLabel tabLabel" id="activeTab">
+				<input type="radio" id="selectTab" name="settingTab" class="hidden" checked>
 				漢字を選択
 			</label>
-			<hr id="tabBorder" noshade>
-			<div id="ramdomSetting">
+			<div id="ramdomSetting" class="settings" hidden>
 				学習年:
 				<label><input type="checkbox" name="studyYear1" checked value="1">1年生</label>
 				<label><input type="checkbox" name="studyYear1" checked value="2">2年生</label>
 				<label><input type="checkbox" name="studyYear1" checked value="3">3年生</label>
 				<label>問題数: <input type="number" id="qNum" min="1" max="4" value="4"></label>
 			</div>
-			<div id="selectSetting" hidden>
+			<div id="selectSetting" class="settings">
 				学習年:
 				<label><input type="checkbox" name="studyYear2" checked value="1">1年生</label>
 				<label><input type="checkbox" name="studyYear2" checked value="2">2年生</label>
 				<label><input type="checkbox" name="studyYear2" checked value="3">3年生</label>
 				<div id="kanjiChoicesDiv">
 					<p>テストに入れる漢字を選んでください。</p>
+					<h3>1年生</h3>
 					<label>
 						<input type="checkbox" name="kanjiChoices" value="一">一
 					</label>
+					<h3>3年生</h3>
 					<label>
 						<input type="checkbox" name="kanjiChoices" value="短">短
 					</label>
