@@ -79,7 +79,6 @@ window.addEventListener("load", () => {
 
 		// 学習年を選び直した時に、選択肢を変える
 		function changeChoices() {
-			console.log("changeChoices");
 			// 今ある選択肢の削除
 			const first = kanjiChoicesDiv.firstElementChild;
 			kanjiChoicesDiv.innerHTML = first.outerHTML;
@@ -116,6 +115,21 @@ window.addEventListener("load", () => {
 			} else {
 				kind = "select";
 			}
+			
+			// テストが作れるか判定
+			const studyYear = getMultiple(studyYearBtns[kind]);
+			if (!studyYear.length) {
+				alert("学習年をひとつ以上選択してください。")
+				return;
+			}
+			if (kind === "select") {
+				if (!getMultiple(kanjiChoicesElems).length) {
+					alert("漢字をひとつ以上選択してください。")
+					return;
+				}
+			}
+			
+			// テスト部分の表示
 			testAreaElem.removeAttribute("hidden");
 
 			// 今ある問題を削除
@@ -123,8 +137,7 @@ window.addEventListener("load", () => {
 				questionsDiv.firstChild.remove();
 			}
 
-			// 学習年を取得
-			const studyYear = getMultiple(studyYearBtns[kind]);
+			// 漢字を決定
 			const qNum = qNumElem.value;
 			maxScoreElem.textContent = qNum;
 			let qKanji;
