@@ -53,14 +53,10 @@ window.addEventListener("load", () => {
 			return values;
 		}
 
-		function max(array) {
-			return array.reduce((a, b) => {return Math.max(a, b)});
-		}
-
 		const settingTabs = document.getElementsByName("settingTab");
 		const settingTabpanel = [document.getElementById("ramdomSetting"), document.getElementById("selectSetting")];
 		const questionsDiv = document.getElementById("questionsDiv");
-		const studyYearElems = {
+		const studyYearBtns = {
 			ramdom: document.getElementsByName("studyYear1"),
 			select: document.getElementsByName("studyYear2")
 		};
@@ -82,13 +78,13 @@ window.addEventListener("load", () => {
 		}
 
 		// 学習年を選び直した時に、選択肢を変える
-		function choices() {
+		function changeChoices() {
+			console.log("changeChoices");
 			// 今ある選択肢の削除
 			const first = kanjiChoicesDiv.firstElementChild;
 			kanjiChoicesDiv.innerHTML = first.outerHTML;
-
 			// 選択肢を表示
-			const studyYear = getMultiple(studyYearElems.select);
+			const studyYear = getMultiple(studyYearBtns.select);
 			studyYear.forEach(year => {
 				const choices = filterByYear([year]);
 				if (choices.length) {
@@ -109,11 +105,10 @@ window.addEventListener("load", () => {
 				});
 			});
 		}
-		choices();
 
 		// テストを作る
 		function makeTest() {
-			// ランダムか選択か判定
+			// ランダムか漢字の選択か判定
 			let kind;
 			const hiddenElem = settingTabpanel.filter(elem => elem.hasAttribute("hidden"));
 			if (hiddenElem[0].id === "selectSetting") {
@@ -129,7 +124,7 @@ window.addEventListener("load", () => {
 			}
 
 			// 学習年を取得
-			const studyYear = getMultiple(studyYearElems[kind]);
+			const studyYear = getMultiple(studyYearBtns[kind]);
 			const qNum = qNumElem.value;
 			maxScoreElem.textContent = qNum;
 			let qKanji;
@@ -207,13 +202,29 @@ window.addEventListener("load", () => {
 				counter[i].textContent = numbers[i];
 			}
 
-			// 答えを表示
+			// 答えを表示する準備
 			showAnswer();
+
+			// テスト内の漢字を学年に合わせる
+			const maxYear = Math.max(...studyYear);
+			const maxYearElems = document.querySelectorAll(`[data-year="${maxYear}"]`);
+			for (let i = 0; i < maxYearElems.length; i++) {
+				maxYearElems[i].removeAttribute("hidden");
+			}
+			const notMaxYear = [1, 2, 3].filter((num) => {
+				return num !== maxYear
+			});
+			for (let i = 0; i < notMaxYear.length; i++) {
+				const notMaxYearElems = document.querySelectorAll(`[data-year="${notMaxYear[i]}"]`);
+				for (let y = 0; y < notMaxYearElems.length; y++) {
+					notMaxYearElems[y].setAttribute("hidden", "");
+				}
+			}
 		}
 
 		// 学習年を選び直したとき
-		for　(let k of Object.keys(studyYearElems)) {
-			const elements = studyYearElems[k];
+		for　(let key of Object.keys(studyYearBtns)) {
+			const elements = studyYearBtns[key];
 			for (let i = 0; i < elements.length; i++) {
 				elements[i].addEventListener("change", () => {
 					// 問題数の最大値を漢字の数に合わせる
@@ -227,25 +238,19 @@ window.addEventListener("load", () => {
 					if (qNumElem.value > qNumElem.max) {
 						qNumElem.value = qNumElem.max;
 					}
-					// テスト内の漢字を学年に合わせる
-					const maxYear = max(studyYear);
-					const maxYearElems = document.querySelectorAll(`[data-year="${maxYear}"]`);
-					for (let i = 0; i < maxYearElems.length; i++) {
-						maxYearElems[i].removeAttribute("hidden");
+					// 同期
+					if (key === "ramdom") {
+						var kind = "select";
+					} else {
+						var kind = "ramdom";
 					}
-					const notMaxYear = [1, 2, 3].filter((num) => {
-						return num !== maxYear
-					});
-					for (let i = 0; i < notMaxYear.length; i++) {
-						const notMaxYearElems = document.querySelectorAll(`[data-year="${notMaxYear[i]}"]`);
-						for (let y = 0; y < notMaxYearElems.length; y++) {
-							notMaxYearElems[y].setAttribute("hidden", "");
-						}
+					if (elements[i].checked) {
+						studyYearBtns[kind][i].checked = true;
+					} else {
+						studyYearBtns[kind][i].checked = false;
 					}
-					// 選択のとき、選択肢を変更
-					if (k === "select") {
-						choices();
-					}
+					// ランダムではないとき、漢字の選択肢を変更
+					changeChoices();
 				});
 			}
 			elements[0].dispatchEvent(new Event("change"));	// changeイベントの発火
