@@ -1,5 +1,6 @@
 window.addEventListener("load", () => {
-	const character = document.getElementById("character").textContent;
+	const character = decodeURI(location.search).split("=")[1];
+	document.getElementById("character").textContent = character;
 	document.title = `「${character}」を含む言葉・熟語`;
 	// JSONのロード
 	fetch("../kanjidata.json").then(response => {
