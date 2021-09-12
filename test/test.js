@@ -54,7 +54,7 @@ window.addEventListener("load", () => {
 		}
 
 		const settingTabs = document.getElementsByName("settingTab");
-		const settingTabpanel = [document.getElementById("ramdomSetting"), document.getElementById("selectSetting")];
+		const settingTabpanel = document.getElementsByClassName("settingTabpanel");
 		const questionsDiv = document.getElementById("questionsDiv");
 		const studyYearBtns = {
 			ramdom: document.getElementsByName("studyYear1"),
@@ -64,9 +64,18 @@ window.addEventListener("load", () => {
 		const kanjiChoicesDiv = document.getElementById("kanjiChoicesDiv");
 		const kanjiChoicesElems = document.getElementsByName("kanjiChoices");
 		const answerBtn = document.getElementById("answer");
+		const makeTestBtn = document.getElementById("makeTest");
 		const testAreaElem = document.getElementById("testArea");
 		const maxScoreElem = document.getElementById("maxScore");
 
+		// 設定タブの初期設定
+		const activeTab = document.getElementById("activeTab");
+		activeTab.firstElementChild.setAttribute("checked", "");
+		if (activeTab.firstElementChild === settingTabs[0]) {
+			settingTabpanel[1].setAttribute("hidden", "");
+		} else {
+			settingTabpanel[0].setAttribute("hidden", "");
+		}
 		// 設定タブの動き
 		for (let i = 0; i < settingTabs.length; i++) {
 			settingTabs[i].addEventListener("click", () => {
@@ -109,8 +118,8 @@ window.addEventListener("load", () => {
 		function makeTest() {
 			// ランダムか漢字の選択か判定
 			let kind;
-			const hiddenElem = settingTabpanel.filter(elem => elem.hasAttribute("hidden"));
-			if (hiddenElem[0].id === "selectSetting") {
+			const hiddenElem = [...settingTabpanel].filter(elem => elem.hasAttribute("hidden"));
+			if (hiddenElem[0] === settingTabpanel[1]) {
 				kind = "ramdom";
 			} else {
 				kind = "select";
@@ -270,18 +279,19 @@ window.addEventListener("load", () => {
 		}
 
 		// テスト作成
-		document.getElementById("makeTest").addEventListener("click", makeTest);
-
-		// 印刷するとき
-		document.getElementById("printTest").addEventListener("click", () => {
-			const elems = document.querySelectorAll("main > *:not(#testArea)");
-			for (let i = 0; i < elems.length; i++) {
-				elems[i].setAttribute("hidden", "");
+		makeTestBtn.addEventListener("click", () => {
+			makeTest();
+			if (!testArea.hasAttribute("hidden")) {
+				makeTestBtn.textContent = "テストを更新";
 			}
-			// const printArea = document.createElement("div");
+		});
+
+		// 印刷
+		document.getElementById("printTest").addEventListener("click", () => {
+			const printArea = document.createElement("div");
 			// 8問ずつグルーピング
 			function sliceByNumber(array, number) {
-				const elements = Array.from(array);
+				const elements = [...array];
 				const length = Math.ceil(elements.length / number);
 				return new Array(length).fill().map((_, i) =>
 					elements.slice(i * number, (i + 1) * number)
@@ -295,15 +305,12 @@ window.addEventListener("load", () => {
 				});
 				questionsDiv.appendChild(div);
 			});
-			// document.body.appendChild(printArea);
-			// printArea.appendChild(testAreaElem);
-			// document.body.firstElementChild.setAttribute("hidden", "");
+			document.body.appendChild(printArea);
+			printArea.appendChild(testAreaElem.cloneNode(true));
+			document.body.firstElementChild.setAttribute("hidden", "");
 			window.print();
-			// document.body.firstElementChild.removeAttribute("hidden");
-			// printArea.remove();
-			for (let i = 0; i < elems.length; i++) {
-				elems[i].removeAttribute("hidden");
-			}
+			document.body.firstElementChild.removeAttribute("hidden");
+			printArea.remove();
 			const rowElem = document.getElementsByClassName("row");
 			while (rowElem[0]) {
 				while (rowElem[0].firstElementChild) {

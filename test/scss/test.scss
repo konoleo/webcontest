@@ -37,7 +37,7 @@ $phraseWide: 1.6em;
 	}
 }
 
-.settings {
+.settingTabpanel {
 	border: 2px solid #333;
 	margin: -2px 0 $spacing2;
 }
@@ -45,6 +45,10 @@ $phraseWide: 1.6em;
 .dash {
 	letter-spacing: -0.1em;
 	margin-right: 0.2em;
+}
+
+.scroll {
+	overflow: auto;
 }
 
 #testArea {
