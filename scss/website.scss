@@ -1,7 +1,7 @@
 @import "var";
 
 html {
-	font: 400 16px/1.8 -apple-system, BlinkMacSystemFont, sans-serif;
+	font: 400 16px/1.8 $sansSerif;
 	color: $textColor;
 	font-feature-settings: "pkna";
 }

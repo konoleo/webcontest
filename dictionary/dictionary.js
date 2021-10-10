@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
 	document.getElementById("character").textContent = character;
 	document.title = `「${character}」を含む言葉・熟語`;
 	// JSONのロード
-	fetch("../kanjidata.json").then(response => {
+	fetch("../data/kanjidata.json").then(response => {
 		if (response.ok) {
 			return response.json();
 		} else {
