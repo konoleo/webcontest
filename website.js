@@ -33,7 +33,7 @@ window.addEventListener("load", () => {
 	const selectLangE = document.getElementById("selectLang");
 	selectLangE.addEventListener("change", () => {
 		userLang = selectLangE.value;
-		if (navLang !== userLang) {
+		if (navLang !== userLang && !url.searchParams.has("lang")) {
 			url.searchParams.append("lang", userLang);
 			history.replaceState(null, null, url.toString());
 		} else if (paraLang !== userLang) {
