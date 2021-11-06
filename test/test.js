@@ -261,10 +261,12 @@ window.addEventListener("load", () => {
 					"ja": ["をすベて選択", "の選択をすべて解除"],
 					"en-US": ["Select", "Deselect"],
 				};
-				if (!elem.classList.contains("checked")) {
-					message[userLang].reverse();
-				}
-				elem.innerHTML = elem.innerHTML.replace(message[userLang][0], message[userLang][1]);
+				supportedLang.forEach(lang => {
+					if (!elem.classList.contains("checked")) {
+						message[lang].reverse();
+					}
+					elem.innerHTML = elem.innerHTML.replace(message[lang][0], message[lang][1]);
+				});
 			});
 		});
 
@@ -427,7 +429,9 @@ window.addEventListener("load", () => {
 					"ja": "テストを更新",
 					"en-US": "Update test",
 				};
-				makeTestBtn.textContent = message[userLang];
+				supportedLang.forEach(lang => {
+					makeTestBtn.querySelector(`:lang(${lang})`).textContent = message[lang];
+				});
 			}
 		});
 

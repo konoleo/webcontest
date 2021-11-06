@@ -5,10 +5,10 @@ if (navLang === "en") {
 }
 const paraLang = url.searchParams.get("lang");
 let userLang = paraLang || navLang;
+const supportedLang = ["ja", "en-US"];
 function lang() {
 	document.getElementsByTagName("html")[0].setAttribute("lang", userLang);
 	document.title = document.querySelector(`title:lang(${userLang})`).textContent;
-	const supportedLang = ["ja", "en-US"];
 	const hideLang = supportedLang.filter(item => userLang !== item);
 	const showLangElems = document.querySelectorAll(`[lang=${userLang}]`);
 	for (let i = 0; i < showLangElems.length; i++) {

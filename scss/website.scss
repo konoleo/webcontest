@@ -206,6 +206,11 @@ input {
 		outline: 3px solid #db1616d2;
 	}
 }
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+	input {
+		vertical-align: -0.06em;
+	}
+}
 
 input, button, select {
 	font-family: $sansSerif;
@@ -213,10 +218,6 @@ input, button, select {
 
 button, select {
 	cursor: pointer;
-}
-
-label {
-	margin-right: 4px;
 }
 
 button {
