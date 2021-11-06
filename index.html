@@ -2,17 +2,22 @@
 <html lang="ja">
 <head>
 	<meta charset="utf-8">
-	<title>小学生のための漢字学習</title>
+	<title lang="ja">小学生のための漢字学習</title>
+	<title lang="en-US">Learning Kanji for elementary school students</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="stylesheet" media="all" href="website.min.css">
 	<link rel="stylesheet" media="all" href="index.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" defer></script>
 	<script src="website.js"></script>
 	<meta name="robots" content="noindex">
 </head>
 <body>
 <div>
 	<header>
-		<a href="/" id="siteName">小学生のための漢字学習</a>
+		<a href="" id="siteName">
+			<span lang="ja">小学生のための漢字学習</span>
+			<span lang="en-US" hidden>Learning Kanji for elementary school students</span>
+		</a>
 		<div id="hamburger">
 			<div></div>
 			<div></div>
@@ -20,16 +25,42 @@
 		</div>
 		<nav class="hide">
 			<ul>
-				<li><a href="test/index.html">漢字テストの作成</a></li>
-				<li><a href="origin/index.html">漢字の成り立ち</a></li>
+				<li>
+					<a href="test/">
+						<span lang="ja">漢字テストの作成</span>
+						<span lang="en-US" hidden>Create a Kanji test</span>
+					</a>
+				</li>
+				<li>
+					<a href="origin/">
+						<span lang="ja">漢字の成り立ち</span>
+						<span lang="en-US" hidden>The origin of Kanji</span>
+					</a>
+				</li>
+				<li id="selectLi">
+					<select id="selectLang">
+						<option selected disabled>言語 / Language</option>
+						<option value="ja">日本語</option>
+						<option value="en-US">English</option>
+					</select>
+				</li>
 			</ul>
 		</nav>
 	</header>
 	<main>
 		<div>
-			<h1>簡単に漢字テストを</h1>
-			<p>このサイトでは、学習年からランダムに問題を作る機能や、漢字を一つずつ選んで作る機能があり、自分で問題文を作らなくても簡単に漢字テストを作ることができます。</p>
-			<a href="test/index.html" class="button">漢字テストを作ってみる</a>
+			<h1>
+				<span lang="ja">簡単に漢字テストを</span>
+				<span lang="en-US" hidden>Let's make a Kanji test easily</span>
+			</h1>
+			<p>
+				<span lang="ja">このサイトでは、学習年からランダムに問題を作る機能や、漢字を一つずつ選んで作る機能があり、自分で問題文を作らなくても簡単に漢字テストを作ることができます。</span>
+				<span lang="en-US" hidden>This site has a function to randomly create questions from the year of study and a function to select and create Kanji one by one, so you can easily create a Kanji test without creating your own question sentences.</span>
+			</p>
+			<a href="test/" class="button">
+				<span lang="ja">漢字テストを作ってみる</span>
+				<span lang="en-US" hidden>Try to make a Kanji test</span>
+			</a>
 		</div>
 	</main>
 </div>

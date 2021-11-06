@@ -2,7 +2,8 @@
 <html lang="ja">
 <head>
 	<meta charset="utf-8">
-	<title>漢字の成り立ち - 小学生のための漢字学習</title>
+	<title lang="ja">漢字の成り立ち - 小学生のための漢字学習</title>
+	<title lang="en-US">The origin of Kanji - Learning Kanji for elementary school students</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<script src="../website.js"></script>
 	<script src="test.js"></script>
@@ -12,7 +13,10 @@
 <body>
 <div>
 	<header>
-		<a href="/" id="siteName">小学生のための漢字学習</a>
+		<a href="../" id="siteName">
+			<span lang="ja">小学生のための漢字学習</span>
+			<span lang="en-US" hidden>Learning Kanji for elementary school students</span>
+		</a>
 		<div id="hamburger">
 			<div></div>
 			<div></div>
@@ -20,13 +24,33 @@
 		</div>
 		<nav class="hide">
 			<ul>
-				<li><a href="../test/index.html">漢字テストの作成</a></li>
-				<li><a href="">漢字の成り立ち</a></li>
+				<li>
+					<a href="../test/">
+						<span lang="ja">漢字テストの作成</span>
+						<span lang="en-US" hidden>Create a Kanji test</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span lang="ja">漢字の成り立ち</span>
+						<span lang="en-US" hidden>The origin of Kanji</span>
+					</a>
+				</li>
+				<li id="selectLi">
+					<select id="selectLang">
+						<option selected disabled>言語 / Language</option>
+						<option value="ja">日本語</option>
+						<option value="en-US">English</option>
+					</select>
+				</li>
 			</ul>
 		</nav>
 	</header>
 	<main>
-		<h1>漢字の成り立ち</h1>
+		<h1>
+			<span lang="ja">漢字の成り立ち</span>
+			<span lang="en-US" hidden>The origin of Kanji</span>
+		</h1>
 		<section>
 			<h2>漢字の歴史クイズ</h2>
 			<p>突然ですが、みなさんに漢字の歴史クイズを2問出します。</p>

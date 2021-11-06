@@ -36,6 +36,9 @@ $phraseWide: 1.6em;
 			border-radius: 8px 0 0 0;
 			border-right: none;
 		}
+		&:focus-within {
+			outline: auto;
+		}
 		&#activeTab {
 			cursor: default;
 			position: relative;
@@ -95,10 +98,6 @@ $phraseWide: 1.6em;
 
 .scroll {
 	overflow: auto;
-}
-
-#testH2 {
-	// margin-bottom: 0;
 }
 
 #testArea {

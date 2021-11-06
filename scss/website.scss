@@ -42,7 +42,9 @@ header {
 		margin: calc((80px - 1.5rem * 1.8) / 2) 0;
 		text-decoration: none;
 		@media (max-width: 700px) {
-			display: inline-block;
+			&:not([hidden]) {
+				display: inline-block;
+			}
 		}
 	}
 	#hamburger {
@@ -111,13 +113,40 @@ header {
 				@media (max-width: 700px) {
 					margin: 0 0 1em;
 				}
-				a {
+				a, select {
+					color: $subColor;
 					text-decoration: none;
 					padding-bottom: 2px;
 					border-bottom: 1px solid $subColor;
 					transition: all .3s ease;
 					&:hover {
 						border-bottom-color: transparent;
+					}
+				}
+				&#selectLi {
+					position: relative;
+					&::after {
+						color: $subColor;
+						position: absolute;
+						right: 0;
+						content: "▼";
+					}
+					#selectLang {
+						width: 8.5em;
+						font-size: 1rem;
+						border-top: none;
+						border-left: none;
+						border-right: none;
+						border-radius: 0;
+						background: none;
+						appearance: none;
+						-webkit-appearance: none;
+						&:focus {
+							outline: none;
+						}
+						// &:focus-visible {
+						// 	outline: auto;
+						// }
 					}
 				}
 			}
@@ -172,14 +201,25 @@ section {
 }
 
 input {
-	vertical-align: middle;
+	vertical-align: 0.08em;
 	&:invalid {
 		outline: 3px solid #db1616d2;
 	}
 }
 
-button {
+input, button, select {
+	font-family: $sansSerif;
+}
+
+button, select {
 	cursor: pointer;
+}
+
+label {
+	margin-right: 4px;
+}
+
+button {
 	padding: 12px 16px;
 	border-radius: 4px;
 	border: 2px solid $themeColor;

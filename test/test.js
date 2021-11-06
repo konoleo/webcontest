@@ -142,6 +142,21 @@ window.addEventListener("load", () => {
 			return values;
 		}
 
+		function ordinalSuffix(i) {
+			var j = i % 10,
+				k = i % 100;
+			if (j == 1 && k != 11) {
+				return i + "st";
+			}
+			if (j == 2 && k != 12) {
+				return i + "nd";
+			}
+			if (j == 3 && k != 13) {
+				return i + "rd";
+			}
+			return i + "th";
+		}
+
 		const settingTabs = document.getElementsByName("settingTab");
 		const settingTabpanel = document.getElementsByClassName("settingTabpanel");
 		const questionsDiv = document.getElementById("questionsDiv");
@@ -175,7 +190,6 @@ window.addEventListener("load", () => {
 		function changeChoices() {
 			const detailsElems = settingTabpanel[1].getElementsByTagName("details");
 			const studyYear = getMultiple(studyYearBtns);
-			console.log("0");
 			if (detailsElems.length) {
 				studyYear.forEach((year, index) => {
 					detailsElems[year-1].removeAttribute("hidden");
@@ -189,7 +203,6 @@ window.addEventListener("load", () => {
 				});
 			} else {
 				// 選択肢を表示
-				console.log("1");
 				studyYear.forEach((year, index) => {
 					const choices = filterByYear([year]);
 					if (choices.length) {
@@ -199,11 +212,18 @@ window.addEventListener("load", () => {
 						}
 						const summary = document.createElement("summary");
 						const h3 = document.createElement("h3");
-						h3.textContent = `${year}年生`;
+						h3.innerHTML = `
+							<span lang="ja">${year}年生</span>
+							<span lang="en-US" hidden>${ordinalSuffix(year)} grade</span>
+						`;
 						summary.appendChild(h3);
 						details.appendChild(summary);
 						const button = document.createElement("button");
 						button.textContent = `${year}年生の漢字をすベて選択`;
+						button.innerHTML = `
+							<span lang="ja">${year}年生の漢字をすベて選択</span>
+							<span lang="en-US" hidden>Select all ${ordinalSuffix(year)} grade Kanji</span>
+						`;
 						button.setAttribute("id", `all${year}check`);
 						details.appendChild(button);
 						const div = document.createElement("div");
@@ -224,6 +244,7 @@ window.addEventListener("load", () => {
 						settingTabpanel[1].appendChild(details);
 					}
 				});
+				lang();
 			}
 		}
 		changeChoices();
@@ -236,11 +257,14 @@ window.addEventListener("load", () => {
 					inputs[i].checked = !elem.classList.contains("checked");
 				}
 				elem.classList.toggle("checked");
-				const message = ["をすベて選択", "の選択をすべて解除"];
+				const message = {
+					"ja": ["をすベて選択", "の選択をすべて解除"],
+					"en-US": ["Select", "Deselect"],
+				};
 				if (!elem.classList.contains("checked")) {
-					message.reverse();
+					message[userLang].reverse();
 				}
-				elem.innerHTML = elem.innerHTML.replace(message[0], message[1]);
+				elem.innerHTML = elem.innerHTML.replace(message[userLang][0], message[userLang][1]);
 			});
 		});
 
@@ -285,10 +309,12 @@ window.addEventListener("load", () => {
 				// 漢字をランダムに選ぶ
 				qKanji = ramdomSelect(qNum, studyYear);
 			} else {
+				// 選ばれた漢字を取得
+				const kanjis = getMultiple(kanjiChoicesElems);
 				// 問題数を取得
-				qNum = getMultiple(kanjiChoicesElems).length;
-				// 選ばれた漢字を取得 -> シャッフル
-				qKanji = shuffle(getMultiple(kanjiChoicesElems));
+				qNum = kanjis.length;
+				// シャッフル
+				qKanji = shuffle(kanjis);
 			}
 			maxScoreElem.textContent = qNum;
 
@@ -393,19 +419,15 @@ window.addEventListener("load", () => {
 			});
 		}
 
-		// qNumElem.addEventListener("input", () => {
-		// 	console.log(qNumElem.matches(":invalid"));
-		// 	const invalid = qNumElem.matches(":invalid");
-		// 	if (invalid) {
-		// 		qNumElem.textContent = "失敗"
-		// 	}
-		// })
-
 		// テスト作成
 		makeTestBtn.addEventListener("click", () => {
 			makeTest();
 			if (!testArea.hasAttribute("hidden")) {
-				makeTestBtn.textContent = "テストを更新";
+				const message = {
+					"ja": "テストを更新",
+					"en-US": "Update test",
+				};
+				makeTestBtn.textContent = message[userLang];
 			}
 		});
 
