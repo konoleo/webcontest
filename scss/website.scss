@@ -41,7 +41,7 @@ header {
 		color: $themeColor;
 		margin: calc((80px - 1.5rem * 1.8) / 2) 0;
 		text-decoration: none;
-		@media (max-width: 700px) {
+		@media (max-width: 850px) {
 			&:not([hidden]) {
 				display: inline-block;
 			}
@@ -84,7 +84,7 @@ header {
 			}
 		}
 	}
-	@media (max-width: 700px) {
+	@media (max-width: 850px) {
 		display: block;
 		#hamburger {
 			display: block;
@@ -93,7 +93,7 @@ header {
 	nav {
 		margin-left: auto;
 		margin-right: 0;
-		@media (max-width: 700px) {
+		@media (max-width: 850px) {
 			&.hide {
 				display: none;
 			}
@@ -104,13 +104,13 @@ header {
 			height: 100%;
 			margin: auto 0;
 			padding-left: 0;
-			@media (max-width: 700px) {
+			@media (max-width: 850px) {
 				display: block;
 				margin: 0 0 1em;
 			}
 			li {
-				margin: auto 0 auto 40px;
-				@media (max-width: 700px) {
+				margin: auto auto auto 40px;
+				@media (max-width: 850px) {
 					margin: 0 0 1em;
 				}
 				a, select {
@@ -124,6 +124,7 @@ header {
 					}
 				}
 				&#selectLi {
+					display: inline-block;
 					position: relative;
 					&::after {
 						color: $subColor;
@@ -132,7 +133,7 @@ header {
 						content: "▼";
 					}
 					#selectLang {
-						width: 8.5em;
+						width: 9em;
 						font-size: 1rem;
 						border-top: none;
 						border-left: none;
