@@ -126,6 +126,10 @@ header {
 				}
 				&#selectLi {
 					position: relative;
+					display: inline;
+					details {
+						display: inline;
+					}
 					summary {
 						padding-bottom: 2px;
 					}

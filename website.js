@@ -30,6 +30,12 @@ function addRemovePara() {
 }
 
 window.addEventListener("load", () => {
+	const details = document.querySelector("#selectLi details");
+	const optionsLang = document.getElementById("optionsLang");
+	[["mouseover", "mouseout"], ["focusin", "focusout"]].forEach(elem => {
+		details.addEventListener(elem[0], () => details.setAttribute("open", ""));
+		[elem[1] === "focusout" ? details : optionsLang][0].addEventListener(elem[1], () => details.removeAttribute("open"));
+	});
 	const selectLangE = document.getElementsByName("selectLang");
 	for (let i = 0; i < selectLangE.length; i++) {
 		const element = selectLangE[i];
