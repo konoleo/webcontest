@@ -5,6 +5,7 @@
 	<title lang="ja">漢字の成り立ち - 小学生のための漢字学習</title>
 	<title lang="en-US">The origin of Kanji - Learning Kanji for elementary school students</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
 	<script src="../website.js"></script>
 	<link rel="stylesheet" media="all" href="../website.min.css">
 	<meta name="robots" content="noindex">
@@ -62,21 +63,66 @@
 		<section>
 			<h2>一つ目の正解「象形（しょうけい）」</h2>
 			<p>象形文字は、ものの形を線でえがいた絵をもとに作られた漢字です。「木」、「火」、「山」などの漢字の成り立ちを見てみましょう。</p>
-			<img src="" alt="">
+			<div class="imgDiv js-scrollable">
+				<img src="img/ki.png" alt="「木」の成り立ち">
+				<img src="img/fire.png" alt="「火」の成り立ち">
+				<img src="img/yama.png" alt="「山」の成り立ち">
+			</div>
 			<h2>二つ目の正解「指事（しじ）」</h2>
 			<p>指事文字は、一つ目の象形文字とは反対で、目に見えないものを表す絵をもとに作られた漢字です。目に見えないものが元になっているので、象形文字よりは数が少ないです。「上」、「下」、「中」などがあります。</p>
-			<img src="" alt="">
+			<div class="imgDiv js-scrollable">
+				<img src="img/ue.png" alt="「上」の成り立ち">
+				<img src="img/shita.png" alt="「下」の成り立ち">
+				<img src="img/naka.png" alt="「中」の成り立ち">
+			</div>
 			<h2>三つ目の正解「会意（かいい）」</h2>
 			<p>会意文字は、何個かの漢字を組み合わせて別の意味を表す漢字のことです。木がたくさんある「森」、人が木の横で「休」む、のように作られます。</p>
-			<img src="" alt="">
+			<div class="imgDiv js-scrollable">
+				<img src="img/mori.png" alt="「森」の成り立ち">
+				<img src="img/yasumu.png" alt="「休」の成り立ち">
+			</div>
 			<h2>四つ目の正解「形声（けいせい）」</h2>
-			<p>形声文字は、音を表す漢字と意味を表す漢字を組み合わせて作られた漢字です。「草」、「海」、「味」などの漢字の成り立ちを見てみましょう。</p>
-			<img src="" alt="">
+			<p>形声文字は、音を表す漢字と意味を表す漢字を組み合わせて作られた漢字です。「草」、「晴」、「味」などの漢字の成り立ちを見てみましょう。</p>
+			<div class="imgDiv js-scrollable">
+				<img src="img/kusa.png" alt="「草」の成り立ち">
+				<img src="img/hare.png" alt="「晴」の成り立ち">
+				<img src="img/aji.png" alt="「味」の成り立ち">
+			</div>
 		</section>
+		<style>
+			.imgDiv {
+				display: flex;
+				overflow-y: auto;
+				margin-bottom: 32px;
+			}
+			.imgDiv img {
+				width: 400px;
+				margin-right: 40px;
+				margin-bottom: 2px;
+			}
+			@media (max-width: 500px) {
+				.imgDiv {
+					overflow-y: hidden;
+					flex-wrap: wrap;
+				}
+				.imgDiv img {
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 32px;
+				}
+			}
+		</style>
 		<section>
 			<!-- <h2></h2> -->
 			<p>いろんな漢字の成り立ちがありましたね。みなさんが今覚えようとしている漢字は「象形文字」、「指事文字」、「会意文字」、「形声文字」のどれでしょうか。ぜひ調べてみてください。</p>
 		</section>
 	</main>
 </div>
+<script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
+<script>
+	new ScrollHint(".js-scrollable", {
+		// scrollHintIconAppendClass: 'scroll-hint-icon-white',
+		i18n: {scrollable: "スクロールできます"}
+	});
+</script>
 </body>
