@@ -113,10 +113,11 @@ header {
 				@media (max-width: 850px) {
 					margin: 0 0 1em;
 				}
-				a, select {
+				a, summary {
 					color: $subColor;
+					cursor: pointer;
 					text-decoration: none;
-					padding-bottom: 2px;
+					padding-bottom: 5px;
 					border-bottom: 1px solid $subColor;
 					transition: all .3s ease;
 					&:hover {
@@ -124,30 +125,18 @@ header {
 					}
 				}
 				&#selectLi {
-					display: inline-block;
 					position: relative;
-					&::after {
-						color: $subColor;
-						position: absolute;
-						right: 0;
-						content: "▼";
+					summary {
+						padding-bottom: 2px;
 					}
-					#selectLang {
-						width: 9em;
-						font-size: 1rem;
+					#optionsLang {
+						background: white;
+						border: 1px solid $subColor;
 						border-top: none;
-						border-left: none;
-						border-right: none;
-						border-radius: 0;
-						background: none;
-						appearance: none;
-						-webkit-appearance: none;
-						&:focus {
-							outline: none;
-						}
-						// &:focus-visible {
-						// 	outline: auto;
-						// }
+						margin-top: 8px;
+						width: 100%;
+						padding: 8px;
+						position: absolute;
 					}
 				}
 			}

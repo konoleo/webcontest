@@ -39,11 +39,17 @@
 					</a>
 				</li>
 				<li id="selectLi">
-					<select id="selectLang">
-						<option selected disabled hidden>言語 / Language</option>
-						<option value="ja">日本語</option>
-						<option value="en-US">English (US)</option>
-					</select>
+					<details>
+						<summary>言語 / Language</summary>
+						<div id="optionsLang">
+							<label>
+								<input type="radio" name="selectLang" value="ja">日本語
+							</label><br>
+							<label>
+								<input type="radio" name="selectLang" value="en-US">English (US)
+							</label>
+						</div>
+					</details>
 				</li>
 			</ul>
 		</nav>
@@ -119,7 +125,7 @@
 			</button>
 		</section>
 		<h2 id="testH2" hidden>テスト</h2>
-		<div class="scroll">
+		<div class="scroll" tabindex="0">
 			<section id="testArea" hidden>
 				<div id="testTitle">
 					<p id="title">
