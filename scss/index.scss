@@ -4,12 +4,86 @@ main {
 	height: calc(100vh - 80px);
 	position: relative;
 	padding-top: 0;
-	div:first-of-type {
+	img {
+		display: none;
+	}
+	.kanjis {
+		display: none;
+	}
+	&.kokuban {
+		overflow: hidden;
+		@media (max-width: 800px) {
+			width: 100vw;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		img {
+			display: block;
+			min-width: 100%;
+			height: 100%;
+			opacity: .75;
+		}
+	}
+	&.kanji {
+		overflow: hidden;
+		@media (max-width: 800px) {
+			width: 100vw;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		#kanjis {
+			display: block;
+			span {
+				font-size: unquote("clamp(2rem, 4vw, 3rem)");
+				position: absolute;
+				&:nth-of-type(1) {
+					top: 23%;
+					left: 10%;
+				}
+				&:nth-of-type(2) {
+					top: 7%;
+					left: 25%;
+				}
+				&:nth-of-type(3) {
+					top: 32%;
+					left: 32%;
+				}
+				&:nth-of-type(4) {
+					top: 20%;
+					left: 38%;
+					@media (min-width: 500px) {
+						left: 44%;
+					}
+					@media (min-width: 700px) {
+						left: 48%;
+					}
+				}
+				&:nth-of-type(5) {
+					top: 9%;
+					right: 25%;
+				}
+				&:nth-of-type(6) {
+					top: 27%;
+					right: 10%;
+				}
+			}
+		}
+	}
+	#thumb {
 		max-width: 600px;
 		position: absolute;
 		bottom: 0;
-		margin: 0 auto 10vh;
+		background: rgba(white, .8);
+		margin: 0 0 40px 40px;
+		border-radius: 8px;
+		padding: 20px unquote("min(7.5vw, 40px)") 40px;
+		@media (max-width: 800px) {
+			border-radius: 0;
+			margin: 0;
+			width: 100vw;
+		}
 		h1 {
+			margin: 8px 0;
 			padding-left: 0;
 			border-left: none;
 		}

@@ -53,9 +53,22 @@
 				</li>
 			</ul>
 		</nav>
+		<select id="idea">
+			<option value="kanji">漢字</option>
+			<option value="kokuban">黒板</option>
+		</select>
 	</header>
 	<main>
-		<div>
+		<img src="IMG_2756.jpg" alt="黒板に並んだ漢字">
+		<div id="kanjis">
+			<span>한자</span>
+			<span>Kanji</span>
+			<span>كانجي</span>
+			<span>かんじ</span>
+			<span lang="zh-CN">汉字</span>
+			<span>Кандзи</span>
+		</div>
+		<div id="thumb">
 			<h1>
 				<span lang="ja">簡単に漢字テストを</span>
 				<span lang="en-US" hidden>Let's make a Kanji test easily</span>
@@ -70,7 +83,20 @@
 			</a>
 		</div>
 	</main>
-	<div>
+	<script>
+		const idea = document.getElementById("idea");
+		const main = document.getElementsByTagName("main")[0];
+		const ramdom = Math.floor(Math.random() * 2);
+		main.classList.add(idea.options[ramdom].value);
+		idea.options[ramdom].selected = true;
+		for (let i = 0; i < idea.length; i++) {
+			idea.addEventListener("change", (e) => {
+				main.classList = "";
+				main.classList.add(e.target.value);
+			});
+		}
+	</script>
+	<div id="footerImg">
 		<img src="" alt="">
 		<img src="" alt="">
 		<img src="" alt="">
