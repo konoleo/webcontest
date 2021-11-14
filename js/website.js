@@ -23,10 +23,34 @@ function lang() {
 }
 
 function addRemovePara() {
-	const aE = document.getElementsByTagName("a");
+	const aE = document.querySelectorAll("a:not([target])");
 	for (let i = 0; i < aE.length; i++) {
 		aE[i].setAttribute("href", location.search ? aE[i].getAttribute("href") + location.search : aE[i].getAttribute("href").replace(/\?.+/, ""));
 	}
+}
+
+const imgLinks = [
+	"aji",
+	"fire",
+	"hare",
+	"ki",
+	"kusa",
+	"mori",
+	"naka",
+	"shita",
+	"ue",
+	"yama",
+	"yasumu"
+];
+
+function shuffle(array) {
+	for (let i = (array.length - 1); 0 < i; i--){
+		const r = Math.floor(Math.random() * (i + 1));
+		const tmp = array[i];
+		array[i] = array[r];
+		array[r] = tmp;
+	}
+	return array;
 }
 
 window.addEventListener("load", () => {
@@ -63,4 +87,11 @@ window.addEventListener("load", () => {
 		nav.classList.toggle("hide");
 	});
 	addRemovePara();
+	const footerImg = document.getElementsByTagName("footer")[0].previousElementSibling.children;
+	const shuffleArr = shuffle(imgLinks);
+	for (let i = 0; i < footerImg.length; i++) {
+		const element = footerImg[i];
+		element.setAttribute("src", `../origin/img/名称未設定フォルダ/${shuffleArr[i]}-${Math.floor(Math.random() * 2) + 1}.png`);
+		element.setAttribute("alt", `${shuffleArr[i]}の絵`);
+	}
 });
