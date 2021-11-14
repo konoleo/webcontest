@@ -91,7 +91,7 @@ window.addEventListener("load", () => {
 	const shuffleArr = shuffle(imgLinks);
 	for (let i = 0; i < footerImg.length; i++) {
 		const element = footerImg[i];
-		element.setAttribute("src", `../origin/img/名称未設定フォルダ/${shuffleArr[i]}-${Math.floor(Math.random() * 2) + 1}.png`);
+		element.setAttribute("src", `../origin/img/parts/${shuffleArr[i]}-${Math.floor(Math.random() * 2) + 1}.png`);
 		element.setAttribute("alt", `${shuffleArr[i]}の絵`);
 	}
 });
