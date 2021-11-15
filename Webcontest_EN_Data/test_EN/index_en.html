@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title lang="ja">漢字テストの作成　- 小学生のための漢字学習</title>
+	<title lang="en-US">Create a Kanji test - Learning Kanji for elementary school students</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" defer></script>
+	<script src="../website.js"></script>
+	<script src="test.js"></script>
+	<link rel="stylesheet" media="all" href="../website.min.css">
+	<link rel="stylesheet" media="all" href="test.min.css">
+	<meta name="robots" content="noindex">
+</head>
+<body>
+<div>
+	<header>
+		<a href="../" id="siteName">
+			<span lang="ja">小学生のための漢字学習</span>
+			<span lang="en-US" hidden>Learning Kanji for elementary school students</span>
+		</a>
+		<div id="hamburger">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<nav class="hide">
+			<ul>
+				<li>
+					<a href="">
+						<span lang="ja">漢字テストの作成</span>
+						<span lang="en-US" hidden>Create a Kanji test</span>
+					</a>
+				</li>
+				<li>
+					<a href="../origin/">
+						<span lang="ja">漢字の成り立ち</span>
+						<span lang="en-US" hidden>The origin of Kanji</span>
+					</a>
+				</li>
+				<li id="selectLi">
+					<select id="selectLang">
+						<option selected disabled hidden>言語 / Language</option>
+						<option value="ja">日本語</option>
+						<option value="en-US">English (US)</option>
+					</select>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>
+			<span lang="ja">漢字テストの作成</span>
+			<span lang="en-US" hidden>Create a Kanji test</span>
+		</h1>
+		<section>
+			<h2>
+				<span lang="ja">設定</span>
+				<span lang="en-US" hidden>Options</span>
+			</h2>
+			<span lang="ja">学年 : </span>
+			<span lang="en-US" hidden>grade : </span>
+			<label>
+				<input type="checkbox" name="studyYear" checked value="1"><span lang="ja">1年生</span><span lang="en-US" hidden>1st grade</span>
+			</label>
+			<label>
+				<input type="checkbox" name="studyYear" checked value="2"><span lang="ja">2年生</span><span lang="en-US" hidden>2nd grade</span>
+			</label>
+			<label>
+				<input type="checkbox" name="studyYear" checked value="3"><span lang="ja">3年生</span><span lang="en-US" hidden>3rd grade</span>
+			</label><br>
+			<label>
+				<input type="checkbox" id="answer">
+				<span lang="ja">答えを表示</span>
+				<span lang="en-US" hidden>Show the answer</span>
+			</label>
+			<div id="tabs">
+				<label class="inputLabel tabLabel" id="activeTab">
+					<input type="radio" id="ramdomTab" name="settingTab" class="hidden">
+					<span lang="ja">ランダムな問題</span>
+					<span lang="en-US" hidden>Random questions</span>
+				</label>
+				<label class="inputLabel tabLabel">
+					<input type="radio" id="selectTab" name="settingTab" class="hidden">
+					<span lang="ja">漢字を選択</span>
+					<span lang="en-US" hidden>Select Kanji</span>
+				</label>
+			</div>
+			<div class="settingTabpanel">
+				<p>
+					<span lang="ja">何問作るか選んでください。</span>
+					<span lang="en-US" hidden>Please choose how many questions to make.</span>
+				</p>
+				<label>
+					<span lang="ja">問題数: </span>
+					<span lang="en-US" hidden>The number of questions: </span>
+					<input type="number" id="qNum" min="1" max="440" value="50"></label>
+			</div>
+			<div class="settingTabpanel" hidden>
+				<p>
+					<span lang="ja">テストに入れる漢字を選んでください。</span>
+					<span lang="en-US" hidden>Please select the Kanji to be included in the test.</span>
+				</p>
+			</div>
+			<template id="kanjiChoicesTemp">
+				<label class="kanjiChoices">
+					<input type="checkbox" name="kanjiChoices" value="">
+				</label>
+			</template>
+		</section>
+		<section>
+			<button id="makeTest">
+				<span lang="ja">テストを作成</span>
+				<span lang="en-US" hidden>Create a test</span>
+			</button>
+			<button id="printTest">
+				<span lang="ja">印刷する</span>
+				<span lang="en-US" hidden>Print</span>
+			</button>
+		</section>
+		<h2 id="testH2" hidden>テスト</h2>
+		<div class="scroll">
+			<section id="testArea" hidden>
+				<div id="testTitle">
+					<p id="title">
+						<span data-year="1" hidden>かんじてすと</span>
+						<span data-year="2" hidden>かん字テスト</span>
+						<span data-year="3" hidden>かん字テスト</span>
+					</p>
+					<p id="name">
+						<span data-year="1" hidden>なまえ</span>
+						<span data-year="2" hidden>名まえ</span>
+						<span data-year="3" hidden>名前</span>
+					</p>
+					<div id="score">
+						<span>/ <span id="maxScore"></span></span>
+					</div>
+				</div>
+				<p>
+					<span data-year="1" hidden>かんじをかきましょう。<span class="dash">―――</span>のことばは、かんじとおくりがなでかきましょう。</span>
+					<span data-year="2" hidden>かん字をかきましょう。<span class="dash">―――</span>のことばは、かん字とおくりがなでかきましょう。</span>
+					<span data-year="3" hidden>かん字を書きましょう。<span class="dash">―――</span>のことばは、かん字とおくりがなで書きましょう。</span>
+				</p>
+				<template id="questionTemp">
+					<div class="question">
+						<span class="counter"></span>
+						<div class="phrase"></div>
+					</div>
+				</template>
+				<div id="questionsDiv"></div>
+			</section>
+		</div>
+	</main>
+</div>
+</body>
