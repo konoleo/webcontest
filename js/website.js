@@ -89,9 +89,10 @@ window.addEventListener("load", () => {
 	addRemovePara();
 	const footerImg = document.getElementsByTagName("footer")[0].previousElementSibling.children;
 	const shuffleArr = shuffle(imgLinks);
+	const isTopDirectory = document.getElementsByTagName("html")[0].hasAttribute("data-isTopDirectory")
 	for (let i = 0; i < footerImg.length; i++) {
 		const element = footerImg[i];
-		element.setAttribute("src", `../origin/img/parts/${shuffleArr[i]}-${Math.floor(Math.random() * 2) + 1}.png`);
+		element.setAttribute("src", `${isTopDirectory ? "" : "../"}origin/img/parts/${shuffleArr[i]}-${Math.floor(Math.random() * 2) + 1}.png`);
 		element.setAttribute("alt", `${shuffleArr[i]}の絵`);
 	}
 });
