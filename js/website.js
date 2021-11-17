@@ -29,20 +29,6 @@ function addRemovePara() {
 	}
 }
 
-const imgLinks = [
-	"aji",
-	"fire",
-	"hare",
-	"ki",
-	"kusa",
-	"mori",
-	"naka",
-	"shita",
-	"ue",
-	"yama",
-	"yasumu"
-];
-
 function shuffle(array) {
 	for (let i = (array.length - 1); 0 < i; i--){
 		const r = Math.floor(Math.random() * (i + 1));
@@ -54,12 +40,6 @@ function shuffle(array) {
 }
 
 window.addEventListener("load", () => {
-	const details = document.querySelector("#selectLi details");
-	const optionsLang = document.getElementById("optionsLang");
-	[["mouseover", "mouseout"], ["focusin", "focusout"]].forEach(elem => {
-		details.addEventListener(elem[0], () => details.setAttribute("open", ""));
-		[elem[1] === "focusout" ? details : optionsLang][0].addEventListener(elem[1], () => details.removeAttribute("open"));
-	});
 	const selectLangE = document.getElementsByName("selectLang");
 	for (let i = 0; i < selectLangE.length; i++) {
 		const element = selectLangE[i];
@@ -87,12 +67,13 @@ window.addEventListener("load", () => {
 		nav.classList.toggle("hide");
 	});
 	addRemovePara();
-	const footerImg = document.getElementsByTagName("footer")[0].previousElementSibling.children;
-	const shuffleArr = shuffle(imgLinks);
-	const isTopDirectory = document.getElementsByTagName("html")[0].hasAttribute("data-isTopDirectory")
-	for (let i = 0; i < footerImg.length; i++) {
-		const element = footerImg[i];
-		element.setAttribute("src", `${isTopDirectory ? "" : "../"}origin/img/parts/${shuffleArr[i]}-${Math.floor(Math.random() * 2) + 1}.png`);
-		element.setAttribute("alt", `${shuffleArr[i]}の絵`);
-	}
 });
+
+(function(d) {
+	var config = {
+		kitId: 'hsd2xde',
+		scriptTimeout: 3000,
+		async: true
+	},
+	h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);

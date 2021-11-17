@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 	<meta charset="utf-8">
-	<title lang="ja">漢字テストの作成　- 小学生のための漢字学習</title>
+	<title lang="ja">漢字テストの作成　- やさしい小学漢字</title>
 	<title lang="en-US">Create a Kanji test - Learning Kanji for elementary school students</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" defer></script>
@@ -15,45 +15,26 @@
 <body>
 <div>
 	<noscript>JavaScriptを有効にしてください。<br>Please enable JavaScript.</noscript>
+	<nav class="hide">
+		<div class="pagesLinks">
+			<div>
+				<a href="../origin/" class="inner"><span lang="ja">漢字の成り立ち</span><span lang="en-US" hidden>The origin of Kanji</span></a>
+				<a href="" class="inner"><span lang="ja">漢字テストの作成</span><span lang="en-US" hidden>Create a Kanji test</span></a>
+				<a href="../about.html" class="inner"><span lang="ja">このサイトについて</span><span lang="en-US" hidden>About this site</span></a>
+			</div>
+			<div>
+				<input type="radio" class="hidden" name="selectLang" id="ja" value="ja">
+				<label class="inner" for="ja">日本語</label>
+				<input type="radio" class="hidden" name="selectLang" id="en-US" value="en-US">
+				<label class="inner" for="en-US">English (US)</label>
+			</div>
+		</div>
+	</nav>
 	<header>
 		<a href="../" id="siteName">
-			<span lang="ja">小学生のための漢字学習</span>
-			<span lang="en-US" hidden>Learning Kanji for elementary school students</span>
+			<img id="logo" src="../img/logo-ja.png" alt="やさしい小学漢字">
 		</a>
-		<div id="hamburger">
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-		<nav class="hide">
-			<ul>
-				<li>
-					<a href="">
-						<span lang="ja">漢字テストの作成</span>
-						<span lang="en-US" hidden>Create a Kanji test</span>
-					</a>
-				</li>
-				<li>
-					<a href="../origin/">
-						<span lang="ja">漢字の成り立ち</span>
-						<span lang="en-US" hidden>The origin of Kanji</span>
-					</a>
-				</li>
-				<li id="selectLi">
-					<details tabindex="0">
-						<summary>言語 / Language</summary>
-						<div id="optionsLang">
-							<label>
-								<input type="radio" name="selectLang" value="ja">日本語
-							</label><br>
-							<label>
-								<input type="radio" name="selectLang" value="en-US">English (US)
-							</label>
-						</div>
-					</details>
-				</li>
-			</ul>
-		</nav>
+		<div id="hamburger"><div></div><div></div><div></div></div>
 	</header>
 	<main>
 		<h1>
@@ -63,10 +44,10 @@
 		<section>
 			<h2>
 				<span lang="ja">設定</span>
-				<span lang="en-US" hidden>Setting</span>
+				<span lang="en-US" hidden>Options</span>
 			</h2>
 			<span lang="ja">学習年: </span>
-			<span lang="en-US" hidden>Year of study: </span>
+			<span lang="en-US" hidden>grade: </span>
 			<label>
 				<input type="checkbox" name="studyYear" checked value="1"><span lang="ja">1年生</span><span lang="en-US" hidden>1st grade</span>
 			</label>
@@ -79,13 +60,13 @@
 			<label>
 				<input type="checkbox" id="answer">
 				<span lang="ja">答えを表示</span>
-				<span lang="en-US" hidden>Show answer</span>
+				<span lang="en-US" hidden>Show the answer</span>
 			</label>
 			<div id="tabs">
 				<label class="inputLabel tabLabel" id="activeTab">
 					<input type="radio" id="ramdomTab" name="settingTab" class="hidden">
 					<span lang="ja">ランダムな問題</span>
-					<span lang="en-US" hidden>Random problem</span>
+					<span lang="en-US" hidden>Random questions</span>
 				</label>
 				<label class="inputLabel tabLabel">
 					<input type="radio" id="selectTab" name="settingTab" class="hidden">
@@ -125,7 +106,10 @@
 				<span lang="en-US" hidden>Print</span>
 			</button>
 		</section>
-		<h2 id="testH2" hidden>テスト</h2>
+		<h2 id="testH2" hidden>
+			<span lang="ja">テスト</span>
+			<span lang="en-US" hidden>Test</span>
+		</h2>
 		<div class="scroll" tabindex="0">
 			<section id="testArea" hidden>
 				<div id="testTitle">
@@ -158,18 +142,6 @@
 			</section>
 		</div>
 	</main>
-	<div id="footerImg">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-	</div>
 	<footer>
 		<ul>
 			<li>

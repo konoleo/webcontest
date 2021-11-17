@@ -2,7 +2,7 @@
 <html lang="ja" data-isTopDirectory>
 <head>
 	<meta charset="utf-8">
-	<title lang="ja">このサイトについて - 小学生のための漢字学習</title>
+	<title lang="ja">このサイトについて - やさしい小学漢字</title>
 	<title lang="en-US">About this site - Learning Kanji for elementary school students</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="stylesheet" media="all" href="website.min.css">
@@ -14,45 +14,26 @@
 <body>
 <noscript>JavaScriptを有効にしてください。<br>Please enable JavaScript.</noscript>
 <div>
+	<nav class="hide">
+		<div class="pagesLinks">
+			<div>
+				<a href="origin/" class="inner"><span lang="ja">漢字の成り立ち</span><span lang="en-US" hidden>The origin of Kanji</span></a>
+				<a href="test/" class="inner"><span lang="ja">漢字テストの作成</span><span lang="en-US" hidden>Create a Kanji test</span></a>
+				<a href="about.html" class="inner"><span lang="ja">このサイトについて</span><span lang="en-US" hidden>About this site</span></a>
+			</div>
+			<div>
+				<input type="radio" class="hidden" name="selectLang" id="ja" value="ja">
+				<label class="inner" for="ja">日本語</label>
+				<input type="radio" class="hidden" name="selectLang" id="en-US" value="en-US">
+				<label class="inner" for="en-US">English (US)</label>
+			</div>
+		</div>
+	</nav>
 	<header>
 		<a href="index.html" id="siteName">
-			<span lang="ja">小学生のための漢字学習</span>
-			<span lang="en-US" hidden>Learning Kanji for elementary school students</span>
+			<img id="logo" src="img/logo-ja.png" alt="やさしい小学漢字">
 		</a>
-		<div id="hamburger">
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-		<nav class="hide">
-			<ul>
-				<li>
-					<a href="test/">
-						<span lang="ja">漢字テストの作成</span>
-						<span lang="en-US" hidden>Create a Kanji test</span>
-					</a>
-				</li>
-				<li>
-					<a href="origin/">
-						<span lang="ja">漢字の成り立ち</span>
-						<span lang="en-US" hidden>The origin of Kanji</span>
-					</a>
-				</li>
-				<li id="selectLi">
-					<details tabindex="0">
-						<summary>言語 / Language</summary>
-						<div id="optionsLang">
-							<label>
-								<input type="radio" name="selectLang" value="ja">日本語
-							</label><br>
-							<label>
-								<input type="radio" name="selectLang" value="en-US">English (US)
-							</label>
-						</div>
-					</details>
-				</li>
-			</ul>
-		</nav>
+		<div id="hamburger"><div></div><div></div><div></div></div>
 	</header>
 	<main>
 		<h1>
@@ -245,21 +226,56 @@
 						</dd>
 					</dl>
 				</li>
+				<li>
+					<h4><a href="https://fonts.adobe.com/fonts/irohamaru" target="_blank" rel="noopener noreferrer">Adobe Fonts</a></h4>
+					<dl>
+						<dt>
+							<span lang="ja">参考・利用先ページ</span>
+							<span lang="en-US" hidden>Pages using that information / technology</span>
+						</dt>
+						<dd>
+							<span lang="ja">全ページ</span>
+							<span lang="en-US" hidden>All pages</span>
+						</dd>
+						<dt>
+							<span lang="ja">許可の取得方法</span>
+							<span lang="en-US" hidden>How to get permission</span>
+						</dt>
+						<dd>
+							<span lang="ja">利用規定に基づき使用
+								<br><a href="https://helpx.adobe.com/jp/fonts/using/font-licensing.html" target="_blank" rel="noopener noreferrer">フォントのライセンス</a>
+							</span>
+							<span lang="en-US" hidden>We used it based acceptable use policy.
+								<br><a href="https://helpx.adobe.com/fonts/using/font-licensing.html" target="_blank" rel="noopener noreferrer">Font licensing</a>
+							</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<h4><a href="https://fonts.google.com/specimen/Klee+One" target="_blank" rel="noopener noreferrer">Google Fonts</a></h4>
+					<dl>
+						<dt>
+							<span lang="ja">参考・利用先ページ</span>
+							<span lang="en-US" hidden>Pages using that information / technology</span>
+						</dt>
+						<dd><a href="test/">
+							<span lang="ja">漢字テストの作成</span>
+							<span lang="en-US" hidden>Create a Kanji test</span>
+						</a></dd>
+						<dt>
+							<span lang="ja">許可の取得方法</span>
+							<span lang="en-US" hidden>How to get permission</span>
+						</dt>
+						<dd>
+							<span lang="ja">利用規定に基づき使用</span>
+							<span lang="en-US" hidden>We used it based acceptable use policy.</span>
+							<br><a href="https://fonts.google.com/about" target="_blank" rel="noopener noreferrer">Google Fonts</a>
+						</dd>
+					</dl>
+				</li>
 			</ul>
 		</section>
 	</main>
-	<div id="footerImg">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-	</div>
 	<footer>
 		<ul>
 			<li>

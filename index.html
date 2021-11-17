@@ -2,7 +2,7 @@
 <html lang="ja" data-isTopDirectory>
 <head>
 	<meta charset="utf-8">
-	<title lang="ja">小学生のための漢字学習</title>
+	<title lang="ja">やさしい小学漢字</title>
 	<title lang="en-US">Learning Kanji for elementary school students</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="stylesheet" media="all" href="website.min.css">
@@ -14,100 +14,44 @@
 <body>
 <noscript>JavaScriptを有効にしてください。<br>Please enable JavaScript.</noscript>
 <div>
+	<nav class="hide">
+		<div class="pagesLinks">
+			<div>
+				<a href="origin/" class="inner"><span lang="ja">漢字の成り立ち</span><span lang="en-US" hidden>The origin of Kanji</span></a>
+				<a href="test/" class="inner"><span lang="ja">漢字テストの作成</span><span lang="en-US" hidden>Create a Kanji test</span></a>
+				<a href="about.html" class="inner"><span lang="ja">このサイトについて</span><span lang="en-US" hidden>About this site</span></a>
+			</div>
+			<div>
+				<input type="radio" class="hidden" name="selectLang" id="ja" value="ja">
+				<label class="inner" for="ja">日本語</label>
+				<input type="radio" class="hidden" name="selectLang" id="en-US" value="en-US">
+				<label class="inner" for="en-US">English (US)</label>
+			</div>
+		</div>
+	</nav>
 	<header>
 		<a href="" id="siteName">
-			<span lang="ja">小学生のための漢字学習</span>
-			<span lang="en-US" hidden>Learning Kanji for elementary school students</span>
+			<img id="logo" src="img/logo-ja.png" alt="やさしい小学漢字">
 		</a>
-		<div id="hamburger">
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-		<nav class="hide">
-			<ul>
-				<li>
-					<a href="test/">
-						<span lang="ja">漢字テストの作成</span>
-						<span lang="en-US" hidden>Create a Kanji test</span>
-					</a>
-				</li>
-				<li>
-					<a href="origin/">
-						<span lang="ja">漢字の成り立ち</span>
-						<span lang="en-US" hidden>The origin of Kanji</span>
-					</a>
-				</li>
-				<li id="selectLi">
-					<details tabindex="0">
-						<summary>言語 / Language</summary>
-						<div id="optionsLang">
-							<label>
-								<input type="radio" name="selectLang" value="ja">日本語
-							</label><br>
-							<label>
-								<input type="radio" name="selectLang" value="en-US">English (US)
-							</label>
-						</div>
-					</details>
-				</li>
-			</ul>
-		</nav>
-		<select id="idea">
-			<option value="kanji">漢字</option>
-			<option value="kokuban">黒板</option>
-		</select>
+		<div id="hamburger"><div></div><div></div><div></div></div>
 	</header>
-	<main>
-		<img src="IMG_2756.jpg" alt="黒板に並んだ漢字">
-		<div id="kanjis">
-			<span>한자</span>
-			<span>Kanji</span>
-			<span>كانجي</span>
-			<span>かんじ</span>
-			<span lang="zh-CN">汉字</span>
-			<span>Кандзи</span>
-		</div>
-		<div id="thumb">
-			<h1>
-				<span lang="ja">簡単に漢字テストを</span>
-				<span lang="en-US" hidden>Let's make a Kanji test easily</span>
-			</h1>
-			<p>
-				<span lang="ja">このサイトでは、学習年からランダムに問題を作る機能や、漢字を一つずつ選んで作る機能があり、自分で問題文を作らなくても簡単に漢字テストを作ることができます。</span>
-				<span lang="en-US" hidden>This site has a function to randomly create questions from the year of study and a function to select and create Kanji one by one, so you can easily create a Kanji test without creating your own question sentences.</span>
-			</p>
-			<a href="test/" class="button">
-				<span lang="ja">漢字テストを作ってみる</span>
-				<span lang="en-US" hidden>Try to make a Kanji test</span>
-			</a>
-		</div>
-	</main>
-	<script>
-		const idea = document.getElementById("idea");
-		const main = document.getElementsByTagName("main")[0];
-		const ramdom = Math.floor(Math.random() * 2);
-		main.classList.add(idea.options[ramdom].value);
-		idea.options[ramdom].selected = true;
-		for (let i = 0; i < idea.length; i++) {
-			idea.addEventListener("change", (e) => {
-				main.classList = "";
-				main.classList.add(e.target.value);
-			});
-		}
-	</script>
-	<div id="footerImg">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
-		<img src="" alt="">
+	<div id="kokuban">
+		<img id="kokubanImg" src="img/kokuban.png" alt="黒板">
+		<img id="kokubanText" src="img/kokuban_text-ja.png" alt="漢字が書けるってかっこいい">
+		<img id="wave" src="img/wave.svg" alt="波の背景">
 	</div>
+	<main>
+		<img id="logo" src="img/logo-ja.png" alt="やさしい小学漢字">
+		<div class="pagesLinks">
+			<a href="origin/" class="inner"><span lang="ja">漢字の成り立ち</span><span lang="en-US" hidden>The origin of Kanji</span></a>
+			<a href="test/" class="inner"><span lang="ja">漢字テストの作成</span><span lang="en-US" hidden>Create a Kanji test</span></a>
+			<a href="about.html" class="inner"><span lang="ja">このサイトについて</span><span lang="en-US" hidden>About this site</span></a>
+		</div>
+		<p>
+			<span lang="ja">このサイトでは、学年別でランダムに問題を作る機能や、漢字を一つずつ選んでテストを作る機能があり、自分で問題を作らなくても簡単に漢字学習をすることができます。</span>
+			<span lang="en-US" hidden>This site has a function to randomly create questions from the grade and a function to select and create Kanji test one by one, so you can easily studey Kanji without creating your own questions.</span>
+		</p>
+	</main>
 	<footer>
 		<ul>
 			<li>
