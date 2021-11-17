@@ -39,7 +39,15 @@ function shuffle(array) {
 	return array;
 }
 
+
 window.addEventListener("load", () => {
+	const nav = document.getElementsByTagName("nav")[0];
+	const hamburger = document.getElementById("hamburger");
+	function toggleMenu() {
+		hamburger.classList.toggle("checked");
+		nav.classList.toggle("hide");
+	}
+	hamburger.addEventListener("click", toggleMenu);
 	const selectLangE = document.getElementsByName("selectLang");
 	for (let i = 0; i < selectLangE.length; i++) {
 		const element = selectLangE[i];
@@ -57,15 +65,10 @@ window.addEventListener("load", () => {
 			}
 			lang();
 			addRemovePara();
+			toggleMenu();
 		});
 	}
 	lang();
-	const nav = document.getElementsByTagName("nav")[0];
-	const hamburger = document.getElementById("hamburger");
-	hamburger.addEventListener("click", () => {
-		hamburger.classList.toggle("checked");
-		nav.classList.toggle("hide");
-	});
 	addRemovePara();
 });
 

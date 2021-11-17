@@ -4,6 +4,12 @@ html {
 	background-color: $bgColor;
 }
 
+nav.hide + header #siteName {
+	// transition: all .3s ease;
+	opacity: 0;
+	visibility: hidden;
+}
+
 header {
 	background: none;
 }
@@ -47,6 +53,7 @@ main {
 	.pagesLinks {
 		width: 80vw;
 		& + p {
+			font-family: $sansSerif;
 			color: $textColor;
 			line-height: 1.8;
 			width: 80vw;
