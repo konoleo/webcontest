@@ -2,97 +2,92 @@
 <html lang="ja">
 <head>
 	<meta charset="utf-8">
-	<title lang="ja">漢字テストの作成　- やさしい小学漢字</title>
-	<title lang="en-US">Create a Kanji test - Learning Kanji for elementary school students</title>
+	<title data-ja="漢字テストの作成 - やさしい小学漢字" data-en-us="Create a Kanji test - Learning Kanji for elementary school students">漢字テストの作成 - やさしい小学漢字</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" defer></script>
-	<script src="../js/website.js"></script>
-	<script src="test.js"></script>
 	<link rel="stylesheet" media="all" href="../website.min.css">
 	<link rel="stylesheet" media="all" href="test.min.css">
-	<meta name="robots" content="noindex">
+	<script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" defer></script>
+	<script src="../js/website.min.js" defer></script>
+	<script src="test.min.js" defer></script>
+	<link rel="icon" href="../img/favicon.ico"/>
+	<link rel="apple-touch-icon" sizes="180x180" href="../img/logo.png">
 </head>
 <body>
 <div>
 	<noscript>JavaScriptを有効にしてください。<br>Please enable JavaScript.</noscript>
+	<header>
+		<a href="../" id="siteName">
+			<img src="../img/logo.png" alt="やさしい小学漢字のロゴ">
+		</a>
+		<div id="hamburger" tabindex="0"><div></div><div></div><div></div></div>
+	</header>
 	<nav class="hide">
 		<div class="pagesLinks">
 			<div>
-				<a href="../origin/" class="inner"><span lang="ja">漢字の成り立ち</span><span lang="en-US" hidden>The origin of Kanji</span></a>
-				<a href="" class="inner"><span lang="ja">漢字テストの作成</span><span lang="en-US" hidden>Create a Kanji test</span></a>
-				<a href="../about.html" class="inner"><span lang="ja">このサイトについて</span><span lang="en-US" hidden>About this site</span></a>
+				<a href="../origin/" class="inner" tabindex="-1"><span lang="ja">漢字の成り立ち</span><span lang="en-us" hidden>The origin of Kanji</span></a>
+				<a href="" class="inner" tabindex="-1"><span lang="ja">漢字テストの作成</span><span lang="en-us" hidden>Create a Kanji test</span></a>
+				<a href="../about.html" class="inner" tabindex="-1"><span lang="ja">このサイトについて</span><span lang="en-us" hidden>About this site</span></a>
 			</div>
 			<div>
-				<input type="radio" class="hidden" name="selectLang" id="ja" value="ja">
+				<input type="radio" class="hidden" name="selectLang" id="ja" value="ja" tabindex="-1">
 				<label class="inner" for="ja">日本語</label>
-				<input type="radio" class="hidden" name="selectLang" id="en-US" value="en-US">
-				<label class="inner" for="en-US">English (US)</label>
+				<input type="radio" class="hidden" name="selectLang" id="en-us" value="en-us" tabindex="-1">
+				<label class="inner" for="en-us">English (US)</label>
 			</div>
 		</div>
 	</nav>
-	<header>
-		<a href="../" id="siteName">
-			<span lang="ja">
-				<img src="../img/logo-ja.png" alt="やさしい小学漢字">
-			</span>
-			<span lang="en-US" hidden>
-				<img src="../img/logo-en.png" alt="やさしい小学漢字">
-			</span>
-		</a>
-		<div id="hamburger"><div></div><div></div><div></div></div>
-	</header>
 	<main>
 		<h1>
 			<span lang="ja">漢字テストの作成</span>
-			<span lang="en-US" hidden>Create a Kanji test</span>
+			<span lang="en-us" hidden>Create a Kanji test</span>
 		</h1>
 		<section>
 			<h2>
 				<span lang="ja">設定</span>
-				<span lang="en-US" hidden>Options</span>
+				<span lang="en-us" hidden>Options</span>
 			</h2>
 			<span lang="ja">学習年: </span>
-			<span lang="en-US" hidden>grade: </span>
+			<span lang="en-us" hidden>grade: </span>
 			<label>
-				<input type="checkbox" name="studyYear" checked value="1"><span lang="ja">1年生</span><span lang="en-US" hidden>1st grade</span>
+				<input type="checkbox" name="studyYear" checked value="1"><span lang="ja">1年生</span><span lang="en-us" hidden>1st grade</span>
 			</label>
 			<label>
-				<input type="checkbox" name="studyYear" checked value="2"><span lang="ja">2年生</span><span lang="en-US" hidden>2nd grade</span>
+				<input type="checkbox" name="studyYear" checked value="2"><span lang="ja">2年生</span><span lang="en-us" hidden>2nd grade</span>
 			</label>
 			<label>
-				<input type="checkbox" name="studyYear" checked value="3"><span lang="ja">3年生</span><span lang="en-US" hidden>3rd grade</span>
+				<input type="checkbox" name="studyYear" checked value="3"><span lang="ja">3年生</span><span lang="en-us" hidden>3rd grade</span>
 			</label><br>
 			<label>
 				<input type="checkbox" id="answer">
 				<span lang="ja">答えを表示</span>
-				<span lang="en-US" hidden>Show the answer</span>
+				<span lang="en-us" hidden>Show the answer</span>
 			</label>
 			<div id="tabs">
 				<label class="inputLabel tabLabel" id="activeTab">
 					<input type="radio" id="ramdomTab" name="settingTab" class="hidden">
 					<span lang="ja">ランダムな問題</span>
-					<span lang="en-US" hidden>Random questions</span>
+					<span lang="en-us" hidden>Random questions</span>
 				</label>
 				<label class="inputLabel tabLabel">
 					<input type="radio" id="selectTab" name="settingTab" class="hidden">
 					<span lang="ja">漢字を選択</span>
-					<span lang="en-US" hidden>Select Kanji</span>
+					<span lang="en-us" hidden>Select Kanji</span>
 				</label>
 			</div>
 			<div class="settingTabpanel">
 				<p>
 					<span lang="ja">何問作るか選んでください。</span>
-					<span lang="en-US" hidden>Please choose how many questions to make.</span>
+					<span lang="en-us" hidden>Please choose how many questions to make.</span>
 				</p>
 				<label>
 					<span lang="ja">問題数: </span>
-					<span lang="en-US" hidden>The number of questions: </span>
+					<span lang="en-us" hidden>The number of questions: </span>
 					<input type="number" id="qNum" min="1" max="440" value="50"></label>
 			</div>
 			<div class="settingTabpanel" hidden>
 				<p>
 					<span lang="ja">テストに入れる漢字を選んでください。</span>
-					<span lang="en-US" hidden>Please select the Kanji to be included in the test.</span>
+					<span lang="en-us" hidden>Please select the Kanji to be included in the test.</span>
 				</p>
 			</div>
 			<template id="kanjiChoicesTemp">
@@ -104,16 +99,20 @@
 		<section>
 			<button id="makeTest">
 				<span lang="ja">テストを作成</span>
-				<span lang="en-US" hidden>Create test</span>
+				<span lang="en-us" hidden>Create test</span>
 			</button>
-			<button id="printTest">
-				<span lang="ja">印刷する</span>
-				<span lang="en-US" hidden>Print</span>
+			<button id="printTest" hidden>
+				<span lang="ja">テストを印刷</span>
+				<span lang="en-us" hidden>Print test</span>
+			</button>
+			<button id="printAnswer" hidden>
+				<span lang="ja">答えを印刷</span>
+				<span lang="en-us" hidden>Print answer</span>
 			</button>
 		</section>
 		<h2 id="testH2" hidden>
 			<span lang="ja">テスト</span>
-			<span lang="en-US" hidden>Test</span>
+			<span lang="en-us" hidden>Test</span>
 		</h2>
 		<div class="scroll" tabindex="0">
 			<section id="testArea" hidden>
@@ -152,19 +151,19 @@
 			<li>
 				<a href="../">
 					<span lang="ja">ホーム</span>
-					<span lang="en-US" hidden>Home</span>
+					<span lang="en-us" hidden>Home</span>
 				</a>
 			</li>
 			<li>
 				<a href="../about.html">
 					<span lang="ja">このサイトについて</span>
-					<span lang="en-US" hidden>About this site</span>
+					<span lang="en-us" hidden>About this site</span>
 				</a>
 			</li>
 		</ul>
 		<p>
 			<span lang="ja">このサイトは<a href="http://webcon.japias.jp" target="_blank" rel="noopener noreferrer">第24回全国中学高校Webコンテスト</a>に参加しています。</span>
-			<span lang="en-US" hidden>This site participates in <a href="http://webcon.japias.jp" target="_blank" rel="noopener noreferrer">the 24'th Japan Junior high school/high school Web contest</a>.</span>
+			<span lang="en-us" hidden>This site participates in <a href="http://webcon.japias.jp" target="_blank" rel="noopener noreferrer">the 24'th Japan Junior high school/high school Web contest</a>.</span>
 		</p>
 	</footer>
 </div>

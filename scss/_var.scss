@@ -2,9 +2,11 @@
 $textColor: #333;
 $bgColor: #e9e6d4;
 $themeColor: #005335;
-// $themeColor: #5E9D7C;
-$subColor: #C26850;
+$subColor: #b68e55;
 
 // フォント
 $sansSerif: irohamaru, -apple-system, BlinkMacSystemFont, sans-serif;
 $textbookTypeface: "Klee One", "游教科書体", "HG教科書体", sans-serif;
+
+// 横幅
+$mainWidth: unquote("min(85vw, 1000px)");

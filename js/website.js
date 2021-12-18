@@ -1,14 +1,14 @@
 const url = new URL(location);
 let navLang = window.navigator.language;
 if (/en/.test(navLang)) {
-	navLang = "en-US";
+	navLang = "en-us";
 }
 const paraLang = url.searchParams.get("lang");
 let userLang = paraLang || navLang;
-const supportedLang = ["ja", "en-US"];
+const supportedLang = ["ja", "en-us"];
 function lang() {
 	document.getElementsByTagName("html")[0].setAttribute("lang", userLang);
-	document.title = document.querySelector(`title:lang(${userLang})`).textContent;
+	document.title = document.getElementsByTagName("title")[0].getAttribute(`data-${userLang}`);
 	const hideLang = supportedLang.filter(item => userLang !== item);
 	const showLangElems = document.querySelectorAll(`[lang=${userLang}]`);
 	for (let i = 0; i < showLangElems.length; i++) {
@@ -40,37 +40,51 @@ function shuffle(array) {
 }
 
 
-window.addEventListener("load", () => {
-	const nav = document.getElementsByTagName("nav")[0];
-	const hamburger = document.getElementById("hamburger");
-	function toggleMenu() {
-		hamburger.classList.toggle("checked");
-		nav.classList.toggle("hide");
-	}
-	hamburger.addEventListener("click", toggleMenu);
-	const selectLangE = document.getElementsByName("selectLang");
-	for (let i = 0; i < selectLangE.length; i++) {
-		const element = selectLangE[i];
-		if (element.value === userLang) {
-			element.checked = true;
-		}
-		element.addEventListener("change", () => {
-			userLang = element.value;
-			if (navLang !== userLang && !url.searchParams.has("lang")) {
-				url.searchParams.append("lang", userLang);
-				history.replaceState(null, null, url.toString());
-			} else if (paraLang !== userLang) {
-				url.searchParams.delete("lang");
-				history.replaceState(null, null, url.toString());
-			}
-			lang();
-			addRemovePara();
-			toggleMenu();
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementsByTagName("nav")[0];
+const siteName = document.getElementById("siteName");
+const mainAndFooter = document.querySelectorAll("nav ~ *");
+function toggleMenu() {
+	hamburger.classList.toggle("checked");
+	nav.classList.toggle("hide");
+	nav.querySelectorAll("[tabindex]").forEach(e => {
+		e.setAttribute("tabindex", nav.classList.contains("hide") ? -1 : 0);
+	});
+	mainAndFooter.forEach(parent => {
+		parent.querySelectorAll("[tabindex], a, input, button").forEach(e => {
+			e.setAttribute("tabindex", nav.classList.contains("hide") ? 0 : -1);
 		});
+	});
+	siteName.classList.toggle("hide");
+}
+hamburger.addEventListener("click", toggleMenu);
+hamburger.addEventListener("keydown", e => {
+	if (e.key === "Enter") {
+		toggleMenu();
 	}
-	lang();
-	addRemovePara();
 });
+const selectLangE = document.getElementsByName("selectLang");
+for (let i = 0; i < selectLangE.length; i++) {
+	const element = selectLangE[i];
+	if (element.value === userLang) {
+		element.checked = true;
+	}
+	element.addEventListener("change", () => {
+		userLang = element.value;
+		if (navLang !== userLang && !url.searchParams.has("lang")) {
+			url.searchParams.append("lang", userLang);
+			history.replaceState(null, null, url.toString());
+		} else if (paraLang !== userLang) {
+			url.searchParams.delete("lang");
+			history.replaceState(null, null, url.toString());
+		}
+		toggleMenu();
+		lang();
+		addRemovePara();
+	});
+}
+lang();
+addRemovePara();
 
 (function(d) {
 	var config = {

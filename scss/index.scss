@@ -1,13 +1,12 @@
 @import "var";
 
-html {
-	background-color: $bgColor;
-}
-
-nav.hide + header #siteName {
-	// transition: all .3s ease;
-	opacity: 0;
-	visibility: hidden;
+#siteName {
+	transition: all .3s ease-in;
+	&.hide {
+		opacity: 0;
+		visibility: hidden;
+		transition: all .32s ease;
+	}
 }
 
 header {
@@ -21,15 +20,25 @@ header {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		object-position: center 80%;
 	}
-	#kokubanText {
-		object-fit: scale-down;
+	.kokubanText {
 		position: absolute;
-		top: 4%;
+		top: 8%;
 		left: 0;
 		right: 0;
 		height: 80%;
-		margin: auto;
+		writing-mode: vertical-rl;
+		font-size: 5vh;
+		color: #eee;
+		display: flex;
+		align-items: center;
+		text-align: right;
+	}
+	[lang=en-us] .kokubanText {
+		top: 8%;
+		left: 0;
+		right: 0;
 	}
 	#wave {
 		width: 100vw;
@@ -42,28 +51,15 @@ header {
 }
 
 main {
-	all: initial;
-	display: block;
 	text-align: center;
+	margin-top: 0;
+	padding-top: 0;
 	#logo {
 		display: block;
-		width: 240px;
-		margin: 0 auto 32px;
-	}
-	.pagesLinks {
-		width: 80vw;
+		width: 60px;
+		margin: 10px auto;
 		& + p {
 			font-family: $sansSerif;
-			color: $textColor;
-			line-height: 1.8;
-			width: 80vw;
-			margin-left: auto;
-			margin-right: auto;
 		}
 	}
-}
-
-#footerImg {
-	display: none;
-	// margin-top: 0;
 }

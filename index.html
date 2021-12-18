@@ -2,69 +2,67 @@
 <html lang="ja" data-isTopDirectory>
 <head>
 	<meta charset="utf-8">
-	<title lang="ja">やさしい小学漢字</title>
-	<title lang="en-US">Learning Kanji for elementary school students</title>
+	<title data-ja="やさしい小学漢字" data-en-us="Learning Kanji for elementary school students">やさしい小学漢字</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="stylesheet" media="all" href="website.min.css">
 	<link rel="stylesheet" media="all" href="index.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" defer></script>
-	<script src="js/website.js"></script>
-	<meta name="robots" content="noindex">
+	<script src="js/website.min.js" defer></script>
+	<link rel="icon" href="img/favicon.ico"/>
+	<link rel="apple-touch-icon" sizes="180x180" href="img/logo.png">
 </head>
 <body>
 <noscript>JavaScriptを有効にしてください。<br>Please enable JavaScript.</noscript>
 <div>
+	<header>
+		<a href="" id="siteName" class="hide">
+			<img src="img/logo.png" alt="やさしい小学漢字のロゴ">
+		</a>
+		<div id="hamburger" tabindex="0"><div></div><div></div><div></div></div>
+	</header>
 	<nav class="hide">
 		<div class="pagesLinks">
 			<div>
-				<a href="origin/" class="inner"><span lang="ja">漢字の成り立ち</span><span lang="en-US" hidden>The origin of Kanji</span></a>
-				<a href="test/" class="inner"><span lang="ja">漢字テストの作成</span><span lang="en-US" hidden>Create a Kanji test</span></a>
-				<a href="about.html" class="inner"><span lang="ja">このサイトについて</span><span lang="en-US" hidden>About this site</span></a>
+				<a href="origin/" class="inner" tabindex="-1"><span lang="ja">漢字の成り立ち</span><span lang="en-us" hidden>The origin of Kanji</span></a>
+				<a href="test/" class="inner" tabindex="-1"><span lang="ja">漢字テストの作成</span><span lang="en-us" hidden>Create a Kanji test</span></a>
+				<a href="about.html" class="inner" tabindex="-1"><span lang="ja">このサイトについて</span><span lang="en-us" hidden>About this site</span></a>
 			</div>
 			<div>
-				<input type="radio" class="hidden" name="selectLang" id="ja" value="ja">
+				<input type="radio" class="hidden" name="selectLang" id="ja" value="ja" tabindex="-1">
 				<label class="inner" for="ja">日本語</label>
-				<input type="radio" class="hidden" name="selectLang" id="en-US" value="en-US">
-				<label class="inner" for="en-US">English (US)</label>
+				<input type="radio" class="hidden" name="selectLang" id="en-us" value="en-us" tabindex="-1">
+				<label class="inner" for="en-us">English (US)</label>
 			</div>
 		</div>
 	</nav>
-	<header>
-		<a href="" id="siteName">
-			<span lang="ja">
-				<img src="img/logo-ja.png" alt="やさしい小学漢字">
-			</span>
-			<span lang="en-US" hidden>
-				<img src="img/logo-en.png" alt="やさしい小学漢字">
-			</span>
-		</a>
-		<div id="hamburger"><div></div><div></div><div></div></div>
-	</header>
 	<div id="kokuban">
-		<img id="kokubanImg" src="img/kokuban.png" alt="黒板">
+		<img id="kokubanImg" src="img/kokuban.jpg" alt="黒板">
 		<span lang="ja">
-			<img id="kokubanText" src="img/kokuban_text-ja.png" alt="漢字が書けるってかっこいい">
+			<p class="kokubanText">
+				漢字が書けるって<br>かっこいい
+			</p>
 		</span>
-		<span lang="en-US" hidden>
-			<img id="kokubanText" src="img/kokuban_text-en.png" alt="漢字が書けるってかっこいい">
+		<span lang="en-us" hidden>
+			<p class="kokubanText">
+				Learn Kanji and<br>Be Cool.
+			</p>
 		</span>
 		<img id="wave" src="img/wave.svg" alt="波の背景">
 	</div>
 	<main>
-		<span lang="ja">
-			<img id="logo" src="img/logo-ja.png" alt="やさしい小学漢字">
-		</span>
-		<span lang="en-US" hidden>
-			<img id="logo" src="img/logo-en.png" alt="やさしい小学漢字">
-		</span>
+		<img id="logo" src="img/logo.png" alt="やさしい小学漢字のロゴ">
+		<p>
+			<span lang="ja">やさしい小学漢字</span>
+			<span lang="en-us" hidden>Learning Kanji for elementary school students</span>
+		</p>
 		<div class="pagesLinks">
-			<a href="origin/" class="inner"><span lang="ja">漢字の成り立ち</span><span lang="en-US" hidden>The origin of Kanji</span></a>
-			<a href="test/" class="inner"><span lang="ja">漢字テストの作成</span><span lang="en-US" hidden>Create a Kanji test</span></a>
-			<a href="about.html" class="inner"><span lang="ja">このサイトについて</span><span lang="en-US" hidden>About this site</span></a>
+			<a href="origin/" class="inner"><span lang="ja">漢字の成り立ち</span><span lang="en-us" hidden>The origin of Kanji</span></a>
+			<a href="test/" class="inner"><span lang="ja">漢字テストの作成</span><span lang="en-us" hidden>Create a Kanji test</span></a>
+			<a href="about.html" class="inner"><span lang="ja">このサイトについて</span><span lang="en-us" hidden>About this site</span></a>
 		</div>
 		<p>
 			<span lang="ja">このサイトでは、学年別でランダムに問題を作る機能や、漢字を一つずつ選んでテストを作る機能があり、自分で問題を作らなくても簡単に漢字学習をすることができます。</span>
-			<span lang="en-US" hidden>This site has a function to randomly create questions from the grade and a function to select and create Kanji test one by one, so you can easily studey Kanji without creating your own questions.</span>
+			<span lang="en-us" hidden>This site has a function to randomly create questions from the grade and a function to select and create Kanji test one by one, so you can easily studey Kanji without creating your own questions.</span>
 		</p>
 	</main>
 	<footer>
@@ -72,19 +70,19 @@
 			<li>
 				<a href="">
 					<span lang="ja">ホーム</span>
-					<span lang="en-US" hidden>Home</span>
+					<span lang="en-us" hidden>Home</span>
 				</a>
 			</li>
 			<li>
 				<a href="about.html">
 					<span lang="ja">このサイトについて</span>
-					<span lang="en-US" hidden>About this site</span>
+					<span lang="en-us" hidden>About this site</span>
 				</a>
 			</li>
 		</ul>
 		<p>
 			<span lang="ja">このサイトは<a href="http://webcon.japias.jp" target="_blank" rel="noopener noreferrer">第24回全国中学高校Webコンテスト</a>に参加しています。</span>
-			<span lang="en-US" hidden>This site participates in <a href="http://webcon.japias.jp" target="_blank" rel="noopener noreferrer">the 24'th Japan Junior high school/high school Web contest</a>.</span>
+			<span lang="en-us" hidden>This site participates in <a href="http://webcon.japias.jp" target="_blank" rel="noopener noreferrer">the 24'th Japan Junior high school/high school Web contest</a>.</span>
 		</p>
 	</footer>
 </div>

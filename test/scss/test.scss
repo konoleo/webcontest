@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap');
 @import "../../scss/var";
 
-html {
-	@media print {
-		main {
-			width: initial;
-		}
-		-webkit-print-color-adjust: exact;
-		color-adjust: exact;
+@media print {
+	body {
+		background: none;
+	}
+	main {
+		width: initial;
 	}
 }
 
@@ -82,7 +81,7 @@ $phraseWide: 1.6em;
 				border-radius: 8px;
 				margin-right: 8px;
 				margin-bottom: 8px;
-				background: $bgColor;
+				background: white;
 			}
 		}
 	}
