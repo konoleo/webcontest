@@ -181,6 +181,8 @@ fetch("../data/kanjidata.json").then(response => {
 	});
 
 	// テストを作る
+	const testH2 = document.getElementById("testH2");
+	const questionTemp = document.getElementById("questionTemp");
 	function makeTest() {
 		// ランダムか漢字の選択か判定
 		const hiddenElem = [...settingTabpanel].filter(elem => elem.hasAttribute("hidden"));
@@ -198,7 +200,7 @@ fetch("../data/kanjidata.json").then(response => {
 		}
 		
 		// テスト部分の表示
-		document.getElementById("testH2").removeAttribute("hidden");
+		testH2.removeAttribute("hidden");
 		testAreaElem.removeAttribute("hidden");
 
 		// 今ある問題を削除
@@ -230,11 +232,11 @@ fetch("../data/kanjidata.json").then(response => {
 		}
 		maxScoreElem.textContent = qNum;
 
-		const temp = document.getElementById("questionTemp");
+		const fragment = document.createDocumentFragment();
 		qKanji.forEach(kanji => {
 			const test = kanjiData[kanji].test;
 			const phraseNum = Math.floor(Math.random() * test.length);	// 何番目のフレーズか
-			const clone = temp.content.cloneNode(true);
+			const clone = questionTemp.content.cloneNode(true);
 			const questionElem = clone.querySelector(".question");
 			const phraseElem = questionElem.getElementsByClassName("phrase")[0];
 			if (test[phraseNum].hasOkurigana) {
@@ -255,7 +257,7 @@ fetch("../data/kanjidata.json").then(response => {
 						answerElem.textContent = phrase.answer;
 						answerElem.classList.add("answer");
 						if (phrase.answer.length >= 4) {
-							answerElem.classList.add("more");
+							answerElem.classList.add("long");
 						}
 						answerElem.setAttribute("hidden", "");
 						blankElem.appendChild(answerElem);
@@ -277,7 +279,7 @@ fetch("../data/kanjidata.json").then(response => {
 						const yomigana = document.createElement("span");
 						yomigana.classList.add("yomigana");
 						if (phrase.text.length >= 3) {
-							yomigana.classList.add("more");
+							yomigana.classList.add("long");
 						}
 						yomigana.textContent = phrase.text;
 						blankElem.appendChild(yomigana);
@@ -292,11 +294,9 @@ fetch("../data/kanjidata.json").then(response => {
 					}
 				});
 			}
-			questionsDiv.appendChild(clone);
+			fragment.appendChild(clone);
 		});
-
-		// 答えを表示する準備
-		showAnswer();
+		questionsDiv.appendChild(fragment);
 
 		// テスト内の漢字を学年に合わせる
 		const maxYear = Math.max(...studyYear);
@@ -369,27 +369,34 @@ fetch("../data/kanjidata.json").then(response => {
 				elements.slice(i * number, (i + 1) * number)
 			);
 		}
+		const fragment = document.createDocumentFragment();
 		sliceByNumber(questionsDiv.children, 8).forEach(elemGroup => {
 			const div = document.createElement("div");
 			div.classList.add("row");
 			elemGroup.forEach(elem => {
 				div.appendChild(elem);
 			});
-			questionsDiv.appendChild(div);
+			fragment.appendChild(div);
 		});
+		questionsDiv.appendChild(fragment);
 		document.body.appendChild(printArea);
 		printArea.appendChild(testAreaElem.cloneNode(true));
 		document.body.firstElementChild.setAttribute("hidden", "");
 	});
 	window.addEventListener("afterprint", () => {
-		document.body.firstElementChild.removeAttribute("hidden");
-		document.getElementById("printArea").remove();
-		const rowElem = document.getElementsByClassName("row");
-		while (rowElem[0]) {
-			while (rowElem[0].firstElementChild) {
-				questionsDiv.appendChild(rowElem[0].firstElementChild);
+		const elem = document.body.firstElementChild;
+		if (elem.hasAttribute("hidden")) {
+			elem.removeAttribute("hidden");
+			document.getElementById("printArea").remove();
+			const rowElem = document.getElementsByClassName("row");
+			const fragment = document.createDocumentFragment();
+			while (rowElem[0]) {
+				while (rowElem[0].firstElementChild) {
+					fragment.appendChild(rowElem[0].firstElementChild);
+				}
+				rowElem[0].remove();
 			}
-			rowElem[0].remove();
+			questionsDiv.appendChild(fragment);
 		}
 	});
 
@@ -407,7 +414,6 @@ fetch("../data/kanjidata.json").then(response => {
 		}
 	}
 	answerBtn.addEventListener("click", showAnswer);
-	showAnswer();
 
 }).catch(e => {
 	console.error(e.message);

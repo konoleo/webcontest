@@ -5,8 +5,9 @@ $themeColor: #005335;
 $subColor: #b68e55;
 
 // フォント
-$sansSerif: irohamaru, -apple-system, BlinkMacSystemFont, sans-serif;
+$sansSerif: -apple-system, BlinkMacSystemFont, sans-serif;
+// $sansSerif: irohamaru, -apple-system, BlinkMacSystemFont, sans-serif;
 $textbookTypeface: "Klee One", "游教科書体", "HG教科書体", sans-serif;
 
 // 横幅
-$mainWidth: unquote("min(85vw, 1000px)");
+$mainWidth: unquote("min(85vw, 800px)");

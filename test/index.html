@@ -57,11 +57,7 @@
 			<label>
 				<input type="checkbox" name="studyYear" checked value="3"><span lang="ja">3年生</span><span lang="en-us" hidden>3rd grade</span>
 			</label><br>
-			<label>
-				<input type="checkbox" id="answer">
-				<span lang="ja">答えを表示</span>
-				<span lang="en-us" hidden>Show the answer</span>
-			</label>
+			<input type="checkbox" id="answer" class="hidden">
 			<div id="tabs">
 				<label class="inputLabel tabLabel" id="activeTab">
 					<input type="radio" id="ramdomTab" name="settingTab" class="hidden">
@@ -82,7 +78,7 @@
 				<label>
 					<span lang="ja">問題数: </span>
 					<span lang="en-us" hidden>The number of questions: </span>
-					<input type="number" id="qNum" min="1" max="440" value="50"></label>
+					<input type="number" id="qNum" min="1" max="440" value="440"></label>
 			</div>
 			<div class="settingTabpanel" hidden>
 				<p>

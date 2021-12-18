@@ -38,9 +38,9 @@ noscript {
 	right: 0;
 	margin: 0 auto;
 	padding: 16px;
-	background: $bgColor;
+	background: lighten($bgColor, 5%);
 	text-align: center;
-	box-shadow: 0 2px 100px rgba(black, .2);
+	box-shadow: 0 2px 20px rgba(black, .2);
 	border-radius: 8px;
 }
 
@@ -164,6 +164,7 @@ h1, h2, h3 {
 	border-left: 4px solid $subColor;
 	padding-left: 16px;
 	line-height: 1.8;
+	font-weight: 500;
 }
 
 h3 {
@@ -203,7 +204,7 @@ button, label {
 button {
 	padding: 12px 16px;
 	margin: 0 8px 12px 0;
-	border-radius: 4px;
+	border-radius: 8px;
 	border: 2px solid $themeColor;
 	background: $themeColor;
 	color: white;

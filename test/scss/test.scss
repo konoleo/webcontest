@@ -144,6 +144,11 @@ $phraseWide: 1.6em;
 	#questionsDiv {
 		font-size: 18px;
 		font-feature-settings: normal;
+		// [data-answer=false] {
+		// 	.answer {
+		// 		display: none;
+		// 	}
+		// }
 		@mixin grid() {
 			display: grid;
 			grid-template-rows: 18px * 10;
@@ -217,7 +222,7 @@ $phraseWide: 1.6em;
 			&[hidden] {
 				visibility: hidden;
 			}
-			&.more {
+			&.long {
 				font-size: 1.5em;
 			}
 		}
@@ -274,7 +279,7 @@ $phraseWide: 1.6em;
 			right: calc(-#{$phraseWide} - 1px);
 			text-align: center;
 			height: 100%;
-			&.more {
+			&.long {
 				top: -25%;
 				height: 150%;
 			}
