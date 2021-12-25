@@ -8,6 +8,7 @@
 	<link rel="stylesheet" media="all" href="test.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" defer></script>
 	<script src="../js/website.min.js" defer></script>
+	<script src="../js/tab.min.js" defer></script>
 	<script src="test.min.js" defer></script>
 	<link rel="icon" href="../img/favicon.ico"/>
 	<link rel="apple-touch-icon" sizes="180x180" href="../img/logo.png">
@@ -58,33 +59,34 @@
 				<input type="checkbox" name="studyYear" checked value="3"><span lang="ja">3年生</span><span lang="en-us" hidden>3rd grade</span>
 			</label><br>
 			<input type="checkbox" id="answer" class="hidden">
-			<div id="tabs">
-				<label class="inputLabel tabLabel" id="activeTab">
-					<input type="radio" id="ramdomTab" name="settingTab" class="hidden">
+			<div class="tabs" id="tab01">
+				<label class="tabLabel activeLabel">
+					<input type="radio" id="ramdomTab" name="tab01" class="hidden">
 					<span lang="ja">ランダムな問題</span>
 					<span lang="en-us" hidden>Random questions</span>
 				</label>
-				<label class="inputLabel tabLabel">
-					<input type="radio" id="selectTab" name="settingTab" class="hidden">
+				<label class="tabLabel">
+					<input type="radio" id="selectTab" name="tab01" class="hidden">
 					<span lang="ja">漢字を選択</span>
 					<span lang="en-us" hidden>Select Kanji</span>
 				</label>
-			</div>
-			<div class="settingTabpanel">
-				<p>
-					<span lang="ja">何問作るか選んでください。</span>
-					<span lang="en-us" hidden>Please choose how many questions to make.</span>
-				</p>
-				<label>
-					<span lang="ja">問題数: </span>
-					<span lang="en-us" hidden>The number of questions: </span>
-					<input type="number" id="qNum" min="1" max="440" value="440"></label>
-			</div>
-			<div class="settingTabpanel" hidden>
-				<p>
-					<span lang="ja">テストに入れる漢字を選んでください。</span>
-					<span lang="en-us" hidden>Please select the Kanji to be included in the test.</span>
-				</p>
+				<hr>
+				<div class="tabContent activeContent">
+					<p>
+						<span lang="ja">何問作るか選んでください。</span>
+						<span lang="en-us" hidden>Please choose how many questions to make.</span>
+					</p>
+					<label>
+						<span lang="ja">問題数: </span>
+						<span lang="en-us" hidden>The number of questions: </span>
+						<input type="number" id="qNum" min="1" max="440" value="440"></label>
+				</div>
+				<div class="tabContent">
+					<p>
+						<span lang="ja">テストに入れる漢字を選んでください。</span>
+						<span lang="en-us" hidden>Please select the Kanji to be included in the test.</span>
+					</p>
+				</div>
 			</div>
 			<template id="kanjiChoicesTemp">
 				<label class="kanjiChoices">
@@ -146,9 +148,7 @@
 		<ul>
 			<li>
 				<a href="../">
-					<span lang="ja">ホーム</span>
-					<span lang="en-us" hidden>Home</span>
-				</a>
+					<span lang="ja">ホーム</span><span lang="en-us" hidden>Home</span></a>
 			</li>
 			<li>
 				<a href="../about.html">

@@ -34,11 +34,11 @@ header {
 		display: flex;
 		align-items: center;
 		text-align: right;
-	}
-	[lang=en-us] .kokubanText {
-		top: 8%;
-		left: 0;
-		right: 0;
+		[lang=en-us] {
+			position: absolute;
+			top: 10%;
+			left: 42%;
+		}
 	}
 	#wave {
 		width: 100vw;
@@ -58,8 +58,5 @@ main {
 		display: block;
 		width: 60px;
 		margin: 10px auto;
-		& + p {
-			font-family: $sansSerif;
-		}
 	}
 }

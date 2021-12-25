@@ -10,7 +10,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" defer></script>
 	<script src="https://unpkg.com/scroll-hint@1.1.10/js/scroll-hint.min.js" defer></script>
 	<script src="../js/website.min.js" defer></script>
-	<script src="../js/scrollable.min.js" defer></script>
+	<script src="../js/tab.min.js" defer></script>
 	<link rel="icon" href="../img/favicon.ico"/>
 	<link rel="apple-touch-icon" sizes="180x180" href="../img/logo.png">
 </head>
@@ -43,7 +43,164 @@
 			<span lang="ja">漢字の成り立ち</span>
 			<span lang="en-us" hidden>The origin of Kanji</span>
 		</h1>
-		<section>
+		<div class="tabs" id="tab01">
+			<label class="tabLabel activeLabel">
+				<input type="radio" name="tab01" class="hidden" checked>
+				<span lang="ja">歴史</span>
+				<span lang="en-us" hidden></span>
+			</label>
+			<label class="tabLabel">
+				<input type="radio" name="tab01" class="hidden">
+				<span lang="ja">構成</span>
+				<span lang="en-us" hidden></span>
+			</label>
+			<hr>
+			<div class="tabContent activeContent">
+				<section>
+					<h2>
+						<span lang="ja">絵から文字へ</span>
+						<span lang="en-us" hidden></span>
+					</h2>
+					<p>
+						<span lang="ja">ずっと昔、まだ漢字がなかった頃、中国の王様は亀の甲羅の骨や牛の骨で占いをしていました。しかし、その結果を記録することができませんでした。文字がなかったからです。記録ができないと、いつまでも誰かが占いの結果を覚えていないといけません。文字がないと不便なので、中国の王様は絵を簡単にした文字を使うようにしました。それが最初の漢字、「甲骨文字」の中の「象形文字」です。元になった絵と文字が似ている甲骨文字を見てみましょう。</span>
+						<span lang="en-us" hidden></span>
+					</p>
+					<div class="imgDiv">
+						<figure>
+							<img src="img/ki.png" alt="「木」の成り立ち">
+							<figcaption>「木」の成り立ち</figcaption>
+						</figure>
+						<figure>
+							<img src="img/fire.png" alt="「火」の成り立ち">
+							<figcaption>「火」の成り立ち</figcaption>
+						</figure>
+						<figure>
+							<img src="img/yama.png" alt="「山」の成り立ち">
+							<figcaption>「山」の成り立ち</figcaption>
+						</figure>
+					</div>
+					<p>
+						<span lang="ja">これで占いに使った骨に結果を記録できるようになりました。でも、このままでは目に見えないものを表す文字は作ることができません。「上」「中」「下」などです。占いの結果を記録するときも、今の文章と同じように「上」「中」「下」などを使うことがありました。そこで甲骨文字の中に足されたのが「指示文字」です。</span>
+						<span lang="en-us" hidden></span>
+					</p>
+					<div class="imgDiv">
+						<figure>
+							<img src="img/ue.png" alt="「上」の成り立ち">
+							<figcaption>「上」の成り立ち</figcaption>
+						</figure>
+						<figure>
+							<img src="img/shita.png" alt="「下」の成り立ち">
+							<figcaption>「下」の成り立ち</figcaption>
+						</figure>
+						<figure>
+							<img src="img/naka.png" alt="「中」の成り立ち">
+							<figcaption>「中」の成り立ち</figcaption>
+						</figure>
+					</div>
+				</section>
+				<section>
+					<h2>
+						<span lang="ja">漢字パズルで文字を増やす</span>
+						<span lang="en-us" hidden></span>
+					</h2>
+					<p>
+						<span lang="ja">だいぶ漢字が増えてきましたね。それでもまだまだ足りません。実は、今使われている漢字の多くは象形文字でも指示文字でもありません。次は、絵から文字を作るのではなく、今ある文字をパズルのように組み合わせて漢字を作りました。</span>
+						<span lang="en-us" hidden></span>
+					</p>
+					<p>
+						<span lang="ja">このようにしてできた漢字は、「会意文字」という名前で呼ばれます。会意文字は、2~3個の漢字の意味を組み合わせて新しい意味をつけた文字のことです。</span>
+						<span lang="en-us" hidden></span>
+					</p>
+					<p>
+						<span lang="ja">「木」がたくさんある「森」、「人」が「木」の横で「休」む、のように作られます。</span>
+						<span lang="en-us" hidden></span>
+					</p>
+					<div class="imgDiv">
+						<figure>
+							<img src="img/mori.png" alt="「森」の成り立ち">
+							<figcaption>「森」の成り立ち</figcaption>
+						</figure>
+						<figure>
+							<img src="img/yasumu.png" alt="「休」の成り立ち">
+							<figcaption>「休」の成り立ち</figcaption>
+						</figure>
+					</div>
+				</section>
+				<section>
+					<h2>
+						<span lang="ja">いろいろなところで漢字を使う時代に</span>
+						<span lang="en-us" hidden></span>
+					</h2>
+					<p>
+						<span lang="ja">これで「象形文字」「指示文字」「会意文字」が揃い、甲骨文字が完成しました。甲骨文字は約400年間使われましたが、次の書き方の「金文」が使われるようになった頃には、占いだけでなく他のことにも使われるようになっていました。すると、今ある漢字では足りなくなります。そして作られたのが「形声文字」です。意味を表す漢字と音を表す漢字を組み合わせて作られました。読みは音を表す漢字と同じですが、意味の付け方は2種類あります。1つは意味を表す漢字と同じ意味を付ける方法、もう1つは音を表す漢字と意味を表す漢字の両方の意味を混ぜて意味を付ける方法です。形声文字も漢字パズルでできた漢字です。</span>
+						<span lang="en-us" hidden></span>
+					</p>
+					<p>
+						<span lang="ja">例えば、「銅」は、「どう（同）」と呼ばれている「金」属、という意味で、「晴」は、「せい（青）」と読み、太陽（日）が見えて空が青いときの天気、という意味を持っています。</span>
+						<span lang="en-us" hidden></span>
+					</p>
+					<div class="imgDiv">
+						<figure>
+							<img src="img/kusa.png" alt="「草」の成り立ち">
+							<figcaption>「草」の成り立ち</figcaption>
+						</figure>
+						<figure>
+							<img src="img/hare.png" alt="「晴」の成り立ち">
+							<figcaption>「晴」の成り立ち</figcaption>
+						</figure>
+						<figure>
+							<img src="img/aji.png" alt="「味」の成り立ち">
+							<figcaption>「味」の成り立ち</figcaption>
+						</figure>
+					</div>
+				</section>
+				<section>
+					<h2>
+						<span lang="ja">より書きやすく</span>
+						<span lang="en-us" hidden></span>
+					</h2>
+					<p>
+						<span lang="ja">ここまで来てやっと漢字の完成です。でも、まだ絵のような文字なので、速く、たくさんの文字を書くのは大変でした。そのため、いろいろな工夫がされて漢字は書きやすく変わっていきました。どのように書きやすく変わってきたのでしょうか。</span>
+						<span lang="en-us" hidden></span>
+					</p>
+					// 画像
+					<p>
+						<span lang="ja">まず、複雑で絵のような部分が簡単になり、曲線が直線に変わりました。ここまで変わったのが「隷書」です。隷書もまだ丸い部分があったので、さらにたくさんの部分が直線になりました。これが今使われている漢字の書き方、「楷書」です。ひらがなやアルファベットとは違って漢字がカクカクなのは、書きやすくするためだったのです。</span>
+						<span lang="en-us" hidden></span>
+					</p>
+				</section>
+			</div>
+			<div class="tabContent">
+				<section>
+					<h2>
+						<span lang="ja">「へん」と「つくり」</span>
+						<span lang="en-us" hidden></span>
+					</h2>
+					<p>
+						<span lang="ja">ここまでで漢字ができるまでの歴史を説明してきました。ここで少し歴史から離れて、漢字パズルについての話をします。漢字パズルでできた漢字を、元の漢字ごとに分解してみてください。今回は、左と右で分かれている漢字が多いので左右で漢字を分けます。分かれた左側のパーツを「へん」、右側のパーツを「つくり」と言います。へんが同じ漢字同士は同じことについての漢字が多く、つくりが同じ漢字同士は音が同じなことが多いです。</span>
+						<span lang="en-us" hidden></span>
+					</p>
+					<ul>
+						<li>
+							<span lang="ja">「桜」「株」「柱」は、すべて「木へん」なので、同じ「木」についての文字。</span>
+							<span lang="en-us" hidden></span>
+						</li>
+						<li>
+							<span lang="ja">「沖」と「仲」は「中」がつくりなので、音読みはすべて「ちゅう」。</span>
+							<span lang="en-us" hidden></span>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<p>
+						<span lang="ja">この次に、一年生で習う漢字に使われているへんとつくりの一覧を載せます。</span>
+						<span lang="en-us" hidden></span>
+					</p>
+					// 画像
+				</section>
+			</div>
+		</div>
+		<!-- <section>
 			<h2>
 				<span lang="ja">漢字の歴史クイズ</span>
 				<span lang="en-us" hidden>The Quiz Of Kanji's History</span>
@@ -76,7 +233,7 @@
 				<span lang="ja">象形文字は、ものの形を線でえがいた絵をもとに作られた漢字です。「木」、「火」、「山」などの漢字の成り立ちを見てみましょう。</span>
 				<span lang="en-us" hidden><i>Shoukei</i> Characters are based on lines drawing of the shape of the objects. Then, let's see the origin of like "木 (tree)", "火 (fire)", and "山 (mountein)".</span>
 			</p>
-			<div class="imgDiv js-scrollable" tabindex="0">
+			<div class="imgDiv">
 				<img src="img/ki.png" alt="「木」の成り立ち">
 				<img src="img/fire.png" alt="「火」の成り立ち">
 				<img src="img/yama.png" alt="「山」の成り立ち">
@@ -89,7 +246,7 @@
 				<span lang="ja">指事文字は、一つ目の象形文字とは反対で、目に見えないものを表す絵をもとに作られた漢字です。目に見えないものが元になっているので、象形文字よりは数が少ないです。「上」、「下」、「中」などがあります。</span>
 				<span lang="en-us" hidden><i>Shiji</i> characters are the opposite of the first <i>Shoukei</i> characters, and are Kanji created based on pictures that represents something invisible. They are less numerous than <i>Shoukei</i> characters because they are based on what are invisible. There are "上 (top)", "中 (middle)" and "下 (bottom)" etc.</span>
 			</p>
-			<div class="imgDiv js-scrollable" tabindex="0">
+			<div class="imgDiv">
 				<img src="img/ue.png" alt="「上」の成り立ち">
 				<img src="img/shita.png" alt="「下」の成り立ち">
 				<img src="img/naka.png" alt="「中」の成り立ち">
@@ -102,7 +259,7 @@
 				<span lang="ja">会意文字は、何個かの漢字を組み合わせて別の意味を表す漢字のことです。木がたくさんある「森」、人が木の横で「休」む、のように作られます。</span>
 				<span lang="en-us" hidden><i>Kaii</i> characters are Kanji that combine several Kanji to express different meanings. They are made sach as "森 (forest)" (it explains a lot of trees) and "休 (rest)" (it explains someone taking a rest beside a tree).</span>
 			</p>
-			<div class="imgDiv js-scrollable" tabindex="0">
+			<div class="imgDiv">
 				<img src="img/mori.png" alt="「森」の成り立ち">
 				<img src="img/yasumu.png" alt="「休」の成り立ち">
 			</div>
@@ -114,7 +271,7 @@
 				<span lang="ja">形声文字は、音を表す漢字と意味を表す漢字を組み合わせて作られた漢字です。「草」、「晴」、「味」などの漢字の成り立ちを見てみましょう。</span>
 				<span lang="en-us" hidden><i>Keisei</i> characters are Kanji created by combining a Kanji that represents sound and a Kanji that represents meaning. Let's see the origins such as "草 (grass)", "晴 (sunny)" and "味 (taste)".</span>
 			</p>
-			<div class="imgDiv js-scrollable" tabindex="0">
+			<div class="imgDiv">
 				<img src="img/kusa.png" alt="「草」の成り立ち">
 				<img src="img/hare.png" alt="「晴」の成り立ち">
 				<img src="img/aji.png" alt="「味」の成り立ち">
@@ -125,15 +282,13 @@
 				<span lang="ja">いろんな漢字の成り立ちがありましたね。みなさんが今覚えようとしている漢字は「象形文字」、「指事文字」、「会意文字」、「形声文字」のどれでしょうか。ぜひ調べてみてください。</span>
 				<span lang="en-us" hidden>There were various origins of Kanji. Which of the Kanji you are trying to remember now is "象形 <i>(Shoukei)</i> ", "指事 <i>(Shiji)</i> ", "会意 <i>(Kaii)</i> " or "形声 <i>(Keisei)</i> "? Please check it out!</span>
 			</p>
-		</section>
+		</section> -->
 	</main>
 	<footer>
 		<ul>
 			<li>
 				<a href="../">
-					<span lang="ja">ホーム</span>
-					<span lang="en-us" hidden>Home</span>
-				</a>
+					<span lang="ja">ホーム</span><span lang="en-us" hidden>Home</span></a>
 			</li>
 			<li>
 				<a href="../about.html">

@@ -1,20 +1,27 @@
+@import "../../scss/var";
+
 .imgDiv {
 	display: flex;
-	overflow-y: auto;
-	margin-bottom: 32px;
-	@media (max-width: 500px) {
-		overflow-y: hidden;
-		flex-wrap: wrap;
-	}
-	img {
-		width: 400px;
-		margin-right: 40px;
-		margin-bottom: 2px;
-		padding-right: 2px;
+	flex-wrap: wrap;
+	figure {
+		margin: 8px 0;
+		margin-right: 0;
+		width: calc(#{$mainWidth} / 2 - 20px);
+		&:nth-of-type(2n) {
+			margin-left: 40px;
+			@media (max-width: 500px) {
+				margin-left: 0;
+			}
+		}
 		@media (max-width: 500px) {
 			width: 100%;
-			margin-right: 0;
-			margin-bottom: 32px;
+		}
+		img {
+			width: 100%;
+		}
+		figcaption {
+			// border-bottom: 2px solid $themeColor;
+			margin: 4px 0 2px;
 		}
 	}
 }

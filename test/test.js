@@ -65,8 +65,8 @@ fetch("../data/kanjidata.json").then(response => {
 		return i + "th";
 	}
 
-	const settingTabs = document.getElementsByName("settingTab");
-	const settingTabpanel = document.getElementsByClassName("settingTabpanel");
+	const tab01 = document.getElementById("tab01");
+	const tabContent = tab01.getElementsByClassName("tabContent");
 	const questionsDiv = document.getElementById("questionsDiv");
 	const studyYearBtns = document.getElementsByName("studyYear");
 	const qNumElem = document.getElementById("qNum");
@@ -78,27 +78,9 @@ fetch("../data/kanjidata.json").then(response => {
 	const testAreaElem = document.getElementById("testArea");
 	const maxScoreElem = document.getElementById("maxScore");
 
-	// 設定タブの初期設定
-	const activeTab = document.getElementById("activeTab");
-	activeTab.firstElementChild.setAttribute("checked", "");
-	if (activeTab.firstElementChild === settingTabs[0]) {
-		settingTabpanel[1].setAttribute("hidden", "");
-	} else {
-		settingTabpanel[0].setAttribute("hidden", "");
-	}
-	// 設定タブの動き
-	for (let i = 0; i < settingTabs.length; i++) {
-		settingTabs[i].addEventListener("click", () => {
-			settingTabpanel[i].removeAttribute("hidden");
-			settingTabpanel[Math.pow(0,i)].setAttribute("hidden", "");
-			settingTabs[i].parentElement.id = "activeTab";
-			settingTabs[Math.pow(0,i)].parentElement.removeAttribute("id");
-		});
-	}
-
 	// 学習年を選び直した時に、選択肢を変える
 	function changeChoices() {
-		const detailsElems = settingTabpanel[1].getElementsByTagName("details");
+		const detailsElems = tabContent[1].getElementsByTagName("details");
 		const studyYear = getMultiple(studyYearBtns);
 		if (detailsElems.length) {
 			studyYear.forEach((year, index) => {
@@ -151,7 +133,7 @@ fetch("../data/kanjidata.json").then(response => {
 						div.appendChild(clone);
 					});
 					details.appendChild(div);
-					settingTabpanel[1].appendChild(details);
+					tabContent[1].appendChild(details);
 				}
 			});
 			lang();
@@ -185,8 +167,8 @@ fetch("../data/kanjidata.json").then(response => {
 	const questionTemp = document.getElementById("questionTemp");
 	function makeTest() {
 		// ランダムか漢字の選択か判定
-		const hiddenElem = [...settingTabpanel].filter(elem => elem.hasAttribute("hidden"));
-		const kind = hiddenElem[0] === settingTabpanel[1] ? "ramdom" : "select";
+		const hiddenElem = [...tabContent].filter(elem => !elem.classList.contains("activeContent"));
+		const kind = hiddenElem[0] === tabContent[1] ? "ramdom" : "select";
 		
 		// テストが作れるか判定
 		const studyYear = getMultiple(studyYearBtns);

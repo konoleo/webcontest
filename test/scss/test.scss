@@ -19,47 +19,8 @@ $phraseWide: 1.6em;
 	margin: 40px 0 0;
 }
 
-#tabs {
-	display: flex;
-	width: 100%;
-	margin-top: 12px;
-	.tabLabel {
-		flex-grow: 1;
-		width: 50%;
-		border: 1px solid $themeColor;
-		padding: 0.5em 0;
-		text-align: center;
-		cursor: pointer;
-		border-radius: 0 8px 0 0;
-		&:first-of-type {
-			border-radius: 8px 0 0 0;
-			border-right: none;
-		}
-		&:focus-within {
-			outline: auto;
-		}
-		&#activeTab {
-			cursor: default;
-			position: relative;
-			&::after {
-				content: "";
-				position: absolute;
-				left: calc(50% - 10px);
-				top: 100%;
-				border-right: 10px solid transparent;
-				border-top: 8px solid $themeColor;
-				border-left: 10px solid transparent;
-			}
-		}
-	}
-}
-
-.settingTabpanel {
-	margin-bottom: 16px;
-	border: 1px solid $themeColor;
-	border-top: none;
-	border-radius: 0 0 8px 8px;
-	padding: 8px 16px;
+.tabContent {
+	margin: 16px 0;
 	p:first-child {
 		margin: 0;
 	}
@@ -125,6 +86,7 @@ $phraseWide: 1.6em;
 			text-align: center;
 			padding-left: 16px;
 			border-left: 1px solid $textColor;
+			margin: 0;
 		}
 		#score {
 			font-size: 18px;
@@ -144,11 +106,6 @@ $phraseWide: 1.6em;
 	#questionsDiv {
 		font-size: 18px;
 		font-feature-settings: normal;
-		// [data-answer=false] {
-		// 	.answer {
-		// 		display: none;
-		// 	}
-		// }
 		@mixin grid() {
 			display: grid;
 			grid-template-rows: 18px * 10;
