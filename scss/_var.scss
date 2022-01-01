@@ -1,15 +1,13 @@
 // 色
 $textColor: #444;
-// $lightColor: #d6d3ca;
 $bgColor: #e9e6d4;
 $themeColor: #005335;
 $subColor: #b68e55;
 
 // フォント
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap');
-$sansSerif: -apple-system, BlinkMacSystemFont, sans-serif;
-$sansSerif: irohamaru, -apple-system, BlinkMacSystemFont, sans-serif;
-$sansSerif: "Zen Maru Gothic", "zen-maru-gothic", -apple-system, BlinkMacSystemFont, sans-serif;
+// $sansSerif: irohamaru, -apple-system, BlinkMacSystemFont, sans-serif;
+$sansSerif: "Zen Maru Gothic", -apple-system, BlinkMacSystemFont, sans-serif;
 $textbookTypeface: "Klee One", "游教科書体", "HG教科書体", sans-serif;
 
 // 横幅

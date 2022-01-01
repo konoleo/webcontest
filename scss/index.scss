@@ -23,21 +23,21 @@ header {
 		object-position: center 80%;
 	}
 	.kokubanText {
+		width: max-content;
+		height: 75%;
 		position: absolute;
-		top: 8%;
+		top: 0;
 		left: 0;
 		right: 0;
-		height: 80%;
+		margin: 16px auto;
 		writing-mode: vertical-rl;
 		font-size: 5vh;
 		color: #eee;
-		display: flex;
-		align-items: center;
 		text-align: right;
-		[lang=en-us] {
-			position: absolute;
-			top: 10%;
-			left: 42%;
+		[lang=en-us]:not([hidden]) {
+			display: block;
+			margin-top: 1em;
+			margin-left: 0.3em;
 		}
 	}
 	#wave {
