@@ -15,6 +15,11 @@
 	@media (max-width: 500px) {
 		--column: calc(var(--column) - 1) !important;
 	}
+	&.long {
+		@media (max-width: 600px) {
+			--column: calc(var(--column) - 1) !important;
+		}
+	}
 	display: grid;
 	grid-template-columns: repeat(var(--column), 1fr);
 	grid-gap: 16px 32px;
