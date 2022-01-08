@@ -10,14 +10,13 @@ for (const tab of tabs) {
 			tab.getElementsByClassName("activeContent")[0].classList.remove("activeContent");
 			tabContent[i].classList.add("activeContent");
 		});
-		element.onfocus = (e) => {
-			e.target.parentElement.classList.add("focus-visible");
-		};
-		element.addEventListener("blur", (e) => {
-			e.target.parentElement.classList.remove("focus-visible");
+		element.addEventListener("focus", (e) => {
+			if (e.target.classList.contains("focus-visible")) {
+				e.target.parentElement.classList.add("outline");
+			}
 		});
-		element.parentElement.addEventListener("touchend", () => {
-			element.onfocus = "";
+		element.addEventListener("blur", (e) => {
+			e.target.parentElement.classList.remove("outline");
 		});
 	});
 }

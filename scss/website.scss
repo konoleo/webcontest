@@ -2,15 +2,10 @@
 
 * {
 	box-sizing: border-box;
+	&:focus:not(.focus-visible) {
+		outline: none;
+	}
 }
-
-.js-focus-visible :focus:not(.focus-visible) {
-	outline: none;
-}
-
-// _::-webkit-full-page-media, _:future, :root .focus-visible {
-// 	outline: auto;
-// }
 
 body {
 	margin: 0;
@@ -250,10 +245,12 @@ li {
 
 dt {
 	margin-top: 8px;
+	font-size: 1.05rem;
 }
 
 dd {
 	margin-bottom: 12px;
+	margin-left: 32px;
 }
 
 h4 {
@@ -305,6 +302,9 @@ table {
 		}
 		&.activeLabel {
 			background: $bgColor;
+		}
+		&.outline {
+			outline: auto;
 		}
 	}
 	hr {

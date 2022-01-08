@@ -61,3 +61,19 @@
 		}
 	}
 }
+
+dd {
+	min-height: 106px;
+	.syotaiImg {
+		img {
+			width: 100px;
+			height: 100px;
+			float: right;
+			margin: 6px 0 16px 16px;
+		}
+	}
+}
+
+dl + p {
+	clear: both;
+}
