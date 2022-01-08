@@ -8,9 +8,9 @@
 	outline: none;
 }
 
-.focus-visible {
-	outline: auto;
-}
+// _::-webkit-full-page-media, _:future, :root .focus-visible {
+// 	outline: auto;
+// }
 
 body {
 	margin: 0;
@@ -124,7 +124,7 @@ nav {
 	transition: all .3s ease;
 	opacity: 1;
 	&.hide {
-		transform: translateY(-100vh);
+		transform: translateY(-101vh);
 		transition-timing-function: ease-in;
 		opacity: 0;
 	}

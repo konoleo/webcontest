@@ -331,12 +331,22 @@ fetch("../data/kanjidata.json").then(response => {
 
 	// 印刷ボタン
 	printBtn.addEventListener("click", () => {
+		window.onbeforeprint = function() {
+			answerBtn.checked = false;
+			showAnswer();
+		};
 		window.print();
 	});
 	printAnsBtn.addEventListener("click", () => {
-		answerBtn.click();
+		window.onbeforeprint = function() {
+			answerBtn.checked = true;
+			showAnswer();
+		};
+		window.onafterprint = function() {
+			answerBtn.checked = false;
+			showAnswer();
+		};
 		window.print();
-		answerBtn.click();
 	});
 
 	// 印刷

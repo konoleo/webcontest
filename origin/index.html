@@ -4,11 +4,11 @@
 	<meta charset="utf-8">
 	<title data-ja="漢字の成り立ち - やさしい小学漢字" data-en-us="The origin of Kanji - Learning Kanji for elementary school students">漢字の成り立ち - やさしい小学漢字</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/scroll-hint@1.1.10/css/scroll-hint.css">
+	<!-- <link rel="stylesheet" href="https://unpkg.com/scroll-hint@1.1.10/css/scroll-hint.css"> -->
 	<link rel="stylesheet" media="all" href="../website.min.css">
 	<link rel="stylesheet" media="all" href="origin.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" defer></script>
-	<script src="https://unpkg.com/scroll-hint@1.1.10/js/scroll-hint.min.js" defer></script>
+	<!-- <script src="https://unpkg.com/scroll-hint@1.1.10/js/scroll-hint.min.js" defer></script> -->
 	<script src="../js/website.min.js" defer></script>
 	<script src="../js/tab.min.js" defer></script>
 	<link rel="icon" href="../img/favicon.ico"/>
@@ -44,18 +44,18 @@
 			<span lang="en-us" hidden>The origin of Kanji</span>
 		</h1>
 		<div class="tabs" id="tab01">
-			<label class="tabLabel ">
-				<input type="radio" name="tab01" class="hidden" >
+			<label class="tabLabel activeLabel">
+				<input type="radio" name="tab01" class="hidden" checked>
 				<span lang="ja">歴史</span>
 				<span lang="en-us" hidden></span>
 			</label>
-			<label class="tabLabel activeLabel">
-				<input type="radio" name="tab01" class="hidden" checked>
+			<label class="tabLabel">
+				<input type="radio" name="tab01" class="hidden">
 				<span lang="ja">構成</span>
 				<span lang="en-us" hidden></span>
 			</label>
 			<hr>
-			<div class="tabContent ">
+			<div class="tabContent activeContent">
 				<section>
 					<h2>
 						<span lang="ja">絵から文字へ</span>
@@ -67,44 +67,72 @@
 					</p>
 					<div class="imgDiv" style="--column: 2">
 						<figure>
-							<img src="img/ki.png" alt="「木」の成り立ち">
+							<picture>
+								<source srcset="img/ki.webp" type="image/webp"/>
+								<img src="img/ki.png" alt="「木」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">「木」は幹の絵</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/fire.png" alt="「火」の成り立ち">
+							<picture>
+								<source srcset="img/fire.webp" type="image/webp"/>
+								<img src="img/fire.png" alt="「火」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">「火」の成り立ち</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/yama.png" alt="「山」の成り立ち">
+							<picture>
+								<source srcset="img/yama.webp" type="image/webp"/>
+								<img src="img/yama.png" alt="「山」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">「山」の成り立ち</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/mizu.png" alt="「水」の成り立ち">
+							<picture>
+								<source srcset="img/mizu.webp" type="image/webp"/>
+								<img src="img/mizu.png" alt="「水」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">川の絵が「水」のもと</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/hito.png" alt="「人」の成り立ち">
+							<picture>
+								<source srcset="img/hito.webp" type="image/webp"/>
+								<img src="img/hito.png" alt="「人」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">「人」の成り立ち</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/sun.png" alt="「日」の成り立ち">
+							<picture>
+								<source srcset="img/sun.webp" type="image/webp"/>
+								<img src="img/sun.png" alt="「日」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">「日」の成り立ち</span>
+								<span lang="en-us" hidden></span>
+							</figcaption>
+						</figure>
+						<figure>
+							<picture>
+								<source srcset="img/ko.webp" type="image/webp"/>
+								<img src="img/ko.png" alt="「子」の成り立ち">
+							</picture>
+							<figcaption>
+								<span lang="ja">「子」の成り立ち</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
@@ -130,21 +158,30 @@
 					</p>
 					<div class="imgDiv" style="--column: 2">
 						<figure>
-							<img src="img/ue.png" alt="「上」の成り立ち">
+							<picture>
+								<source srcset="img/ue.webp" type="image/webp"/>
+								<img src="img/ue.png" alt="「上」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">「上」の成り立ち</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/shita.png" alt="「下」の成り立ち">
+							<picture>
+								<source srcset="img/shita.webp" type="image/webp"/>
+								<img src="img/shita.png" alt="「下」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">「下」の成り立ち</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/naka.png" alt="「中」の成り立ち">
+							<picture>
+								<source srcset="img/naka.webp" type="image/webp"/>
+								<img src="img/naka.png" alt="「中」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">軍の旗の絵からできた「中」</span>
 								<span lang="en-us" hidden></span>
@@ -175,35 +212,50 @@
 					</p>
 					<div class="imgDiv" style="--column: 2">
 						<figure>
-							<img src="img/mori.png" alt="「森」の成り立ち">
+							<picture>
+								<source srcset="img/mori.webp" type="image/webp"/>
+								<img src="img/mori.png" alt="「森」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">「森」の成り立ち</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/yasumu.png" alt="「休」の成り立ち">
+							<picture>
+								<source srcset="img/yasumu.webp" type="image/webp"/>
+								<img src="img/yasumu.png" alt="「休」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">「休」の成り立ち</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/au.png" alt="「合」の成り立ち">
+							<picture>
+								<source srcset="img/au.webp" type="image/webp"/>
+								<img src="img/au.png" alt="「合」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">ふたと容器が「合」う</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/honoo.png" alt="「炎」の成り立ち">
+							<picture>
+								<source srcset="img/honoo.webp" type="image/webp"/>
+								<img src="img/honoo.png" alt="「炎」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">「炎」の成り立ち</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/miru.png" alt="「見」の成り立ち">
+							<picture>
+								<source srcset="img/miru.webp" type="image/webp"/>
+								<img src="img/miru.png" alt="「見」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">「見」は大きな目の人</span>
 								<span lang="en-us" hidden></span>
@@ -226,32 +278,56 @@
 					</p>
 					<div class="imgDiv" style="--column: 2">
 						<figure>
-							<img lang="ja" src="img/dou.png" alt="「銅」の成り立ち">
-							<img lang="en-us" hidden src="img/dou-en.png" alt="「銅」の成り立ち">
+							<picture lang="ja">
+								<source srcset="img/dou.webp" type="image/webp"/>
+								<img src="img/dou.png" alt="「銅」の成り立ち">
+							</picture>
+							<picture lang="en-us" hidden>
+								<source srcset="img/dou-en.webp" type="image/webp"/>
+								<img src="img/dou-en.png" alt="「銅」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">「銅」の成り立ち</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img lang="ja" src="img/hare.png" alt="「晴」の成り立ち">
-							<img lang="en-us" hidden src="img/hare-en.png" alt="「晴」の成り立ち">
+							<picture lang="ja">
+								<source srcset="img/hare.webp" type="image/webp"/>
+								<img src="img/hare.png" alt="「晴」の成り立ち">
+							</picture>
+							<picture lang="en-us" hidden>
+								<source srcset="img/hare-en.webp" type="image/webp"/>
+								<img src="img/hare-en.png" alt="「晴」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">「晴」の成り立ち</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img lang="ja" src="img/kusa.png" alt="「草」の成り立ち">
-							<img lang="en-us" hidden src="img/kusa-en.png" alt="「草」の成り立ち">
+							<picture lang="ja">
+								<source srcset="img/kusa.webp" type="image/webp"/>
+								<img src="img/kusa.png" alt="「草」の成り立ち">
+							</picture>
+							<picture lang="en-us" hidden>
+								<source srcset="img/kusa-en.webp" type="image/webp"/>
+								<img src="img/kusa-en.png" alt="「草」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">「草」の成り立ち</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img lang="ja" src="img/aji.png" alt="「味」の成り立ち">
-							<img lang="en-us" hidden src="img/aji-en.png" alt="「味」の成り立ち">
+							<picture lang="ja">
+								<source srcset="img/aji.webp" type="image/webp"/>
+								<img src="img/aji.png" alt="「味」の成り立ち">
+							</picture>
+							<picture lang="en-us" hidden>
+								<source srcset="img/aji-en.webp" type="image/webp"/>
+								<img src="img/aji-en.png" alt="「味」の成り立ち">
+							</picture>
 							<figcaption>
 								<span lang="ja">「味」の成り立ち</span>
 								<span lang="en-us" hidden></span>
@@ -270,21 +346,30 @@
 					</p>
 					<div class="imgDiv long" style="--column: 2">
 						<figure>
-							<img src="img/history-ki.png" alt="「木」の変化">
+							<picture>
+								<source srcset="img/history-ki.webp" type="image/webp"/>
+								<img src="img/history-ki.png" alt="「木」の変化">
+							</picture>
 							<figcaption>
 								<span lang="ja">「木」の変化</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/history-yama.png" alt="「山」の変化">
+							<picture>
+								<source srcset="img/history-yama.webp" type="image/webp"/>
+								<img src="img/history-yama.png" alt="「山」の変化">
+							</picture>
 							<figcaption>
 								<span lang="ja">「山」の変化</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/history-te.png" alt="「手」の変化">
+							<picture>
+								<source srcset="img/history-te.webp" type="image/webp"/>
+								<img src="img/history-te.png" alt="「手」の変化">
+							</picture>
 							<figcaption>
 								<span lang="ja">「手」の変化</span>
 								<span lang="en-us" hidden></span>
@@ -311,7 +396,7 @@
 					</div>
 				</section>
 			</div>
-			<div class="tabContent activeContent">
+			<div class="tabContent">
 				<section>
 					<h2>
 						<span lang="ja">漢字にはパーツがある</span>
@@ -355,7 +440,10 @@
 					</h3>
 					<div class="imgDiv hentsukuri" style="--column: 2">
 						<figure>
-							<img src="img/hen-sanzui.png" alt="さんずい">
+							<picture>
+								<source srcset="img/hen-sanzui.webp" type="image/webp"/>
+								<img src="img/hen-sanzui.png" alt="さんずい">
+							</picture>
 							<figcaption>
 								<span lang="ja">さんずい</span>
 								<span lang="en-us" hidden></span>
@@ -366,7 +454,10 @@
 							</div>
 						</figure>
 						<figure>
-							<img src="img/hen-ninben.png" alt="にんべん">
+							<picture>
+								<source srcset="img/hen-ninben.webp" type="image/webp"/>
+								<img src="img/hen-ninben.png" alt="にんべん">
+							</picture>
 							<figcaption>
 								<span lang="ja">にんべん</span>
 								<span lang="en-us" hidden></span>
@@ -377,7 +468,10 @@
 							</div>
 						</figure>
 						<figure>
-							<img src="img/hen-tehen.png" alt="てへん">
+							<picture>
+								<source srcset="img/hen-tehen.webp" type="image/webp"/>
+								<img src="img/hen-tehen.png" alt="てへん">
+							</picture>
 							<figcaption>
 								<span lang="ja">てへん</span>
 								<span lang="en-us" hidden></span>
@@ -388,7 +482,10 @@
 							</div>
 						</figure>
 						<figure>
-							<img src="img/hen-gonben.png" alt="ごんべん">
+							<picture>
+								<source srcset="img/hen-gonben.webp" type="image/webp"/>
+								<img src="img/hen-gonben.png" alt="ごんべん">
+							</picture>
 							<figcaption>
 								<span lang="ja">ごんべん</span>
 								<span lang="en-us" hidden></span>
@@ -399,7 +496,10 @@
 							</div>
 						</figure>
 						<figure>
-							<img src="img/hen-kihen.png" alt="きへん">
+							<picture>
+								<source srcset="img/hen-kihen.webp" type="image/webp"/>
+								<img src="img/hen-kihen.png" alt="きへん">
+							</picture>
 							<figcaption>
 								<span lang="ja">きへん</span>
 								<span lang="en-us" hidden></span>
@@ -410,7 +510,10 @@
 							</div>
 						</figure>
 						<figure>
-							<img src="img/hen-itohen.png" alt="いとへん">
+							<picture>
+								<source srcset="img/hen-itohen.webp" type="image/webp"/>
+								<img src="img/hen-itohen.png" alt="いとへん">
+							</picture>
 							<figcaption>
 								<span lang="ja">いとへん</span>
 								<span lang="en-us" hidden></span>
@@ -427,7 +530,10 @@
 					</h3>
 					<div class="imgDiv hentsukuri" style="--column: 2">
 						<figure>
-							<img src="img/tsukuri-rittou.png" alt="りっとう">
+							<picture>
+								<source srcset="img/tsukuri-rittou.webp" type="image/webp"/>
+								<img src="img/tsukuri-rittou.png" alt="りっとう">
+							</picture>
 							<figcaption>
 								<span lang="ja">りっとう</span>
 								<span lang="en-us" hidden></span>
@@ -438,7 +544,10 @@
 							</div>
 						</figure>
 						<figure>
-							<img src="img/tsukuri-oogai.png" alt="おおがい">
+							<picture>
+								<source srcset="img/tsukuri-oogai.webp" type="image/webp"/>
+								<img src="img/tsukuri-oogai.png" alt="おおがい">
+							</picture>
 							<figcaption>
 								<span lang="ja">おおがい</span>
 								<span lang="en-us" hidden></span>
@@ -449,7 +558,10 @@
 							</div>
 						</figure>
 						<figure>
-							<img src="img/tsukuri-chikara.png" alt="ちから">
+							<picture>
+								<source srcset="img/tsukuri-chikara.webp" type="image/webp"/>
+								<img src="img/tsukuri-chikara.png" alt="ちから">
+							</picture>
 							<figcaption>
 								<span lang="ja">ちから</span>
 								<span lang="en-us" hidden></span>
@@ -460,7 +572,10 @@
 							</div>
 						</figure>
 						<figure>
-							<img src="img/tsukuri-oozato.png" alt="おおざと">
+							<picture>
+								<source srcset="img/tsukuri-oozato.webp" type="image/webp"/>
+								<img src="img/tsukuri-oozato.png" alt="おおざと">
+							</picture>
 							<figcaption>
 								<span lang="ja">おおざと</span>
 								<span lang="en-us" hidden></span>
@@ -483,49 +598,70 @@
 					</p>
 					<div class="imgDiv" style="--column: 2">
 						<figure>
-							<img src="img/hen.png" alt="へん">
+							<picture>
+								<source srcset="img/hen.webp" type="image/webp"/>
+								<img src="img/hen.png" alt="へん">
+							</picture>
 							<figcaption>
 								<span lang="ja">へん</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/tsukuri.png" alt="つくり">
+							<picture>
+								<source srcset="img/tsukuri.webp" type="image/webp"/>
+								<img src="img/tsukuri.png" alt="つくり">
+							</picture>
 							<figcaption>
 								<span lang="ja">つくり</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/kanmuri.png" alt="かんむり">
+							<picture>
+								<source srcset="img/kanmuri.webp" type="image/webp"/>
+								<img src="img/kanmuri.png" alt="かんむり">
+							</picture>
 							<figcaption>
 								<span lang="ja">かんむり</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/ashi.png" alt="あし">
+							<picture>
+								<source srcset="img/ashi.webp" type="image/webp"/>
+								<img src="img/ashi.png" alt="あし">
+							</picture>
 							<figcaption>
 								<span lang="ja">あし</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/tare.png" alt="たれ">
+							<picture>
+								<source srcset="img/tare.webp" type="image/webp"/>
+								<img src="img/tare.png" alt="たれ">
+							</picture>
 							<figcaption>
 								<span lang="ja">たれ</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/nyou.png" alt="にょう">
+							<picture>
+								<source srcset="img/nyou.webp" type="image/webp"/>
+								<img src="img/nyou.png" alt="にょう">
+							</picture>
 							<figcaption>
 								<span lang="ja">にょう</span>
 								<span lang="en-us" hidden></span>
 							</figcaption>
 						</figure>
 						<figure>
-							<img src="img/kamae.png" alt="かまえ">
+							<picture>
+								<source srcset="img/kamae.webp" type="image/webp"/>
+								<img src="img/kamae.png" alt="かまえ">
+							</picture>
 							<figcaption>
 								<span lang="ja">かまえ</span>
 								<span lang="en-us" hidden></span>
@@ -535,89 +671,6 @@
 				</section>
 			</div>
 		</div>
-		<!-- <section>
-			<h2>
-				<span lang="ja">漢字の歴史クイズ</span>
-				<span lang="en-us" hidden>The Quiz Of Kanji's History</span>
-			</h2>
-			<p>
-				<span lang="ja">突然ですが、みなさんに漢字の歴史クイズを2問出します。</span>
-				<span lang="en-us" hidden>It is quite sudden to ask, but I will ask you two questions about the history of Kanji.</span>
-			</p>
-			<ol>
-				<li>
-					<span lang="ja">漢字はいつ、どこで作られたでしょうか</span>
-					<span lang="en-us" hidden>When and where were Kanji created?</span>
-				</li>
-				<li>
-					<span lang="ja">漢字はどうやって作られたでしょうか</span>
-					<span lang="en-us" hidden>How were Kanji created?</span>
-				</li>
-			</ol>
-			<p>
-				<span lang="ja">答えられましたか。1つ目の答えは、昔の中国です。昔の日本人は中国から漢字を持ち帰り、日本でも使うようになりました。では2つ目の答えです。これは、一つではなく四つあります。これから、その四つの正解を見てみましょう。</span>
-				<span lang="en-us" hidden>Did you answer? The answer of first one is ancient China. The ancient Japanese brought back Kanji from China and began to use them in Japan as well. Then the second answer. There are four correct answers, not only one. From now on, let's see the Four correct answers.</span>
-			</p>
-		</section>
-		<section>
-			<h2>
-				<span lang="ja">一つ目の正解「象形（しょうけい）」</span>
-				<span lang="en-us" hidden>First Correct Answer "象形 <i>(Shoukei)</i> "</span>
-			</h2>
-			<p>
-				<span lang="ja">象形文字は、ものの形を線でえがいた絵をもとに作られた漢字です。「木」、「火」、「山」などの漢字の成り立ちを見てみましょう。</span>
-				<span lang="en-us" hidden><i>Shoukei</i> Characters are based on lines drawing of the shape of the objects. Then, let's see the origin of like "木 (tree)", "火 (fire)", and "山 (mountein)".</span>
-			</p>
-			<div class="imgDiv" style="--column: 2">
-				<img src="img/ki.png" alt="「木」の成り立ち">
-				<img src="img/fire.png" alt="「火」の成り立ち">
-				<img src="img/yama.png" alt="「山」の成り立ち">
-			</div>
-			<h2>
-				<span lang="ja">二つ目の正解「指事（しじ）」</span>
-				<span lang="en-us" hidden>Second Correct Answer "指事 <i>(Shiji)</i> "</span>
-			</h2>
-			<p>
-				<span lang="ja">指事文字は、一つ目の象形文字とは反対で、目に見えないものを表す絵をもとに作られた漢字です。目に見えないものが元になっているので、象形文字よりは数が少ないです。「上」、「下」、「中」などがあります。</span>
-				<span lang="en-us" hidden><i>Shiji</i> characters are the opposite of the first <i>Shoukei</i> characters, and are Kanji created based on pictures that represents something invisible. They are less numerous than <i>Shoukei</i> characters because they are based on what are invisible. There are "上 (top)", "中 (middle)" and "下 (bottom)" etc.</span>
-			</p>
-			<div class="imgDiv" style="--column: 2">
-				<img src="img/ue.png" alt="「上」の成り立ち">
-				<img src="img/shita.png" alt="「下」の成り立ち">
-				<img src="img/naka.png" alt="「中」の成り立ち">
-			</div>
-			<h2>
-				<span lang="ja">三つ目の正解「会意（かいい）」</span>
-				<span lang="en-us" hidden>Third Correct Answer "会意 <i>(Kaii)</i> "</span>
-			</h2>
-			<p>
-				<span lang="ja">会意文字は、何個かの漢字を組み合わせて別の意味を表す漢字のことです。木がたくさんある「森」、人が木の横で「休」む、のように作られます。</span>
-				<span lang="en-us" hidden><i>Kaii</i> characters are Kanji that combine several Kanji to express different meanings. They are made sach as "森 (forest)" (it explains a lot of trees) and "休 (rest)" (it explains someone taking a rest beside a tree).</span>
-			</p>
-			<div class="imgDiv" style="--column: 2">
-				<img src="img/mori.png" alt="「森」の成り立ち">
-				<img src="img/yasumu.png" alt="「休」の成り立ち">
-			</div>
-			<h2>
-				<span lang="ja">四つ目の正解「形声（けいせい）」</span>
-				<span lang="en-us" hidden>Fourth Correct Answer "形声 <i>(Keisei)</i> "</span>
-			</h2>
-			<p>
-				<span lang="ja">形声文字は、音を表す漢字と意味を表す漢字を組み合わせて作られた漢字です。「草」、「晴」、「味」などの漢字の成り立ちを見てみましょう。</span>
-				<span lang="en-us" hidden><i>Keisei</i> characters are Kanji created by combining a Kanji that represents sound and a Kanji that represents meaning. Let's see the origins such as "草 (grass)", "晴 (sunny)" and "味 (taste)".</span>
-			</p>
-			<div class="imgDiv" style="--column: 2">
-				<img src="img/kusa.png" alt="「草」の成り立ち">
-				<img src="img/hare.png" alt="「晴」の成り立ち">
-				<img src="img/aji.png" alt="「味」の成り立ち">
-			</div>
-		</section>
-		<section>
-			<p>
-				<span lang="ja">いろんな漢字の成り立ちがありましたね。みなさんが今覚えようとしている漢字は「象形文字」、「指事文字」、「会意文字」、「形声文字」のどれでしょうか。ぜひ調べてみてください。</span>
-				<span lang="en-us" hidden>There were various origins of Kanji. Which of the Kanji you are trying to remember now is "象形 <i>(Shoukei)</i> ", "指事 <i>(Shiji)</i> ", "会意 <i>(Kaii)</i> " or "形声 <i>(Keisei)</i> "? Please check it out!</span>
-			</p>
-		</section> -->
 	</main>
 	<footer>
 		<ul>
