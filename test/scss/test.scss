@@ -128,12 +128,14 @@ $phraseWide: 1.6em;
 }
 
 @media print {
-	_::-webkit-full-page-media, _:future, :root .row {
-		padding-bottom: 1em !important;
-		gap: 2em !important;
-	}
-	_::-webkit-full-page-media, _:future, :root #testArea {
-		padding: 1em 2em;
+	body.safari {
+		.row {
+			padding-bottom: 1em !important;
+			gap: 2em !important;
+		}
+		#testArea {
+			padding: 1em 2em;
+		}
 	}
 	@-moz-document url-prefix() {
 		.row {

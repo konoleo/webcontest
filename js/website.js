@@ -36,12 +36,13 @@ const mainAndFooter = document.querySelectorAll("nav ~ *");
 function toggleMenu() {
 	hamburger.classList.toggle("checked");
 	nav.classList.toggle("hide");
+	const hide = nav.classList.contains("hide");
 	nav.querySelectorAll("[tabindex]").forEach(e => {
-		e.setAttribute("tabindex", nav.classList.contains("hide") ? -1 : 0);
+		e.setAttribute("tabindex", hide ? -1 : 0);
 	});
 	mainAndFooter.forEach(parent => {
 		parent.querySelectorAll("[tabindex], a, input, button").forEach(e => {
-			e.setAttribute("tabindex", nav.classList.contains("hide") ? 0 : -1);
+			e.setAttribute("tabindex", hide ? 0 : -1);
 		});
 	});
 	siteName.classList.toggle("hide");
@@ -75,11 +76,12 @@ for (let i = 0; i < selectLangE.length; i++) {
 lang();
 addRemovePara();
 
-// (function(d) {
-// 	var config = {
-// 		kitId: 'hsd2xde',
-// 		scriptTimeout: 3000,
-// 		async: true
-// 	},
-// 	h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-// })(document);
+const ua = window.navigator.userAgent.toLowerCase();
+if (ua.indexOf("chrome") != -1) {
+	document.body.classList.add("chromium");
+	if (ua.indexOf("android") != -1) {
+		document.body.classList.add("android");
+	}
+} else if (ua.indexOf("safari") != -1) {
+	document.body.classList.add("safari");
+}

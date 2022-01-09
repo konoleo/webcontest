@@ -16,11 +16,11 @@ header {
 #kokuban {
 	position: relative;
 	height: 60vh;
-	#kokubanImg {
-		width: 100%;
-		height: 100%;
+	#kokubanImg img {
 		object-fit: cover;
 		object-position: center 80%;
+		width: 100%;
+		height: 100%;
 	}
 	.kokubanText {
 		width: max-content;

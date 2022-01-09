@@ -103,7 +103,8 @@ header {
 		font-size: 1.5rem;
 		color: $themeColor;
 		margin: 16px;
-		border-bottom: none;
+		// border-bottom: none;
+		text-decoration: none;
 	}
 }
 
@@ -149,11 +150,35 @@ img {
 
 a {
 	color: $themeColor;
-	text-decoration: none;
-	border-bottom: 1px solid $themeColor;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.12em;
 	transition: all .3s ease;
-	&:hover {
-		border-bottom-color: transparent;
+	&[target=_blank]::after {
+		content: "";
+		background: url(../img/link-icon.svg) center/0.8em auto no-repeat;
+		display: inline-block;
+		width: 0.9em;
+		height: 0.9em;
+		vertical-align: -1px;
+		margin-left: 0.1em;
+		margin-right: 0.15em;
+		padding: 0;
+	}
+}
+body {
+	&.safari a {
+		text-underline-offset: 0.17em;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&:not(.safari) a:hover {
+		text-decoration-color: transparent;
+	}
+	@-moz-document url-prefix() {
+		a {
+			text-underline-offset: 0.2em;
+		}
 	}
 }
 
@@ -178,19 +203,29 @@ section {
 }
 
 input {
-	vertical-align: 0.08em;
 	&:invalid {
 		outline: 2px solid #c5175a;
 	}
+	&[type=checkbox] {
+		vertical-align: baseline;
+	}
 	&[type=number] {
+		vertical-align: 0.1em;
 		border: none;
 		border-radius: 4px;
 		padding: 4px;
 	}
 }
-@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
-	input {
-		vertical-align: -0.06em;
+body {
+	&.safari input[type=checkbox] {
+		width: 1.2em;
+		height: 1.2em;
+	}
+	&.chromium input[type=checkbox] {
+		vertical-align: -0.1em;
+	}
+	&.chromium.android input[type=checkbox] {
+		vertical-align: -0.2em;
 	}
 }
 
@@ -280,49 +315,6 @@ table {
 	}
 	th {
 		font-weight: 500;
-	}
-}
-
-.tabs {
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: 32px;
-	.tabLabel {
-		flex: 1;
-		padding: 16px;
-		margin: 0 8px;
-		border: 1px solid $themeColor;
-		border-bottom: 0;
-		text-align: center;
-		&:first-of-type {
-			margin-left: 8px;
-		}
-		&:last-of-type {
-			margin-right: 8px;
-		}
-		&.activeLabel {
-			background: $bgColor;
-		}
-		&.outline {
-			outline: auto;
-		}
-	}
-	hr {
-		width: 100%;
-		border: 1px solid $themeColor;
-		border-bottom: none;
-		margin-top: -1px;
-		z-index: -1;
-	}
-	.tabContent {
-		display: none;
-		&.activeContent {
-			width: 100%;
-			display: block;
-		}
-		section:first-of-type {
-			margin-top: 24px;
-		}
 	}
 }
 

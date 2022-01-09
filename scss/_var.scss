@@ -5,9 +5,8 @@ $themeColor: #005335;
 $subColor: #b68e55;
 
 // フォント
-@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap');
-// $sansSerif: irohamaru, -apple-system, BlinkMacSystemFont, sans-serif;
-$sansSerif: "Zen Maru Gothic", -apple-system, BlinkMacSystemFont, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap");
+$sansSerif: "Zen Maru Gothic", "筑紫A丸ゴシック", sans-serif;
 $textbookTypeface: "Klee One", "游教科書体", "HG教科書体", sans-serif;
 
 // 横幅

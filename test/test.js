@@ -16,15 +16,15 @@ fetch("../data/kanjidata.json").then(response => {
 		return kanjiArr;
 	}
 
-	// function shuffle(array) {
-	// 	for (let i = (array.length - 1); 0 < i; i--){
-	// 		const r = Math.floor(Math.random() * (i + 1));
-	// 		const tmp = array[i];
-	// 		array[i] = array[r];
-	// 		array[r] = tmp;
-	// 	}
-	// 	return array;
-	// }
+	function shuffle(array) {
+		for (let i = (array.length - 1); 0 < i; i--){
+			const r = Math.floor(Math.random() * (i + 1));
+			const tmp = array[i];
+			array[i] = array[r];
+			array[r] = tmp;
+		}
+		return array;
+	}
 
 	function ramdomSelect(qNum, year) {
 		const kanjiArr = shuffle(filterByYear(year));

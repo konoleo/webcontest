@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="350" height="350" viewBox="0 0 350 350">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-link-icon);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #005335;
+        stroke-linecap: round;
+        stroke-width: 30px;
+      }
+    </style>
+    <clipPath id="clip-link-icon">
+      <rect width="350" height="350"/>
+    </clipPath>
+  </defs>
+  <g id="link-icon" class="cls-1">
+    <path id="パス_67" data-name="パス 67" class="cls-2" d="M88.706,0H229.558a34.607,34.607,0,0,1,34.607,34.607V229.558a34.607,34.607,0,0,1-34.607,34.607H34.607A34.607,34.607,0,0,1,0,229.558V88.706" transform="translate(280.015 69.985) rotate(90)"/>
+    <line id="線_3" data-name="線 3" class="cls-2" x2="275.961" transform="translate(138.865 211.134) rotate(-45)"/>
+    <line id="線_4" data-name="線 4" class="cls-2" x2="109.967" transform="translate(224.032 16)"/>
+    <line id="線_5" data-name="線 5" class="cls-2" x2="109.967" transform="translate(334 16) rotate(90)"/>
+  </g>
+</svg>
