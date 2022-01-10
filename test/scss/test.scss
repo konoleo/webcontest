@@ -19,6 +19,40 @@ $phraseWide: 1.6em;
 	margin: 40px 0 0;
 }
 
+#studyYears {
+	text-align: center;
+	margin-bottom: 32px;
+	label {
+		display: inline-block;
+		margin-right: 0.5em;
+		font-size: 1.5rem;
+		input {
+			width: 1.2rem;
+			height: 1.2rem;
+		}
+	}
+}
+body.safari #studyYears label input {
+	vertical-align: -0.1em;
+}
+
+#qNum {
+	width: 2.1em;
+	color: inherit;
+	font-size: inherit;
+	font-family: $sansSerif;
+	background-color: rgba(white, 0.3);
+	padding: 0 4px;
+	border: none;
+	border-radius: 4px;
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	-moz-appearance: textfield;
+}
+
 .tabContent {
 	margin: 16px 0;
 	p:first-child {
@@ -32,7 +66,15 @@ $phraseWide: 1.6em;
 			border-left: none;
 		}
 		button {
+			margin-top: 8px;
 			margin-bottom: 16px;
+		}
+		#randomCheck {
+			margin-top: 16px;
+			margin-bottom: 8px;
+		}
+		summary h3 {
+			margin-left: 0.5em;
 		}
 		.kanjiChoicesDiv {
 			display: flex;

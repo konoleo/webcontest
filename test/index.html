@@ -53,27 +53,17 @@
 			<span lang="en-us" hidden>Create a Kanji test</span>
 		</h1>
 		<section>
-			<h2>
-				<span lang="ja">設定</span>
-				<span lang="en-us" hidden>Options</span>
-			</h2>
-			<span lang="ja">学習年: </span>
-			<span lang="en-us" hidden>grade: </span>
-			<label>
-				<input type="checkbox" name="studyYear" checked value="1"><span lang="ja">1年生</span><span lang="en-us" hidden>1st grade</span>
-			</label>
-			<label>
-				<input type="checkbox" name="studyYear" checked value="2"><span lang="ja">2年生</span><span lang="en-us" hidden>2nd grade</span>
-			</label>
-			<label>
-				<input type="checkbox" name="studyYear" checked value="3"><span lang="ja">3年生</span><span lang="en-us" hidden>3rd grade</span>
-			</label><br>
+			<div id="studyYears">
+				<label><input type="checkbox" name="studyYear" checked value="1"><span lang="ja">1年生</span><span lang="en-us" hidden>1st grade</span></label>
+				<label><input type="checkbox" name="studyYear" checked value="2"><span lang="ja">2年生</span><span lang="en-us" hidden>2nd grade</span></label>
+				<label><input type="checkbox" name="studyYear" checked value="3"><span lang="ja">3年生</span><span lang="en-us" hidden>3rd grade</span></label>
+			</div>
 			<input type="checkbox" id="answer" class="hidden">
 			<div class="tabs" id="tab01">
 				<label class="tabLabel activeLabel">
 					<input type="radio" id="ramdomTab" name="tab01" class="hidden">
-					<span lang="ja">ランダムな問題</span>
-					<span lang="en-us" hidden>Random questions</span>
+					<span lang="ja">学年別テスト</span>
+					<span lang="en-us" hidden>Grade test</span>
 				</label>
 				<label class="tabLabel">
 					<input type="radio" id="selectTab" name="tab01" class="hidden">
@@ -83,19 +73,21 @@
 				<hr>
 				<div class="tabContent activeContent">
 					<p>
-						<span lang="ja">何問作るか選んでください。</span>
-						<span lang="en-us" hidden>Please choose how many questions to make.</span>
+						<span lang="ja" class="years"></span><span lang="ja">の漢字が全て出るテストを作ります。</span>
+						<span lang="en-us" hidden>It makes a test which all of the Kanji of the </span><span lang="en-us" class="years" hidden></span><span lang="en-us" hidden> grade are given.</span>
 					</p>
-					<label>
-						<span lang="ja">問題数: </span>
-						<span lang="en-us" hidden>The number of questions: </span>
-						<input type="number" id="qNum" min="1" max="440" value="50"></label>
 				</div>
 				<div class="tabContent">
 					<p>
 						<span lang="ja">テストに入れる漢字を選んでください。</span>
 						<span lang="en-us" hidden>Please select the Kanji to be included in the test.</span>
 					</p>
+					<button id="randomCheck">
+						<span lang="en-us" hidden>Select randomly</span>
+						<input type="number" id="qNum" min="1" max="440" value="50">
+						<span lang="ja">問ランダムに選択</span>
+						<span lang="en-us" hidden>questions</span>
+					</button>
 				</div>
 			</div>
 			<template id="kanjiChoicesTemp">

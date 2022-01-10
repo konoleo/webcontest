@@ -26,15 +26,6 @@ fetch("../data/kanjidata.json").then(response => {
 		return array;
 	}
 
-	function ramdomSelect(qNum, year) {
-		const kanjiArr = shuffle(filterByYear(year));
-		const difference = kanjiArr.length - qNum;
-		if (difference > 0) {
-			kanjiArr.splice(0, difference);
-		}
-		return kanjiArr;
-	}
-
 	function getMultiple(elems) {
 		const values = [];
 		for (let i = 0; i < elems.length; i++) {
@@ -69,6 +60,7 @@ fetch("../data/kanjidata.json").then(response => {
 	const tabContent = tab01.getElementsByClassName("tabContent");
 	const questionsDiv = document.getElementById("questionsDiv");
 	const studyYearBtns = document.getElementsByName("studyYear");
+	const randomCheckElem = document.getElementById("randomCheck");
 	const qNumElem = document.getElementById("qNum");
 	const kanjiChoicesElems = document.getElementsByName("kanjiChoices");
 	const answerBtn = document.getElementById("answer");
@@ -83,25 +75,23 @@ fetch("../data/kanjidata.json").then(response => {
 		const detailsElems = tabContent[1].getElementsByTagName("details");
 		const studyYear = getMultiple(studyYearBtns);
 		if (detailsElems.length) {
-			studyYear.forEach((year, index) => {
-				detailsElems[year-1].removeAttribute("hidden");
-				if (index === 0 && detailsElems[year-1].open) {
-					detailsElems[year-1].setAttribute("open", "true");
-				}
+			studyYear.forEach(year => {
+				detailsElems[year - 1].removeAttribute("hidden");
 			});
 			const otherYears = [1, 2, 3].filter(num => !studyYear.includes(num));
 			otherYears.forEach(year => {
-				detailsElems[year-1].setAttribute("hidden", "");
+				detailsElems[year - 1].setAttribute("hidden", "");
+				detailsElems[year - 1].querySelectorAll(".kanjiChoicesDiv input").forEach(input => {
+					input.checked = false;
+				});
 			});
 		} else {
 			// 選択肢を表示
-			studyYear.forEach((year, index) => {
+			studyYear.forEach(year => {
 				const choices = filterByYear([year]);
 				if (choices.length) {
 					const details = document.createElement("details");
-					if (index === 0) {
-						details.setAttribute("open", "true");
-					}
+					details.setAttribute("open", "true");
 					const summary = document.createElement("summary");
 					const h3 = document.createElement("h3");
 					h3.innerHTML = `
@@ -111,10 +101,9 @@ fetch("../data/kanjidata.json").then(response => {
 					summary.appendChild(h3);
 					details.appendChild(summary);
 					const button = document.createElement("button");
-					button.textContent = `${year}年生の漢字をすベて選択`;
 					button.innerHTML = `
-						<span lang="ja">${year}年生の漢字をすベて選択</span>
-						<span lang="en-us" hidden>Select all ${ordinalSuffix(year)} grade Kanji</span>
+						<span lang="ja">すベて選択</span>
+						<span lang="en-us" hidden>Select all</span>
 					`;
 					button.setAttribute("id", `all${year}check`);
 					details.appendChild(button);
@@ -138,6 +127,19 @@ fetch("../data/kanjidata.json").then(response => {
 			});
 			lang();
 		}
+		// 「1年生、2年生、3年生の漢字が全て出るテストを作ります。」を変更
+		const years = tabContent[0].getElementsByClassName("years");
+		years[0].textContent = "";
+		years[1].textContent = "";
+		studyYear.forEach(year => {
+			years[0].textContent += `${year}年生`;
+			years[0].textContent += "、";
+			years[1].textContent += ordinalSuffix(year)
+			years[1].textContent += ", ";
+		});
+		years[0].textContent = years[0].textContent.replace(/、$/, "");
+		years[1].textContent = years[1].textContent.replace(/, $/, "");
+		years[1].textContent = years[1].textContent.replace(/(.*),/, "$1 and");
 	}
 	changeChoices();
 
@@ -150,7 +152,7 @@ fetch("../data/kanjidata.json").then(response => {
 			}
 			elem.classList.toggle("checked");
 			const message = {
-				"ja": ["をすベて選択", "の選択をすべて解除"],
+				"ja": ["選択", "選択解除"],
 				"en-us": ["Select", "Deselect"],
 			};
 			supportedLang.forEach(lang => {
@@ -162,13 +164,34 @@ fetch("../data/kanjidata.json").then(response => {
 		});
 	});
 
+	qNumElem.addEventListener("focus", () => {
+		randomCheckElem.removeEventListener("click", ramdomSelect);
+	});
+	qNumElem.addEventListener("blur", () => {
+		randomCheckElem.addEventListener("click", ramdomSelect);
+	});
+	qNumElem.addEventListener("change", ramdomSelect);
+
+	randomCheckElem.addEventListener("click", ramdomSelect);
+
+	function ramdomSelect() {
+		const inputs = document.querySelectorAll("details:not([hidden]) .kanjiChoicesDiv input");
+		inputs.forEach(input => {
+			if (input.checked) input.checked = false;
+		});
+		const random = shuffle(Array.from(inputs)).slice(0, qNumElem.value);
+		random.forEach(input => {
+			input.checked = true;
+		});
+	}
+
 	// テストを作る
 	const testH2 = document.getElementById("testH2");
 	const questionTemp = document.getElementById("questionTemp");
 	function makeTest() {
 		// ランダムか漢字の選択か判定
 		const hiddenElem = [...tabContent].filter(elem => !elem.classList.contains("activeContent"));
-		const kind = hiddenElem[0] === tabContent[1] ? "ramdom" : "select";
+		const kind = hiddenElem[0] === tabContent[1] ? "grade" : "select";
 		
 		// テストが作れるか判定
 		const studyYear = getMultiple(studyYearBtns);
@@ -192,21 +215,13 @@ fetch("../data/kanjidata.json").then(response => {
 
 		// 漢字を決定
 		let qKanji, qNum;
-		if (kind === "ramdom") {
-			// 問題数を取得
-			qNum = Number(qNumElem.value);
-			if (qNumElem.max < qNum) {
-				qNum = qNumElem.max;
-				qNumElem.value = qNum;
-			} else if (qNum < qNumElem.min) {
-				qNum = qNumElem.min;
-				qNumElem.value = qNum;
-			}
-			// 漢字をランダムに選ぶ
-			qKanji = ramdomSelect(qNum, studyYear);
+		if (kind === "grade") {
+			qKanji = filterByYear(studyYear);
+			qNum = qKanji.length;
 		} else {
 			// 選ばれた漢字を取得
 			const kanjis = getMultiple(kanjiChoicesElems);
+			console.log(kanjis);
 			// 問題数を取得
 			qNum = kanjis.length;
 			// シャッフル
@@ -310,6 +325,7 @@ fetch("../data/kanjidata.json").then(response => {
 			}
 			// 漢字の選択肢を変更
 			changeChoices();
+			randomCheckElem.click();
 		});
 	}
 
