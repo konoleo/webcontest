@@ -3,6 +3,9 @@ let navLang = window.navigator.language;
 if (/en/.test(navLang)) {
 	navLang = "en-us";
 }
+if (/ja/.test(navLang)) {
+	navLang = "ja";
+}
 const paraLang = url.searchParams.get("lang");
 let userLang = paraLang || navLang;
 const supportedLang = ["ja", "en-us"];
