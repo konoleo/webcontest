@@ -155,7 +155,7 @@ a {
 	transition: all .3s ease;
 	&[target=_blank]::after {
 		content: "";
-		background: url(../img/link-icon.svg) center/0.8em auto no-repeat;
+		background: url(img/link-icon.svg) center/0.8em auto no-repeat;
 		display: inline-block;
 		width: 0.9em;
 		height: 0.9em;
