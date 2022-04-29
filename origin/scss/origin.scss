@@ -46,30 +46,18 @@ figure {
 .column {
 	border: 1px solid #b3b3b3;
 	border-radius: 16px;
-	padding: 16px 24px 8px;
-	margin: 1.3rem + 0.6rem 0 1.3rem;
-	position: relative;
+	padding: 8px 24px;
+	margin: 16px 0;
 	h2 {
-		display: contents;
-		span {
-			position: absolute;
-			top: -0.9em;
-			background: $bgColor;
-			padding: 0 16px;
-			max-width: calc(100% - 24px * 2);
-		}
+		border-left: none;
+		margin-top: 8px;
+		margin-bottom: 12px;
+		padding-left: 0;
 	}
 }
-
 #kusabiKakikata {
-	@media (max-width: 574px) {
-		padding-top: 64px;
-	}
-	@media (min-width: 574px) {
-		padding-top: 16px;
-	}
 	figure {
-		margin: 20px 24px 20px 0;
+		margin: 8px 24px 16px 0;
 		float: left;
 		@media (max-width: 500px) {
 			margin-right: 0;

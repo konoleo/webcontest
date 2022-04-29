@@ -6,10 +6,10 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta property="og:title" content="やさしい小学漢字">
 	<meta property="og:type" content="article">
-	<meta property="og:url" content="http://kanjitest.jp/test/">
+	<meta property="og:url" content="https://konoleo.github.io/webcontest/test/">
 	<meta property="og:description" content="「漢字テストの作成」では、漢字テストを数クリックで作ることができます。このサイトでは簡単に漢字テストを作れて、漢字の成り立ちの勉強もできます。">
 	<meta property="og:site_name" content="やさしい小学漢字">
-	<meta property="og:image" content="http://kanjitest.jp/img/ogp.png">
+	<meta property="og:image" content="https://konoleo.github.io/webcontest/img/ogp.png">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="description" content="「漢字テストの作成」では、漢字テストを数クリックで作ることができます。このサイトでは簡単に漢字テストを作れて、漢字の成り立ちの勉強もできます。">
 	<meta name="theme-color" content="#005335">
@@ -53,48 +53,77 @@
 			<span lang="en-us" hidden>Create a Kanji test</span>
 		</h1>
 		<section>
-			<div id="studyYears">
-				<label><input type="checkbox" name="studyYear" checked value="1"><span lang="ja">1年生</span><span lang="en-us" hidden>1st grade</span></label>
-				<label><input type="checkbox" name="studyYear" checked value="2"><span lang="ja">2年生</span><span lang="en-us" hidden>2nd grade</span></label>
-				<label><input type="checkbox" name="studyYear" checked value="3"><span lang="ja">3年生</span><span lang="en-us" hidden>3rd grade</span></label>
-			</div>
+			<div id="studyYears"></div>
 			<input type="checkbox" id="answer" class="hidden">
 			<div class="tabs" id="tab01">
-				<label class="tabLabel activeLabel">
-					<input type="radio" id="ramdomTab" name="tab01" class="hidden">
-					<span lang="ja">学年別テスト</span>
-					<span lang="en-us" hidden>Grade test</span>
-				</label>
-				<label class="tabLabel">
-					<input type="radio" id="selectTab" name="tab01" class="hidden">
-					<span lang="ja">漢字を選択</span>
-					<span lang="en-us" hidden>Select Kanji</span>
-				</label>
-				<hr>
-				<div class="tabContent activeContent">
-					<p>
-						<span lang="ja" class="years"></span><span lang="ja">の漢字が全て出るテストを作ります。</span>
-						<span lang="en-us" hidden>It makes a test which all of the Kanji of the </span><span lang="en-us" class="years" hidden></span><span lang="en-us" hidden> grade are given.</span>
-					</p>
+				<div class="tabLabels">
+					<label class="tabWrapper">
+						<input type="radio" id="ramdomTab" name="tab01" class="hidden" >
+						<span lang="ja">学年別テスト</span>
+						<span lang="en-us" hidden>Grade test</span>
+					</label>
+					<label class="tabWrapper">
+						<input type="radio" id="selectTab" name="tab01" class="hidden" checked>
+						<span lang="ja">漢字を選択</span>
+						<span lang="en-us" hidden>Select Kanji</span>
+					</label>
 				</div>
-				<div class="tabContent">
-					<p>
-						<span lang="ja">テストに入れる漢字を選んでください。</span>
-						<span lang="en-us" hidden>Please select the Kanji to be included in the test.</span>
-					</p>
-					<button id="randomCheck">
-						<span lang="en-us" hidden>Select randomly</span>
-						<input type="number" id="qNum" min="1" max="440" value="50">
-						<span lang="ja">問ランダムに選択</span>
-						<span lang="en-us" hidden>questions</span>
-					</button>
+				<hr>
+				<div class="tabContents">
+					<div class="tabWrapper">
+						<p>
+							<span lang="ja" class="years"></span><span lang="ja">の漢字が全て出るテストを作ります。</span>
+							<span lang="en-us" hidden>It makes a test which all of the Kanji of the </span><span lang="en-us" class="years" hidden></span><span lang="en-us" hidden> grade are given.</span>
+						</p>
+					</div>
+					<div class="tabWrapper">
+						<p>
+							<span lang="ja">テストに入れる漢字を選んでください。</span>
+							<span lang="en-us" hidden>Please select the Kanji to be included in the test.</span>
+						</p>
+						<button id="randomCheck">
+							<span lang="en-us" hidden>Select randomly</span>
+							<input type="number" id="qNum" min="1" max="440" value="40">
+							<span lang="ja">問ランダムに選択</span>
+							<span lang="en-us" hidden>questions</span>
+						</button>
+						<template id="detailsTemp">
+							<details open="true">
+								<summary>
+									<h2>
+										<span lang="ja"></span>
+										<span lang="en-us" hidden></span>
+									</h2>
+								</summary>
+								<button class="inline">
+									<span lang="ja">すベて選択</span>
+									<span lang="en-us" hidden>Select all</span>
+								</button>
+							</details>
+						</template>
+						<template id="strokeTitleTemp">
+							<h3>
+								<span lang="ja"></span>
+								<span lang="en-us" hidden></span>
+							</h3>
+							<div class="kanjiChoicesDiv"></div>
+						</template>
+						<template id="kanjiChoicesTemp">
+							<label class="kanjiChoices">
+								<input type="checkbox" name="kanjiChoices" value="" class="hidden">
+							</label>
+						</template>
+						<div id="questionCounter" hidden>
+							<span lang="ja">
+								<span class="qCount">0</span>問選択中（A4 <span class="sheetsCount">0</span>枚）
+							</span>
+							<span lang="en-us" hidden>
+								<span class="qCount">0</span> questions are being selected (<span class="sheetsCount">0</span> A4 sheets)
+							</span>
+						</div>
+					</div>
 				</div>
 			</div>
-			<template id="kanjiChoicesTemp">
-				<label class="kanjiChoices">
-					<input type="checkbox" name="kanjiChoices" value="">
-				</label>
-			</template>
 		</section>
 		<section>
 			<button id="makeTest">
@@ -121,11 +150,13 @@
 						<span data-year="1" hidden>かんじてすと</span>
 						<span data-year="2" hidden>かん字テスト</span>
 						<span data-year="3" hidden>かん字テスト</span>
+						<span data-year="4" hidden>漢字テスト</span>
 					</p>
 					<p id="name">
 						<span data-year="1" hidden>なまえ</span>
 						<span data-year="2" hidden>名まえ</span>
 						<span data-year="3" hidden>名前</span>
+						<span data-year="4" hidden>名前</span>
 					</p>
 					<div id="score">
 						<span>/ <span id="maxScore"></span></span>
@@ -135,6 +166,7 @@
 					<span data-year="1" hidden>かんじをかきましょう。<span class="dash">―――</span>のことばは、かんじとおくりがなでかきましょう。</span>
 					<span data-year="2" hidden>かん字をかきましょう。<span class="dash">―――</span>のことばは、かん字とおくりがなでかきましょう。</span>
 					<span data-year="3" hidden>かん字を書きましょう。<span class="dash">―――</span>のことばは、かん字とおくりがなで書きましょう。</span>
+					<span data-year="4" hidden>漢字を書きましょう。<span class="dash">―――</span>の言葉は、漢字と送りがなで書きましょう。</span>
 				</p>
 				<template id="questionTemp">
 					<div class="question">
@@ -142,7 +174,6 @@
 						<div class="phrase"></div>
 					</div>
 				</template>
-				<div id="questionsDiv"></div>
 			</section>
 		</div>
 	</main>

@@ -27,6 +27,7 @@ $phraseWide: 1.6em;
 		margin-right: 0.5em;
 		font-size: 1.5rem;
 		input {
+			accent-color: $themeColor;
 			width: 1.2rem;
 			height: 1.2rem;
 		}
@@ -53,41 +54,61 @@ body.safari #studyYears label input {
 	-moz-appearance: textfield;
 }
 
-.tabContent {
+.tabContents .tabWrapper {
 	margin: 16px 0;
 	p:first-child {
 		margin: 0;
 	}
 	&:last-of-type {
-		summary h3 {
-			display: inline-block;
-			width: calc(100% - 100px);
-			padding-left: 0;
-			border-left: none;
-		}
-		button {
-			margin-top: 8px;
+		details {
 			margin-bottom: 16px;
 		}
-		#randomCheck {
-			margin-top: 16px;
-			margin-bottom: 8px;
-		}
-		summary h3 {
-			margin-left: 0.5em;
-		}
-		.kanjiChoicesDiv {
-			display: flex;
-			flex-wrap: wrap;
-			label {
-				padding: 8px 12px;
-				border-radius: 8px;
-				margin-right: 8px;
-				margin-bottom: 8px;
-				background: white;
+		summary {
+			margin: 16px 0;
+			h2 {
+				display: inline-block;
+				width: calc(100% - 100px);
+				padding-left: 0;
+				border-left: none;
+				margin: 0 0 0 0.5em;
 			}
 		}
 	}
+}
+
+#randomCheck {
+	margin-top: 16px;
+	margin-bottom: 8px;
+}
+.kanjiChoicesDiv {
+	display: flex;
+	flex-wrap: wrap;
+	.kanjiChoices {
+		padding: 8px 16px;
+		border-radius: 8px;
+		margin-right: 8px;
+		margin-bottom: 8px;
+		user-select: none;
+		-webkit-user-select: none;
+		&.checked {
+			background: white;
+			color: $textColor;
+		}
+		&:not(.checked) {
+			background: rgba(white, .3);
+			color: rgba($textColor, .5);
+		}
+	}
+}
+#questionCounter {
+	width: 100vw;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	background: rgba($bgColor, .9);
+	padding: 16px 20px;
+	text-align: center;
 }
 
 .dash {
@@ -107,9 +128,8 @@ body.safari #studyYears label input {
 	@media screen {
 		width: 297mm;
 	}
-	@media print {
-		padding: 32px;
-	}
+	padding: 32px;
+	background: white;
 	#testTitle {
 		display: grid;
 		grid-template-columns: 40px * 7 1fr 150px;
@@ -145,28 +165,21 @@ body.safari #studyYears label input {
 	> p {
 		margin-bottom: 32px;
 	}
-	#questionsDiv {
-		font-size: 18px;
-		font-feature-settings: normal;
-		@mixin grid() {
+	// #questionsDiv {
+		.row {
+			font-size: 18px;
+			font-feature-settings: normal;
 			display: grid;
 			grid-template-rows: 18px * 10;
 			grid-template-columns: repeat(8, calc(#{$phraseWide} + #{$blankWide}));
 			gap: 3em;
-		}
-		@media screen {
-			@include grid();
-			gap: auto;
-			padding-bottom: 1em;
-		}
-		.row {
-			@include grid();
-			@media print {
+			// padding-bottom: 3em;
+			// @media print {
 				padding: 1em 0 2em 5px;
 				break-inside: avoid;
-			}
+			// }
 		}
-	}
+	// }
 }
 
 @media print {
@@ -176,7 +189,7 @@ body.safari #studyYears label input {
 			gap: 2em !important;
 		}
 		#testArea {
-			padding: 1em 2em;
+			padding: 2em;
 		}
 	}
 	@-moz-document url-prefix() {
@@ -235,7 +248,7 @@ body.safari #studyYears label input {
 		grid-column: 2;
 		margin-top: 4px;
 	}
-	.yomigana {
+	.reading {
 		grid-column: 2;
 		border-right: 1px solid $textColor;
 	}
@@ -268,22 +281,28 @@ body.safari #studyYears label input {
 		grid-column: 2;
 		grid-row: 2;
 	}
-	.blank {
+	.blank, .tokubetsu {
 		display: inline-block;
+		position: relative;
+	}
+	.blank {
 		width: calc(#{$blankWide} - 2px);
 		height: $blankWide;
 		border: 1px solid $textColor;
 		margin: 4px 0;
-		position: relative;
-		.yomigana {
-			position: absolute;
-			right: calc(-#{$phraseWide} - 1px);
-			text-align: center;
-			height: 100%;
-			&.long {
-				top: -25%;
-				height: 150%;
-			}
+	}
+	.reading {
+		position: absolute;
+		right: calc(-#{$phraseWide} - 1px);
+		text-align: center;
+		height: 100%;
+		&.long {
+			top: -25%;
+			height: 150%;
 		}
+	}
+	.tokubetsu .reading {
+		padding: 4px 0;
+		text-align-last: justify;
 	}
 }
