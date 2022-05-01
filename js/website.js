@@ -1,10 +1,11 @@
 const url = new URL(location);
 let navLang = window.navigator.language;
-if (/en/.test(navLang)) {
-	navLang = "en-us";
-}
 if (/ja/.test(navLang)) {
 	navLang = "ja";
+} else if (/en/.test(navLang)) {
+	navLang = "en-us";
+} else {
+	navLang = "en-us";
 }
 const paraLang = url.searchParams.get("lang");
 let userLang = paraLang || navLang;

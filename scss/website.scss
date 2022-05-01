@@ -23,6 +23,10 @@ body {
 	}
 }
 
+[hidden] {
+	display: none !important;
+}
+
 noscript {
 	position: fixed;
 	z-index: 5;
@@ -207,6 +211,7 @@ input {
 		outline: 2px solid #c5175a;
 	}
 	&[type=checkbox] {
+		accent-color: $themeColor;
 		vertical-align: baseline;
 	}
 }

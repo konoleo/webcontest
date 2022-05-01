@@ -129,6 +129,7 @@ fetch("../data/kanjidata.json").then(response => {
 	const sheetsCount = document.getElementsByClassName("sheetsCount");
 	const qNumElem = document.getElementById("qNum");
 	const kanjiChoicesElems = document.getElementsByName("kanjiChoices");
+	const answerBtnLabel = document.getElementById("answerBtnLabel");
 	const answerBtn = document.getElementById("answer");
 	const makeTestBtn = document.getElementById("makeTest");
 	const printBtn = document.getElementById("printTest");
@@ -194,6 +195,21 @@ fetch("../data/kanjidata.json").then(response => {
 				}
 			});
 			// 選択肢のイベント
+			const data = {
+				questions: {
+					elem: qCount,
+					replaceText: [
+						["questions ", "question "],
+						["are", "is"]
+					],
+				},
+				sheets: {
+					elem: sheetsCount,
+					replaceText: [
+						["sheets)", "sheet)"]
+					],
+				}
+			};
 			for (const input of kanjiChoicesElems) {
 				input.addEventListener("change", () => {
 					if (input.checked) {
@@ -203,23 +219,8 @@ fetch("../data/kanjidata.json").then(response => {
 					}
 					const num = getMultiple(kanjiChoicesElems).length;
 					const sheetsNum = num === 0 ? 0 : Math.ceil(Math.ceil((num - 16) / 8) / 3) + 1;
-					const data = {
-						questions: {
-							elem: qCount,
-							data: num,
-							replaceText: [
-								["questions ", "question "],
-								["are", "is"]
-							],
-						},
-						sheets: {
-							elem: sheetsCount,
-							data: sheetsNum,
-							replaceText: [
-								["sheets)", "sheet)"]
-							],
-						}
-					};
+					data.questions.data = num;
+					data.sheets.data = sheetsNum;
 					for (let i = 0; i < qCount.length; i++) {
 						Object.keys(data).forEach(key => {
 							const elem = data[key].elem[i];
@@ -233,6 +234,9 @@ fetch("../data/kanjidata.json").then(response => {
 							}
 						});
 					}
+					if (updateTestBtn) {
+						updateTestBtn.click();
+					}
 				});
 			}
 			lang();
@@ -244,7 +248,7 @@ fetch("../data/kanjidata.json").then(response => {
 		checkedYear.forEach(year => {
 			yearsElem[0].textContent += `${year}年生${year === 4 ? "（前期）" : ""}`;
 			yearsElem[0].textContent += "、";
-			yearsElem[1].textContent += `${ordinalSuffix(year)} ${year === 4 ? "(first semester)" : ""}`
+			yearsElem[1].textContent += `${ordinalSuffix(year)}${year === 4 ? " (first semester)" : ""}`
 			yearsElem[1].textContent += ", ";
 		});
 		yearsElem[0].textContent = yearsElem[0].textContent.replace(/、$/, "");
@@ -320,8 +324,8 @@ fetch("../data/kanjidata.json").then(response => {
 		const kind = hiddenElem[0] === tabContent[1] ? "grade" : "select";
 		
 		// テストが作れるか判定
-		const studyYear = getMultiple(studyYearBtns);
-		if (!studyYear.length) {
+		const activeYear = getMultiple(studyYearBtns);
+		if (!activeYear.length) {
 			alert("学習年をひとつ以上選択してください。");
 			return;
 		}
@@ -329,9 +333,7 @@ fetch("../data/kanjidata.json").then(response => {
 			alert("漢字をひとつ以上選択してください。");
 			return;
 		}
-		
-		// テスト部分の表示
-		testH2.removeAttribute("hidden");
+
 		testAreaElem.removeAttribute("hidden");
 
 		// 今ある問題を削除
@@ -342,7 +344,7 @@ fetch("../data/kanjidata.json").then(response => {
 		// 漢字を決定
 		let qKanji, qNum;
 		if (kind === "grade") {
-			qKanji = filterBy(kanjiData, "studyYear", studyYear, {});
+			qKanji = filterBy(kanjiData, "studyYear", activeYear, {});
 			qKanji = shuffle(qKanji);
 			qNum = qKanji.length;
 		} else {
@@ -457,7 +459,7 @@ fetch("../data/kanjidata.json").then(response => {
 		testAreaElem.appendChild(fragment);
 
 		// テスト内の漢字を学年に合わせる
-		const maxYear = Math.max(...studyYear);
+		const maxYear = Math.max(...activeYear);
 		const maxYearElems = document.querySelectorAll(`[data-year="${maxYear}"]`);
 		for (let i = 0; i < maxYearElems.length; i++) {
 			maxYearElems[i].removeAttribute("hidden");
@@ -488,16 +490,18 @@ fetch("../data/kanjidata.json").then(response => {
 			}
 			// 漢字の選択肢を変更
 			changeChoices();
-			if (Boolean(getMultiple(kanjiChoicesElems).length)) {
-				ramdomSelect();
+			if (updateTestBtn) {
+				updateTestBtn.click();
 			}
 		});
 	}
 
 	// テスト作成
+	let updateTestBtn;
 	makeTestBtn.addEventListener("click", () => {
 		makeTest();
-		if (!testArea.hasAttribute("hidden")) {
+		if (!testAreaElem.hasAttribute("hidden")) {
+			updateTestBtn = makeTestBtn;
 			const message = {
 				"ja": "テストを更新",
 				"en-us": "Update test",
@@ -505,29 +509,28 @@ fetch("../data/kanjidata.json").then(response => {
 			supportedLang.forEach(lang => {
 				makeTestBtn.querySelector(`:lang(${lang})`).textContent = message[lang];
 			});
+			// テスト部分の表示
+			testH2.removeAttribute("hidden");
+			answerBtnLabel.removeAttribute("hidden");
 			printBtn.removeAttribute("hidden");
 			printAnsBtn.removeAttribute("hidden");
 		}
 	});
 
 	// 印刷ボタン
-	printBtn.addEventListener("click", () => {
-		window.onbeforeprint = function() {
-			answerBtn.checked = false;
-			showAnswer();
-		};
-		window.print();
-	});
-	printAnsBtn.addEventListener("click", () => {
-		window.onbeforeprint = function() {
-			answerBtn.checked = true;
-			showAnswer();
-		};
-		window.onafterprint = function() {
-			answerBtn.checked = false;
-			showAnswer();
-		};
-		window.print();
+	[printBtn, printAnsBtn].forEach(btn => {
+		btn.addEventListener("click", () => {
+			const original = answerBtn.checked;
+			window.onbeforeprint = function() {
+				answerBtn.checked = btn === printBtn ? false : true;
+				showAnswer();
+			};
+			window.onafterprint = function() {
+				answerBtn.checked = original;
+				showAnswer();
+			};
+			window.print();
+		});
 	});
 
 	// 印刷
@@ -550,12 +553,12 @@ fetch("../data/kanjidata.json").then(response => {
 	function showAnswer() {
 		const answerElems = document.getElementsByClassName("answer");
 		if (answerBtn.checked) {
-			for (let i = 0; i < answerElems.length; i++) {
-				answerElems[i].removeAttribute("hidden")
+			for (const elem of answerElems) {
+				elem.removeAttribute("hidden");
 			}
 		} else {
-			for (let i = 0; i < answerElems.length; i++) {
-				answerElems[i].setAttribute("hidden", "")
+			for (const elem of answerElems) {
+				elem.setAttribute("hidden", "");
 			}
 		}
 	}

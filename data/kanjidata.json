@@ -4501,10 +4501,10 @@
 						"text": "いすの"
 					},{
 						"reading": "うしろ",
-						"answer": "後"
+						"answer": "後ろ"
 					}
 				],
-				"hasOkurigana": false
+				"hasOkurigana": true
 			},{
 				"phrase": [
 					{
@@ -20340,7 +20340,9 @@
 			},{
 				"phrase": [
 					{
-						"reading": "たこを",
+						"text": "たこを"
+					},{
+						"reading": "とばす",
 						"answer": "飛ばす"
 					}
 				],
