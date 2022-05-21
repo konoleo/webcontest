@@ -9842,10 +9842,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "達成"
-					},{
 						"reading": "かん",
 						"answer": "感"
+					},{
+						"text": "心する"
 					}
 				],
 				"hasOkurigana": false
@@ -17315,6 +17315,8 @@
 			},{
 				"phrase": [
 					{
+						"text": "無"
+					},{
 						"reading": "かん",
 						"answer": "関"
 					},{
@@ -18705,6 +18707,8 @@
 			},{
 				"phrase": [
 					{
+						"text": "国語"
+					},{
 						"reading": "じ",
 						"answer": "辞"
 					},{
