@@ -13,8 +13,15 @@
 // 印刷
 @page {
 	size: A4 landscape;
+	// padding: 2cm; // margin for each printed piece of paper
 	margin: 40px 0 0;
 }
+
+@page :first {
+	// padding-top: 4cm; // top margin for first page of paper
+	margin: 40px 0 0;
+}
+
 
 #gradesFromData {
 	display: flex;
@@ -142,6 +149,10 @@ $phraseWide: 1.6 * 18px;
 		transform: scale(var(--scale));
 		transform-origin: top left;
 	}
+	@media print {
+		margin-top: 15mm;
+		margin-left: 3mm;
+	}
 	#testTitle {
 		display: grid;
 		grid-template-columns: calc(40px * 7) 1fr 150px;
@@ -187,23 +198,30 @@ $phraseWide: 1.6 * 18px;
 		gap: 3 * $size;
 		padding: $size 0 2 * $size 5px;
 		break-inside: avoid;
+		@media print {
+			&:nth-of-type(3n+4) {
+				padding-top: 25mm;
+			}
+		}
 	}
 }
 
 @media print {
 	$size: 16px;
 	body.safari {
-		.row {
-			padding-bottom: $size !important;
-			gap: 2 * $size !important;
+		#testPrint {
+			margin-top: 5mm !important;
 		}
-		#testSection {
-			padding: 2 * $size;
+		.row {
+			&:nth-of-type(3n+4) {
+				padding-top: 12mm !important;
+			}
+			gap: 2 * $size !important;
 		}
 	}
 	@-moz-document url-prefix() {
 		.row {
-			column-gap: 2.4 * $size !important;
+			column-gap: 3 * $size !important;
 		}
 	}
 }
@@ -283,7 +301,7 @@ $phraseWide: 1.6 * 18px;
 			}
 		}
 	}
-	
+
 	&.tango .phrase {
 		grid-column: 2;
 		grid-row: 2;
