@@ -44,6 +44,7 @@
 		z-index: -1;
 	}
 	.tabContents {
+		width: 100%;
 		.tabWrapper {
 			display: none;
 			&.activeContent {

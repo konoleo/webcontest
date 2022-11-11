@@ -1,5 +1,5 @@
 const messeage = {
-	"en-us": "scrollable",
+	"en": "scrollable",
 	"ja": "スクロールできます"
 };
 new ScrollHint(".js-scrollable", {

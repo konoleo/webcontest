@@ -1,15 +1,32 @@
+const ua = window.navigator.userAgent.toLowerCase();
+if (ua.indexOf("chrome") !== -1) {
+	document.body.classList.add("chromium");
+	if (ua.indexOf("android") !== -1) {
+		document.body.classList.add("android");
+	}
+} else if (ua.indexOf("safari") !== -1) {
+	document.body.classList.add("safari");
+}
+
 const url = new URL(location);
+const supportedLang = ["ja", "en"];
 let navLang = window.navigator.language;
-if (/ja/.test(navLang)) {
+supportedLang.forEach(lang => {
+	if (new RegExp(lang).test(navLang)) {
+		navLang = lang;
+	}
+});
+if (!supportedLang.includes(navLang)) {
+	navLang = "en";
+}
+if (!supportedLang.includes(navLang)) {
+	navLang = "en";
+}
+if (ua.indexOf("Googlebot") !== -1) {
 	navLang = "ja";
-} else if (/en/.test(navLang)) {
-	navLang = "en-us";
-} else {
-	navLang = "en-us";
 }
 const paraLang = url.searchParams.get("lang");
 let userLang = paraLang || navLang;
-const supportedLang = ["ja", "en-us"];
 function lang() {
 	document.getElementsByTagName("html")[0].setAttribute("lang", userLang);
 	document.title = document.getElementsByTagName("title")[0].getAttribute(`data-${userLang}`);
@@ -79,13 +96,3 @@ for (let i = 0; i < selectLangE.length; i++) {
 }
 lang();
 addRemovePara();
-
-const ua = window.navigator.userAgent.toLowerCase();
-if (ua.indexOf("chrome") != -1) {
-	document.body.classList.add("chromium");
-	if (ua.indexOf("android") != -1) {
-		document.body.classList.add("android");
-	}
-} else if (ua.indexOf("safari") != -1) {
-	document.body.classList.add("safari");
-}
