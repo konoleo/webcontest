@@ -6,6 +6,8 @@ if (ua.indexOf("chrome") !== -1) {
 	}
 } else if (ua.indexOf("safari") !== -1) {
 	document.body.classList.add("safari");
+} else if (ua.indexOf("firefox") !== -1) {
+	document.body.classList.add("firefox");
 }
 
 const url = new URL(location);

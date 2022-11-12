@@ -317,11 +317,9 @@ fetch("../data/kanjidata.json").then(response => {
 	});
 	qNumE.addEventListener("change", randomSelect);
 	function randomSelect() {
-		for (const choiceE of kanjiChoicesEs) {
-			if (choiceE.checked) {
-				choiceE.checked = false;
-				choiceE.dispatchEvent(new Event("change"));
-			};
+		for (const choiceE of document.querySelectorAll("[name=kanjiChoices]:checked")) {
+			choiceE.checked = false;
+			choiceE.dispatchEvent(new Event("change"));
 		}
 		const shuffled = shuffle([...kanjiChoicesEs]).slice(0, qNumE.value);
 		shuffled.forEach(choiceE => {
@@ -360,7 +358,7 @@ fetch("../data/kanjidata.json").then(response => {
 			qNumE.value = qNumE.max;
 		}
 
-		// 「1年生、2年生、3年生の漢字が全て出るテストを作ります。」を変更
+		// 「n年生の漢字が全て出るテストを作ります。」を変更
 		const text = {ja: "", en: ""};
 		selectedGrades.forEach((grade, i) => {
 			text.ja += addNensei(grade, "ja");
@@ -382,6 +380,13 @@ fetch("../data/kanjidata.json").then(response => {
 				details.setAttribute("hidden", "");
 			}
 		});
+
+		// 選択解除された学年の問題の選択解除
+		const deselectedGradeChoicesEs = document.querySelectorAll(".gradeDetails[hidden] [name=kanjiChoices]:checked");
+		for (const choiceE of deselectedGradeChoicesEs) {
+			choiceE.checked = false;
+			choiceE.dispatchEvent(new Event("change"));
+		}
 
 		// テストを更新
 		if (!testSectionE.hasAttribute("hidden")) {
@@ -589,6 +594,7 @@ fetch("../data/kanjidata.json").then(response => {
 		for (const elem of answerEs) {
 			elem.removeAttribute("hidden");
 		}
+		console.log("answerBtn.checked: ", answerBtn.checked);
 		if (answerBtn.checked) {
 			for (const elem of answerEs) {
 				elem.removeAttribute("hidden");
@@ -605,14 +611,15 @@ fetch("../data/kanjidata.json").then(response => {
 		const wantToShowAnswer = btn === printAnswerBtn;
 		btns[btn.id].forEach(btn2 => {
 			btn2.addEventListener("click", () => {
+				console.log("wantToShowAnswer: ", wantToShowAnswer);
 				window.onbeforeprint = function() {
 					answerBtn.checked = wantToShowAnswer;
-					answerBtn.dispatchEvent(new Event("change"));
+					showAnswer();
 				};
 				const original = answerBtn.checked;
 				window.onafterprint = function() {
 					answerBtn.checked = original;
-					answerBtn.dispatchEvent(new Event("change"));
+					showAnswer();
 				};
 				window.print();
 			});

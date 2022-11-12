@@ -13,12 +13,6 @@
 // 印刷
 @page {
 	size: A4 landscape;
-	// padding: 2cm; // margin for each printed piece of paper
-	margin: 40px 0 0;
-}
-
-@page :first {
-	// padding-top: 4cm; // top margin for first page of paper
 	margin: 40px 0 0;
 }
 
@@ -131,10 +125,6 @@ body.safari #studyGrades label input {
 	overflow: auto;
 }
 
-$blankWide: 3 * 18px;
-$gap: 0.2 * 18px;
-$phraseWide: 1.6 * 18px;
-
 #testPrint {
 	margin: 0;
 	font-family: $textbookTypeface;
@@ -192,11 +182,9 @@ $phraseWide: 1.6 * 18px;
 	}
 	.row {
 		font-feature-settings: normal;
-		display: grid;
-		grid-template-rows: 10 * $size;
-		grid-template-columns: repeat(8, calc(#{$phraseWide} + #{$gap} + #{$blankWide}));
-		gap: 3 * $size;
-		padding: $size 0 2 * $size 5px;
+		display: flex;
+		justify-content: space-between;
+		padding: $size 0;
 		break-inside: avoid;
 		@media print {
 			&:nth-of-type(3n+4) {
@@ -219,11 +207,19 @@ $phraseWide: 1.6 * 18px;
 			gap: 2 * $size !important;
 		}
 	}
-	@-moz-document url-prefix() {
+	body.firefox {
 		.row {
 			column-gap: 3 * $size !important;
 		}
 	}
+}
+
+$phraseWide: 1.6 * 18px;
+$blankWide: 3 * 18px;
+$gap: 0.2 * 18px;
+
+body.firefox .question.okurigana .phrase .reading {
+	padding-right: 3px;
 }
 
 .question {
@@ -245,7 +241,6 @@ $phraseWide: 1.6 * 18px;
 			height: 0.7 * 1.9 * $size;
 			margin: auto;
 			font-family: $sansSerif;
-			// font-size: 0.8rem;
 			font-size: 0.7 * $size;
 			text-align: center;
 			border: 1px solid $textColor;
