@@ -228,14 +228,10 @@ fetch("../data/kanjidata.json").then(response => {
 			filteredByStrokeNum.sort(function(a, b) {
 				const readingA = kanjiData[a].readingForSort;
 				const readingB = kanjiData[b].readingForSort;
-				if (readingA < readingB) return -1;
-				else if (readingA > readingB) return 1;
-				else {
-					const readingA2 = kanjiData[a].reading;
-					const readingB2 = kanjiData[b].reading;
-					if (readingA2 < readingB2) return -1;
-					if (readingA2 > readingB2) return 1;
-					return 0;
+				if (readingA <= readingB) {
+					return -1;
+				} else {
+					return 1;
 				}
 			});
 			filteredByStrokeNum.forEach(kanji => {

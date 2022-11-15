@@ -10417,7 +10417,7 @@
 							{
 								"text": "東"
 							},{
-								"reading": "さい",
+								"reading": "ざい",
 								"answer": "西"
 							},{
 								"text": "の文化"
@@ -17782,7 +17782,7 @@
 						"reading": "さす",
 						"answer": "指す"
 					},{
-						"text": "時計"
+						"text": "はり"
 					}
 				],
 				"hasOkurigana": true
@@ -24285,6 +24285,286 @@
 						"answer": "和"
 					},{
 						"text": "ふうだし"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"今朝": {
+		"studyGrade": 3,
+		"isUniqueReading": true,
+		"readingForSort": "けさ",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"reading": "けさ",
+						"answer": "今朝"
+					},{
+						"text": "のこと"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "けさ",
+						"answer": "今朝"
+					},{
+						"text": "早く"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"今日": {
+		"studyGrade": 3,
+		"isUniqueReading": true,
+		"readingForSort": "きょう",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"reading": "きょう",
+						"answer": "今日"
+					},{
+						"text": "のこと"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "来年の"
+					},{
+						"reading": "きょう",
+						"answer": "今日"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"二人": {
+		"studyGrade": 3,
+		"isUniqueReading": true,
+		"readingForSort": "ふたり",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"reading": "ふたり",
+						"answer": "二人"
+					},{
+						"text": "のなか"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ふたり",
+						"answer": "二人"
+					},{
+						"text": "分"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"一人": {
+		"studyGrade": 3,
+		"isUniqueReading": true,
+		"readingForSort": "ひとり",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"reading": "ひとり",
+						"answer": "一人"
+					},{
+						"text": "ぐらし"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ひとり",
+						"answer": "一人"
+					},{
+						"text": "ずつ"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"上手": {
+		"studyGrade": 3,
+		"isUniqueReading": true,
+		"readingForSort": "じょうず",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"reading": "じょうず",
+						"answer": "上手"
+					},{
+						"text": "な字"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "聞き"
+					},{
+						"reading": "じょうず",
+						"answer": "上手"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"大人": {
+		"studyGrade": 3,
+		"isUniqueReading": true,
+		"readingForSort": "おとな",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"reading": "おとな",
+						"answer": "大人"
+					},{
+						"text": "になる"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "おとな",
+						"answer": "大人"
+					},{
+						"text": "買い"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"二日": {
+		"studyGrade": 3,
+		"isUniqueReading": true,
+		"readingForSort": "ふつか",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"text": "二月"
+					},{
+						"reading": "ふつか",
+						"answer": "二日"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ふつか",
+						"answer": "二日"
+					},{
+						"text": "間"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"時計": {
+		"studyGrade": 3,
+		"isUniqueReading": true,
+		"readingForSort": "とけい",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"reading": "とけい",
+						"answer": "時計"
+					},{
+						"text": "のはり"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "すな"
+					},{
+						"reading": "どけい",
+						"answer": "時計"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"部屋": {
+		"studyGrade": 3,
+		"isUniqueReading": true,
+		"readingForSort": "へや",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"text": "子ども"
+					},{
+						"reading": "べや",
+						"answer": "部屋"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "すもう"
+					},{
+						"reading": "べや",
+						"answer": "部屋"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"二十日": {
+		"studyGrade": 3,
+		"isUniqueReading": true,
+		"readingForSort": "はつか",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"reading": "はつか",
+						"answer": "二十日"
+					},{
+						"text": "間"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "五月"
+					},{
+						"reading": "はつか",
+						"answer": "二十日"
 					}
 				],
 				"hasOkurigana": false

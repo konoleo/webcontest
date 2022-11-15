@@ -125,6 +125,10 @@ body.safari #studyGrades label input {
 	overflow: auto;
 }
 
+$phraseWide: 1.6 * 18px;
+$blankWide: 3 * 18px;
+$gap: 0.2 * 18px;
+
 #testPrint {
 	margin: 0;
 	font-family: $textbookTypeface;
@@ -182,7 +186,8 @@ body.safari #studyGrades label input {
 	}
 	.row {
 		font-feature-settings: normal;
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(8, $phraseWide + $blankWide + $gap);
 		justify-content: space-between;
 		padding: $size 0;
 		break-inside: avoid;
@@ -213,10 +218,6 @@ body.safari #studyGrades label input {
 		}
 	}
 }
-
-$phraseWide: 1.6 * 18px;
-$blankWide: 3 * 18px;
-$gap: 0.2 * 18px;
 
 body.firefox .question.okurigana .phrase .reading {
 	padding-right: 3px;
