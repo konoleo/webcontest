@@ -106,7 +106,7 @@ function sliceByNum(array, num) {
 
 let fragment = document.createDocumentFragment();
 
-fetch("../data/kanjidata.json").then(response => {
+fetch("../data/test.json").then(response => {
 	if (response.ok) {
 		return response.json();
 	} else {
@@ -129,12 +129,13 @@ fetch("../data/kanjidata.json").then(response => {
 					quiz.phrase.forEach((item, i) => {
 						if (item.answer) {
 							const answer = item.answer;
-							[...Array(item.answer.length)].forEach((_, t) => {
+							const kanjis = [...item.answer.matchAll(/[一-龠]/g)];
+							kanjis.forEach(matched => {
 								const newQuiz = JSON.parse(JSON.stringify(quiz));
 								const newAnswerArr = [];
-								const before = answer.substr(0, t);
-								const newAnswer = answer.substr(t, t + 1);
-								const after = answer.substr(t + 1);
+								const before = answer.substr(0, matched.index);
+								const newAnswer = answer.substr(matched.index, matched.index + 1);
+								const after = answer.substr(matched.index + 1);
 								if (before !== "") {
 									newAnswerArr.push({"text": before});
 								}
@@ -225,7 +226,7 @@ fetch("../data/kanjidata.json").then(response => {
 			const kanjiChoicesDiv = clone2.querySelector(".kanjiChoicesDiv");
 			detailsE.append(clone2);
 			// 読みで並び替え
-			filteredByStrokeNum.sort(function(a, b) {
+			filteredByStrokeNum.sort((a, b) => {
 				const readingA = kanjiData[a].readingForSort;
 				const readingB = kanjiData[b].readingForSort;
 				if (readingA <= readingB) {
@@ -590,7 +591,6 @@ fetch("../data/kanjidata.json").then(response => {
 		for (const elem of answerEs) {
 			elem.removeAttribute("hidden");
 		}
-		console.log("answerBtn.checked: ", answerBtn.checked);
 		if (answerBtn.checked) {
 			for (const elem of answerEs) {
 				elem.removeAttribute("hidden");

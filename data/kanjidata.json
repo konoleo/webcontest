@@ -24543,6 +24543,34 @@
 			}
 		]
 	},
+	"真っ青": {
+		"studyGrade": 3,
+		"isUniqueReading": true,
+		"readingForSort": "まっさお",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"reading": "まっさお",
+						"answer": "真っ青"
+					},{
+						"text": "な海"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "まっさお",
+						"answer": "真っ青"
+					},{
+						"text": "な顔"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"二十日": {
 		"studyGrade": 3,
 		"isUniqueReading": true,
@@ -28031,8 +28059,6 @@
 					},{
 						"reading": "おく",
 						"answer": "置く"
-					},{
-						"text": "な人"
 					}
 				],
 				"hasOkurigana": true
@@ -29856,6 +29882,174 @@
 					}
 				],
 				"hasOkurigana": true
+			}
+		]
+	},
+	"友達": {
+		"studyGrade": 4,
+		"isUniqueReading": true,
+		"readingForSort": "ともだち",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"reading": "ともだち",
+						"answer": "友達"
+					},{
+						"text": "になる"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ともだち",
+						"answer": "友達"
+					},{
+						"text": "と会う"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"明日": {
+		"studyGrade": 4,
+		"isUniqueReading": true,
+		"readingForSort": "あす",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"reading": "あす",
+						"answer": "明日"
+					},{
+						"text": "の天気"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "あす",
+						"answer": "明日"
+					},{
+						"text": "の予定"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"昨日": {
+		"studyGrade": 4,
+		"isUniqueReading": true,
+		"readingForSort": "きのう",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"reading": "きのう",
+						"answer": "昨日"
+					},{
+						"text": "のこと"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "きのう",
+						"answer": "昨日"
+					},{
+						"text": "の朝"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"一日": {
+		"studyGrade": 4,
+		"isUniqueReading": true,
+		"readingForSort": "ついたち",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"text": "一月"
+					},{
+						"reading": "ついたち",
+						"answer": "一日"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ついたち",
+						"answer": "一日"
+					},{
+						"text": "になる"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"手伝い": {
+		"studyGrade": 4,
+		"isUniqueReading": true,
+		"readingForSort": "てつだい",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"reading": "てつだ",
+						"answer": "手伝"
+					},{
+						"text": "う"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "てつだ",
+						"answer": "手伝"
+					},{
+						"text": "い"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"真っ赤": {
+		"studyGrade": 4,
+		"isUniqueReading": true,
+		"readingForSort": "まっか",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"reading": "まっか",
+						"answer": "真っ赤"
+					},{
+						"text": "な紙"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "まっか",
+						"answer": "真っ赤"
+					},{
+						"text": "な空"
+					}
+				],
+				"hasOkurigana": false
 			}
 		]
 	}

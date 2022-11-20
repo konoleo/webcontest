@@ -33,12 +33,13 @@
 						quiz.phrase.forEach((item, i) => {
 							if (item.answer) {
 								const answer = item.answer;
-								[...Array(item.answer.length)].forEach((_, t) => {
+								const kanjis = [...item.answer.matchAll(/[一-龠]/g)];
+								kanjis.forEach(matched => {
 									const newQuiz = JSON.parse(JSON.stringify(quiz));
 									const newAnswerArr = [];
-									const before = answer.substr(0, t);
-									const newAnswer = answer.substr(t, t + 1);
-									const after = answer.substr(t + 1);
+									const before = answer.substr(0, matched.index);
+									const newAnswer = answer.substr(matched.index, matched.index + 1);
+									const after = answer.substr(matched.index + 1);
 									if (before !== "") {
 										newAnswerArr.push({"text": before});
 									}
@@ -60,6 +61,7 @@
 		return [newData, jsonData];
 	}).then(datas => {
 		const kanjiData = datas[0];
+		console.log("kanjiData: ", kanjiData);
 		const jsonData = datas[1];
 
 		// 全ての学習年をデータから取得
@@ -135,7 +137,7 @@
 						}
 					}
 				});
-				const kanjisInPhrase = phrase.match(/[一-齢]/g);
+				const kanjisInPhrase = phrase.match(/[一-龠]/g);
 				if (kanjisInPhrase) {
 					const higherGrades = allGrades.filter(num => num >= data.studyGrade);
 					let higherGradesKanji = filterByYear(higherGrades).concat(notStudiedKanji);
