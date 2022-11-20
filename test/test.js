@@ -106,7 +106,7 @@ function sliceByNum(array, num) {
 
 let fragment = document.createDocumentFragment();
 
-fetch("../data/test.json").then(response => {
+fetch("../data/kanjidata.json").then(response => {
 	if (response.ok) {
 		return response.json();
 	} else {
