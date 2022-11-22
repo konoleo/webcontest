@@ -318,7 +318,7 @@ fetch("../data/kanjidata.json").then(response => {
 			choiceE.checked = false;
 			choiceE.dispatchEvent(new Event("change"));
 		}
-		const shuffled = shuffle([...kanjiChoicesEs]).slice(0, qNumE.value);
+		const shuffled = shuffle([...document.querySelectorAll(".gradeDetails:not([hidden]) [name=kanjiChoices]")]).slice(0, qNumE.value);
 		shuffled.forEach(choiceE => {
 			choiceE.checked = true;
 			choiceE.dispatchEvent(new Event("change"));
@@ -607,7 +607,6 @@ fetch("../data/kanjidata.json").then(response => {
 		const wantToShowAnswer = btn === printAnswerBtn;
 		btns[btn.id].forEach(btn2 => {
 			btn2.addEventListener("click", () => {
-				console.log("wantToShowAnswer: ", wantToShowAnswer);
 				window.onbeforeprint = function() {
 					answerBtn.checked = wantToShowAnswer;
 					showAnswer();
