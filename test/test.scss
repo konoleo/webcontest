@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap");
+@import "../css/var";
+
+@media print {
+	body {
+		background: none;
+	}
+	main {
+		width: initial;
+	}
+}
+
+// 印刷
+@page {
+	size: A4 landscape;
+	margin: 40px 0 0;
+}
+
+
+#gradesFromData {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	column-gap: 2em;
+	margin-bottom: 32px;
+	label {
+		text-align: center;
+		font-size: 1.5rem;
+		input {
+			width: 1.2rem;
+			height: 1.2rem;
+			margin-right: 4px;
+		}
+	}
+}
+body.safari #studyGrades label input {
+	vertical-align: -0.1em;
+}
+
+#qNum {
+	width: 2.1em;
+	color: inherit;
+	font-size: inherit;
+	font-family: $sansSerif;
+	background-color: rgba(white, 0.3);
+	padding: 0 4px;
+	border: none;
+	border-radius: 4px;
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	-moz-appearance: textfield;
+}
+
+.tabContents .tabWrapper {
+	margin: 16px 0;
+	&:last-of-type {
+		details {
+			margin-bottom: 16px;
+		}
+		summary {
+			margin: 16px 0;
+			h2 {
+				display: inline-block;
+				width: calc(100% - 100px);
+				padding-left: 0;
+				border-left: none;
+				margin: 0 0 0 0.5em;
+			}
+		}
+	}
+}
+
+#randomSelect {
+	margin-top: 16px;
+	margin-bottom: 8px;
+}
+.kanjiChoicesDiv {
+	display: flex;
+	flex-wrap: wrap;
+	.kanjiChoices {
+		padding: 8px 16px;
+		border-radius: 8px;
+		margin-right: 8px;
+		margin-bottom: 8px;
+		user-select: none;
+		-webkit-user-select: none;
+		&.checked {
+			background: white;
+			color: $textColor;
+		}
+		&:not(.checked) {
+			background: rgba(white, .3);
+			color: rgba($textColor, .5);
+		}
+		&:focus-within {
+			outline: auto;
+		}
+	}
+}
+
+#footerMenu {
+	width: 100vw;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	background: rgba($bgColor, .9);
+	padding: 0 20px 16px;
+	text-align: center;
+}
+
+:is(#btns, .btns) button {
+	margin: 0 12px 12px 0;
+}
+
+#answerBtnLabel {
+	display: block;
+	margin: 0.7em 0;
+}
+
+.scroll {
+	overflow: auto;
+}
+
+$phraseWide: 1.6 * 18px;
+$blankWide: 3 * 18px;
+$gap: 0.2 * 18px;
+
+#testPrint {
+	margin: 0;
+	font-family: $textbookTypeface;
+	$size: 16px;
+	font-size: $size;
+	counter-reset: questions;
+	padding: 2 * $size;
+	background: white;
+	--scale: 1;
+	@media screen {
+		width: 1123px;
+		transform: scale(var(--scale));
+		transform-origin: top left;
+	}
+	@media print {
+		margin-left: 3mm;
+	}
+	#testTitle {
+		display: grid;
+		grid-template-columns: calc(40px * 7) 1fr 150px;
+		height: 4.5 * $size;
+		border: 1px solid $textColor;
+		border-radius: $size;
+		padding: 0 $size 0 1.5 * $size;
+		@media print {
+			margin-top: 5mm;
+		}
+		#title {
+			font-size: 40px;
+			line-height: 1.65;
+			margin: 0;
+		}
+		#name {
+			writing-mode: vertical-lr;
+			text-align: center;
+			padding-left: $size;
+			border-left: 1px solid $textColor;
+			margin: 0;
+		}
+		#score {
+			text-align: end;
+			border-left: 1px solid $textColor;
+			position: relative;
+			> span {
+				position: absolute;
+				right: 0;
+				bottom: 5px;
+			}
+		}
+	}
+	> p {
+		margin-bottom: 2 * $size;
+	}
+	.dash {
+		text-decoration: line-through;
+		margin-right: 0.2 * $size;
+	}
+	.row {
+		font-feature-settings: normal;
+		display: grid;
+		grid-template-columns: repeat(8, $phraseWide + $blankWide + $gap);
+		justify-content: space-between;
+		padding: 2 * $size 0 0;
+		break-inside: avoid;
+		&:nth-of-type(2) {
+			padding-top: $size;
+		}
+		@media print {
+			&:nth-of-type(3n+1) {
+				padding-top: 10mm;
+			}
+		}
+	}
+}
+
+@media print {
+	$size: 16px;
+	body.safari .row {
+		&:nth-of-type(3n+1) {
+			padding-top: 9mm !important;
+		}
+		gap: 2 * $size !important;
+	}
+	body.firefox .row {
+		&:nth-of-type(3n+1) {
+			padding-top: 20mm !important;
+		}
+		column-gap: 3 * $size !important;
+	}
+}
+
+body.firefox .question.okurigana .phrase .reading {
+	padding-right: 3px;
+}
+
+.question {
+	$size: 18px;
+	display: grid;
+	grid-template-columns: 2em 1fr;
+	grid-template-rows: $phraseWide $blankWide;
+	row-gap: $gap;
+	font-size: $size;
+	writing-mode: vertical-rl;
+	height: 10.5 * $size;
+	.counter {
+		grid-column: 1;
+		grid-row: 2;
+		writing-mode: horizontal-tb;
+		&::after {
+			display: block;
+			width: 0.7 * 1.9 * $size;
+			height: 0.7 * 1.9 * $size;
+			margin: auto;
+			font-family: $sansSerif;
+			font-size: 0.7 * $size;
+			text-align: center;
+			border: 1px solid $textColor;
+			border-radius: 50%;
+			counter-increment: questions;
+			content: counter(questions);
+		}
+	}
+	.answer {
+		display: block;
+		font-size: 2 * $size;
+		line-height: 2 * $size * 1.4 + 2px;
+		text-align: center;
+		width: 100%;
+		height: calc(100% - 2px);
+		&.long {
+			font-size: 1.5 * $size;
+		}
+	}
+
+	&.okurigana {
+		.phrase {
+			grid-column: 2;
+			grid-row: 1;
+			margin-top: 4px;
+			.reading {
+				grid-column: 2;
+				border-right: 1px solid $textColor;
+			}
+		}
+		.blank {
+			grid-column: 2;
+			grid-row: 2;
+			width: $blankWide;
+			height: calc(100% - 4px);
+			margin-top: 4px;
+			position: relative;
+			&::before, &::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				width: calc(100% - 2px);
+				height: 0.5 * $size;
+				border: 1px solid $textColor;
+			}
+			&::before {
+				top: 0;
+				border-bottom: none;
+			}
+			&::after {
+				bottom: 0;
+				border-top: none;
+			}
+		}
+	}
+
+	&.tango .phrase {
+		grid-column: 2;
+		grid-row: 2;
+		.main {
+			grid-column: 1;
+			grid-row: 2;
+			display: inline-block;
+			position: relative;
+			.blank {
+				width: $blankWide;
+				height: $blankWide;
+				border: 1px solid $textColor;
+				margin: 4px 0;
+				display: inline-block;
+			}
+			.reading {
+				width: $phraseWide;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				right: calc(#{$phraseWide} * -1 - #{$gap} + 1px);
+				text-align: center;
+				&.long {
+					top: -25%;
+					height: 150%;
+				}
+			}
+			&.unique .reading {
+				padding: 4px 0;
+				text-align-last: justify;
+				&.short2 {
+					padding: 16px 0;
+				}
+				&.short1 {
+					padding: 8px 0;
+				}
+				&.long {
+					text-align-last: center;
+				}
+			}
+		}
+	}
+}
