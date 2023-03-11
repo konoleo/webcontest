@@ -37,10 +37,30 @@
 			},{
 				"phrase": [
 					{
+						"reading": "ひとつ",
+						"answer": "一つ"
+					},{
+						"text": "のせかい"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"reading": "ひと",
 						"answer": "一"
 					},{
 						"text": "くち"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ひと",
+						"answer": "一"
+					},{
+						"text": "さらぶん"
 					}
 				],
 				"hasOkurigana": false
@@ -147,6 +167,32 @@
 					},{
 						"phrase": [
 							{
+								"reading": "あめ",
+								"answer": "雨"
+							},{
+								"text": "ふり"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "あめ",
+								"answer": "雨"
+							},{
+								"text": "あがり"
+							}
+						],
+						"hasOkurigana": false
+					}
+				]
+			},{
+				"studyGrade": 2,
+				"reading": "あま",
+				"quizzes": [
+					{
+						"phrase": [
+							{
 								"reading": "あま",
 								"answer": "雨"
 							},{
@@ -157,10 +203,22 @@
 					},{
 						"phrase": [
 							{
-								"reading": "あめ",
+								"reading": "あま",
 								"answer": "雨"
 							},{
-								"text": "ふり"
+								"text": "水をためる"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "くろい"
+							},{
+								"reading": "あま",
+								"answer": "雨"
+							},{
+								"text": "ぐも"
 							}
 						],
 						"hasOkurigana": false
@@ -227,6 +285,16 @@
 					},{
 						"phrase": [
 							{
+								"reading": "えん",
+								"answer": "円"
+							},{
+								"text": "をかく"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
 								"text": "ごじゅう"
 							},{
 								"reading": "えん",
@@ -257,6 +325,16 @@
 								"answer": "円い"
 							},{
 								"text": "ケーキ"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "まるい",
+								"answer": "円い"
+							},{
+								"text": "まど"
 							}
 						],
 						"hasOkurigana": true
@@ -378,6 +456,48 @@
 						"hasOkurigana": false
 					}
 				]
+			},{
+				"reading": "ね",
+				"studyGrade": 2,
+				"quizzes": [
+					{
+						"phrase": [
+							{
+								"text": "ふえの"
+							},{
+								"reading": "ね",
+								"answer": "音"
+							},{
+								"text": "いろ"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "本"
+							},{
+								"reading": "ね",
+								"answer": "音"
+							},{
+								"text": "をいう"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "よわ"
+							},{
+								"reading": "ね",
+								"answer": "音"
+							},{
+								"text": "をはく"
+							}
+						],
+						"hasOkurigana": false
+					}
+				]
 			}
 		]
 	},
@@ -419,7 +539,27 @@
 			},{
 				"phrase": [
 					{
+						"text": "やまから"
+					},{
+						"reading": "おりる",
+						"answer": "下りる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "てを"
+					},{
+						"reading": "おろす",
+						"answer": "下ろす"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "こしを"
 					},{
 						"reading": "おろす",
 						"answer": "下ろす"
@@ -745,10 +885,32 @@
 			},{
 				"phrase": [
 					{
+						"reading": "きゅう",
+						"answer": "九"
+					},{
+						"text": "かい"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "く",
 						"answer": "九"
 					},{
 						"text": "がつ"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "よるの"
+					},{
+						"reading": "く",
+						"answer": "九"
+					},{
+						"text": "じ"
 					}
 				],
 				"hasOkurigana": false
@@ -762,6 +924,36 @@
 					}
 				],
 				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "ここのつ",
+						"answer": "九つ"
+					},{
+						"text": "になる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "ここの",
+						"answer": "九"
+					},{
+						"text": "かのひる"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ここの",
+						"answer": "九"
+					},{
+						"text": "かめ"
+					}
+				],
+				"hasOkurigana": false
 			}
 		]
 	},
@@ -785,6 +977,16 @@
 					},{
 						"phrase": [
 							{
+								"text": "しごとを"
+							},{
+								"reading": "やすむ",
+								"answer": "休む"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "きが"
 							},{
 								"reading": "やすまる",
@@ -795,7 +997,27 @@
 					},{
 						"phrase": [
 							{
+								"text": "からだが"
+							},{
+								"reading": "やすまる",
+								"answer": "休まる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "てを"
+							},{
+								"reading": "やすめる",
+								"answer": "休める"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "あたまを"
 							},{
 								"reading": "やすめる",
 								"answer": "休める"
@@ -992,6 +1214,18 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "おう"
+							},{
+								"reading": "ごん",
+								"answer": "金"
+							},{
+								"text": "時だい"
+							}
+						],
+						"hasOkurigana": false
 					}
 				]
 			}
@@ -1017,10 +1251,10 @@
 					},{
 						"phrase": [
 							{
-								"reading": "そら",
-								"answer": "空"
+								"text": "よ"
 							},{
-								"text": "をとぶ"
+								"reading": "ぞら",
+								"answer": "空"
 							}
 						],
 						"hasOkurigana": false
@@ -1067,6 +1301,42 @@
 							},{
 								"reading": "あく",
 								"answer": "空く"
+							}
+						],
+						"hasOkurigana": true
+					}
+				]
+			},{
+				"studyGrade": 2,
+				"reading": "あける",
+				"quizzes": [
+					{
+						"phrase": [
+							{
+								"text": "せきを"
+							},{
+								"reading": "あける",
+								"answer": "空ける"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "よていを"
+							},{
+								"reading": "あける",
+								"answer": "空ける"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "かんかくを"
+							},{
+								"reading": "あける",
+								"answer": "空ける"
 							}
 						],
 						"hasOkurigana": true
@@ -1218,30 +1488,82 @@
 		]
 	},
 	"犬": {
-		"studyGrade": 1,
 		"strokesNum": 4,
 		"readingForSort": "けん",
-		"quizzes": [
+		"readings": [
 			{
-				"phrase": [
+				"studyGrade": 1,
+				"quizzes": [
 					{
-						"text": "こ"
+						"phrase": [
+							{
+								"text": "こ"
+							},{
+								"reading": "いぬ",
+								"answer": "犬"
+							}
+						],
+						"hasOkurigana": false
 					},{
-						"reading": "いぬ",
-						"answer": "犬"
+						"phrase": [
+							{
+								"reading": "いぬ",
+								"answer": "犬"
+							},{
+								"text": "ごや"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "しば"
+							},{
+								"reading": "いぬ",
+								"answer": "犬"
+							}
+						],
+						"hasOkurigana": false
 					}
-				],
-				"hasOkurigana": false
+				]
 			},{
-				"phrase": [
+				"studyGrade": 5,
+				"reading": "けん",
+				"quizzes": [
 					{
-						"reading": "いぬ",
-						"answer": "犬"
+						"phrase": [
+							{
+								"text": "愛"
+							},{
+								"reading": "けん",
+								"answer": "犬"
+							},{
+								"text": "の名前"
+							}
+						],
+						"hasOkurigana": false
 					},{
-						"text": "ごや"
+						"phrase": [
+							{
+								"text": "大がた"
+							},{
+								"reading": "けん",
+								"answer": "犬"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "かしこい名"
+							},{
+								"reading": "けん",
+								"answer": "犬"
+							}
+						],
+						"hasOkurigana": false
 					}
-				],
-				"hasOkurigana": false
+				]
 			}
 		]
 	},
@@ -1253,6 +1575,26 @@
 				"studyGrade": 1,
 				"quizzes": [
 					{
+						"phrase": [
+							{
+								"text": "すがたを"
+							},{
+								"reading": "みせる",
+								"answer": "見せる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "しゃしんを"
+							},{
+								"reading": "みせる",
+								"answer": "見せる"
+							}
+						],
+						"hasOkurigana": true
+					},{
 						"phrase": [
 							{
 								"text": "とおくを"
@@ -1275,13 +1617,23 @@
 					},{
 						"phrase": [
 							{
-								"reading": "み",
-								"answer": "見"
+								"text": "ほしが"
 							},{
-								"text": "はらし"
+								"reading": "みえる",
+								"answer": "見える"
 							}
 						],
-						"hasOkurigana": false
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "やさしく"
+							},{
+								"reading": "みえる",
+								"answer": "見える"
+							}
+						],
+						"hasOkurigana": true
 					}
 				]
 			},{
@@ -1343,6 +1695,16 @@
 			},{
 				"phrase": [
 					{
+						"reading": "ご",
+						"answer": "五"
+					},{
+						"text": "ねんめ"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "いつつ",
 						"answer": "五つ"
 					},{
@@ -1353,10 +1715,32 @@
 			},{
 				"phrase": [
 					{
+						"reading": "いつつ",
+						"answer": "五つ"
+					},{
+						"text": "がさね"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"reading": "いつ",
 						"answer": "五"
 					},{
 						"text": "かご"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "ごがつ"
+					},{
+						"reading": "いつ",
+						"answer": "五"
+					},{
+						"text": "か"
 					}
 				],
 				"hasOkurigana": false
@@ -1373,10 +1757,10 @@
 					{
 						"phrase": [
 							{
-								"reading": "くち",
-								"answer": "口"
+								"text": "で"
 							},{
-								"text": "ぐせ"
+								"reading": "ぐち",
+								"answer": "口"
 							}
 						],
 						"hasOkurigana": false
@@ -1476,7 +1860,7 @@
 						"reading": "こう",
 						"answer": "校"
 					},{
-						"text": "てい"
+						"text": "かをうたう"
 					}
 				],
 				"hasOkurigana": false
@@ -1539,10 +1923,30 @@
 			},{
 				"phrase": [
 					{
+						"reading": "さん",
+						"answer": "三"
+					},{
+						"text": "がつ"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "みっつ",
 						"answer": "三つ"
 					},{
 						"text": "めのほん"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "みっつ",
+						"answer": "三つ"
+					},{
+						"text": "としうえ"
 					}
 				],
 				"hasOkurigana": true
@@ -1559,10 +1963,30 @@
 			},{
 				"phrase": [
 					{
+						"reading": "み",
+						"answer": "三"
+					},{
+						"text": "かづきがた"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "みつ",
 						"answer": "三つ"
 					},{
 						"text": "おり"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "みつ",
+						"answer": "三つ"
+					},{
+						"text": "あみ"
 					}
 				],
 				"hasOkurigana": true
@@ -1615,7 +2039,7 @@
 					{
 						"phrase": [
 							{
-								"text": "下"
+								"text": "げ"
 							},{
 								"reading": "ざん",
 								"answer": "山"
@@ -1669,6 +2093,16 @@
 					},{
 						"phrase": [
 							{
+								"text": "おや"
+							},{
+								"reading": "こ",
+								"answer": "子"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
 								"reading": "こ",
 								"answer": "子"
 							},{
@@ -1689,6 +2123,18 @@
 							},{
 								"reading": "す",
 								"answer": "子"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "い"
+							},{
+								"reading": "す",
+								"answer": "子"
+							},{
+								"text": "にすわる"
 							}
 						],
 						"hasOkurigana": false
@@ -1721,9 +2167,9 @@
 					},{
 						"phrase": [
 							{
-								"text": "王"
+								"text": "いいちょう"
 							},{
-								"reading": "じ",
+								"reading": "し",
 								"answer": "子"
 							}
 						],
@@ -1761,10 +2207,30 @@
 			},{
 				"phrase": [
 					{
+						"reading": "し",
+						"answer": "四"
+					},{
+						"text": "かく"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "よん",
 						"answer": "四"
 					},{
 						"text": "ほんのき"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "よん",
+						"answer": "四"
+					},{
+						"text": "かいめ"
 					}
 				],
 				"hasOkurigana": false
@@ -1781,10 +2247,30 @@
 			},{
 				"phrase": [
 					{
+						"reading": "よっつ",
+						"answer": "四つ"
+					},{
+						"text": "にわける"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"reading": "よつ",
 						"answer": "四つ"
 					},{
 						"text": "かど"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "よつ",
+						"answer": "四つ"
+					},{
+						"text": "ば"
 					}
 				],
 				"hasOkurigana": true
@@ -1923,10 +2409,30 @@
 			},{
 				"phrase": [
 					{
-						"reading": "なの",
+						"reading": "しち",
 						"answer": "七"
 					},{
-						"text": "か"
+						"text": "ごさん"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "なな",
+						"answer": "七"
+					},{
+						"text": "くさがゆ"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "なな",
+						"answer": "七"
+					},{
+						"text": "ころび"
 					}
 				],
 				"hasOkurigana": false
@@ -1940,6 +2446,36 @@
 					}
 				],
 				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "ななつ",
+						"answer": "七つ"
+					},{
+						"text": "のしま"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "なの",
+						"answer": "七"
+					},{
+						"text": "か"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "なの",
+						"answer": "七"
+					},{
+						"text": "かのあさ"
+					}
+				],
+				"hasOkurigana": false
 			}
 		]
 	},
@@ -2089,10 +2625,50 @@
 			},{
 				"phrase": [
 					{
+						"reading": "じゅう",
+						"answer": "十"
+					},{
+						"text": "がつ"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "じっ",
 						"answer": "十"
 					},{
 						"text": "ぴき"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "じっ",
+						"answer": "十"
+					},{
+						"text": "かい"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "じゅっ",
+						"answer": "十"
+					},{
+						"text": "ぴき"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "じゅっ",
+						"answer": "十"
+					},{
+						"text": "かい"
 					}
 				],
 				"hasOkurigana": false
@@ -2106,54 +2682,108 @@
 					}
 				],
 				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "とお",
+						"answer": "十"
+					},{
+						"text": "かのよる"
+					}
+				],
+				"hasOkurigana": false
 			}
 		]
 	},
 	"出": {
-		"studyGrade": 1,
 		"strokesNum": 5,
 		"readingForSort": "しゅつ",
-		"quizzes": [
+		"readings": [
 			{
-				"phrase": [
+				"studyGrade": 1,
+				"quizzes": [
 					{
-						"text": "つきが"
+						"phrase": [
+							{
+								"text": "つきが"
+							},{
+								"reading": "でる",
+								"answer": "出る"
+							}
+						],
+						"hasOkurigana": true
 					},{
-						"reading": "でる",
-						"answer": "出る"
+						"phrase": [
+							{
+								"reading": "で",
+								"answer": "出"
+							},{
+								"text": "ぐち"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "おかねを"
+							},{
+								"reading": "だす",
+								"answer": "出す"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "ふねを"
+							},{
+								"reading": "だす",
+								"answer": "出す"
+							}
+						],
+						"hasOkurigana": true
 					}
-				],
-				"hasOkurigana": true
+				]
 			},{
-				"phrase": [
+				"studyGrade": 3,
+				"reading": "しゅつ",
+				"quizzes": [
 					{
-						"reading": "で",
-						"answer": "出"
+						"phrase": [
+							{
+								"text": "六時"
+							},{
+								"reading": "しゅっ",
+								"answer": "出"
+							},{
+								"text": "ぱつ"
+							}
+						],
+						"hasOkurigana": false
 					},{
-						"text": "ぐち"
-					}
-				],
-				"hasOkurigana": false
-			},{
-				"phrase": [
-					{
-						"text": "おかねを"
+						"phrase": [
+							{
+								"text": "米のゆ"
+							},{
+								"reading": "しゅつ",
+								"answer": "出"
+							}
+						],
+						"hasOkurigana": false
 					},{
-						"reading": "だす",
-						"answer": "出す"
+						"phrase": [
+							{
+								"text": "四国"
+							},{
+								"reading": "しゅっ",
+								"answer": "出"
+							},{
+								"text": "しん"
+							}
+						],
+						"hasOkurigana": false
 					}
-				],
-				"hasOkurigana": true
-			},{
-				"phrase": [
-					{
-						"text": "ふねを"
-					},{
-						"reading": "だす",
-						"answer": "出す"
-					}
-				],
-				"hasOkurigana": true
+				]
 			}
 		]
 	},
@@ -2169,6 +2799,16 @@
 						"answer": "女"
 					},{
 						"text": "のこ"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "おんな",
+						"answer": "女"
+					},{
+						"text": "のこたち"
 					}
 				],
 				"hasOkurigana": false
@@ -2198,7 +2838,7 @@
 								"reading": "ちいさい",
 								"answer": "小さい"
 							},{
-								"text": "ねこ"
+								"text": "いぬ"
 							}
 						],
 						"hasOkurigana": true
@@ -2308,7 +2948,27 @@
 								"reading": "お",
 								"answer": "小"
 							},{
-								"text": "川の音"
+								"text": "川の流れ"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "お",
+								"answer": "小"
+							},{
+								"text": "ぐらあん"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "お",
+								"answer": "小"
+							},{
+								"text": "田わらし"
 							}
 						],
 						"hasOkurigana": false
@@ -2355,7 +3015,27 @@
 			},{
 				"phrase": [
 					{
+						"text": "かおを"
+					},{
+						"reading": "あげる",
+						"answer": "上げる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "おき"
+					},{
+						"reading": "あがる",
+						"answer": "上がる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "はなびが"
 					},{
 						"reading": "あがる",
 						"answer": "上がる"
@@ -2412,6 +3092,16 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "もり",
+								"answer": "森"
+							},{
+								"text": "にはいる"
+							}
+						],
+						"hasOkurigana": false
 					}
 				]
 			},{
@@ -2435,6 +3125,16 @@
 								"answer": "森"
 							},{
 								"text": "りん火事"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "しん",
+								"answer": "森"
+							},{
+								"text": "りんを守る"
 							}
 						],
 						"hasOkurigana": false
@@ -2631,6 +3331,26 @@
 					},{
 						"phrase": [
 							{
+								"reading": "ただしい",
+								"answer": "正しい"
+							},{
+								"text": "ほうほう"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "まちがいを"
+							},{
+								"reading": "ただす",
+								"answer": "正す"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "しせいを"
 							},{
 								"reading": "ただす",
@@ -2721,6 +3441,26 @@
 					},{
 						"phrase": [
 							{
+								"text": "なごやに"
+							},{
+								"reading": "うまれる",
+								"answer": "生まれる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "めいさくを"
+							},{
+								"reading": "うむ",
+								"answer": "生む"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "けっかを"
 							},{
 								"reading": "うむ",
@@ -2767,7 +3507,33 @@
 					},{
 						"phrase": [
 							{
-								"text": "ごみを"
+								"text": "百さいまで"
+							},{
+								"reading": "いきる",
+								"answer": "生きる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "山で"
+							},{
+								"reading": "いきる",
+								"answer": "生きる"
+							}
+						],
+						"hasOkurigana": true
+					}
+				]
+			},{
+				"reading": "いかす",
+				"studyGrade": 2,
+				"quizzes": [
+					{
+						"phrase": [
+							{
+								"text": "さかなを"
 							},{
 								"reading": "いかす",
 								"answer": "生かす"
@@ -2777,7 +3543,53 @@
 					},{
 						"phrase": [
 							{
-								"text": "はなを"
+								"text": "そざいを"
+							},{
+								"reading": "いかす",
+								"answer": "生かす"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "いかす",
+								"answer": "生かす"
+							},{
+								"text": "もころすも"
+							}
+						],
+						"hasOkurigana": true
+					}
+				]
+			},{
+				"reading": "いける",
+				"studyGrade": 2,
+				"quizzes": [
+					{
+						"phrase": [
+							{
+								"reading": "いけ",
+								"answer": "生け"
+							},{
+								"text": "花"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "花びんに"
+							},{
+								"reading": "いける",
+								"answer": "生ける"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "花を"
 							},{
 								"reading": "いける",
 								"answer": "生ける"
@@ -2803,10 +3615,10 @@
 					},{
 						"phrase": [
 							{
-								"text": "ひげを"
+								"text": "はが"
 							},{
-								"reading": "はやす",
-								"answer": "生やす"
+								"reading": "はえる",
+								"answer": "生える"
 							}
 						],
 						"hasOkurigana": true
@@ -2817,6 +3629,42 @@
 							},{
 								"reading": "はえる",
 								"answer": "生える"
+							}
+						],
+						"hasOkurigana": true
+					}
+				]
+			},{
+				"reading": "はやす",
+				"studyGrade": 2,
+				"quizzes": [
+					{
+						"phrase": [
+							{
+								"text": "ねを"
+							},{
+								"reading": "はやす",
+								"answer": "生やす"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "ひげを"
+							},{
+								"reading": "はやす",
+								"answer": "生やす"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "口ひげを"
+							},{
+								"reading": "はやす",
+								"answer": "生やす"
 							}
 						],
 						"hasOkurigana": true
@@ -2848,6 +3696,52 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "しょう",
+								"answer": "生"
+							},{
+								"text": "がいの友"
+							}
+						],
+						"hasOkurigana": false
+					}
+				]
+			},{
+				"reading": "なま",
+				"studyGrade": 5,
+				"quizzes": [
+					{
+						"phrase": [
+							{
+								"reading": "なま",
+								"answer": "生"
+							},{
+								"text": "物を食べる"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "なま",
+								"answer": "生"
+							},{
+								"text": "意気な口"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "なま",
+								"answer": "生"
+							},{
+								"text": "放送"
+							}
+						],
+						"hasOkurigana": false
 					}
 				]
 			}
@@ -2867,6 +3761,16 @@
 								"answer": "青い"
 							},{
 								"text": "うみ"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "あおく",
+								"answer": "青く"
+							},{
+								"text": "なる"
 							}
 						],
 						"hasOkurigana": true
@@ -2913,6 +3817,16 @@
 								"answer": "青"
 							},{
 								"text": "しゅん"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "せい",
+								"answer": "青"
+							},{
+								"text": "しゅん時代"
 							}
 						],
 						"hasOkurigana": false
@@ -3069,13 +3983,63 @@
 					},{
 						"phrase": [
 							{
-								"reading": "あか",
-								"answer": "赤"
+								"reading": "あかい",
+								"answer": "赤い"
 							},{
-								"text": "ぐみ"
+								"text": "やね"
 							}
 						],
-						"hasOkurigana": false
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "あかい",
+								"answer": "赤い"
+							},{
+								"text": "ひかり"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "みが"
+							},{
+								"reading": "あからむ",
+								"answer": "赤らむ"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "ほっぺの"
+							},{
+								"reading": "あからみ",
+								"answer": "赤らみ"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "かおを"
+							},{
+								"reading": "あからめる",
+								"answer": "赤らめる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "ほほを"
+							},{
+								"reading": "あからめる",
+								"answer": "赤らめる"
+							}
+						],
+						"hasOkurigana": true
 					}
 				]
 			},{
@@ -3179,6 +4143,16 @@
 								"answer": "千"
 							},{
 								"text": "とせあめ"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "ち",
+								"answer": "千"
+							},{
+								"text": "鳥がとぶ"
 							}
 						],
 						"hasOkurigana": false
@@ -3335,13 +4309,43 @@
 					},{
 						"phrase": [
 							{
-								"reading": "はや",
-								"answer": "早"
+								"text": "よていが"
 							},{
-								"text": "おき"
+								"reading": "はやまる",
+								"answer": "早まる"
 							}
 						],
-						"hasOkurigana": false
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "じかんが"
+							},{
+								"reading": "はやまる",
+								"answer": "早まる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "みっか"
+							},{
+								"reading": "はやめる",
+								"answer": "早める"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "いちねん"
+							},{
+								"reading": "はやめる",
+								"answer": "早める"
+							}
+						],
+						"hasOkurigana": true
 					}
 				]
 			},{
@@ -3365,6 +4369,16 @@
 								"answer": "早"
 							},{
 								"text": "たいする"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "そう",
+								"answer": "早"
+							},{
+								"text": "ちょう五時"
 							}
 						],
 						"hasOkurigana": false
@@ -3456,40 +4470,198 @@
 		]
 	},
 	"足": {
-		"studyGrade": 1,
 		"strokesNum": 7,
 		"readingForSort": "そく",
-		"quizzes": [
+		"readings": [
 			{
-				"phrase": [
+				"studyGrade": 1,
+				"quizzes": [
 					{
-						"text": "かけ"
+						"phrase": [
+							{
+								"text": "かけ"
+							},{
+								"reading": "あし",
+								"answer": "足"
+							}
+						],
+						"hasOkurigana": false
 					},{
-						"reading": "あし",
-						"answer": "足"
+						"phrase": [
+							{
+								"reading": "あし",
+								"answer": "足"
+							},{
+								"text": "がはやい"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "あし",
+								"answer": "足"
+							},{
+								"text": "おと"
+							}
+						],
+						"hasOkurigana": false
 					}
-				],
-				"hasOkurigana": false
+				]
 			},{
-				"phrase": [
+				"studyGrade": 2,
+				"reading": "たりる",
+				"quizzes": [
 					{
-						"reading": "あし",
-						"answer": "足"
+						"phrase": [
+							{
+								"text": "ひとりで"
+							},{
+								"reading": "たりる",
+								"answer": "足りる"
+							}
+						],
+						"hasOkurigana": true
 					},{
-						"text": "あと"
+						"phrase": [
+							{
+								"text": "お金が"
+							},{
+								"reading": "たり",
+								"answer": "足り"
+							},{
+								"text": "ない"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "一日で"
+							},{
+								"reading": "たりる",
+								"answer": "足りる"
+							}
+						],
+						"hasOkurigana": true
 					}
-				],
-				"hasOkurigana": false
+				]
 			},{
-				"phrase": [
+				"studyGrade": 2,
+				"reading": "たる",
+				"quizzes": [
 					{
-						"reading": "あし",
-						"answer": "足"
+						"phrase": [
+							{
+								"reading": "たる",
+								"answer": "足る"
+							},{
+								"text": "をしる"
+							}
+						],
+						"hasOkurigana": true
 					},{
-						"text": "おと"
+						"phrase": [
+							{
+								"text": "お金が"
+							},{
+								"reading": "たら",
+								"answer": "足ら"
+							},{
+								"text": "ない"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "力が"
+							},{
+								"reading": "たら",
+								"answer": "足ら"
+							},{
+								"text": "ない"
+							}
+						],
+						"hasOkurigana": true
 					}
-				],
-				"hasOkurigana": false
+				]
+			},{
+				"studyGrade": 2,
+				"reading": "たす",
+				"quizzes": [
+					{
+						"phrase": [
+							{
+								"text": "二"
+							},{
+								"reading": "たす",
+								"answer": "足す"
+							},{
+								"text": "三"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "つけ"
+							},{
+								"reading": "たす",
+								"answer": "足す"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "かき"
+							},{
+								"reading": "たす",
+								"answer": "足す"
+							}
+						],
+						"hasOkurigana": true
+					}
+				]
+			},{
+				"studyGrade": 2,
+				"reading": "そく",
+				"quizzes": [
+					{
+						"phrase": [
+							{
+								"text": "まん"
+							},{
+								"reading": "ぞく",
+								"answer": "足"
+							},{
+								"text": "する"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "学校えん"
+							},{
+								"reading": "そく",
+								"answer": "足"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "りょう金ぶ"
+							},{
+								"reading": "そく",
+								"answer": "足"
+							}
+						],
+						"hasOkurigana": false
+					}
+				]
 			}
 		]
 	},
@@ -3566,7 +4738,7 @@
 								"reading": "そん",
 								"answer": "村"
 							},{
-								"text": "の人"
+								"text": "の写真"
 							}
 						],
 						"hasOkurigana": false
@@ -3605,13 +4777,33 @@
 					},{
 						"phrase": [
 							{
-								"reading": "おおきい",
-								"answer": "大きい"
+								"reading": "おおきな",
+								"answer": "大きな"
 							},{
-								"text": "き"
+								"text": "いし"
 							}
 						],
 						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "おおきな",
+								"answer": "大きな"
+							},{
+								"text": "たてもの"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "おお",
+								"answer": "大"
+							},{
+								"text": "ぞら"
+							}
+						],
+						"hasOkurigana": false
 					},{
 						"phrase": [
 							{
@@ -3622,6 +4814,26 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "おおいに",
+								"answer": "大いに"
+							},{
+								"text": "よろこぶ"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "おおいに",
+								"answer": "大いに"
+							},{
+								"text": "やくだつ"
+							}
+						],
+						"hasOkurigana": true
 					}
 				]
 			},{
@@ -3675,6 +4887,16 @@
 						"answer": "男"
 					},{
 						"text": "のこ"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "おとこ",
+						"answer": "男"
+					},{
+						"text": "のこたち"
 					}
 				],
 				"hasOkurigana": false
@@ -3759,10 +4981,12 @@
 					},{
 						"phrase": [
 							{
+								"text": "ばく"
+							},{
 								"reading": "ちく",
 								"answer": "竹"
 							},{
-								"text": "馬の友"
+								"text": "の音"
 							}
 						],
 						"hasOkurigana": false
@@ -3915,6 +5139,8 @@
 							},{
 								"reading": "ちゅう",
 								"answer": "虫"
+							},{
+								"text": "るい"
 							}
 						],
 						"hasOkurigana": false
@@ -3925,16 +5151,18 @@
 							},{
 								"reading": "ちゅう",
 								"answer": "虫"
+							},{
+								"text": "くじょ"
 							}
 						],
 						"hasOkurigana": false
 					},{
 						"phrase": [
 							{
-								"reading": "むし",
-								"answer": "虫"
+								"text": "はちのよう"
 							},{
-								"text": "かご"
+								"reading": "ちゅう",
+								"answer": "虫"
 							}
 						],
 						"hasOkurigana": false
@@ -4088,6 +5316,16 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "た",
+								"answer": "田"
+							},{
+								"text": "はた"
+							}
+						],
+						"hasOkurigana": false
 					}
 				]
 			},{
@@ -4196,6 +5434,26 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "と",
+								"answer": "土"
+							},{
+								"text": "ちをかう"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "と",
+								"answer": "土"
+							},{
+								"text": "ちかいはつ"
+							}
+						],
+						"hasOkurigana": false
 					}
 				]
 			}
@@ -4219,6 +5477,16 @@
 			},{
 				"phrase": [
 					{
+						"reading": "に",
+						"answer": "二"
+					},{
+						"text": "がつ"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "ふたつ",
 						"answer": "二つ"
 					},{
@@ -4229,10 +5497,30 @@
 			},{
 				"phrase": [
 					{
+						"reading": "ふたつ",
+						"answer": "二つ"
+					},{
+						"text": "にきる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"reading": "ふた",
 						"answer": "二"
 					},{
 						"text": "くち"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ふた",
+						"answer": "二"
+					},{
+						"text": "さら"
 					}
 				],
 				"hasOkurigana": false
@@ -4290,6 +5578,16 @@
 						"phrase": [
 							{
 								"text": "みっ"
+							},{
+								"reading": "か",
+								"answer": "日"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "なの"
 							},{
 								"reading": "か",
 								"answer": "日"
@@ -4381,10 +5679,30 @@
 					},{
 						"phrase": [
 							{
+								"text": "うけ"
+							},{
+								"reading": "いれる",
+								"answer": "入れる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "きに"
 							},{
 								"reading": "いる",
 								"answer": "入る"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "いり",
+								"answer": "入り"
+							},{
+								"text": "ぐち"
 							}
 						],
 						"hasOkurigana": true
@@ -4493,6 +5811,16 @@
 								"answer": "白い"
 							},{
 								"text": "いと"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "しろい",
+								"answer": "白い"
+							},{
+								"text": "ふく"
 							}
 						],
 						"hasOkurigana": true
@@ -4611,6 +5939,16 @@
 			},{
 				"phrase": [
 					{
+						"reading": "はち",
+						"answer": "八"
+					},{
+						"text": "がつ"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"text": "りんごが"
 					},{
 						"reading": "やっつ",
@@ -4621,10 +5959,60 @@
 			},{
 				"phrase": [
 					{
+						"reading": "やっつ",
+						"answer": "八つ"
+					},{
+						"text": "のはなし"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "や",
+						"answer": "八"
+					},{
+						"text": "えざくら"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "やつ",
+						"answer": "八つ"
+					},{
+						"text": "はし"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "やつ",
+						"answer": "八つ"
+					},{
+						"text": "あたり"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"reading": "よう",
 						"answer": "八"
 					},{
 						"text": "か"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "よう",
+						"answer": "八"
+					},{
+						"text": "かご"
 					}
 				],
 				"hasOkurigana": false
@@ -4677,10 +6065,12 @@
 			{
 				"phrase": [
 					{
+						"text": "にほんの"
+					},{
 						"reading": "ぶん",
 						"answer": "文"
 					},{
-						"text": "しょう"
+						"text": "か"
 					}
 				],
 				"hasOkurigana": false
@@ -4691,6 +6081,8 @@
 					},{
 						"reading": "ぶん",
 						"answer": "文"
+					},{
+						"text": "をかく"
 					}
 				],
 				"hasOkurigana": false
@@ -4730,7 +6122,7 @@
 								"reading": "き",
 								"answer": "木"
 							},{
-								"text": "のした"
+								"text": "のはっぱ"
 							}
 						],
 						"hasOkurigana": false
@@ -4911,6 +6303,18 @@
 								"answer": "本"
 							},{
 								"text": "の意味"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "はた"
+							},{
+								"reading": "もと",
+								"answer": "本"
+							},{
+								"text": "屋しき"
 							}
 						],
 						"hasOkurigana": false
@@ -5097,6 +6501,16 @@
 					},{
 						"phrase": [
 							{
+								"text": "さか"
+							},{
+								"reading": "だち",
+								"answer": "立ち"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "いたを"
 							},{
 								"reading": "たてる",
@@ -5107,10 +6521,10 @@
 					},{
 						"phrase": [
 							{
-								"text": "さか"
+								"text": "ぼうを"
 							},{
-								"reading": "だち",
-								"answer": "立ち"
+								"reading": "たてる",
+								"answer": "立てる"
 							}
 						],
 						"hasOkurigana": true
@@ -5310,6 +6724,16 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "ふかい"
+							},{
+								"reading": "はやし",
+								"answer": "林"
+							}
+						],
+						"hasOkurigana": false
 					}
 				]
 			},{
@@ -5373,6 +6797,16 @@
 			},{
 				"phrase": [
 					{
+						"reading": "ろっ",
+						"answer": "六"
+					},{
+						"text": "ぽんのき"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "むっつ",
 						"answer": "六つ"
 					},{
@@ -5383,6 +6817,50 @@
 			},{
 				"phrase": [
 					{
+						"reading": "むっつ",
+						"answer": "六つ"
+					},{
+						"text": "め"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "むつ",
+						"answer": "六つ"
+					},{
+						"text": "ご"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "くれ"
+					},{
+						"reading": "むつ",
+						"answer": "六つ"
+					},{
+						"text": "のかね"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "むい",
+						"answer": "六"
+					},{
+						"text": "か"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "いちがつ"
+					},{
 						"reading": "むい",
 						"answer": "六"
 					},{
@@ -5413,6 +6891,16 @@
 					},{
 						"phrase": [
 							{
+								"reading": "ひき",
+								"answer": "引き"
+							},{
+								"text": "しまる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "気が"
 							},{
 								"reading": "ひける",
@@ -5423,10 +6911,10 @@
 					},{
 						"phrase": [
 							{
-								"reading": "ひき",
-								"answer": "引き"
+								"text": "こしが"
 							},{
-								"text": "しまる"
+								"reading": "ひける",
+								"answer": "引ける"
 							}
 						],
 						"hasOkurigana": true
@@ -5529,6 +7017,8 @@
 					},{
 						"phrase": [
 							{
+								"text": "風車の"
+							},{
 								"reading": "は",
 								"answer": "羽"
 							},{
@@ -5542,7 +7032,7 @@
 								"reading": "は",
 								"answer": "羽"
 							},{
-								"text": "音"
+								"text": "音を立てる"
 							}
 						],
 						"hasOkurigana": false
@@ -5614,6 +7104,16 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "夜空のせい"
+							},{
+								"reading": "うん",
+								"answer": "雲"
+							}
+						],
+						"hasOkurigana": false
 					}
 				]
 			}
@@ -5672,7 +7172,7 @@
 						"reading": "えん",
 						"answer": "遠"
 					},{
-						"text": "足の日"
+						"text": "そくの日"
 					}
 				],
 				"hasOkurigana": false
@@ -5727,6 +7227,16 @@
 			},{
 				"phrase": [
 					{
+						"reading": "なに",
+						"answer": "何"
+					},{
+						"text": "かたべる"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "なん",
 						"answer": "何"
 					},{
@@ -5737,10 +7247,10 @@
 			},{
 				"phrase": [
 					{
-						"reading": "なに",
+						"reading": "なん",
 						"answer": "何"
 					},{
-						"text": "かたべる"
+						"text": "にん目"
 					}
 				],
 				"hasOkurigana": false
@@ -5775,10 +7285,12 @@
 			},{
 				"phrase": [
 					{
-						"text": "せいかつ"
+						"text": "百"
 					},{
 						"reading": "か",
 						"answer": "科"
+					},{
+						"text": "じてん"
 					}
 				],
 				"hasOkurigana": false
@@ -5853,16 +7365,6 @@
 					},{
 						"phrase": [
 							{
-								"text": "となりの"
-							},{
-								"reading": "いえ",
-								"answer": "家"
-							}
-						],
-						"hasOkurigana": false
-					},{
-						"phrase": [
-							{
 								"text": "こめのう"
 							},{
 								"reading": "か",
@@ -5908,6 +7410,16 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "や",
+								"answer": "家"
+							},{
+								"text": "主さん"
+							}
+						],
+						"hasOkurigana": false
 					}
 				]
 			}
@@ -5933,6 +7445,16 @@
 					},{
 						"phrase": [
 							{
+								"reading": "うた",
+								"answer": "歌"
+							},{
+								"text": "をきく"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
 								"text": "みんなで"
 							},{
 								"reading": "うたう",
@@ -5943,13 +7465,13 @@
 					},{
 						"phrase": [
 							{
-								"reading": "うた",
-								"answer": "歌"
+								"text": "うまく"
 							},{
-								"text": "をきく"
+								"reading": "うたう",
+								"answer": "歌う"
 							}
 						],
-						"hasOkurigana": false
+						"hasOkurigana": true
 					}
 				]
 			},{
@@ -5959,7 +7481,7 @@
 					{
 						"phrase": [
 							{
-								"text": "たん"
+								"text": "春のたん"
 							},{
 								"reading": "か",
 								"answer": "歌"
@@ -6015,10 +7537,12 @@
 					},{
 						"phrase": [
 							{
-								"text": "はん"
+								"text": "まん"
 							},{
 								"reading": "が",
 								"answer": "画"
+							},{
+								"text": "をかく"
 							}
 						],
 						"hasOkurigana": false
@@ -6119,7 +7643,27 @@
 			},{
 				"phrase": [
 					{
+						"text": "目が"
+					},{
+						"reading": "まわる",
+						"answer": "回る"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "こまを"
+					},{
+						"reading": "まわす",
+						"answer": "回す"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "てきに"
 					},{
 						"reading": "まわす",
 						"answer": "回す"
@@ -6357,10 +7901,10 @@
 					},{
 						"phrase": [
 							{
+								"text": "いえの"
+							},{
 								"reading": "そと",
 								"answer": "外"
-							},{
-								"text": "へ出る"
 							}
 						],
 						"hasOkurigana": false
@@ -6426,46 +7970,86 @@
 		]
 	},
 	"角": {
-		"studyGrade": 2,
 		"strokesNum": 7,
 		"readingForSort": "かく",
-		"quizzes": [
+		"readings": [
 			{
-				"phrase": [
+				"studyGrade": 2,
+				"quizzes": [
 					{
-						"text": "四"
+						"phrase": [
+							{
+								"text": "四"
+							},{
+								"reading": "かく",
+								"answer": "角"
+							},{
+								"text": "いはこ"
+							}
+						],
+						"hasOkurigana": false
 					},{
-						"reading": "かく",
-						"answer": "角"
+						"phrase": [
+							{
+								"text": "三"
+							},{
+								"reading": "かく",
+								"answer": "角"
+							},{
+								"text": "におる"
+							}
+						],
+						"hasOkurigana": false
 					},{
-						"text": "いはこ"
+						"phrase": [
+							{
+								"text": "にしのほう"
+							},{
+								"reading": "がく",
+								"answer": "角"
+							}
+						],
+						"hasOkurigana": false
 					}
-				],
-				"hasOkurigana": false
+				]
 			},{
-				"phrase": [
+				"studyGrade": 5,
+				"reading": "かど",
+				"quizzes": [
 					{
-						"text": "三"
+						"phrase": [
+							{
+								"text": "道の"
+							},{
+								"reading": "かど",
+								"answer": "角"
+							}
+						],
+						"hasOkurigana": false
 					},{
-						"reading": "かく",
-						"answer": "角"
+						"phrase": [
+							{
+								"text": "街"
+							},{
+								"reading": "かど",
+								"answer": "角"
+							},{
+								"text": "の風景"
+							}
+						],
+						"hasOkurigana": false
 					},{
-						"text": "におる"
+						"phrase": [
+							{
+								"reading": "かど",
+								"answer": "角"
+							},{
+								"text": "が立つ"
+							}
+						],
+						"hasOkurigana": false
 					}
-				],
-				"hasOkurigana": false
-			},{
-				"phrase": [
-					{
-						"text": "四"
-					},{
-						"reading": "かっ",
-						"answer": "角"
-					},{
-						"text": "けい"
-					}
-				],
-				"hasOkurigana": false
+				]
 			}
 		]
 	},
@@ -6487,10 +8071,30 @@
 			},{
 				"phrase": [
 					{
+						"text": "いまを"
+					},{
+						"reading": "たのしむ",
+						"answer": "楽しむ"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"reading": "たのしい",
 						"answer": "楽しい"
 					},{
 						"text": "はなし"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "たのしい",
+						"answer": "楽しい"
+					},{
+						"text": "おんがく"
 					}
 				],
 				"hasOkurigana": true
@@ -6621,16 +8225,6 @@
 					},{
 						"phrase": [
 							{
-								"text": "一年"
-							},{
-								"reading": "かん",
-								"answer": "間"
-							}
-						],
-						"hasOkurigana": false
-					},{
-						"phrase": [
-							{
 								"text": "くう"
 							},{
 								"reading": "かん",
@@ -6703,6 +8297,16 @@
 			},{
 				"phrase": [
 					{
+						"reading": "まる",
+						"answer": "丸"
+					},{
+						"text": "まど"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "まるい",
 						"answer": "丸い"
 					},{
@@ -6713,7 +8317,27 @@
 			},{
 				"phrase": [
 					{
+						"reading": "まるい",
+						"answer": "丸い"
+					},{
+						"text": "たまご"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "かみを"
+					},{
+						"reading": "まるめる",
+						"answer": "丸める"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "からだを"
 					},{
 						"reading": "まるめる",
 						"answer": "丸める"
@@ -6983,6 +8607,16 @@
 					},{
 						"phrase": [
 							{
+								"text": "いえへ"
+							},{
+								"reading": "かえる",
+								"answer": "帰る"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "先に"
 							},{
 								"reading": "かえす",
@@ -6993,10 +8627,10 @@
 					},{
 						"phrase": [
 							{
-								"text": "いえへ"
+								"text": "いえに"
 							},{
-								"reading": "かえる",
-								"answer": "帰る"
+								"reading": "かえす",
+								"answer": "帰す"
 							}
 						],
 						"hasOkurigana": true
@@ -7187,16 +8821,6 @@
 			},{
 				"phrase": [
 					{
-						"reading": "さかな",
-						"answer": "魚"
-					},{
-						"text": "いちば"
-					}
-				],
-				"hasOkurigana": false
-			},{
-				"phrase": [
-					{
 						"text": "金"
 					},{
 						"reading": "ぎょ",
@@ -7277,6 +8901,16 @@
 					},{
 						"phrase": [
 							{
+								"reading": "つよい",
+								"answer": "強い"
+							},{
+								"text": "チーム"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "火を"
 							},{
 								"reading": "つよめる",
@@ -7287,7 +8921,27 @@
 					},{
 						"phrase": [
 							{
-								"text": "かぜが"
+								"text": "力を"
+							},{
+								"reading": "つよめる",
+								"answer": "強める"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "雨が"
+							},{
+								"reading": "つよまる",
+								"answer": "強まる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "おもいが"
 							},{
 								"reading": "つよまる",
 								"answer": "強まる"
@@ -7375,7 +9029,7 @@
 					},{
 						"phrase": [
 							{
-								"text": "ぶっ"
+								"text": "しゅう"
 							},{
 								"reading": "きょう",
 								"answer": "教"
@@ -7394,6 +9048,16 @@
 						"phrase": [
 							{
 								"text": "人から"
+							},{
+								"reading": "おそわる",
+								"answer": "教わる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "人に"
 							},{
 								"reading": "おそわる",
 								"answer": "教わる"
@@ -7527,10 +9191,34 @@
 					},{
 						"phrase": [
 							{
-								"reading": "あに",
+								"text": "三にん"
+							},{
+								"reading": "きょう",
 								"answer": "兄"
 							},{
-								"text": "にあう"
+								"text": "だい"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "三にん"
+							},{
+								"reading": "きょう",
+								"answer": "兄"
+							},{
+								"text": "だい"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "きょう",
+								"answer": "兄"
+							},{
+								"text": "だいげんか"
 							}
 						],
 						"hasOkurigana": false
@@ -7547,6 +9235,28 @@
 								"answer": "兄"
 							},{
 								"text": "さん"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "にい",
+								"answer": "兄"
+							},{
+								"text": "さんに会う"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "お"
+							},{
+								"reading": "にい",
+								"answer": "兄"
+							},{
+								"text": "ちゃん"
 							}
 						],
 						"hasOkurigana": false
@@ -7585,16 +9295,6 @@
 					},{
 						"phrase": [
 							{
-								"text": "うさぎの"
-							},{
-								"reading": "かたち",
-								"answer": "形"
-							}
-						],
-						"hasOkurigana": false
-					},{
-						"phrase": [
-							{
 								"text": "へん"
 							},{
 								"reading": "けい",
@@ -7607,7 +9307,7 @@
 					},{
 						"phrase": [
 							{
-								"text": "川のち"
+								"text": "山のち"
 							},{
 								"reading": "けい",
 								"answer": "形"
@@ -7632,11 +9332,33 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "人"
+							},{
+								"reading": "ぎょう",
+								"answer": "形"
+							},{
+								"text": "げき"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "あやつり人"
+							},{
+								"reading": "ぎょう",
+								"answer": "形"
+							}
+						],
+						"hasOkurigana": false
 					}
 				]
 			},{
 				"reading": "かた",
-				"studyGrade": 3,
+				"studyGrade": 4,
 				"quizzes": [
 					{
 						"phrase": [
@@ -7742,6 +9464,16 @@
 							}
 						],
 						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "はかり",
+								"answer": "計り"
+							},{
+								"text": "知れない"
+							}
+						],
+						"hasOkurigana": true
 					}
 				]
 			}
@@ -7805,7 +9537,7 @@
 					},{
 						"phrase": [
 							{
-								"text": "たれの"
+								"text": "草のね"
 							},{
 								"reading": "もと",
 								"answer": "元"
@@ -8161,10 +9893,10 @@
 					{
 						"text": "き"
 					},{
-						"reading": "ふるした",
-						"answer": "古した"
+						"reading": "ふるし",
+						"answer": "古し"
 					},{
-						"text": "ふく"
+						"text": "たふく"
 					}
 				],
 				"hasOkurigana": true
@@ -8194,7 +9926,7 @@
 						"reading": "ご",
 						"answer": "午"
 					},{
-						"text": "になる"
+						"text": "ちょうど"
 					}
 				],
 				"hasOkurigana": false
@@ -8415,6 +10147,8 @@
 							},{
 								"reading": "こう",
 								"answer": "工"
+							},{
+								"text": "しつ"
 							}
 						],
 						"hasOkurigana": false
@@ -8539,6 +10273,26 @@
 					},{
 						"phrase": [
 							{
+								"text": "こころが"
+							},{
+								"reading": "ひろい",
+								"answer": "広い"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "はなしが"
+							},{
+								"reading": "ひろまる",
+								"answer": "広まる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "うたが"
 							},{
 								"reading": "ひろまる",
@@ -8549,10 +10303,60 @@
 					},{
 						"phrase": [
 							{
+								"text": "よさを"
+							},{
+								"reading": "ひろめる",
+								"answer": "広める"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "せかいに"
+							},{
+								"reading": "ひろめる",
+								"answer": "広める"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "ゆめが"
 							},{
 								"reading": "ひろがる",
 								"answer": "広がる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "うわさが"
+							},{
+								"reading": "ひろがる",
+								"answer": "広がる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "かさを"
+							},{
+								"reading": "ひろげる",
+								"answer": "広げる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "みちを"
+							},{
+								"reading": "ひろげる",
+								"answer": "広げる"
 							}
 						],
 						"hasOkurigana": true
@@ -8575,12 +10379,22 @@
 					},{
 						"phrase": [
 							{
-								"text": "ネット"
+								"text": "新聞"
 							},{
 								"reading": "こう",
 								"answer": "広"
 							},{
 								"text": "こく"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "こう",
+								"answer": "広"
+							},{
+								"text": "ほう活動"
 							}
 						],
 						"hasOkurigana": false
@@ -8654,6 +10468,16 @@
 							}
 						],
 						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "歌をおり"
+							},{
+								"reading": "まぜる",
+								"answer": "交ぜる"
+							}
+						],
+						"hasOkurigana": true
 					}
 				]
 			},{
@@ -8674,6 +10498,16 @@
 						"phrase": [
 							{
 								"text": "しゅに"
+							},{
+								"reading": "まじわる",
+								"answer": "交わる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "光が"
 							},{
 								"reading": "まじわる",
 								"answer": "交わる"
@@ -8705,6 +10539,16 @@
 					},{
 						"phrase": [
 							{
+								"text": "きれいな"
+							},{
+								"reading": "ひかり",
+								"answer": "光"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
 								"text": "ほしが"
 							},{
 								"reading": "ひかる",
@@ -8715,13 +10559,13 @@
 					},{
 						"phrase": [
 							{
-								"text": "きれいな"
+								"text": "青く"
 							},{
-								"reading": "ひかり",
-								"answer": "光"
+								"reading": "ひかる",
+								"answer": "光る"
 							}
 						],
-						"hasOkurigana": false
+						"hasOkurigana": true
 					}
 				]
 			},{
@@ -8731,12 +10575,10 @@
 					{
 						"phrase": [
 							{
-								"text": "日"
+								"text": "強い日"
 							},{
 								"reading": "こう",
 								"answer": "光"
-							},{
-								"text": "のかげ"
 							}
 						],
 						"hasOkurigana": false
@@ -9037,10 +10879,10 @@
 					},{
 						"phrase": [
 							{
-								"text": "力を"
+								"reading": "たかく",
+								"answer": "高く"
 							},{
-								"reading": "たかめる",
-								"answer": "高める"
+								"text": "上げる"
 							}
 						],
 						"hasOkurigana": true
@@ -9054,6 +10896,56 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "たか",
+								"answer": "高"
+							},{
+								"text": "だいの学校"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "気もちが"
+							},{
+								"reading": "たかまる",
+								"answer": "高まる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "たかみ",
+								"answer": "高み"
+							},{
+								"text": "を目ざす"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "力を"
+							},{
+								"reading": "たかめる",
+								"answer": "高める"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "こえを"
+							},{
+								"reading": "たかめる",
+								"answer": "高める"
+							}
+						],
+						"hasOkurigana": true
 					}
 				]
 			},{
@@ -9153,10 +11045,50 @@
 					},{
 						"phrase": [
 							{
+								"text": "こたえが"
+							},{
+								"reading": "あう",
+								"answer": "合う"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "力を"
 							},{
 								"reading": "あわす",
 								"answer": "合わす"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "音に"
+							},{
+								"reading": "あわす",
+								"answer": "合わす"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "力を"
+							},{
+								"reading": "あわせる",
+								"answer": "合わせる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "音に"
+							},{
+								"reading": "あわせる",
+								"answer": "合わせる"
 							}
 						],
 						"hasOkurigana": true
@@ -9282,19 +11214,7 @@
 						"reading": "こく",
 						"answer": "国"
 					},{
-						"text": "めいをいう"
-					}
-				],
-				"hasOkurigana": false
-			},{
-				"phrase": [
-					{
-						"text": "一"
-					},{
-						"reading": "こく",
-						"answer": "国"
-					},{
-						"text": "だけ"
+						"text": "めいをかく"
 					}
 				],
 				"hasOkurigana": false
@@ -9324,40 +11244,92 @@
 		]
 	},
 	"黒": {
-		"studyGrade": 2,
 		"strokesNum": 11,
 		"readingForSort": "こく",
-		"quizzes": [
+		"readings": [
 			{
-				"phrase": [
+				"studyGrade": 2,
+				"quizzes": [
 					{
-						"reading": "くろ",
-						"answer": "黒"
+						"phrase": [
+							{
+								"reading": "くろい",
+								"answer": "黒い"
+							},{
+								"text": "もよう"
+							}
+						],
+						"hasOkurigana": true
 					},{
-						"text": "いもよう"
+						"phrase": [
+							{
+								"reading": "くろい",
+								"answer": "黒い"
+							},{
+								"text": "ねこ"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "くろ",
+								"answer": "黒"
+							},{
+								"text": "っぽい"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "白と"
+							},{
+								"reading": "くろ",
+								"answer": "黒"
+							}
+						],
+						"hasOkurigana": false
 					}
-				],
-				"hasOkurigana": false
+				]
 			},{
-				"phrase": [
+				"studyGrade": 2,
+				"reading": "こく",
+				"quizzes": [
 					{
-						"reading": "くろい",
-						"answer": "黒い"
+						"phrase": [
+							{
+								"reading": "こく",
+								"answer": "黒"
+							},{
+								"text": "ばんけし"
+							}
+						],
+						"hasOkurigana": false
 					},{
-						"text": "ねこ"
-					}
-				],
-				"hasOkurigana": true
-			},{
-				"phrase": [
-					{
-						"reading": "くろ",
-						"answer": "黒"
+						"phrase": [
+							{
+								"text": "あん"
+							},{
+								"reading": "こく",
+								"answer": "黒"
+							},{
+								"text": "の空"
+							}
+						],
+						"hasOkurigana": false
 					},{
-						"text": "っぽい"
+						"phrase": [
+							{
+								"reading": "こく",
+								"answer": "黒"
+							},{
+								"text": "ばんにかく"
+							}
+						],
+						"hasOkurigana": false
 					}
-				],
-				"hasOkurigana": false
+				]
 			}
 		]
 	},
@@ -9383,16 +11355,6 @@
 						"answer": "今"
 					},{
 						"text": "からいく"
-					}
-				],
-				"hasOkurigana": false
-			},{
-				"phrase": [
-					{
-						"reading": "いま",
-						"answer": "今"
-					},{
-						"text": "とみらい"
 					}
 				],
 				"hasOkurigana": false
@@ -9427,7 +11389,7 @@
 			{
 				"phrase": [
 					{
-						"text": "えの天"
+						"text": "うたの天"
 					},{
 						"reading": "さい",
 						"answer": "才"
@@ -9479,6 +11441,16 @@
 					},{
 						"phrase": [
 							{
+								"reading": "ほそい",
+								"answer": "細い"
+							},{
+								"text": "こえ"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "先が"
 							},{
 								"reading": "ほそる",
@@ -9489,10 +11461,10 @@
 					},{
 						"phrase": [
 							{
-								"reading": "ほそい",
-								"answer": "細い"
+								"text": "やせ"
 							},{
-								"text": "ひも"
+								"reading": "ほそる",
+								"answer": "細る"
 							}
 						],
 						"hasOkurigana": true
@@ -9519,6 +11491,16 @@
 								"answer": "細かく"
 							},{
 								"text": "きざむ"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "こまかい",
+								"answer": "細かい"
+							},{
+								"text": "気づかい"
 							}
 						],
 						"hasOkurigana": true
@@ -9597,6 +11579,16 @@
 								"answer": "作"
 							},{
 								"text": "ぎょうふく"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "同じどう"
+							},{
+								"reading": "さ",
+								"answer": "作"
 							}
 						],
 						"hasOkurigana": false
@@ -9748,7 +11740,7 @@
 								"reading": "いち",
 								"answer": "市"
 							},{
-								"text": "ばでかう"
+								"text": "ばにいく"
 							}
 						],
 						"hasOkurigana": false
@@ -9847,10 +11839,10 @@
 			},{
 				"phrase": [
 					{
+						"text": "ふるいゆみ"
+					},{
 						"reading": "や",
 						"answer": "矢"
-					},{
-						"text": "の先"
 					}
 				],
 				"hasOkurigana": false
@@ -9907,6 +11899,28 @@
 								"answer": "姉"
 							},{
 								"text": "さん"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "ねえ",
+								"answer": "姉"
+							},{
+								"text": "さんに会う"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "お"
+							},{
+								"reading": "ねえ",
+								"answer": "姉"
+							},{
+								"text": "ちゃん"
 							}
 						],
 						"hasOkurigana": false
@@ -10100,6 +12114,26 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "東大"
+							},{
+								"reading": "じ",
+								"answer": "寺"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "金かく"
+							},{
+								"reading": "じ",
+								"answer": "寺"
+							}
+						],
+						"hasOkurigana": false
 					}
 				]
 			}
@@ -10128,7 +12162,7 @@
 								"reading": "じ",
 								"answer": "自"
 							},{
-								"text": "てん車"
+								"text": "ゆうじかん"
 							}
 						],
 						"hasOkurigana": false
@@ -10299,10 +12333,12 @@
 			},{
 				"phrase": [
 					{
-						"text": "きょう"
+						"text": "わ"
 					},{
 						"reading": "しつ",
 						"answer": "室"
+					},{
+						"text": "のたたみ"
 					}
 				],
 				"hasOkurigana": false
@@ -10407,6 +12443,16 @@
 					},{
 						"phrase": [
 							{
+								"reading": "よわり",
+								"answer": "弱り"
+							},{
+								"text": "きった"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "気が"
 							},{
 								"reading": "よわい",
@@ -10417,7 +12463,47 @@
 					},{
 						"phrase": [
 							{
+								"reading": "よわい",
+								"answer": "弱い"
+							},{
+								"text": "日ざし"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "火を"
+							},{
+								"reading": "よわめる",
+								"answer": "弱める"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "力を"
+							},{
+								"reading": "よわめる",
+								"answer": "弱める"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "かぜが"
+							},{
+								"reading": "よわまる",
+								"answer": "弱まる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "力が"
 							},{
 								"reading": "よわまる",
 								"answer": "弱まる"
@@ -10478,7 +12564,7 @@
 								"reading": "くび",
 								"answer": "首"
 							},{
-								"text": "をふる"
+								"text": "をかしげる"
 							}
 						],
 						"hasOkurigana": false
@@ -10495,10 +12581,12 @@
 					},{
 						"phrase": [
 							{
-								"text": "ながい"
+								"text": "足"
 							},{
 								"reading": "くび",
 								"answer": "首"
+							},{
+								"text": "のけが"
 							}
 						],
 						"hasOkurigana": false
@@ -10607,6 +12695,16 @@
 								"answer": "秋"
 							},{
 								"text": "の名月"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "一日千"
+							},{
+								"reading": "しゅう",
+								"answer": "秋"
 							}
 						],
 						"hasOkurigana": false
@@ -10730,7 +12828,7 @@
 								"reading": "しゅん",
 								"answer": "春"
 							},{
-								"text": "三月"
+								"text": "の三月"
 							}
 						],
 						"hasOkurigana": false
@@ -10805,10 +12903,30 @@
 			},{
 				"phrase": [
 					{
+						"reading": "すくない",
+						"answer": "少ない"
+					},{
+						"text": "にんずう"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "あと"
 					},{
 						"reading": "すこし",
 						"answer": "少し"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "すこし",
+						"answer": "少し"
+					},{
+						"text": "の休み"
 					}
 				],
 				"hasOkurigana": true
@@ -10869,10 +12987,12 @@
 					},{
 						"phrase": [
 							{
+								"text": "だい一"
+							},{
 								"reading": "ば",
 								"answer": "場"
 							},{
-								"text": "しょ"
+								"text": "めん"
 							}
 						],
 						"hasOkurigana": false
@@ -11083,8 +13203,10 @@
 							{
 								"text": "のまず"
 							},{
-								"reading": "くわず",
-								"answer": "食わず"
+								"reading": "くわ",
+								"answer": "食わ"
+							},{
+								"text": "ず"
 							}
 						],
 						"hasOkurigana": true
@@ -11286,6 +13408,16 @@
 								"reading": "あらた",
 								"answer": "新た"
 							},{
+								"text": "なスタート"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "あらた",
+								"answer": "新た"
+							},{
 								"text": "な力"
 							}
 						],
@@ -11303,6 +13435,26 @@
 								"answer": "新"
 							},{
 								"text": "がた県"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "にい",
+								"answer": "新"
+							},{
+								"text": "がたし"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "にい",
+								"answer": "新"
+							},{
+								"text": "がたの米"
 							}
 						],
 						"hasOkurigana": false
@@ -11329,10 +13481,30 @@
 			},{
 				"phrase": [
 					{
+						"text": "しぜんに"
+					},{
+						"reading": "したしむ",
+						"answer": "親しむ"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"reading": "したしい",
 						"answer": "親しい"
 					},{
 						"text": "人"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "したしい",
+						"answer": "親しい"
+					},{
+						"text": "ともだち"
 					}
 				],
 				"hasOkurigana": true
@@ -11435,13 +13607,15 @@
 			{
 				"phrase": [
 					{
-						"text": "ものを"
+						"text": "口"
 					},{
-						"reading": "かぞえる",
-						"answer": "数える"
+						"reading": "かず",
+						"answer": "数"
+					},{
+						"text": "がおおい"
 					}
 				],
-				"hasOkurigana": true
+				"hasOkurigana": false
 			},{
 				"phrase": [
 					{
@@ -11452,6 +13626,26 @@
 					}
 				],
 				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "ものを"
+					},{
+						"reading": "かぞえる",
+						"answer": "数える"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "かぞえる",
+						"answer": "数える"
+					},{
+						"text": "ほど"
+					}
+				],
+				"hasOkurigana": true
 			},{
 				"phrase": [
 					{
@@ -11508,7 +13702,7 @@
 								"reading": "にし",
 								"answer": "西"
 							},{
-								"text": "へすすむ"
+								"text": "日本"
 							}
 						],
 						"hasOkurigana": false
@@ -11539,6 +13733,56 @@
 								"answer": "西"
 							},{
 								"text": "地方"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "かん"
+							},{
+								"reading": "さい",
+								"answer": "西"
+							},{
+								"text": "べん"
+							}
+						],
+						"hasOkurigana": false
+					}
+				]
+			},{
+				"studyGrade": 5,
+				"reading": "せい",
+				"quizzes": [
+					{
+						"phrase": [
+							{
+								"text": "県の"
+							},{
+								"reading": "せい",
+								"answer": "西"
+							},{
+								"text": "部"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "せい",
+								"answer": "西"
+							},{
+								"text": "れき二千年"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "せい",
+								"answer": "西"
+							},{
+								"text": "洋と東洋"
 							}
 						],
 						"hasOkurigana": false
@@ -11635,10 +13879,10 @@
 					{
 						"phrase": [
 							{
+								"text": "青い"
+							},{
 								"reading": "ほし",
 								"answer": "星"
-							},{
-								"text": "がひかる"
 							}
 						],
 						"hasOkurigana": false
@@ -11729,6 +13973,16 @@
 					},{
 						"phrase": [
 							{
+								"reading": "はれた",
+								"answer": "晴れた"
+							},{
+								"text": "日"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "見"
 							},{
 								"reading": "はらし",
@@ -11741,10 +13995,10 @@
 					},{
 						"phrase": [
 							{
-								"reading": "はれた",
-								"answer": "晴れた"
+								"text": "気"
 							},{
-								"text": "日"
+								"reading": "ばらし",
+								"answer": "晴らし"
 							}
 						],
 						"hasOkurigana": true
@@ -11778,6 +14032,16 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "せい",
+								"answer": "晴"
+							},{
+								"text": "天がつづく"
+							}
+						],
+						"hasOkurigana": false
 					}
 				]
 			}
@@ -11791,7 +14055,17 @@
 			{
 				"phrase": [
 					{
-						"text": "糸が"
+						"text": "ひもが"
+					},{
+						"reading": "きれる",
+						"answer": "切れる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "でんわが"
 					},{
 						"reading": "きれる",
 						"answer": "切れる"
@@ -11802,6 +14076,16 @@
 				"phrase": [
 					{
 						"text": "かみを"
+					},{
+						"reading": "きる",
+						"answer": "切る"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "いい"
 					},{
 						"reading": "きる",
 						"answer": "切る"
@@ -12107,6 +14391,16 @@
 			},{
 				"phrase": [
 					{
+						"reading": "くみ",
+						"answer": "組み"
+					},{
+						"text": "立て"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "二年一"
 					},{
 						"reading": "くみ",
@@ -12117,13 +14411,13 @@
 			},{
 				"phrase": [
 					{
-						"reading": "くみ",
-						"answer": "組み"
+						"text": "ラジオばん"
 					},{
-						"text": "立て"
+						"reading": "ぐみ",
+						"answer": "組"
 					}
 				],
-				"hasOkurigana": true
+				"hasOkurigana": false
 			}
 		]
 	},
@@ -12305,6 +14599,16 @@
 					},{
 						"phrase": [
 							{
+								"reading": "ふとった",
+								"answer": "太った"
+							},{
+								"text": "人"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"reading": "ふとい",
 								"answer": "太い"
 							},{
@@ -12355,6 +14659,44 @@
 								"answer": "太"
 							},{
 								"text": "こをたたく"
+							}
+						],
+						"hasOkurigana": false
+					}
+				]
+			},{
+				"studyGrade": 5,
+				"reading": "た",
+				"quizzes": [
+					{
+						"phrase": [
+							{
+								"text": "丸"
+							},{
+								"reading": "た",
+								"answer": "太"
+							},{
+								"text": "の橋"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "た",
+								"answer": "太"
+							},{
+								"text": "ろうさん"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "大きな丸"
+							},{
+								"reading": "た",
+								"answer": "太"
 							}
 						],
 						"hasOkurigana": false
@@ -12634,6 +14976,26 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "ちょ水"
+							},{
+								"reading": "ち",
+								"answer": "池"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "じゅう電"
+							},{
+								"reading": "ち",
+								"answer": "池"
+							}
+						],
+						"hasOkurigana": false
 					}
 				]
 			}
@@ -12796,7 +15158,7 @@
 								"reading": "ひる",
 								"answer": "昼"
 							},{
-								"text": "ねをする"
+								"text": "ねのじかん"
 							}
 						],
 						"hasOkurigana": false
@@ -12813,6 +15175,16 @@
 								"answer": "昼"
 							},{
 								"text": "しょくの後"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "ちゅう",
+								"answer": "昼"
+							},{
+								"text": "しょく会"
 							}
 						],
 						"hasOkurigana": false
@@ -12849,6 +15221,16 @@
 			},{
 				"phrase": [
 					{
+						"reading": "ながい",
+						"answer": "長い"
+					},{
+						"text": "糸"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "はん"
 					},{
 						"reading": "ちょう",
@@ -12861,13 +15243,13 @@
 			},{
 				"phrase": [
 					{
-						"reading": "ながい",
-						"answer": "長い"
+						"reading": "ちょう",
+						"answer": "長"
 					},{
-						"text": "ひも"
+						"text": "しょをしる"
 					}
 				],
-				"hasOkurigana": true
+				"hasOkurigana": false
 			}
 		]
 	},
@@ -13055,6 +15437,16 @@
 					},{
 						"phrase": [
 							{
+								"text": "かき"
+							},{
+								"reading": "なおす",
+								"answer": "直す"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "きげんが"
 							},{
 								"reading": "なおる",
@@ -13065,10 +15457,10 @@
 					},{
 						"phrase": [
 							{
-								"text": "かき"
+								"text": "くせが"
 							},{
-								"reading": "なおす",
-								"answer": "直す"
+								"reading": "なおる",
+								"answer": "直る"
 							}
 						],
 						"hasOkurigana": true
@@ -13112,6 +15504,42 @@
 						"hasOkurigana": false
 					}
 				]
+			},{
+				"studyGrade": 5,
+				"reading": "ただちに",
+				"quizzes": [
+					{
+						"phrase": [
+							{
+								"reading": "ただちに",
+								"answer": "直ちに"
+							},{
+								"text": "やめる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "ただちに",
+								"answer": "直ちに"
+							},{
+								"text": "治る"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "ただちに",
+								"answer": "直ちに"
+							},{
+								"text": "分かった"
+							}
+						],
+						"hasOkurigana": true
+					}
+				]
 			}
 		]
 	},
@@ -13135,6 +15563,16 @@
 					},{
 						"phrase": [
 							{
+								"text": "町の大"
+							},{
+								"reading": "どおり",
+								"answer": "通り"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "糸を"
 							},{
 								"reading": "とおす",
@@ -13145,10 +15583,10 @@
 					},{
 						"phrase": [
 							{
-								"text": "町の大"
+								"text": "火を"
 							},{
-								"reading": "どおり",
-								"answer": "通り"
+								"reading": "とおす",
+								"answer": "通す"
 							}
 						],
 						"hasOkurigana": true
@@ -13191,7 +15629,7 @@
 					}
 				]
 			},{
-				"studyGrade": 3,
+				"studyGrade": 4,
 				"reading": "つう",
 				"quizzes": [
 					{
@@ -13261,10 +15699,22 @@
 			},{
 				"phrase": [
 					{
-						"text": "げんきな"
+						"text": "きょう"
 					},{
-						"reading": "おとうと",
+						"reading": "だい",
 						"answer": "弟"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "きょう"
+					},{
+						"reading": "だい",
+						"answer": "弟"
+					},{
+						"text": "たち"
 					}
 				],
 				"hasOkurigana": false
@@ -13330,7 +15780,7 @@
 						"reading": "てん",
 						"answer": "点"
 					},{
-						"text": "をうつ"
+						"text": "が入る"
 					}
 				],
 				"hasOkurigana": false
@@ -13579,7 +16029,19 @@
 			},{
 				"phrase": [
 					{
-						"text": "日が"
+						"text": "手"
+					},{
+						"reading": "あて",
+						"answer": "当て"
+					},{
+						"text": "する"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "くじが"
 					},{
 						"reading": "あたる",
 						"answer": "当たる"
@@ -13589,12 +16051,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "手"
+						"text": "日が"
 					},{
-						"reading": "あて",
-						"answer": "当て"
-					},{
-						"text": "する"
+						"reading": "あたる",
+						"answer": "当たる"
 					}
 				],
 				"hasOkurigana": true
@@ -13622,52 +16082,82 @@
 		]
 	},
 	"東": {
-		"studyGrade": 2,
 		"strokesNum": 8,
 		"readingForSort": "とう",
-		"quizzes": [
+		"readings": [
 			{
-				"phrase": [
+				"studyGrade": 2,
+				"quizzes": [
 					{
-						"reading": "とう",
-						"answer": "東"
+						"phrase": [
+							{
+								"reading": "とう",
+								"answer": "東"
+							},{
+								"text": "きょう"
+							}
+						],
+						"hasOkurigana": false
 					},{
-						"text": "きょう"
+						"phrase": [
+							{
+								"text": "ここん"
+							},{
+								"reading": "とう",
+								"answer": "東"
+							},{
+								"text": "ざい"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "とう",
+								"answer": "東"
+							},{
+								"text": "ようのくに"
+							}
+						],
+						"hasOkurigana": false
 					}
-				],
-				"hasOkurigana": false
+				]
 			},{
-				"phrase": [
+				"studyGrade": 3,
+				"reading": "ひがし",
+				"quizzes": [
 					{
-						"text": "ここん"
+						"phrase": [
+							{
+								"reading": "ひがし",
+								"answer": "東"
+							},{
+								"text": "アジア"
+							}
+						],
+						"hasOkurigana": false
 					},{
-						"reading": "とう",
-						"answer": "東"
+						"phrase": [
+							{
+								"reading": "ひがし",
+								"answer": "東"
+							},{
+								"text": "にすすむ"
+							}
+						],
+						"hasOkurigana": false
 					},{
-						"text": "ざい"
+						"phrase": [
+							{
+								"reading": "ひがし",
+								"answer": "東"
+							},{
+								"text": "日本"
+							}
+						],
+						"hasOkurigana": false
 					}
-				],
-				"hasOkurigana": false
-			},{
-				"phrase": [
-					{
-						"reading": "ひがし",
-						"answer": "東"
-					},{
-						"text": "にすすむ"
-					}
-				],
-				"hasOkurigana": false
-			},{
-				"phrase": [
-					{
-						"reading": "ひがし",
-						"answer": "東"
-					},{
-						"text": "日本"
-					}
-				],
-				"hasOkurigana": false
+				]
 			}
 		]
 	},
@@ -13682,6 +16172,16 @@
 						"phrase": [
 							{
 								"text": "すぐに"
+							},{
+								"reading": "こたえる",
+								"answer": "答える"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "みじかく"
 							},{
 								"reading": "こたえる",
 								"answer": "答える"
@@ -13783,10 +16283,24 @@
 					},{
 						"phrase": [
 							{
-								"reading": "あたま",
+								"text": "せん"
+							},{
+								"reading": "とう",
 								"answer": "頭"
 							},{
-								"text": "をつかう"
+								"text": "に立つ"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"text": "十"
+							},{
+								"reading": "とう",
+								"answer": "頭"
+							},{
+								"text": "のうし"
 							}
 						],
 						"hasOkurigana": false
@@ -14015,6 +16529,16 @@
 					},{
 						"phrase": [
 							{
+								"reading": "よみ",
+								"answer": "読み"
+							},{
+								"text": "かえす"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "おん"
 							},{
 								"reading": "どく",
@@ -14027,13 +16551,13 @@
 					},{
 						"phrase": [
 							{
-								"reading": "よみ",
-								"answer": "読み"
+								"reading": "どく",
+								"answer": "読"
 							},{
-								"text": "かえす"
+								"text": "しょずき"
 							}
 						],
-						"hasOkurigana": true
+						"hasOkurigana": false
 					}
 				]
 			},{
@@ -14047,6 +16571,16 @@
 								"answer": "読"
 							},{
 								"text": "点「、」"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "とう",
+								"answer": "読"
+							},{
+								"text": "点でく切る"
 							}
 						],
 						"hasOkurigana": false
@@ -14343,6 +16877,18 @@
 					},{
 						"phrase": [
 							{
+								"text": "ぐん"
+							},{
+								"reading": "ま",
+								"answer": "馬"
+							},{
+								"text": "の山"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
 								"text": "神社の絵"
 							},{
 								"reading": "ま",
@@ -14375,6 +16921,18 @@
 					},{
 						"phrase": [
 							{
+								"text": "大"
+							},{
+								"reading": "うり",
+								"answer": "売り"
+							},{
+								"text": "出し"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "さかなが"
 							},{
 								"reading": "うれる",
@@ -14385,12 +16943,10 @@
 					},{
 						"phrase": [
 							{
-								"text": "大"
+								"text": "たかく"
 							},{
-								"reading": "うり",
-								"answer": "売り"
-							},{
-								"text": "出し"
+								"reading": "うれる",
+								"answer": "売れる"
 							}
 						],
 						"hasOkurigana": true
@@ -14532,7 +17088,7 @@
 						"reading": "むぎ",
 						"answer": "麦"
 					},{
-						"text": "がみのる"
+						"text": "ちゃをのむ"
 					}
 				],
 				"hasOkurigana": false
@@ -14728,6 +17284,26 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "とう",
+								"answer": "父"
+							},{
+								"text": "ちゃん"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "とう",
+								"answer": "父"
+							},{
+								"text": "さんの本"
+							}
+						],
+						"hasOkurigana": false
 					}
 				]
 			},{
@@ -14756,6 +17332,16 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "ふ",
+								"answer": "父"
+							},{
+								"text": "けいの先ぞ"
+							}
+						],
+						"hasOkurigana": false
 					}
 				]
 			}
@@ -14781,6 +17367,16 @@
 					},{
 						"phrase": [
 							{
+								"text": "そよ"
+							},{
+								"reading": "かぜ",
+								"answer": "風"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
 								"reading": "かざ",
 								"answer": "風"
 							},{
@@ -14791,10 +17387,10 @@
 					},{
 						"phrase": [
 							{
-								"text": "そよ"
-							},{
-								"reading": "かぜ",
+								"reading": "かざ",
 								"answer": "風"
+							},{
+								"text": "かみ"
 							}
 						],
 						"hasOkurigana": false
@@ -14861,10 +17457,70 @@
 					},{
 						"phrase": [
 							{
+								"text": "よび"
+							},{
+								"reading": "わける",
+								"answer": "分ける"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "いけんが"
+							},{
+								"reading": "わかれる",
+								"answer": "分かれる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "二つに"
+							},{
+								"reading": "わかれる",
+								"answer": "分かれる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "いみが"
 							},{
 								"reading": "わかる",
 								"answer": "分かる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "こたえが"
+							},{
+								"reading": "わかる",
+								"answer": "分かる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "わかち",
+								"answer": "分かち"
+							},{
+								"text": "あう"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "たもとを"
+							},{
+								"reading": "わかつ",
+								"answer": "分かつ"
 							}
 						],
 						"hasOkurigana": true
@@ -15009,10 +17665,34 @@
 			},{
 				"phrase": [
 					{
+						"text": "そとから"
+					},{
+						"reading": "きこえる",
+						"answer": "聞こえる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "しん"
 					},{
 						"reading": "ぶん",
 						"answer": "聞"
+					},{
+						"text": "し"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "しん"
+					},{
+						"reading": "ぶん",
+						"answer": "聞"
+					},{
+						"text": "しゃ"
 					}
 				],
 				"hasOkurigana": false
@@ -15276,6 +17956,26 @@
 							}
 						],
 						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "かあ",
+								"answer": "母"
+							},{
+								"text": "ちゃん"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "かあ",
+								"answer": "母"
+							},{
+								"text": "さんの本"
+							}
+						],
+						"hasOkurigana": false
 					}
 				]
 			},{
@@ -15301,6 +18001,16 @@
 								"answer": "母"
 							},{
 								"text": "の話"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "ぼ",
+								"answer": "母"
+							},{
+								"text": "けいの先ぞ"
 							}
 						],
 						"hasOkurigana": false
@@ -15454,7 +18164,7 @@
 						"reading": "まい",
 						"answer": "毎"
 					},{
-						"text": "日はしる"
+						"text": "日やること"
 					}
 				],
 				"hasOkurigana": false
@@ -15583,10 +18293,72 @@
 					},{
 						"phrase": [
 							{
-								"text": "よるが"
+								"reading": "あかるい",
+								"answer": "明るい"
+							},{
+								"text": "こえ"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "空が"
+							},{
+								"reading": "あかるむ",
+								"answer": "明るむ"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "あかるん",
+								"answer": "明るん"
+							},{
+								"text": "でいる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "空が"
+							},{
+								"reading": "あからむ",
+								"answer": "明らむ"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "あからん",
+								"answer": "明らん"
+							},{
+								"text": "でくる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "としが"
 							},{
 								"reading": "あける",
 								"answer": "明ける"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "よ"
+							},{
+								"reading": "あけ",
+								"answer": "明け"
+							},{
+								"text": "まえ"
 							}
 						],
 						"hasOkurigana": true
@@ -15603,7 +18375,27 @@
 					},{
 						"phrase": [
 							{
+								"reading": "あくる",
+								"answer": "明くる"
+							},{
+								"text": "あさ"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "正たいを"
+							},{
+								"reading": "あかす",
+								"answer": "明かす"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "よを"
 							},{
 								"reading": "あかす",
 								"answer": "明かす"
@@ -15636,6 +18428,16 @@
 							}
 						],
 						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "見れば"
+							},{
+								"reading": "あきらか",
+								"answer": "明らか"
+							}
+						],
+						"hasOkurigana": true
 					}
 				]
 			},{
@@ -15645,7 +18447,7 @@
 					{
 						"phrase": [
 							{
-								"text": "雪"
+								"text": "月"
 							},{
 								"reading": "あかり",
 								"answer": "明かり"
@@ -15659,6 +18461,16 @@
 								"answer": "明かり"
 							},{
 								"text": "をけす"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "あかり",
+								"answer": "明かり"
+							},{
+								"text": "をつける"
 							}
 						],
 						"hasOkurigana": true
@@ -15695,7 +18507,7 @@
 					},{
 						"phrase": [
 							{
-								"text": "今日み"
+								"text": "今日のみ"
 							},{
 								"reading": "めい",
 								"answer": "明"
@@ -15727,6 +18539,16 @@
 					},{
 						"phrase": [
 							{
+								"text": "とりが"
+							},{
+								"reading": "なく",
+								"answer": "鳴く"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "かねが"
 							},{
 								"reading": "なる",
@@ -15737,7 +18559,27 @@
 					},{
 						"phrase": [
 							{
+								"text": "かみなりが"
+							},{
+								"reading": "なる",
+								"answer": "鳴る"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
 								"text": "音を"
+							},{
+								"reading": "ならす",
+								"answer": "鳴らす"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "ゆびを"
 							},{
 								"reading": "ならす",
 								"answer": "鳴らす"
@@ -15875,10 +18717,10 @@
 			{
 				"phrase": [
 					{
+						"text": "おもて"
+					},{
 						"reading": "もん",
 						"answer": "門"
-					},{
-						"text": "を出る"
 					}
 				],
 				"hasOkurigana": false
@@ -15890,7 +18732,7 @@
 						"reading": "もん",
 						"answer": "門"
 					},{
-						"text": "のまえ"
+						"text": "を出る"
 					}
 				],
 				"hasOkurigana": false
@@ -15921,16 +18763,6 @@
 							},{
 								"reading": "よる",
 								"answer": "夜"
-							}
-						],
-						"hasOkurigana": false
-					},{
-						"phrase": [
-							{
-								"reading": "よる",
-								"answer": "夜"
-							},{
-								"text": "になる"
 							}
 						],
 						"hasOkurigana": false
@@ -16157,10 +18989,10 @@
 					},{
 						"phrase": [
 							{
+								"text": "おとな"
+							},{
 								"reading": "よう",
 								"answer": "用"
-							},{
-								"text": "いする"
 							}
 						],
 						"hasOkurigana": false
@@ -16194,6 +19026,16 @@
 						"phrase": [
 							{
 								"text": "新しく"
+							},{
+								"reading": "もちいる",
+								"answer": "用いる"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"text": "重く"
 							},{
 								"reading": "もちいる",
 								"answer": "用いる"
@@ -16401,10 +19243,30 @@
 			},{
 				"phrase": [
 					{
+						"text": "えいごを"
+					},{
+						"reading": "はなす",
+						"answer": "話す"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"reading": "はなし",
 						"answer": "話"
 					},{
 						"text": "をきく"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "むずかしい"
+					},{
+						"reading": "はなし",
+						"answer": "話"
 					}
 				],
 				"hasOkurigana": false
@@ -16443,7 +19305,7 @@
 			{
 				"phrase": [
 					{
-						"text": "気ぶんが"
+						"text": "体ちょうが"
 					},{
 						"reading": "わるい",
 						"answer": "悪い"
@@ -16599,10 +19461,12 @@
 			},{
 				"phrase": [
 					{
+						"text": "大学の"
+					},{
 						"reading": "い",
 						"answer": "医"
 					},{
-						"text": "学を学ぶ"
+						"text": "学ぶ"
 					}
 				],
 				"hasOkurigana": false
@@ -16677,10 +19541,10 @@
 			{
 				"phrase": [
 					{
-						"text": "遠足の用"
-					},{
 						"reading": "い",
 						"answer": "意"
+					},{
+						"text": "けんを話す"
 					}
 				],
 				"hasOkurigana": false
@@ -16727,6 +19591,16 @@
 			},{
 				"phrase": [
 					{
+						"text": "秋田で"
+					},{
+						"reading": "そだつ",
+						"answer": "育つ"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "体"
 					},{
 						"reading": "いく",
@@ -16751,10 +19625,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "海に"
+						"text": "しぜんが"
 					},{
-						"reading": "はぐくまれる",
-						"answer": "育まれる"
+						"reading": "はぐくむ",
+						"answer": "育む"
 					}
 				],
 				"hasOkurigana": true
@@ -16841,10 +19715,12 @@
 			},{
 				"phrase": [
 					{
+						"text": "たい"
+					},{
 						"reading": "いん",
 						"answer": "院"
 					},{
-						"text": "長になる"
+						"text": "できる"
 					}
 				],
 				"hasOkurigana": false
@@ -16882,7 +19758,7 @@
 						"reading": "いん",
 						"answer": "飲"
 					},{
-						"text": "しょく"
+						"text": "しょく店"
 					}
 				],
 				"hasOkurigana": false
@@ -16980,7 +19856,19 @@
 						"reading": "えい",
 						"answer": "泳"
 					},{
-						"text": "教室"
+						"text": "をならう"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "きょう"
+					},{
+						"reading": "えい",
+						"answer": "泳"
+					},{
+						"text": "大会"
 					}
 				],
 				"hasOkurigana": false
@@ -17008,17 +19896,19 @@
 						"reading": "えき",
 						"answer": "駅"
 					},{
-						"text": "前の道"
+						"text": "前の公園"
 					}
 				],
 				"hasOkurigana": false
 			},{
 				"phrase": [
 					{
+						"text": "はこね"
+					},{
 						"reading": "えき",
 						"answer": "駅"
 					},{
-						"text": "長に会う"
+						"text": "でん"
 					}
 				],
 				"hasOkurigana": false
@@ -17033,7 +19923,7 @@
 			{
 				"phrase": [
 					{
-						"text": "広場の中"
+						"text": "町の中"
 					},{
 						"reading": "おう",
 						"answer": "央"
@@ -17255,10 +20145,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "人を"
+						"text": "お"
 					},{
-						"reading": "ばかす",
-						"answer": "化かす"
+						"reading": "ばけ",
+						"answer": "化け"
 					}
 				],
 				"hasOkurigana": true
@@ -17318,7 +20208,7 @@
 						"reading": "かい",
 						"answer": "界"
 					},{
-						"text": "地図"
+						"text": "はひとつ"
 					}
 				],
 				"hasOkurigana": false
@@ -17401,7 +20291,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "戸を"
+						"text": "とびらを"
 					},{
 						"reading": "あける",
 						"answer": "開ける"
@@ -17623,7 +20513,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "大きな"
+						"text": "古い"
 					},{
 						"reading": "やかた",
 						"answer": "館"
@@ -17668,7 +20558,7 @@
 						"reading": "がん",
 						"answer": "岸"
 					},{
-						"text": "を歩く"
+						"text": "ぞい"
 					}
 				],
 				"hasOkurigana": false
@@ -17715,10 +20605,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "早ね早"
+						"text": "まき"
 					},{
-						"reading": "おき",
-						"answer": "起き"
+						"reading": "おこる",
+						"answer": "起こる"
 					}
 				],
 				"hasOkurigana": true
@@ -17795,7 +20685,7 @@
 			{
 				"phrase": [
 					{
-						"text": "広い"
+						"text": "わふうの"
 					},{
 						"reading": "きゃく",
 						"answer": "客"
@@ -17812,7 +20702,7 @@
 						"reading": "きゃく",
 						"answer": "客"
 					},{
-						"text": "が多い"
+						"text": "用"
 					}
 				],
 				"hasOkurigana": false
@@ -17879,10 +20769,10 @@
 			{
 				"phrase": [
 					{
-						"text": "道を"
+						"reading": "いそい",
+						"answer": "急い"
 					},{
-						"reading": "いそぐ",
-						"answer": "急ぐ"
+						"text": "で歩く"
 					}
 				],
 				"hasOkurigana": true
@@ -17939,12 +20829,12 @@
 			},{
 				"phrase": [
 					{
-						"text": "上"
+						"text": "こう"
 					},{
 						"reading": "きゅう",
 						"answer": "級"
 					},{
-						"text": "生"
+						"text": "ひん"
 					}
 				],
 				"hasOkurigana": false
@@ -17993,12 +20883,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "広い"
-					},{
 						"reading": "きゅう",
 						"answer": "宮"
 					},{
-						"text": "でん"
+						"text": "でんのあと"
 					}
 				],
 				"hasOkurigana": false
@@ -18078,7 +20966,7 @@
 						"reading": "きょ",
 						"answer": "去"
 					},{
-						"text": "年の春"
+						"text": "年のはじめ"
 					}
 				],
 				"hasOkurigana": false
@@ -18262,7 +21150,7 @@
 						"reading": "きょく",
 						"answer": "曲"
 					},{
-						"text": "聞く"
+						"text": "を聞く"
 					}
 				],
 				"hasOkurigana": false
@@ -18442,7 +21330,7 @@
 						"reading": "にがい",
 						"answer": "苦い"
 					},{
-						"text": "お茶"
+						"text": "コーヒー"
 					}
 				],
 				"hasOkurigana": true
@@ -18479,7 +21367,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "新しい家"
+						"text": "大きな家"
 					},{
 						"reading": "ぐ",
 						"answer": "具"
@@ -18610,7 +21498,7 @@
 						"reading": "かるい",
 						"answer": "軽い"
 					},{
-						"text": "石"
+						"text": "にもつ"
 					}
 				],
 				"hasOkurigana": true
@@ -18633,6 +21521,16 @@
 						"answer": "軽"
 					},{
 						"text": "音楽"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "けい",
+						"answer": "軽"
+					},{
+						"text": "しょく店"
 					}
 				],
 				"hasOkurigana": false
@@ -18697,7 +21595,7 @@
 			{
 				"phrase": [
 					{
-						"text": "当番を"
+						"text": "名前を"
 					},{
 						"reading": "きめる",
 						"answer": "決める"
@@ -18707,10 +21605,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "名前が"
+						"text": "朝はパンと"
 					},{
-						"reading": "きまる",
-						"answer": "決まる"
+						"reading": "きめる",
+						"answer": "決める"
 					}
 				],
 				"hasOkurigana": true
@@ -18885,10 +21783,12 @@
 			},{
 				"phrase": [
 					{
+						"text": "青い"
+					},{
 						"reading": "こ",
 						"answer": "湖"
 					},{
-						"text": "めんの月"
+						"text": "めん"
 					}
 				],
 				"hasOkurigana": false
@@ -18973,6 +21873,16 @@
 			},{
 				"phrase": [
 					{
+						"reading": "しあわせ",
+						"answer": "幸せ"
+					},{
+						"text": "もの"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"reading": "こう",
 						"answer": "幸"
 					},{
@@ -18983,10 +21893,30 @@
 			},{
 				"phrase": [
 					{
+						"reading": "こう",
+						"answer": "幸"
+					},{
+						"text": "うんな人"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "さいわい",
 						"answer": "幸い"
 					},{
 						"text": "なことに"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "さいわい",
+						"answer": "幸い"
+					},{
+						"text": "にも"
 					}
 				],
 				"hasOkurigana": true
@@ -19025,7 +21955,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "古い"
+						"text": "小さい"
 					},{
 						"reading": "みなと",
 						"answer": "港"
@@ -19065,7 +21995,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "二"
+						"text": "一"
 					},{
 						"reading": "ごう",
 						"answer": "号"
@@ -19176,6 +22106,18 @@
 					}
 				],
 				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "前や"
+					},{
+						"reading": "さい",
+						"answer": "祭"
+					},{
+						"text": "に行く"
+					}
+				],
+				"hasOkurigana": false
 			}
 		]
 	},
@@ -19187,10 +22129,12 @@
 			{
 				"phrase": [
 					{
+						"text": "お"
+					},{
 						"reading": "さら",
 						"answer": "皿"
 					},{
-						"text": "にのせる"
+						"text": "にもる"
 					}
 				],
 				"hasOkurigana": false
@@ -19225,7 +22169,7 @@
 			{
 				"phrase": [
 					{
-						"text": "体の"
+						"text": "新しい"
 					},{
 						"reading": "し",
 						"answer": "仕"
@@ -19285,6 +22229,16 @@
 			},{
 				"phrase": [
 					{
+						"text": "よさが"
+					},{
+						"reading": "しぬ",
+						"answer": "死ぬ"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "けっ"
 					},{
 						"reading": "し",
@@ -19317,7 +22271,7 @@
 			{
 				"phrase": [
 					{
-						"text": "はさみを"
+						"text": "はしを"
 					},{
 						"reading": "つかう",
 						"answer": "使う"
@@ -19377,10 +22331,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "話を"
+						"text": "これから"
 					},{
-						"reading": "はじめる",
-						"answer": "始める"
+						"reading": "はじまる",
+						"answer": "始まる"
 					}
 				],
 				"hasOkurigana": true
@@ -19420,7 +22374,7 @@
 						"reading": "ゆび",
 						"answer": "指"
 					},{
-						"text": "のつめ"
+						"text": "を上げる"
 					}
 				],
 				"hasOkurigana": false
@@ -19459,7 +22413,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "北を"
+						"text": "東を"
 					},{
 						"reading": "さす",
 						"answer": "指す"
@@ -19492,7 +22446,7 @@
 						"reading": "は",
 						"answer": "歯"
 					},{
-						"text": "をみがく"
+						"text": "みがき"
 					}
 				],
 				"hasOkurigana": false
@@ -19547,7 +22501,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "外国の"
+						"text": "日本の"
 					},{
 						"reading": "し",
 						"answer": "詩"
@@ -19587,10 +22541,32 @@
 			},{
 				"phrase": [
 					{
+						"reading": "つぎ",
+						"answer": "次"
+					},{
+						"text": "のしんごう"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"text": "電話をとり"
 					},{
 						"reading": "つぐ",
 						"answer": "次ぐ"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "東京に"
+					},{
+						"reading": "つぐ",
+						"answer": "次ぐ"
+					},{
+						"text": "二い"
 					}
 				],
 				"hasOkurigana": true
@@ -19683,7 +22659,7 @@
 			{
 				"phrase": [
 					{
-						"text": "右手で"
+						"text": "手で"
 					},{
 						"reading": "もつ",
 						"answer": "持つ"
@@ -19747,7 +22723,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "計算の"
+						"text": "計算"
 					},{
 						"reading": "しき",
 						"answer": "式"
@@ -19785,7 +22761,27 @@
 			},{
 				"phrase": [
 					{
+						"reading": "み",
+						"answer": "実"
+					},{
+						"text": "がなる"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"text": "かきが"
+					},{
+						"reading": "みのる",
+						"answer": "実る"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "どりょくが"
 					},{
 						"reading": "みのる",
 						"answer": "実る"
@@ -19828,7 +22824,7 @@
 						"reading": "しゃ",
 						"answer": "写"
 					},{
-						"text": "の時間"
+						"text": "をならう"
 					}
 				],
 				"hasOkurigana": false
@@ -20025,12 +23021,36 @@
 			},{
 				"phrase": [
 					{
+						"text": "こう"
+					},{
+						"reading": "しゅ",
+						"answer": "守"
+					},{
+						"text": "交たい"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"text": "る"
 					},{
 						"reading": "す",
 						"answer": "守"
 					},{
 						"text": "ばん"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "る"
+					},{
+						"reading": "す",
+						"answer": "守"
+					},{
+						"text": "にする"
 					}
 				],
 				"hasOkurigana": false
@@ -20109,6 +23129,30 @@
 					},{
 						"reading": "ざけ",
 						"answer": "酒"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "大きな"
+					},{
+						"reading": "さか",
+						"answer": "酒"
+					},{
+						"text": "や"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "えき前の"
+					},{
+						"reading": "さか",
+						"answer": "酒"
+					},{
+						"text": "場"
 					}
 				],
 				"hasOkurigana": false
@@ -20198,7 +23242,7 @@
 						"reading": "しゅう",
 						"answer": "州"
 					},{
-						"text": "と四国"
+						"text": "とのはし"
 					}
 				],
 				"hasOkurigana": false
@@ -20245,7 +23289,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "ごみを"
+						"text": "さいふを"
 					},{
 						"reading": "ひろう",
 						"answer": "拾う"
@@ -20293,7 +23337,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "バスの"
+						"text": "電車の"
 					},{
 						"reading": "しゅう",
 						"answer": "終"
@@ -20323,7 +23367,7 @@
 			{
 				"phrase": [
 					{
-						"text": "国語の"
+						"text": "理科の"
 					},{
 						"text": "学"
 					},{
@@ -20347,7 +23391,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "ピアノを"
+						"text": "中学校で"
 					},{
 						"reading": "ならう",
 						"answer": "習う"
@@ -20375,7 +23419,7 @@
 			{
 				"phrase": [
 					{
-						"text": "切手を"
+						"text": "人目を"
 					},{
 						"reading": "あつめる",
 						"answer": "集める"
@@ -20395,12 +23439,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "文"
+						"text": "記ねん文"
 					},{
 						"reading": "しゅう",
 						"answer": "集"
-					},{
-						"text": "を作る"
 					}
 				],
 				"hasOkurigana": false
@@ -20480,7 +23522,7 @@
 						"reading": "おもい",
 						"answer": "重い"
 					},{
-						"text": "石"
+						"text": "はこ"
 					}
 				],
 				"hasOkurigana": true
@@ -20605,12 +23647,32 @@
 			},{
 				"phrase": [
 					{
+						"text": "小さな"
+					},{
+						"reading": "やど",
+						"answer": "宿"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"text": "雨"
 					},{
 						"reading": "やどり",
 						"answer": "宿り"
 					},{
 						"text": "をする"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "たましいが"
+					},{
+						"reading": "やどる",
+						"answer": "宿る"
 					}
 				],
 				"hasOkurigana": true
@@ -20645,7 +23707,7 @@
 			{
 				"phrase": [
 					{
-						"text": "広い場"
+						"text": "高い場"
 					},{
 						"reading": "しょ",
 						"answer": "所"
@@ -20665,7 +23727,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "高い"
+						"text": "いい"
 					},{
 						"reading": "ところ",
 						"answer": "所"
@@ -20693,12 +23755,10 @@
 			{
 				"phrase": [
 					{
-						"text": "むし"
+						"text": "夏のむし"
 					},{
-						"reading": "あつい",
-						"answer": "暑い"
-					},{
-						"text": "日"
+						"reading": "あつさ",
+						"answer": "暑さ"
 					}
 				],
 				"hasOkurigana": true
@@ -20863,6 +23923,26 @@
 			},{
 				"phrase": [
 					{
+						"text": "電気を"
+					},{
+						"reading": "けす",
+						"answer": "消す"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "においが"
+					},{
+						"reading": "きえる",
+						"answer": "消える"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "にじが"
 					},{
 						"reading": "きえる",
@@ -20935,10 +24015,24 @@
 			},{
 				"phrase": [
 					{
-						"text": "学校の校"
+						"text": "校"
 					},{
 						"reading": "しょう",
 						"answer": "章"
+					},{
+						"text": "バッチ"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "一"
+					},{
+						"reading": "しょう",
+						"answer": "章"
+					},{
+						"text": "のはじめ"
 					}
 				],
 				"hasOkurigana": false
@@ -21223,10 +24317,34 @@
 			},{
 				"phrase": [
 					{
+						"text": "体の"
+					},{
+						"reading": "しん",
+						"answer": "神"
+					},{
+						"text": "けい"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "じん",
 						"answer": "神"
 					},{
 						"text": "社に行く"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "古い"
+					},{
+						"reading": "じん",
+						"answer": "神"
+					},{
+						"text": "社"
 					}
 				],
 				"hasOkurigana": false
@@ -21251,10 +24369,12 @@
 			},{
 				"phrase": [
 					{
+						"text": "しゃ"
+					},{
 						"reading": "しん",
 						"answer": "真"
 					},{
-						"text": "じつを知る"
+						"text": "をとる"
 					}
 				],
 				"hasOkurigana": false
@@ -21371,10 +24491,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "しごとが"
+						"text": "工じを"
 					},{
-						"reading": "すすむ",
-						"answer": "進む"
+						"reading": "すすめる",
+						"answer": "進める"
 					}
 				],
 				"hasOkurigana": true
@@ -21437,6 +24557,18 @@
 						"answer": "世"
 					},{
 						"text": "の中"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "国内の"
+					},{
+						"reading": "よ",
+						"answer": "世"
+					},{
+						"text": "ろん"
 					}
 				],
 				"hasOkurigana": false
@@ -21588,6 +24720,16 @@
 					}
 				],
 				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "すべて",
+						"answer": "全て"
+					},{
+						"text": "話す"
+					}
+				],
+				"hasOkurigana": true
 			}
 		]
 	},
@@ -21651,7 +24793,7 @@
 			{
 				"phrase": [
 					{
-						"text": "手紙を"
+						"text": "えきまで"
 					},{
 						"reading": "おくる",
 						"answer": "送る"
@@ -21799,7 +24941,7 @@
 			{
 				"phrase": [
 					{
-						"text": "走る"
+						"text": "車の"
 					},{
 						"reading": "はやさ",
 						"answer": "速さ"
@@ -21953,10 +25095,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "ヒットを"
-					},{
 						"reading": "うつ",
 						"answer": "打つ"
+					},{
+						"text": "手がない"
 					}
 				],
 				"hasOkurigana": true
@@ -21966,7 +25108,7 @@
 						"reading": "だ",
 						"answer": "打"
 					},{
-						"text": "楽きの音"
+						"text": "楽き"
 					}
 				],
 				"hasOkurigana": false
@@ -22003,12 +25145,12 @@
 			},{
 				"phrase": [
 					{
-						"text": "六"
+						"text": "三"
 					},{
 						"reading": "たい",
 						"answer": "対"
 					},{
-						"text": "五"
+						"text": "二でかつ"
 					}
 				],
 				"hasOkurigana": false
@@ -22097,9 +25239,43 @@
 			},{
 				"phrase": [
 					{
+						"text": "ち"
+					},{
+						"reading": "よ",
+						"answer": "代"
+					},{
+						"text": "紙あそび"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"text": "新しい時"
 					},{
 						"reading": "だい",
+						"answer": "代"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "会の"
+					},{
+						"reading": "だい",
+						"answer": "代"
+					},{
+						"text": "ひょう"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "せんしゅ交"
+					},{
+						"reading": "たい",
 						"answer": "代"
 					}
 				],
@@ -22129,7 +25305,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "電車の"
+						"text": "車の"
 					},{
 						"reading": "かわり",
 						"answer": "代わり"
@@ -22160,7 +25336,7 @@
 						"reading": "だい",
 						"answer": "第"
 					},{
-						"text": "三回大会"
+						"text": "五回大会"
 					}
 				],
 				"hasOkurigana": false
@@ -22195,7 +25371,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "作文の"
+						"text": "絵本の"
 					},{
 						"reading": "だい",
 						"answer": "題"
@@ -22300,7 +25476,7 @@
 						"reading": "たん",
 						"answer": "短"
 					},{
-						"text": "かを作る"
+						"text": "かをよむ"
 					}
 				],
 				"hasOkurigana": false
@@ -22367,7 +25543,7 @@
 			{
 				"phrase": [
 					{
-						"text": "セーターを"
+						"text": "コートを"
 					},{
 						"reading": "きる",
 						"answer": "着る"
@@ -22377,13 +25553,15 @@
 			},{
 				"phrase": [
 					{
-						"text": "コートを"
+						"text": "ふくを"
 					},{
-						"reading": "きる",
-						"answer": "着る"
+						"reading": "き",
+						"answer": "着"
+					},{
+						"text": "こむ"
 					}
 				],
-				"hasOkurigana": true
+				"hasOkurigana": false
 			},{
 				"phrase": [
 					{
@@ -22409,7 +25587,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "バスが"
+						"text": "電車が"
 					},{
 						"reading": "つく",
 						"answer": "着く"
@@ -22457,7 +25635,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "海に"
+						"text": "川が海に"
 					},{
 						"reading": "そそぐ",
 						"answer": "注ぐ"
@@ -22467,7 +25645,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "しるを"
+						"text": "みそしるを"
 					},{
 						"reading": "そそぐ",
 						"answer": "注ぐ"
@@ -22509,10 +25687,10 @@
 			},{
 				"phrase": [
 					{
+						"text": "太い"
+					},{
 						"reading": "はしら",
 						"answer": "柱"
-					},{
-						"text": "を立てる"
 					}
 				],
 				"hasOkurigana": false
@@ -22549,7 +25727,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "二"
+						"text": "一"
 					},{
 						"reading": "ちょう",
 						"answer": "丁"
@@ -22619,7 +25797,7 @@
 			{
 				"phrase": [
 					{
-						"text": "本で"
+						"text": "新聞で"
 					},{
 						"reading": "しらべる",
 						"answer": "調べる"
@@ -22644,7 +25822,7 @@
 						"reading": "ちょう",
 						"answer": "調"
 					},{
-						"text": "がいい"
+						"text": "をくずす"
 					}
 				],
 				"hasOkurigana": false
@@ -22706,7 +25884,7 @@
 						"reading": "つい",
 						"answer": "追"
 					},{
-						"text": "ほうされる"
+						"text": "きゅう"
 					}
 				],
 				"hasOkurigana": false
@@ -22757,7 +25935,29 @@
 			},{
 				"phrase": [
 					{
+						"text": "竹の"
+					},{
+						"reading": "じょう",
+						"answer": "定"
+					},{
+						"text": "ぎ"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"text": "ほうを"
+					},{
+						"reading": "さだめる",
+						"answer": "定める"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "国が"
 					},{
 						"reading": "さだめる",
 						"answer": "定める"
@@ -22775,7 +25975,7 @@
 			{
 				"phrase": [
 					{
-						"text": "学校の中"
+						"text": "家の中"
 					},{
 						"reading": "にわ",
 						"answer": "庭"
@@ -22795,10 +25995,12 @@
 			},{
 				"phrase": [
 					{
-						"text": "明るい家"
+						"text": "家"
 					},{
 						"reading": "てい",
 						"answer": "庭"
+					},{
+						"text": "生活"
 					}
 				],
 				"hasOkurigana": false
@@ -22825,10 +26027,12 @@
 			{
 				"phrase": [
 					{
-						"text": "たて"
+						"text": "草"
 					},{
 						"reading": "ぶえ",
 						"answer": "笛"
+					},{
+						"text": "をふく"
 					}
 				],
 				"hasOkurigana": false
@@ -22913,7 +26117,7 @@
 			{
 				"phrase": [
 					{
-						"text": "さか道で"
+						"text": "すべって"
 					},{
 						"reading": "ころぶ",
 						"answer": "転ぶ"
@@ -23153,6 +26357,28 @@
 			},{
 				"phrase": [
 					{
+						"text": "なっ"
+					},{
+						"reading": "とう",
+						"answer": "豆"
+					},{
+						"text": "を買う"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "とう",
+						"answer": "豆"
+					},{
+						"text": "ふを食べる"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "まめ",
 						"answer": "豆"
 					},{
@@ -23201,7 +26427,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "いず半"
+						"text": "しれとこ半"
 					},{
 						"reading": "とう",
 						"answer": "島"
@@ -23291,6 +26517,18 @@
 			},{
 				"phrase": [
 					{
+						"text": "はつ"
+					},{
+						"reading": "とう",
+						"answer": "登"
+					},{
+						"text": "じょう"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "と",
 						"answer": "登"
 					},{
@@ -23301,7 +26539,17 @@
 			},{
 				"phrase": [
 					{
-						"text": "木に"
+						"reading": "と",
+						"answer": "登"
+					},{
+						"text": "山家"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "台に"
 					},{
 						"reading": "のぼる",
 						"answer": "登る"
@@ -23405,7 +26653,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "電車が"
+						"text": "岩が"
 					},{
 						"reading": "うごく",
 						"answer": "動く"
@@ -23415,10 +26663,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "ものを"
+						"text": "ゆれ"
 					},{
-						"reading": "うごかす",
-						"answer": "動かす"
+						"reading": "うごく",
+						"answer": "動く"
 					}
 				],
 				"hasOkurigana": true
@@ -23436,7 +26684,7 @@
 						"reading": "どう",
 						"answer": "童"
 					},{
-						"text": "話を読む"
+						"text": "話文学"
 					}
 				],
 				"hasOkurigana": false
@@ -23475,7 +26723,7 @@
 			{
 				"phrase": [
 					{
-						"text": "広い"
+						"text": "ゆたかな"
 					},{
 						"reading": "のう",
 						"answer": "農"
@@ -23589,7 +26837,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "新聞を"
+						"text": "手紙を"
 					},{
 						"reading": "くばる",
 						"answer": "配る"
@@ -23622,7 +26870,7 @@
 						"reading": "ばい",
 						"answer": "倍"
 					},{
-						"text": "になる"
+						"text": "にする"
 					}
 				],
 				"hasOkurigana": false
@@ -23657,7 +26905,7 @@
 			{
 				"phrase": [
 					{
-						"text": "くすり"
+						"text": "ダンボール"
 					},{
 						"reading": "ばこ",
 						"answer": "箱"
@@ -23705,6 +26953,16 @@
 			},{
 				"phrase": [
 					{
+						"text": "麦"
+					},{
+						"reading": "ばたけ",
+						"answer": "畑"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"text": "田"
 					},{
 						"reading": "はた",
@@ -23715,10 +26973,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "麦"
-					},{
-						"reading": "ばたけ",
+						"reading": "はた",
 						"answer": "畑"
+					},{
+						"text": "作地たい"
 					}
 				],
 				"hasOkurigana": false
@@ -23883,7 +27141,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "ガラスの"
+						"text": "木の"
 					},{
 						"reading": "いた",
 						"answer": "板"
@@ -23911,7 +27169,7 @@
 			{
 				"phrase": [
 					{
-						"text": "みかんの"
+						"text": "りんごの"
 					},{
 						"reading": "かわ",
 						"answer": "皮"
@@ -23937,6 +27195,16 @@
 						"answer": "皮"
 					},{
 						"text": "ふ"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "すぎのじゅ"
+					},{
+						"reading": "ひ",
+						"answer": "皮"
 					}
 				],
 				"hasOkurigana": false
@@ -24021,10 +27289,12 @@
 			},{
 				"phrase": [
 					{
+						"text": "町の"
+					},{
 						"reading": "び",
 						"answer": "美"
 					},{
-						"text": "かうんどう"
+						"text": "か"
 					}
 				],
 				"hasOkurigana": false
@@ -24062,7 +27332,7 @@
 						"reading": "はな",
 						"answer": "鼻"
 					},{
-						"text": "歌を歌う"
+						"text": "歌まじり"
 					}
 				],
 				"hasOkurigana": false
@@ -24155,12 +27425,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "大きな"
-					},{
 						"reading": "ひょう",
 						"answer": "氷"
 					},{
-						"text": "山"
+						"text": "山の一角"
 					}
 				],
 				"hasOkurigana": false
@@ -24185,7 +27453,7 @@
 			{
 				"phrase": [
 					{
-						"text": "図に"
+						"text": "ことばに"
 					},{
 						"reading": "あらわす",
 						"answer": "表す"
@@ -24393,7 +27661,7 @@
 			{
 				"phrase": [
 					{
-						"text": "ゲームに"
+						"text": "し合に"
 					},{
 						"reading": "まける",
 						"answer": "負ける"
@@ -24517,7 +27785,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "赤い"
+						"text": "白い"
 					},{
 						"reading": "ふく",
 						"answer": "服"
@@ -24587,7 +27855,7 @@
 			{
 				"phrase": [
 					{
-						"text": "海の生"
+						"text": "あらゆる生"
 					},{
 						"reading": "ぶつ",
 						"answer": "物"
@@ -24705,6 +27973,16 @@
 			},{
 				"phrase": [
 					{
+						"reading": "びょう",
+						"answer": "平"
+					},{
+						"text": "どうな社会"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "ひらたい",
 						"answer": "平たい"
 					},{
@@ -24786,7 +28064,17 @@
 						"reading": "べん",
 						"answer": "勉"
 					},{
-						"text": "きょう"
+						"text": "きょう会"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "べん",
+						"answer": "勉"
+					},{
+						"text": "きょうべや"
 					}
 				],
 				"hasOkurigana": false
@@ -24859,6 +28147,16 @@
 						"answer": "放り"
 					},{
 						"text": "こむ"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "ほうり",
+						"answer": "放り"
+					},{
+						"text": "なげる"
 					}
 				],
 				"hasOkurigana": true
@@ -24995,10 +28293,12 @@
 			{
 				"phrase": [
 					{
-						"text": "かたいじ"
+						"text": "じ"
 					},{
 						"reading": "めん",
 						"answer": "面"
+					},{
+						"text": "の中"
 					}
 				],
 				"hasOkurigana": false
@@ -25079,6 +28379,18 @@
 						"answer": "問"
 					},{
 						"text": "やに行く"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "米"
+					},{
+						"reading": "どん",
+						"answer": "問"
+					},{
+						"text": "や"
 					}
 				],
 				"hasOkurigana": false
@@ -25188,7 +28500,7 @@
 						"reading": "ゆう",
 						"answer": "由"
 					},{
-						"text": "に話す"
+						"text": "にうごく"
 					}
 				],
 				"hasOkurigana": false
@@ -25433,6 +28745,16 @@
 			},{
 				"phrase": [
 					{
+						"reading": "よう",
+						"answer": "羊"
+					},{
+						"text": "もうぶとん"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"reading": "ひつじ",
 						"answer": "羊"
 					},{
@@ -25471,7 +28793,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "インド"
+						"text": "たいへい"
 					},{
 						"reading": "よう",
 						"answer": "洋"
@@ -25519,7 +28841,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "こう"
+						"text": "秋のこう"
 					},{
 						"reading": "よう",
 						"answer": "葉"
@@ -25554,7 +28876,7 @@
 						"reading": "よう",
 						"answer": "陽"
 					},{
-						"text": "の光"
+						"text": "の月"
 					}
 				],
 				"hasOkurigana": false
@@ -25564,7 +28886,7 @@
 						"reading": "よう",
 						"answer": "陽"
 					},{
-						"text": "気な人"
+						"text": "気な声"
 					}
 				],
 				"hasOkurigana": false
@@ -25591,7 +28913,7 @@
 			{
 				"phrase": [
 					{
-						"text": "町の"
+						"text": "むかしの"
 					},{
 						"reading": "よう",
 						"answer": "様"
@@ -25741,7 +29063,7 @@
 			{
 				"phrase": [
 					{
-						"text": "日本"
+						"text": "国内"
 					},{
 						"reading": "りょ",
 						"answer": "旅"
@@ -25775,7 +29097,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "船"
+						"text": "船の"
 					},{
 						"reading": "たび",
 						"answer": "旅"
@@ -25836,7 +29158,7 @@
 						"reading": "みどり",
 						"answer": "緑"
 					},{
-						"text": "のしばふ"
+						"text": "をまもる"
 					}
 				],
 				"hasOkurigana": false
@@ -26061,12 +29383,12 @@
 			{
 				"phrase": [
 					{
-						"text": "おん"
+						"text": "へい"
 					},{
 						"reading": "わ",
 						"answer": "和"
 					},{
-						"text": "な人"
+						"text": "な国"
 					}
 				],
 				"hasOkurigana": false
@@ -26462,7 +29784,7 @@
 						"reading": "あん",
 						"answer": "案"
 					},{
-						"text": "を出す"
+						"text": "を考える"
 					}
 				],
 				"hasOkurigana": false
@@ -26539,7 +29861,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "ぬれた"
+						"text": "昔の"
 					},{
 						"reading": "い",
 						"answer": "衣"
@@ -26691,10 +30013,12 @@
 			},{
 				"phrase": [
 					{
-						"text": "消し"
+						"text": "強い"
 					},{
 						"reading": "いん",
 						"answer": "印"
+					},{
+						"text": "しょう"
 					}
 				],
 				"hasOkurigana": false
@@ -26935,10 +30259,12 @@
 			},{
 				"phrase": [
 					{
+						"text": "しず"
+					},{
 						"reading": "おか",
 						"answer": "岡"
 					},{
-						"text": "山し"
+						"text": "県"
 					}
 				],
 				"hasOkurigana": false
@@ -26965,7 +30291,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "三"
+						"text": "一"
 					},{
 						"reading": "おく",
 						"answer": "億"
@@ -27025,7 +30351,27 @@
 			},{
 				"phrase": [
 					{
+						"text": "なか間に"
+					},{
+						"reading": "くわえる",
+						"answer": "加える"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "人が"
+					},{
+						"reading": "くわわる",
+						"answer": "加わる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "話に"
 					},{
 						"reading": "くわわる",
 						"answer": "加わる"
@@ -27084,6 +30430,46 @@
 					}
 				],
 				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "こまり"
+					},{
+						"reading": "はてる",
+						"answer": "果てる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "あきれ"
+					},{
+						"reading": "はてる",
+						"answer": "果てる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "地の"
+					},{
+						"reading": "はて",
+						"answer": "果て"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "旅の"
+					},{
+						"reading": "はて",
+						"answer": "果て"
+					}
+				],
+				"hasOkurigana": true
 			}
 		]
 	},
@@ -27115,7 +30501,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "金"
+						"text": "昔の金"
 					},{
 						"reading": "か",
 						"answer": "貨"
@@ -27133,7 +30519,7 @@
 			{
 				"phrase": [
 					{
-						"text": "作文の"
+						"text": "地球の"
 					},{
 						"reading": "か",
 						"answer": "課"
@@ -27424,7 +30810,7 @@
 						"reading": "まち",
 						"answer": "街"
 					},{
-						"text": "のあかり"
+						"text": "を歩く"
 					}
 				],
 				"hasOkurigana": false
@@ -27474,19 +30860,17 @@
 						"reading": "かっ",
 						"answer": "各"
 					},{
-						"text": "国の人"
+						"text": "国の名物"
 					}
 				],
 				"hasOkurigana": false
 			},{
 				"phrase": [
 					{
-						"text": "日本"
-					},{
 						"reading": "かく",
 						"answer": "各"
 					},{
-						"text": "地"
+						"text": "地の天気"
 					}
 				],
 				"hasOkurigana": false
@@ -27701,7 +31085,7 @@
 			{
 				"phrase": [
 					{
-						"text": "本の"
+						"text": "けんこう"
 					},{
 						"reading": "かん",
 						"answer": "管"
@@ -27723,7 +31107,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "竹の"
+						"text": "木の"
 					},{
 						"reading": "くだ",
 						"answer": "管"
@@ -27754,10 +31138,40 @@
 						"reading": "せき",
 						"answer": "関"
 					},{
-						"text": "所を通る"
+						"text": "所のあと"
 					}
 				],
 				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "すもうの大"
+					},{
+						"reading": "ぜき",
+						"answer": "関"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "命に"
+					},{
+						"reading": "かかわる",
+						"answer": "関わる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "作業に"
+					},{
+						"reading": "かかわる",
+						"answer": "関わる"
+					}
+				],
+				"hasOkurigana": true
 			},{
 				"phrase": [
 					{
@@ -27853,7 +31267,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "幸せを"
+						"text": "心から"
 					},{
 						"reading": "ねがう",
 						"answer": "願う"
@@ -27944,6 +31358,16 @@
 					}
 				],
 				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "き",
+						"answer": "希"
+					},{
+						"text": "はくな気体"
+					}
+				],
+				"hasOkurigana": false
 			}
 		]
 	},
@@ -27955,10 +31379,12 @@
 			{
 				"phrase": [
 					{
-						"text": "日本の四"
+						"text": "四"
 					},{
 						"reading": "き",
 						"answer": "季"
+					},{
+						"text": "おりおり"
 					}
 				],
 				"hasOkurigana": false
@@ -28087,10 +31513,12 @@
 			{
 				"phrase": [
 					{
+						"text": "工場の"
+					},{
 						"reading": "き",
 						"answer": "機"
 					},{
-						"text": "かん車"
+						"text": "かい"
 					}
 				],
 				"hasOkurigana": false
@@ -28217,7 +31645,7 @@
 			{
 				"phrase": [
 					{
-						"text": "弟が"
+						"text": "子どもが"
 					},{
 						"reading": "なく",
 						"answer": "泣く"
@@ -28240,7 +31668,7 @@
 						"reading": "なき",
 						"answer": "泣き"
 					},{
-						"text": "言"
+						"text": "言を言う"
 					}
 				],
 				"hasOkurigana": true
@@ -28307,7 +31735,27 @@
 			},{
 				"phrase": [
 					{
+						"text": "式を"
+					},{
+						"reading": "あげる",
+						"answer": "挙げる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "手が"
+					},{
+						"reading": "あがる",
+						"answer": "挙がる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "こうほが"
 					},{
 						"reading": "あがる",
 						"answer": "挙がる"
@@ -28374,7 +31822,7 @@
 						"reading": "ぎょ",
 						"answer": "漁"
 					},{
-						"text": "業のまち"
+						"text": "業の町"
 					}
 				],
 				"hasOkurigana": false
@@ -28540,7 +31988,17 @@
 						"reading": "きょう",
 						"answer": "競"
 					},{
-						"text": "泳プール"
+						"text": "泳せん手"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "きょう",
+						"answer": "競"
+					},{
+						"text": "歩コース"
 					}
 				],
 				"hasOkurigana": false
@@ -28557,10 +32015,10 @@
 			},{
 				"phrase": [
 					{
-						"reading": "きょう",
+						"reading": "けい",
 						"answer": "競"
 					},{
-						"text": "歩コース"
+						"text": "りんせん手"
 					}
 				],
 				"hasOkurigana": false
@@ -28580,7 +32038,7 @@
 						"reading": "きょく",
 						"answer": "極"
 					},{
-						"text": "の流氷"
+						"text": "の氷山"
 					}
 				],
 				"hasOkurigana": false
@@ -28741,10 +32199,10 @@
 			},{
 				"phrase": [
 					{
+						"text": "県内の"
+					},{
 						"reading": "ぐん",
 						"answer": "郡"
-					},{
-						"text": "の中心"
 					}
 				],
 				"hasOkurigana": false
@@ -28801,7 +32259,27 @@
 			},{
 				"phrase": [
 					{
+						"text": "小さな"
+					},{
+						"reading": "むれ",
+						"answer": "群れ"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "えさに"
+					},{
+						"reading": "むれる",
+						"answer": "群れる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "犬が"
 					},{
 						"reading": "むれる",
 						"answer": "群れる"
@@ -28965,7 +32443,27 @@
 			},{
 				"phrase": [
 					{
+						"text": "決め手を"
+					},{
+						"reading": "かく",
+						"answer": "欠く"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "月が"
+					},{
+						"reading": "かける",
+						"answer": "欠ける"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "コップが"
 					},{
 						"reading": "かける",
 						"answer": "欠ける"
@@ -29045,7 +32543,17 @@
 			},{
 				"phrase": [
 					{
-						"text": "ビルが"
+						"text": "記ねんひを"
+					},{
+						"reading": "たてる",
+						"answer": "建てる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "大きな家が"
 					},{
 						"reading": "たつ",
 						"answer": "建つ"
@@ -29083,12 +32591,10 @@
 			{
 				"phrase": [
 					{
-						"text": "強"
-					},{
 						"reading": "けん",
 						"answer": "健"
 					},{
-						"text": "な体"
+						"text": "こうな体"
 					}
 				],
 				"hasOkurigana": false
@@ -29267,12 +32773,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "せい"
+						"text": "大せい"
 					},{
 						"reading": "こう",
 						"answer": "功"
-					},{
-						"text": "れい"
 					}
 				],
 				"hasOkurigana": false
@@ -29429,12 +32933,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "天"
+						"text": "悪天"
 					},{
 						"reading": "こう",
 						"answer": "候"
-					},{
-						"text": "のへん化"
 					}
 				],
 				"hasOkurigana": false
@@ -29545,6 +33047,16 @@
 			},{
 				"phrase": [
 					{
+						"text": "目薬を"
+					},{
+						"reading": "さす",
+						"answer": "差す"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "交"
 					},{
 						"reading": "さ",
@@ -29577,12 +33089,10 @@
 			{
 				"phrase": [
 					{
-						"text": "水"
-					},{
 						"reading": "な",
 						"answer": "菜"
 					},{
-						"text": "を買う"
+						"text": "の花"
 					}
 				],
 				"hasOkurigana": false
@@ -29601,7 +33111,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "肉と野"
+						"text": "なま野"
 					},{
 						"reading": "さい",
 						"answer": "菜"
@@ -29689,10 +33199,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "犬ぼう"
-					},{
-						"reading": "さき",
+						"reading": "さい",
 						"answer": "埼"
+					},{
+						"text": "玉の山"
 					}
 				],
 				"hasOkurigana": false
@@ -29717,7 +33227,7 @@
 			{
 				"phrase": [
 					{
-						"text": "絵の題"
+						"text": "本の題"
 					},{
 						"reading": "ざい",
 						"answer": "材"
@@ -29909,7 +33419,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "たて物の"
+						"text": "全面"
 					},{
 						"reading": "さつ",
 						"answer": "刷"
@@ -29923,7 +33433,7 @@
 					{
 						"text": "本を"
 					},{
-						"reading": "ほる",
+						"reading": "する",
 						"answer": "刷る"
 					}
 				],
@@ -29951,10 +33461,12 @@
 			{
 				"phrase": [
 					{
-						"text": "医者のしん"
+						"text": "しん"
 					},{
 						"reading": "さつ",
 						"answer": "察"
+					},{
+						"text": "室"
 					}
 				],
 				"hasOkurigana": false
@@ -30129,6 +33641,66 @@
 			},{
 				"phrase": [
 					{
+						"text": "花が"
+					},{
+						"reading": "ちる",
+						"answer": "散る"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "気が"
+					},{
+						"reading": "ちる",
+						"answer": "散る"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "部屋を"
+					},{
+						"reading": "ちらかす",
+						"answer": "散らかす"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "食べ"
+					},{
+						"reading": "ちらかす",
+						"answer": "散らかす"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "すぐに"
+					},{
+						"reading": "ちらかる",
+						"answer": "散らかる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "ちらかった",
+						"answer": "散らかった"
+					},{
+						"text": "部屋"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "分"
 					},{
 						"reading": "さん",
@@ -30179,10 +33751,10 @@
 			},{
 				"phrase": [
 					{
-						"reading": "のこさず",
-						"answer": "残さず"
+						"reading": "のこさ",
+						"answer": "残さ"
 					},{
-						"text": "食べる"
+						"text": "ず食べる"
 					}
 				],
 				"hasOkurigana": true
@@ -30239,7 +33811,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "友の"
+						"text": "友人の"
 					},{
 						"reading": "し",
 						"answer": "氏"
@@ -30251,10 +33823,12 @@
 			},{
 				"phrase": [
 					{
-						"reading": "し",
+						"text": "げん"
+					},{
+						"reading": "じ",
 						"answer": "氏"
 					},{
-						"text": "族"
+						"text": "物語"
 					}
 				],
 				"hasOkurigana": false
@@ -30360,7 +33934,7 @@
 						"reading": "じ",
 						"answer": "児"
 					},{
-						"text": "の本"
+						"text": "休か"
 					}
 				],
 				"hasOkurigana": false
@@ -30833,7 +34407,7 @@
 			{
 				"phrase": [
 					{
-						"text": "湖の"
+						"text": "池の"
 					},{
 						"reading": "まわり",
 						"answer": "周り"
@@ -30843,7 +34417,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "日本を"
+						"text": "町のはじを"
 					},{
 						"reading": "まわる",
 						"answer": "周る"
@@ -30979,6 +34553,16 @@
 			},{
 				"phrase": [
 					{
+						"text": "二月の"
+					},{
+						"reading": "はじめ",
+						"answer": "初め"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"reading": "はじめて",
 						"answer": "初めて"
 					},{
@@ -30986,6 +34570,36 @@
 					}
 				],
 				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "はじめて",
+						"answer": "初めて"
+					},{
+						"text": "の旅"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "はつ",
+						"answer": "初"
+					},{
+						"text": "雪がふる"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "はつ",
+						"answer": "初"
+					},{
+						"text": "耳の話"
+					}
+				],
+				"hasOkurigana": false
 			},{
 				"phrase": [
 					{
@@ -31029,20 +34643,20 @@
 			},{
 				"phrase": [
 					{
-						"reading": "しょう",
-						"answer": "松"
+						"text": "かど"
 					},{
-						"text": "ちくばい"
+						"reading": "まつ",
+						"answer": "松"
 					}
 				],
 				"hasOkurigana": false
 			},{
 				"phrase": [
 					{
-						"text": "かど"
-					},{
-						"reading": "まつ",
+						"reading": "しょう",
 						"answer": "松"
+					},{
+						"text": "ちくばい"
 					}
 				],
 				"hasOkurigana": false
@@ -31155,6 +34769,16 @@
 			},{
 				"phrase": [
 					{
+						"reading": "やき",
+						"answer": "焼き"
+					},{
+						"text": "かげん"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "日"
 					},{
 						"reading": "やけ",
@@ -31199,6 +34823,48 @@
 						"answer": "照り"
 					},{
 						"text": "つける"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "日に"
+					},{
+						"reading": "てらさ",
+						"answer": "照らさ"
+					},{
+						"text": "れる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "夜空を"
+					},{
+						"reading": "てらす",
+						"answer": "照らす"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "てれ",
+						"answer": "照れ"
+					},{
+						"text": "屋さん"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "すぐに"
+					},{
+						"reading": "てれる",
+						"answer": "照れる"
 					}
 				],
 				"hasOkurigana": true
@@ -31335,6 +35001,18 @@
 			},{
 				"phrase": [
 					{
+						"text": "大"
+					},{
+						"reading": "じん",
+						"answer": "臣"
+					},{
+						"text": "になる"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"text": "王の家"
 					},{
 						"reading": "しん",
@@ -31345,7 +35023,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "重"
+						"text": "ばくふの重"
 					},{
 						"reading": "しん",
 						"answer": "臣"
@@ -31457,6 +35135,28 @@
 						"answer": "成り"
 					},{
 						"text": "立ち"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "ペアを"
+					},{
+						"reading": "なす",
+						"answer": "成す"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "意味を"
+					},{
+						"reading": "なさ",
+						"answer": "成さ"
+					},{
+						"text": "ない"
 					}
 				],
 				"hasOkurigana": true
@@ -31617,10 +35317,60 @@
 			{
 				"phrase": [
 					{
-						"reading": "しずかな",
-						"answer": "静かな"
+						"reading": "しずか",
+						"answer": "静か"
 					},{
-						"text": "森"
+						"text": "に動く"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "しずか",
+						"answer": "静か"
+					},{
+						"text": "な雨"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "しず",
+						"answer": "静"
+					},{
+						"text": "おか県"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "しず",
+						"answer": "静"
+					},{
+						"text": "おかし"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "あらしが"
+					},{
+						"reading": "しずまる",
+						"answer": "静まる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "会場が"
+					},{
+						"reading": "しずまる",
+						"answer": "静まる"
 					}
 				],
 				"hasOkurigana": true
@@ -31628,6 +35378,16 @@
 				"phrase": [
 					{
 						"text": "せきを"
+					},{
+						"reading": "しずめる",
+						"answer": "静める"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "心を"
 					},{
 						"reading": "しずめる",
 						"answer": "静める"
@@ -31667,7 +35427,7 @@
 			{
 				"phrase": [
 					{
-						"text": "指定"
+						"text": "列車のざ"
 					},{
 						"reading": "せき",
 						"answer": "席"
@@ -31680,7 +35440,7 @@
 						"reading": "せき",
 						"answer": "席"
 					},{
-						"text": "に着く"
+						"text": "にすわる"
 					}
 				],
 				"hasOkurigana": false
@@ -31711,6 +35471,36 @@
 					},{
 						"reading": "つむ",
 						"answer": "積む"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "つみ",
+						"answer": "積み"
+					},{
+						"text": "木で遊ぶ"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "雪が"
+					},{
+						"reading": "つもる",
+						"answer": "積もる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "心"
+					},{
+						"reading": "づもり",
+						"answer": "積もり"
 					}
 				],
 				"hasOkurigana": true
@@ -31765,6 +35555,50 @@
 			},{
 				"phrase": [
 					{
+						"text": "四き折"
+					},{
+						"reading": "おり",
+						"answer": "折"
+					},{
+						"text": "々"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "おり",
+						"answer": "折"
+					},{
+						"text": "合いが悪い"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "木が"
+					},{
+						"reading": "おれる",
+						"answer": "折れる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "ほねが"
+					},{
+						"reading": "おれる",
+						"answer": "折れる"
+					},{
+						"text": "仕事"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "足のこっ"
 					},{
 						"reading": "せつ",
@@ -31796,7 +35630,7 @@
 						"reading": "せつ",
 						"answer": "節"
 					},{
-						"text": "分の日"
+						"text": "分の豆まき"
 					}
 				],
 				"hasOkurigana": false
@@ -31896,7 +35730,7 @@
 						"reading": "あさい",
 						"answer": "浅い"
 					},{
-						"text": "池"
+						"text": "水たまり"
 					}
 				],
 				"hasOkurigana": true
@@ -32005,7 +35839,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "本を"
+						"text": "一番を"
 					},{
 						"reading": "えらぶ",
 						"answer": "選ぶ"
@@ -32033,12 +35867,10 @@
 			{
 				"phrase": [
 					{
-						"text": "整"
+						"text": "山のし"
 					},{
 						"reading": "ぜん",
 						"answer": "然"
-					},{
-						"text": "とならぶ"
 					}
 				],
 				"hasOkurigana": false
@@ -32141,7 +35973,7 @@
 			{
 				"phrase": [
 					{
-						"text": "古い"
+						"text": "大きな"
 					},{
 						"reading": "そう",
 						"answer": "倉"
@@ -32203,10 +36035,12 @@
 			},{
 				"phrase": [
 					{
+						"text": "ひなが"
+					},{
 						"reading": "す",
 						"answer": "巣"
 					},{
-						"text": "箱を作る"
+						"text": "立つ"
 					}
 				],
 				"hasOkurigana": false
@@ -32272,7 +36106,7 @@
 						"reading": "たば",
 						"answer": "束"
 					},{
-						"text": "の紙"
+						"text": "のぼう"
 					}
 				],
 				"hasOkurigana": false
@@ -32351,7 +36185,29 @@
 			},{
 				"phrase": [
 					{
+						"text": "京都に"
+					},{
+						"reading": "つづく",
+						"answer": "続く"
+					},{
+						"text": "道"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "日記を"
+					},{
+						"reading": "つづける",
+						"answer": "続ける"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "通い"
 					},{
 						"reading": "つづける",
 						"answer": "続ける"
@@ -32458,6 +36314,18 @@
 					}
 				],
 				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "子"
+					},{
+						"reading": "そん",
+						"answer": "孫"
+					},{
+						"text": "はんえい"
+					}
+				],
+				"hasOkurigana": false
 			}
 		]
 	},
@@ -32474,7 +36342,7 @@
 						"reading": "たい",
 						"answer": "帯"
 					},{
-						"text": "夜"
+						"text": "の植物"
 					}
 				],
 				"hasOkurigana": false
@@ -32508,6 +36376,26 @@
 					}
 				],
 				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "着物の"
+					},{
+						"reading": "おび",
+						"answer": "帯"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "おび",
+						"answer": "帯"
+					},{
+						"text": "をむすぶ"
+					}
+				],
+				"hasOkurigana": false
 			}
 		]
 	},
@@ -32557,7 +36445,7 @@
 			{
 				"phrase": [
 					{
-						"text": "手紙の配"
+						"text": "新聞配"
 					},{
 						"reading": "たつ",
 						"answer": "達"
@@ -32597,7 +36485,7 @@
 			{
 				"phrase": [
 					{
-						"text": "重さの"
+						"text": "体せきの"
 					},{
 						"reading": "たん",
 						"answer": "単"
@@ -32669,6 +36557,8 @@
 			},{
 				"phrase": [
 					{
+						"text": "たぬきの"
+					},{
 						"reading": "おき",
 						"answer": "置"
 					},{
@@ -32763,7 +36653,7 @@
 			{
 				"phrase": [
 					{
-						"text": "五"
+						"text": "一"
 					},{
 						"reading": "ちょう",
 						"answer": "兆"
@@ -33061,7 +36951,17 @@
 			},{
 				"phrase": [
 					{
-						"text": "母に"
+						"text": "人に"
+					},{
+						"reading": "つたえる",
+						"answer": "伝える"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "れきしを"
 					},{
 						"reading": "つたえる",
 						"answer": "伝える"
@@ -33072,6 +36972,16 @@
 				"phrase": [
 					{
 						"text": "話が"
+					},{
+						"reading": "つたわる",
+						"answer": "伝わる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "文化が"
 					},{
 						"reading": "つたわる",
 						"answer": "伝わる"
@@ -33123,6 +37033,18 @@
 					},{
 						"reading": "と",
 						"answer": "徒"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "生"
+					},{
+						"reading": "と",
+						"answer": "徒"
+					},{
+						"text": "会の会長"
 					}
 				],
 				"hasOkurigana": false
@@ -33188,7 +37110,7 @@
 						"reading": "とう",
 						"answer": "灯"
 					},{
-						"text": "台の光"
+						"text": "台の明かり"
 					}
 				],
 				"hasOkurigana": false
@@ -33490,7 +37412,7 @@
 						"reading": "あつい",
 						"answer": "熱い"
 					},{
-						"text": "スープ"
+						"text": "飲み物"
 					}
 				],
 				"hasOkurigana": true
@@ -33664,7 +37586,7 @@
 						"reading": "ばい",
 						"answer": "梅"
 					},{
-						"text": "りんに行く"
+						"text": "う前線"
 					}
 				],
 				"hasOkurigana": false
@@ -33689,10 +37611,10 @@
 			},{
 				"phrase": [
 					{
-						"reading": "はく",
-						"answer": "博"
+						"text": "大さかばん"
 					},{
-						"text": "らん会"
+						"reading": "ぱく",
+						"answer": "博"
 					}
 				],
 				"hasOkurigana": false
@@ -33835,7 +37757,27 @@
 			},{
 				"phrase": [
 					{
+						"text": "水しぶきが"
+					},{
+						"reading": "とぶ",
+						"answer": "飛ぶ"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "たこを"
+					},{
+						"reading": "とばす",
+						"answer": "飛ばす"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "読み"
 					},{
 						"reading": "とばす",
 						"answer": "飛ばす"
@@ -34017,22 +37959,30 @@
 			},{
 				"phrase": [
 					{
-						"text": "人手"
-					},{
-						"reading": "ぶ",
+						"reading": "ふ",
 						"answer": "不"
 					},{
-						"text": "足"
+						"text": "まんを言う"
 					}
 				],
 				"hasOkurigana": false
 			},{
 				"phrase": [
 					{
-						"reading": "ふ",
+						"reading": "ぶ",
 						"answer": "不"
 					},{
-						"text": "まんを言う"
+						"text": "き用な動き"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ぶ",
+						"answer": "不"
+					},{
+						"text": "かっこう"
 					}
 				],
 				"hasOkurigana": false
@@ -34051,6 +38001,16 @@
 						"answer": "夫"
 					},{
 						"text": "とつま"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "おっと",
+						"answer": "夫"
+					},{
+						"text": "の本"
 					}
 				],
 				"hasOkurigana": false
@@ -34303,6 +38263,26 @@
 			},{
 				"phrase": [
 					{
+						"reading": "とみ",
+						"answer": "富"
+					},{
+						"text": "を分ける"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "とみ",
+						"answer": "富"
+					},{
+						"text": "をきずく"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"text": "ほう"
 					},{
 						"reading": "ふ",
@@ -34345,7 +38325,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "本の"
+						"text": "小せつの"
 					},{
 						"reading": "ふく",
 						"answer": "副"
@@ -34397,10 +38377,22 @@
 			},{
 				"phrase": [
 					{
-						"reading": "へい",
+						"reading": "ひょう",
 						"answer": "兵"
 					},{
-						"text": "力を集める"
+						"text": "ろうぜめ"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "しろの"
+					},{
+						"reading": "ひょう",
+						"answer": "兵"
+					},{
+						"text": "ろう"
 					}
 				],
 				"hasOkurigana": false
@@ -34447,10 +38439,12 @@
 			},{
 				"phrase": [
 					{
-						"text": "細かな区"
+						"text": "さ"
 					},{
 						"reading": "べつ",
 						"answer": "別"
+					},{
+						"text": "をなくす"
 					}
 				],
 				"hasOkurigana": false
@@ -34465,7 +38459,7 @@
 			{
 				"phrase": [
 					{
-						"text": "駅しゅう"
+						"text": "駅のしゅう"
 					},{
 						"reading": "へん",
 						"answer": "辺"
@@ -34567,7 +38561,27 @@
 			},{
 				"phrase": [
 					{
+						"text": "時代が"
+					},{
+						"reading": "かわる",
+						"answer": "変わる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "話を"
+					},{
+						"reading": "かえる",
+						"answer": "変える"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "考えを"
 					},{
 						"reading": "かえる",
 						"answer": "変える"
@@ -34624,6 +38638,26 @@
 					}
 				],
 				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "たより",
+						"answer": "便り"
+					},{
+						"text": "がとどく"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "学校"
+					},{
+						"reading": "たより",
+						"answer": "便り"
+					}
+				],
+				"hasOkurigana": true
 			}
 		]
 	},
@@ -34818,7 +38852,7 @@
 						"reading": "まつ",
 						"answer": "末"
 					},{
-						"text": "の天気"
+						"text": "の予定"
 					}
 				],
 				"hasOkurigana": false
@@ -34893,7 +38927,27 @@
 			},{
 				"phrase": [
 					{
+						"text": "かおりが"
+					},{
+						"reading": "みちる",
+						"answer": "満ちる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "水で"
+					},{
+						"reading": "みたす",
+						"answer": "満たす"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "きじゅんを"
 					},{
 						"reading": "みたす",
 						"answer": "満たす"
@@ -35084,7 +39138,7 @@
 						"reading": "やく",
 						"answer": "約"
 					},{
-						"text": "を出す"
+						"text": "を守る"
 					}
 				],
 				"hasOkurigana": false
@@ -35134,7 +39188,7 @@
 						"reading": "ゆう",
 						"answer": "勇"
 					},{
-						"text": "気がある"
+						"text": "気を出す"
 					}
 				],
 				"hasOkurigana": false
@@ -35281,7 +39335,27 @@
 			},{
 				"phrase": [
 					{
+						"text": "夕日を"
+					},{
+						"reading": "あびる",
+						"answer": "浴びる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"text": "お湯を"
+					},{
+						"reading": "あびせる",
+						"answer": "浴びせる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "しつ問を"
 					},{
 						"reading": "あびせる",
 						"answer": "浴びせる"
@@ -35386,7 +39460,7 @@
 						"reading": "よい",
 						"answer": "良い"
 					},{
-						"text": "品物"
+						"text": "商品"
 					}
 				],
 				"hasOkurigana": true
@@ -35406,17 +39480,17 @@
 						"reading": "りょう",
 						"answer": "良"
 					},{
-						"text": "心"
+						"text": "心てき"
 					}
 				],
 				"hasOkurigana": false
 			},{
 				"phrase": [
 					{
+						"text": "品しつかい"
+					},{
 						"reading": "りょう",
 						"answer": "良"
-					},{
-						"text": "薬"
 					}
 				],
 				"hasOkurigana": false
@@ -35493,7 +39567,7 @@
 			},{
 				"phrase": [
 					{
-						"text": "米を"
+						"text": "重さを"
 					},{
 						"reading": "はかる",
 						"answer": "量る"
@@ -35506,7 +39580,7 @@
 						"reading": "はかり",
 						"answer": "量り"
 					},{
-						"text": "知れない"
+						"text": "売り"
 					}
 				],
 				"hasOkurigana": true
@@ -35531,6 +39605,18 @@
 			},{
 				"phrase": [
 					{
+						"text": "一"
+					},{
+						"reading": "りん",
+						"answer": "輪"
+					},{
+						"text": "車"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
 						"text": "指"
 					},{
 						"reading": "わ",
@@ -35541,12 +39627,10 @@
 			},{
 				"phrase": [
 					{
-						"text": "一"
+						"text": "ねこの首"
 					},{
-						"reading": "りん",
+						"reading": "わ",
 						"answer": "輪"
-					},{
-						"text": "車"
 					}
 				],
 				"hasOkurigana": false
@@ -35887,10 +39971,50 @@
 			},{
 				"phrase": [
 					{
+						"reading": "つれ",
+						"answer": "連れ"
+					},{
+						"text": "て来る"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "店が"
+					},{
+						"reading": "つらなる",
+						"answer": "連なる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
 						"reading": "つらなる",
 						"answer": "連なる"
 					},{
 						"text": "山々"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "名を"
+					},{
+						"reading": "つらねる",
+						"answer": "連ねる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"text": "書き"
+					},{
+						"reading": "つらねる",
+						"answer": "連ねる"
 					}
 				],
 				"hasOkurigana": true
@@ -36077,6 +40201,34 @@
 						"answer": "友達"
 					},{
 						"text": "と会う"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"七夕": {
+		"studyGrade": 4,
+		"isUniqueReading": true,
+		"readingForSort": "たなばた",
+		"quizzes": [
+			{
+				"phrase": [
+					{
+						"reading": "たなばた",
+						"answer": "七夕"
+					},{
+						"text": "まつり"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "たなばた",
+						"answer": "七夕"
+					},{
+						"text": "の短ざく"
 					}
 				],
 				"hasOkurigana": false
