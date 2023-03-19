@@ -1490,80 +1490,38 @@
 	"犬": {
 		"strokesNum": 4,
 		"readingForSort": "けん",
-		"readings": [
+		"studyGrade": 1,
+		"quizzes": [
 			{
-				"studyGrade": 1,
-				"quizzes": [
+				"phrase": [
 					{
-						"phrase": [
-							{
-								"text": "こ"
-							},{
-								"reading": "いぬ",
-								"answer": "犬"
-							}
-						],
-						"hasOkurigana": false
+						"text": "こ"
 					},{
-						"phrase": [
-							{
-								"reading": "いぬ",
-								"answer": "犬"
-							},{
-								"text": "ごや"
-							}
-						],
-						"hasOkurigana": false
-					},{
-						"phrase": [
-							{
-								"text": "しば"
-							},{
-								"reading": "いぬ",
-								"answer": "犬"
-							}
-						],
-						"hasOkurigana": false
+						"reading": "いぬ",
+						"answer": "犬"
 					}
-				]
+				],
+				"hasOkurigana": false
 			},{
-				"studyGrade": 5,
-				"reading": "けん",
-				"quizzes": [
+				"phrase": [
 					{
-						"phrase": [
-							{
-								"text": "愛"
-							},{
-								"reading": "けん",
-								"answer": "犬"
-							},{
-								"text": "の名前"
-							}
-						],
-						"hasOkurigana": false
+						"reading": "いぬ",
+						"answer": "犬"
 					},{
-						"phrase": [
-							{
-								"text": "大がた"
-							},{
-								"reading": "けん",
-								"answer": "犬"
-							}
-						],
-						"hasOkurigana": false
-					},{
-						"phrase": [
-							{
-								"text": "かしこい名"
-							},{
-								"reading": "けん",
-								"answer": "犬"
-							}
-						],
-						"hasOkurigana": false
+						"text": "ごや"
 					}
-				]
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "しば"
+					},{
+						"reading": "いぬ",
+						"answer": "犬"
+					}
+				],
+				"hasOkurigana": false
 			}
 		]
 	},
@@ -3703,42 +3661,6 @@
 								"answer": "生"
 							},{
 								"text": "がいの友"
-							}
-						],
-						"hasOkurigana": false
-					}
-				]
-			},{
-				"reading": "なま",
-				"studyGrade": 5,
-				"quizzes": [
-					{
-						"phrase": [
-							{
-								"reading": "なま",
-								"answer": "生"
-							},{
-								"text": "物を食べる"
-							}
-						],
-						"hasOkurigana": false
-					},{
-						"phrase": [
-							{
-								"reading": "なま",
-								"answer": "生"
-							},{
-								"text": "意気な口"
-							}
-						],
-						"hasOkurigana": false
-					},{
-						"phrase": [
-							{
-								"reading": "なま",
-								"answer": "生"
-							},{
-								"text": "放送"
 							}
 						],
 						"hasOkurigana": false
@@ -7972,84 +7894,42 @@
 	"角": {
 		"strokesNum": 7,
 		"readingForSort": "かく",
-		"readings": [
+		"studyGrade": 2,
+		"quizzes": [
 			{
-				"studyGrade": 2,
-				"quizzes": [
+				"phrase": [
 					{
-						"phrase": [
-							{
-								"text": "四"
-							},{
-								"reading": "かく",
-								"answer": "角"
-							},{
-								"text": "いはこ"
-							}
-						],
-						"hasOkurigana": false
+						"text": "四"
 					},{
-						"phrase": [
-							{
-								"text": "三"
-							},{
-								"reading": "かく",
-								"answer": "角"
-							},{
-								"text": "におる"
-							}
-						],
-						"hasOkurigana": false
+						"reading": "かく",
+						"answer": "角"
 					},{
-						"phrase": [
-							{
-								"text": "にしのほう"
-							},{
-								"reading": "がく",
-								"answer": "角"
-							}
-						],
-						"hasOkurigana": false
+						"text": "いはこ"
 					}
-				]
+				],
+				"hasOkurigana": false
 			},{
-				"studyGrade": 5,
-				"reading": "かど",
-				"quizzes": [
+				"phrase": [
 					{
-						"phrase": [
-							{
-								"text": "道の"
-							},{
-								"reading": "かど",
-								"answer": "角"
-							}
-						],
-						"hasOkurigana": false
+						"text": "三"
 					},{
-						"phrase": [
-							{
-								"text": "街"
-							},{
-								"reading": "かど",
-								"answer": "角"
-							},{
-								"text": "の風景"
-							}
-						],
-						"hasOkurigana": false
+						"reading": "かく",
+						"answer": "角"
 					},{
-						"phrase": [
-							{
-								"reading": "かど",
-								"answer": "角"
-							},{
-								"text": "が立つ"
-							}
-						],
-						"hasOkurigana": false
+						"text": "におる"
 					}
-				]
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"text": "にしのほう"
+					},{
+						"reading": "がく",
+						"answer": "角"
+					}
+				],
+				"hasOkurigana": false
 			}
 		]
 	},
@@ -13750,44 +13630,6 @@
 						"hasOkurigana": false
 					}
 				]
-			},{
-				"studyGrade": 5,
-				"reading": "せい",
-				"quizzes": [
-					{
-						"phrase": [
-							{
-								"text": "県の"
-							},{
-								"reading": "せい",
-								"answer": "西"
-							},{
-								"text": "部"
-							}
-						],
-						"hasOkurigana": false
-					},{
-						"phrase": [
-							{
-								"reading": "せい",
-								"answer": "西"
-							},{
-								"text": "れき二千年"
-							}
-						],
-						"hasOkurigana": false
-					},{
-						"phrase": [
-							{
-								"reading": "せい",
-								"answer": "西"
-							},{
-								"text": "洋と東洋"
-							}
-						],
-						"hasOkurigana": false
-					}
-				]
 			}
 		]
 	},
@@ -14664,44 +14506,6 @@
 						"hasOkurigana": false
 					}
 				]
-			},{
-				"studyGrade": 5,
-				"reading": "た",
-				"quizzes": [
-					{
-						"phrase": [
-							{
-								"text": "丸"
-							},{
-								"reading": "た",
-								"answer": "太"
-							},{
-								"text": "の橋"
-							}
-						],
-						"hasOkurigana": false
-					},{
-						"phrase": [
-							{
-								"reading": "た",
-								"answer": "太"
-							},{
-								"text": "ろうさん"
-							}
-						],
-						"hasOkurigana": false
-					},{
-						"phrase": [
-							{
-								"text": "大きな丸"
-							},{
-								"reading": "た",
-								"answer": "太"
-							}
-						],
-						"hasOkurigana": false
-					}
-				]
 			}
 		]
 	},
@@ -15502,42 +15306,6 @@
 							}
 						],
 						"hasOkurigana": false
-					}
-				]
-			},{
-				"studyGrade": 5,
-				"reading": "ただちに",
-				"quizzes": [
-					{
-						"phrase": [
-							{
-								"reading": "ただちに",
-								"answer": "直ちに"
-							},{
-								"text": "やめる"
-							}
-						],
-						"hasOkurigana": true
-					},{
-						"phrase": [
-							{
-								"reading": "ただちに",
-								"answer": "直ちに"
-							},{
-								"text": "治る"
-							}
-						],
-						"hasOkurigana": true
-					},{
-						"phrase": [
-							{
-								"reading": "ただちに",
-								"answer": "直ちに"
-							},{
-								"text": "分かった"
-							}
-						],
-						"hasOkurigana": true
 					}
 				]
 			}
