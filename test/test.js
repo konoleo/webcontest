@@ -125,7 +125,7 @@ fetch("../data/kanjidata.json").then(response => {
 				newData[key] = data2;
 			});
 		} else {
-			if (data1.isUniqueReading) {
+			if (data1.isUniqueReading && data1.noNeedToSplit !== true) {
 				const newQuizzes = [];
 				data1.quizzes.forEach(quiz => {
 					quiz.phrase.forEach((item, i) => {
@@ -177,7 +177,7 @@ fetch("../data/kanjidata.json").then(response => {
 		fragment.append(clone);
 	});
 	studyGradesOptTemp.parentElement.append(fragment);
-	const studyGradesOpts = document.getElementsByName("studyGradesOpt")
+	const studyGradesOpts = document.getElementsByName("studyGradesOpt");
 
 	// 「漢字を選択」タブの中を作る
 	const detailsTemp = document.getElementById("detailsTemp");
