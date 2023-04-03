@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="ja" prefix="og: http://ogp.me/ns#">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
 	<meta charset="utf-8">
-	<title>漢字テストの作成 - やさしい小学漢字</title>
+	<title>Create a Kanji quiz - Easy elementary Kanji</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<meta property="og:title" content="やさしい小学漢字">
+	<meta property="og:title" content="Easy elementary Kanji">
 	<meta property="og:type" content="article">
-	<meta property="og:url" content="https://konoleo.github.io/webcontest/test/">
-	<meta property="og:description" content="「漢字テストの作成」では、漢字テストを数クリックで作ることができます。このサイトでは簡単に漢字テストを作れて、漢字の成り立ちの勉強もできます。">
-	<meta property="og:site_name" content="やさしい小学漢字">
+	<meta property="og:url" content="https://konoleo.github.io/webcontest/test/index-en.html">
+	<meta property="og:description" content="“Create a Kanji quiz” allows you to create a Kanji quiz in just a few clicks. On this site, you can easily create a Kanji quiz and study the origin of Kanji.">
+	<meta property="og:site_name" content="Easy elementary Kanji">
 	<meta property="og:image" content="https://konoleo.github.io/webcontest/img/ogp.png">
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="description" content="「漢字テストの作成」では、漢字テストを数クリックで作ることができます。このサイトでは簡単に漢字テストを作れて、漢字の成り立ちの勉強もできます。">
+	<meta name="description" content="“Create a Kanji quiz” allows you to create a Kanji quiz in just a few clicks. On this site, you can easily create a Kanji quiz and study the origin of Kanji.">
 	<meta name="theme-color" content="#005335">
 	<link rel="stylesheet" media="all" href="../css/website.min.css">
 	<link rel="stylesheet" media="all" href="../css/tab.min.css">
@@ -25,35 +25,35 @@
 </head>
 <body>
 <div>
-	<noscript>JavaScriptを有効にしてください。</noscript>
+	<noscript>Please enable JavaScript.</noscript>
 	<dialog id="moveToYourLang">
 		<p id="text"></p>
 		<menu>
 			<button id="cancel"></button>
-			<a href="index-en.html" id="move" class="button"></a>
+			<a href="index.html" id="move" class="button"></a>
 		</menu>
 	</dialog>
 	<header>
-		<a href="../" id="siteLogo">
-			<img src="../img/logo.png" alt="やさしい小学漢字のロゴ">
+		<a href="../index-en.html" id="siteLogo">
+			<img src="../img/logo.png" alt="Logo of Easy elementary Kanji">
 		</a>
 		<div id="hamburger" tabindex="0"><div></div><div></div><div></div></div>
 	</header>
 	<nav class="hide">
 		<div class="pagesLinks">
 			<div>
-				<a href="../origin/" class="inner" tabindex="-1">漢字の成り立ち</a>
-				<a href="" class="inner" tabindex="-1">漢字テストの作成</a>
-				<a href="../about.html" class="inner" tabindex="-1">このサイトについて</a>
+				<a href="../origin/index-en.html" class="inner" tabindex="-1">The origin of Kanji</a>
+				<a href="" class="inner" tabindex="-1">Create a Kanji quiz</a>
+				<a href="../about-en.html" class="inner" tabindex="-1">About this site</a>
 			</div>
 			<div>
-				<a href="" class="inner this" tabindex="-1">日本語</a>
-				<a href="index-en.html" class="inner" tabindex="-1">English</a>
+				<a href="index.html" class="inner" tabindex="-1">日本語</a>
+				<a href="" class="inner this" tabindex="-1">English</a>
 			</div>
 		</div>
 	</nav>
 	<main>
-		<h1>漢字テストの作成</h1>
+		<h1>Create a Kanji quiz</h1>
 		<section>
 			<div id="gradeOpts">
 				<template id="gradeOptTemp">
@@ -64,25 +64,25 @@
 				<div class="tabLabels">
 					<label class="tabWrapper">
 						<input type="radio" name="tab01" class="hidden" checked>
-						学年を選ぶ
+						Select grade
 					</label>
 					<label class="tabWrapper">
 						<input type="radio" name="tab01" class="hidden">
-						漢字を選ぶ
+						Select Kanji
 					</label>
 				</div>
 				<hr>
 				<div class="tabContents">
 					<div class="tabWrapper" id="gradeTab">
-						<p>どの学年の漢字をテストに出すか選んでください。</p>
+						<p>Please select which grade Kanji be included in the quiz. </p>
 					</div>
 					<div class="tabWrapper" id="selectTab">
-						<p>テストに出す漢字を選んでください。</p>
-						<button id="selectRandomlyBtn">選ばれた学年からランダムに<input type="number" id="randomQNum" min="1" value="40">問選択</button>
+						<p>Please select the Kanji to be included in the quiz.</p>
+						<button id="selectRandomlyBtn">Select randomly<input type="number" id="randomQNum" min="1" value="40">questions</button>
 						<template id="gradeDetailsTemp">
 							<details class="gradeDetails" open="true">
 								<summary><h2 class="noBorder"></h2></summary>
-								<label class="button"><input type="checkbox" class="selectAll hidden" checked>全て選択</label>
+								<label class="button"><input type="checkbox" class="selectAll hidden" checked>Select all</label>
 							</details>
 						</template>
 						<template id="strokesNumGroupTemp">
@@ -93,7 +93,7 @@
 							<label><input type="checkbox" class="kanjiChoice hidden"></label>
 						</template>
 						<div id="panel">
-							<p id="qCounter">0問（A4 0枚）</p>
+							<p id="qCounter">0 questions (A4 0 sheets)</p>
 							<div id="copiedBtns" class="btns"></div>
 						</div>
 					</div>
@@ -101,15 +101,15 @@
 			</div>
 		</section>
 		<section id="originalBtns" class="btns">
-			<button id="makeQuizBtn">テストを作成</button>
-			<button id="printQuizBtn" hidden>テストを印刷</button>
-			<button id="printAnsBtn" hidden>答えを印刷</button>
+			<button id="makeQuizBtn">Create quiz</button>
+			<button id="printQuizBtn" hidden>Print quiz</button>
+			<button id="printAnsBtn" hidden>Print answer</button>
 		</section>
 		<section id="quizSection" hidden>
-			<h2 id="quizH2">テスト</h2>
+			<h2 id="quizH2">Quiz</h2>
 			<label>
 				<input type="checkbox" id="showAnsBtn" checked>
-				答えを表示
+				Show answer
 			</label>
 			<div id="quizPrint" class="showingAns">
 				<div id="quizHeader">
@@ -185,10 +185,10 @@
 	</main>
 	<footer>
 		<ul>
-			<li><a href="../">ホーム</a></li>
-			<li><a href="../about.html">このサイトについて</a></li>
+			<li><a href="../">Home</a></li>
+			<li><a href="../about-en.html">About this site</a></li>
 		</ul>
-		<p>このサイトは<a href="http://webcon.japias.jp" target="_blank" rel="noopener noreferrer">第24回全国中学高校Webコンテスト</a>に参加していました。</p>
+		<p>This site participated in <a href="http://webcon.japias.jp" target="_blank" rel="noopener noreferrer">the 24th Japan Junior high school & High school Web contest</a>.</p>
 	</footer>
 </div>
 </body>

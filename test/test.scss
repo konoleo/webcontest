@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Klee+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Klee+One:wght@600&text=0123456789&display=swap");
 @import "../css/var";
 
 @media print {
@@ -6,85 +7,91 @@
 		background: none;
 	}
 	main {
-		width: initial;
+		inline-size: initial;
 	}
 }
 
 // 印刷
 @page {
 	size: A4 landscape;
-	margin: 40px 0 0;
+	margin-block-start: 20mm;
+}
+body.firefox {
+	@page:first {
+		margin-block-start: 0;
+	}
 }
 
 
-#gradesFromData {
+#gradeOpts {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	column-gap: 2em;
-	margin-bottom: 32px;
 	label {
-		text-align: center;
 		font-size: 1.5rem;
 		input {
-			width: 1.2rem;
-			height: 1.2rem;
-			margin-right: 4px;
+			inline-size: 1.2rem;
+			block-size: 1.2rem;
+			margin-inline-end: 4px;
 		}
 	}
 }
-body.safari #studyGrades label input {
-	vertical-align: -0.1em;
-}
-
-#qNum {
-	width: 2.1em;
-	color: inherit;
-	font-size: inherit;
-	font-family: $sansSerif;
-	background-color: rgba(white, 0.3);
-	padding: 0 4px;
-	border: none;
-	border-radius: 4px;
-	&::-webkit-outer-spin-button,
-	&::-webkit-inner-spin-button {
-		-webkit-appearance: none;
-		margin: 0;
-	}
-	-moz-appearance: textfield;
+body.safari #gradeOpts label input {
+	inline-size: 1.5rem;
+	block-size: 1.5rem;
+	vertical-align: -0.5em;
 }
 
 .tabContents .tabWrapper {
-	margin: 16px 0;
-	&:last-of-type {
+	margin-block: 16px;
+	&#selectTab {
 		details {
-			margin-bottom: 16px;
+			margin-block-end: 16px;
 		}
 		summary {
-			margin: 16px 0;
+			margin-block: 16px;
 			h2 {
 				display: inline-block;
-				width: calc(100% - 100px);
-				padding-left: 0;
-				border-left: none;
-				margin: 0 0 0 0.5em;
+				margin-block: 0;
+				margin-inline-start: 0.5em;
 			}
 		}
 	}
 }
 
-#randomSelect {
-	margin-top: 16px;
-	margin-bottom: 8px;
+#selectRandomlyBtn {
+	margin-block: 16px;
+	#randomQNum {
+		inline-size: 2.5em;
+		font-size: inherit;
+		font-family: $sansSerif;
+		color: inherit;
+		text-align: center;
+		vertical-align: 1px;
+		background-color: rgba(white, 0.5);
+		padding-inline: 4px;
+		margin-inline: 4px;
+		border: none;
+		border-radius: pxToRem(4);
+		appearance: textfield;
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	}
 }
+
 .kanjiChoicesDiv {
 	display: flex;
 	flex-wrap: wrap;
-	.kanjiChoices {
-		padding: 8px 16px;
+	& > label {
+		padding-block: 8px;
+		padding-inline: 16px;
 		border-radius: 8px;
-		margin-right: 8px;
-		margin-bottom: 8px;
+		margin-inline-end: 8px;
+		margin-block-end: 8px;
 		user-select: none;
 		-webkit-user-select: none;
 		&.checked {
@@ -101,244 +108,302 @@ body.safari #studyGrades label input {
 	}
 }
 
-#footerMenu {
-	width: 100vw;
+#panel {
+	inline-size: 100vw;
 	position: fixed;
-	bottom: 0;
-	left: 0;
+	inset-block-end: 0;
+	inset-inline-start: 0;
 	z-index: 1;
 	background: rgba($bgColor, .9);
-	padding: 0 20px 16px;
+	padding-inline: 20px;
+	padding-block-end: 16px;
 	text-align: center;
 }
 
-:is(#btns, .btns) button {
-	margin: 0 12px 12px 0;
-}
-
-#answerBtnLabel {
-	display: block;
-	margin: 0.7em 0;
-}
-
-.scroll {
-	overflow: auto;
-}
-
-$phraseWide: 1.6 * 18px;
-$blankWide: 3 * 18px;
-$gap: 0.2 * 18px;
-
-#testPrint {
-	margin: 0;
+$annotationWidth: pxToRem(16);
+$sideWidth: pxToRem(20);
+$blankWidth: pxToRem(56);
+$gap: pxToRem(4);
+$counterHeight: pxToRem(32);
+#quizPrint {
 	font-family: $textbookTypeface;
-	$size: 16px;
-	font-size: $size;
-	counter-reset: questions;
-	padding: 2 * $size;
+	font-weight: 400;
 	background: white;
+	margin-block: 16px;
+	padding: pxToRem(32);
+	counter-reset: questions;
 	--scale: 1;
 	@media screen {
-		width: 1123px;
+		inline-size: pxToRem(1123);
 		transform: scale(var(--scale));
 		transform-origin: top left;
 	}
 	@media print {
-		margin-left: 3mm;
+		padding-block: 0;
+		margin-block-end: 0;
 	}
-	#testTitle {
+	#quizHeader {
+		$titleSize: 40;
 		display: grid;
-		grid-template-columns: calc(40px * 7) 1fr 150px;
-		height: 4.5 * $size;
-		border: 1px solid $textColor;
-		border-radius: $size;
-		padding: 0 $size 0 1.5 * $size;
-		@media print {
-			margin-top: 5mm;
+		grid-template-columns: pxToRem(7 * $titleSize) 1fr pxToRem(200);
+		border: pxToRem(1) solid $textColor;
+		border-radius: pxToRem(16);
+		#quizTitle {
+			font-size: pxToRem($titleSize);
+			margin-block-end: pxToRem(4);
 		}
-		#title {
-			font-size: 40px;
-			line-height: 1.65;
-			margin: 0;
-		}
-		#name {
-			writing-mode: vertical-lr;
-			text-align: center;
-			padding-left: $size;
-			border-left: 1px solid $textColor;
-			margin: 0;
+		#nameField {
+			display: flex;
+			align-items: center;
+			span {
+				writing-mode: vertical-rl;
+			}
 		}
 		#score {
-			text-align: end;
-			border-left: 1px solid $textColor;
-			position: relative;
-			> span {
-				position: absolute;
-				right: 0;
-				bottom: 5px;
+			padding-block-end: pxToRem(8);
+			padding-inline-end: pxToRem(24);
+			display: grid;
+			place-items: end;
+			#maxScore::before {
+				content: "/";
+				margin-inline-end: 0.5em;
+			}
+		}
+		#quizTitle, #nameField {
+			padding-inline-start: pxToRem(24);
+		}
+		#nameField, #score {
+			border-inline-start: pxToRem(1) solid $textColor;
+		}
+	}
+	#dash {
+		margin-inline-end: 0.2em;
+	}
+	#qRows {
+		padding-block-start: pxToRem(16);
+		.qRow {
+			display: grid;
+			grid-template-columns: repeat(8, $annotationWidth + $gap + $sideWidth + $gap + $blankWidth);
+			block-size: $counterHeight + $gap + $gap + $blankWidth + $gap + 5.5rem;
+			justify-content: space-between;
+			break-inside: avoid;
+			margin-block-start: pxToRem(32);
+			box-sizing: content-box;
+			&:first-of-type {
+				margin-block-start: 0;
 			}
 		}
 	}
-	> p {
-		margin-bottom: 2 * $size;
-	}
-	.dash {
-		text-decoration: line-through;
-		margin-right: 0.2 * $size;
-	}
-	.row {
-		font-feature-settings: normal;
-		display: grid;
-		grid-template-columns: repeat(8, $phraseWide + $blankWide + $gap);
-		justify-content: space-between;
-		padding: 2 * $size 0 0;
-		break-inside: avoid;
-		&:nth-of-type(2) {
-			padding-top: $size;
-		}
-		@media print {
-			&:nth-of-type(3n+1) {
-				padding-top: 10mm;
-			}
-		}
+	&:not(.showingAns) .answer {
+		visibility: hidden;
 	}
 }
-
+[dir=rtl] {
+	#quizPrint {
+		@media screen {
+			transform-origin: top right;
+		}
+	}
+	#maxScore::before {
+		content: "\\" !important;
+	}
+}
 @media print {
-	$size: 16px;
-	body.safari .row {
-		&:nth-of-type(3n+1) {
-			padding-top: 9mm !important;
+	body.safari {
+		#quizPrint {
+			padding-block-start: pxToRem(32);
+			margin-block-end: 0;
 		}
-		gap: 2 * $size !important;
-	}
-	body.firefox .row {
-		&:nth-of-type(3n+1) {
-			padding-top: 20mm !important;
+		.qRow {
+			&:nth-of-type(3n) {
+				padding-block-start: 10mm;
+			}
 		}
-		column-gap: 3 * $size !important;
 	}
-}
-
-body.firefox .question.okurigana .phrase .reading {
-	padding-right: 3px;
 }
 
 .question {
-	$size: 18px;
-	display: grid;
-	grid-template-columns: 2em 1fr;
-	grid-template-rows: $phraseWide $blankWide;
-	row-gap: $gap;
-	font-size: $size;
 	writing-mode: vertical-rl;
-	height: 10.5 * $size;
+	direction: ltr !important;
+	block-size: 100%;
+	display: grid;
+	grid-template:
+		". annotation" $annotationWidth
+		". side" $sideWidth
+		"counter blank" $blankWidth;
+	grid-template-columns: $counterHeight 1fr;
+	gap: $gap;
+	line-height: 1;
 	.counter {
-		grid-column: 1;
-		grid-row: 2;
-		writing-mode: horizontal-tb;
+		grid-area: counter;
+		margin: auto;
 		&::after {
-			display: block;
-			width: 0.7 * 1.9 * $size;
-			height: 0.7 * 1.9 * $size;
-			margin: auto;
-			font-family: $sansSerif;
-			font-size: 0.7 * $size;
-			text-align: center;
-			border: 1px solid $textColor;
-			border-radius: 50%;
+			writing-mode: horizontal-tb;
+			$circleWidth: pxToRem(24);
 			counter-increment: questions;
 			content: counter(questions);
+			display: block;
+			block-size: fit-content;
+			min-block-size: $circleWidth;
+			inline-size: $circleWidth;
+			font-size: 0.7rem;
+			font-weight: 600;
+			line-height: $circleWidth - pxToRem(1);
+			text-align: center;
+			border: pxToRem(1) solid $textColor;
+			border-radius: 50%;
+			padding-inline: 0.2em;
 		}
+	}
+	.annotation {
+		grid-area: annotation;
+		font-size: 0.7rem;
+		text-align: end;
 	}
 	.answer {
 		display: block;
-		font-size: 2 * $size;
-		line-height: 2 * $size * 1.4 + 2px;
+		font-size: 2rem;
+		line-height: $blankWidth;
 		text-align: center;
-		width: 100%;
-		height: calc(100% - 2px);
-		&.long {
-			font-size: 1.5 * $size;
+	}
+	.ruby {
+		position: relative;
+		&::after {
+			content: attr(data-ruby);
+			position: absolute;
+			font-size: 0.5rem;
+			text-align: center;
+			inline-size: 300%;
+			inset-inline-start: calc(pxToRem(1) - 100%);
 		}
 	}
-
 	&.okurigana {
 		.phrase {
-			grid-column: 2;
-			grid-row: 1;
-			margin-top: 4px;
+			grid-area: side;
 			.reading {
-				grid-column: 2;
-				border-right: 1px solid $textColor;
+				display: inline-block;
+				position: relative;
+				white-space: nowrap;
+				&::after {
+					content: "";
+					position: absolute;
+					inset-inline-start: 0;
+					inset-block-start: pxToRem(-4);
+					inline-size: 100%;
+					border-block-start: pxToRem(1) solid $textColor;
+				}
+			}
+			.ruby::after {
+				inset-block-start: pxToRem(-5);
 			}
 		}
 		.blank {
-			grid-column: 2;
-			grid-row: 2;
-			width: $blankWide;
-			height: calc(100% - 4px);
-			margin-top: 4px;
+			grid-area: blank;
+			block-size: 100%;
+			inline-size: 100%;
 			position: relative;
 			&::before, &::after {
 				content: "";
 				position: absolute;
-				left: 0;
-				width: calc(100% - 2px);
-				height: 0.5 * $size;
-				border: 1px solid $textColor;
+				inset-block-start: 0;
+				block-size: calc(100% - pxToRem(2));
+				inline-size: pxToRem(8);
+				border: pxToRem(1) solid $textColor;
 			}
 			&::before {
-				top: 0;
-				border-bottom: none;
+				inset-inline-start: 0;
+				border-inline-end: none;
 			}
 			&::after {
-				bottom: 0;
-				border-top: none;
+				inset-inline-end: 0;
+				border-inline-start: none;
+			}
+			.answer.long {
+				font-size: 1.5rem;
 			}
 		}
 	}
-
 	&.tango .phrase {
-		grid-column: 2;
-		grid-row: 2;
+		grid-area: blank;
 		.main {
-			grid-column: 1;
-			grid-row: 2;
 			display: inline-block;
 			position: relative;
+			&.unique {
+				.blank {
+					margin-inline: $gap;
+				}
+				&.firstNode .blank.firstNode {
+					margin-inline-start: 0;
+				}
+				.reading {
+					padding-inline: pxToRem(4);
+					text-align-last: justify;
+					&.short {
+						padding-inline: pxToRem(16);
+					}
+					&.long1 {
+						padding-inline: pxToRem(8);
+					}
+					&.long2 {
+						padding-inline: 0;
+						text-align-last: center;
+					}
+				}
+			}
+			&:not(.unique) {
+				margin-inline: $gap;
+				&.firstNode {
+					margin-inline-start: 0;
+				}
+			}
 			.blank {
-				width: $blankWide;
-				height: $blankWide;
-				border: 1px solid $textColor;
-				margin: 4px 0;
 				display: inline-block;
+				block-size: $blankWidth;
+				inline-size: $blankWidth;
+				border: pxToRem(1) solid $textColor;
+				.answer {
+					block-size: $blankWidth - pxToRem(2);
+				}
 			}
 			.reading {
-				width: $phraseWide;
-				height: 100%;
 				position: absolute;
-				top: 0;
-				right: calc(#{$phraseWide} * -1 - #{$gap} + 1px);
+				inline-size: 100%;
+				inset-inline-start: 0;
+				inset-block-start: pxToRem(-6) - 1rem;
 				text-align: center;
 				&.long {
-					top: -25%;
-					height: 150%;
+					inset-inline-start: $blankWidth * -0.25;
+					inline-size: $blankWidth * 1.5;
 				}
 			}
-			&.unique .reading {
-				padding: 4px 0;
-				text-align-last: justify;
-				&.short2 {
-					padding: 16px 0;
-				}
-				&.short1 {
-					padding: 8px 0;
-				}
-				&.long {
-					text-align-last: center;
-				}
+		}
+		.ruby::after {
+			inset-block-start: pxToRem(-6);
+		}
+	}
+}
+body.firefox {
+	.question {
+		&.okurigana .phrase {
+			.reading {
+				padding-block-start: 0;
 			}
+			.ruby::after {
+				inset-block-start: pxToRem(-9);
+			}
+		}
+		&.tango .phrase .ruby::after {
+			inset-block-start: pxToRem(-9);
+		}
+	}
+}
+body.safari {
+	.question {
+		&.okurigana .phrase .ruby::after {
+			inset-block-start: pxToRem(-12);
+		}
+		&.tango .phrase .ruby::after {
+			inset-block-start: $blankWidth / 2;
 		}
 	}
 }

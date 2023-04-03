@@ -2,7 +2,7 @@
 <html lang="ja" prefix="og: http://ogp.me/ns#">
 <head>
 	<meta charset="utf-8">
-	<title data-ja="やさしい小学漢字" data-en="Learning Kanji for elementary school students">やさしい小学漢字</title>
+	<title>やさしい小学漢字</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta property="og:title" content="やさしい小学漢字">
 	<meta property="og:type" content="website">
@@ -21,26 +21,31 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="img/logo.png">
 </head>
 <body>
-<noscript>JavaScriptを有効にしてください。<br>Please enable JavaScript.</noscript>
 <div>
+	<noscript>JavaScriptを有効にしてください。</noscript>
+	<dialog id="moveToYourLang">
+		<p id="text"></p>
+		<menu>
+			<button id="cancel"></button>
+			<a href="index-en.html" id="move" class="button"></a>
+		</menu>
+	</dialog>
 	<header>
-		<a href="" id="siteName" class="hide">
-			<img src="img/logo.png" alt="やさしい小学漢字のロゴ">
+		<a href="../" id="siteLogo" class="hide">
+			<img src="../img/logo.png" alt="やさしい小学漢字のロゴ">
 		</a>
 		<div id="hamburger" tabindex="0"><div></div><div></div><div></div></div>
 	</header>
 	<nav class="hide">
 		<div class="pagesLinks">
 			<div>
-				<a href="origin/" class="inner" tabindex="-1"><span lang="ja">漢字の成り立ち</span><span lang="en" hidden>The origin of Kanji</span></a>
-				<a href="test/" class="inner" tabindex="-1"><span lang="ja">漢字テストの作成</span><span lang="en" hidden>Create a Kanji test</span></a>
-				<a href="about.html" class="inner" tabindex="-1"><span lang="ja">このサイトについて</span><span lang="en" hidden>About this site</span></a>
+				<a href="origin/" class="inner" tabindex="-1">漢字の成り立ち</a>
+				<a href="test/" class="inner" tabindex="-1">漢字テストの作成</a>
+				<a href="about.html" class="inner" tabindex="-1">このサイトについて</a>
 			</div>
 			<div>
-				<input type="radio" class="hidden" name="selectLang" id="ja" value="ja" tabindex="-1">
-				<label class="inner" for="ja">日本語</label>
-				<input type="radio" class="hidden" name="selectLang" id="en" value="en" tabindex="-1">
-				<label class="inner" for="en">English</label>
+				<a href="" class="inner this" tabindex="-1">日本語</a>
+				<a href="index-en.html" class="inner" tabindex="-1">English</a>
 			</div>
 		</div>
 	</nav>
@@ -49,45 +54,25 @@
 			<source srcset="img/kokuban.webp" type="image/webp"/>
 			<img src="img/kokuban.jpg" alt="黒板">
 		</picture>
-		<p class="kokubanText">
-			<span lang="ja">漢字が書けるって<br>かっこいい</span>
-			<span lang="en" hidden>Learn Kanji and<br>Be Cool.</span>
-		</p>
+		<p class="kokubanText">漢字が書けるって<br>かっこいい</p>
 		<img id="wave" src="img/wave.svg" alt="波の背景">
 	</div>
 	<main>
 		<img id="logo" src="img/logo.png" alt="やさしい小学漢字のロゴ">
-		<p>
-			<span lang="ja">やさしい小学漢字</span>
-			<span lang="en" hidden>Learning Kanji for elementary school students</span>
-		</p>
+		<p>やさしい小学漢字</p>
 		<div class="pagesLinks">
-			<a href="origin/" class="inner"><span lang="ja">漢字の成り立ち</span><span lang="en" hidden>The origin of Kanji</span></a>
-			<a href="test/" class="inner"><span lang="ja">漢字テストの作成</span><span lang="en" hidden>Create a Kanji test</span></a>
-			<a href="about.html" class="inner"><span lang="ja">このサイトについて</span><span lang="en" hidden>About this site</span></a>
+			<a href="origin/" class="inner" tabindex="-1">漢字の成り立ち</a>
+			<a href="test/" class="inner" tabindex="-1">漢字テストの作成</a>
+			<a href="about.html" class="inner" tabindex="-1">このサイトについて</a>
 		</div>
-		<p>
-			<span lang="ja">このサイトでは、学年別でランダムに問題を作る機能や、漢字を一つずつ選んでテストを作る機能があり、自分で問題を作らなくても簡単に漢字学習をすることができます。</span>
-			<span lang="en" hidden>This site has a function to randomly create questions from the grade and a function to select and create Kanji test one by one, so you can easily studey Kanji without creating your own questions.</span>
-		</p>
+		<p>このサイトでは、学年別でランダムに問題を作る機能や、漢字を一つずつ選んでテストを作る機能があり、自分で問題を作らなくても簡単に漢字学習をすることができます。</p>
 	</main>
 	<footer>
 		<ul>
-			<li>
-				<a href="">
-					<span lang="ja">ホーム</span><span lang="en" hidden>Home</span></a>
-			</li>
-			<li>
-				<a href="about.html">
-					<span lang="ja">このサイトについて</span>
-					<span lang="en" hidden>About this site</span>
-				</a>
-			</li>
+			<li><a href="../">ホーム</a></li>
+			<li><a href="../about.html">このサイトについて</a></li>
 		</ul>
-		<p>
-			<span lang="ja">このサイトは<a href="http://webcon.japias.jp" target="_blank" rel="noopener noreferrer">第24回全国中学高校Webコンテスト</a>に参加していました。</span>
-			<span lang="en" hidden>This site participated in <a href="http://webcon.japias.jp" target="_blank" rel="noopener noreferrer">the 24'th Japan Junior high school/high school Web contest</a>.</span>
-		</p>
+		<p>このサイトは<a href="http://webcon.japias.jp" target="_blank" rel="noopener noreferrer">第24回全国中学高校Webコンテスト</a>に参加していました。</p>
 	</footer>
 </div>
 </body>

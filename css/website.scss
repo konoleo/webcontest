@@ -12,11 +12,7 @@ body {
 	padding: 0;
 	font: 500 16px/1.8 $sansSerif;
 	color: $textColor;
-	font-feature-settings: "pkna";
 	background: $bgColor;
-	@media (max-width: 340px) {
-		font-size: 14px;
-	}
 	// 100vwを使うと横スクロールが発生する問題の解決法
 	& > div {
 		overflow: hidden;
@@ -27,51 +23,67 @@ body {
 	display: none !important;
 }
 
+dialog, noscript {
+	z-index: 4;
+	border-radius: 8px;
+	background: white;
+	box-shadow: 0 2px 24px rgba(black, .2);
+	text-align: center;
+}
+
 noscript {
 	position: fixed;
-	z-index: 5;
-	width: 50%;
-	min-width: 300px;
-	top: 100px;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
+	inset: 0;
+	inline-size: calc($mainWidth - 100px);
+	block-size: fit-content;
+	margin: auto;
 	padding: 16px;
-	background: lighten($bgColor, 5%);
-	text-align: center;
-	box-shadow: 0 2px 20px rgba(black, .2);
-	border-radius: 8px;
+}
+
+#moveToYourLang {
+	padding-block: 16px;
+	padding-inline: 32px;
+	border: none;
+	menu {
+		display: flex;
+		justify-content: center;
+		gap: 16px;
+		padding-inline-start: 0;
+		button, .button {
+			margin: 0;
+			padding-block: 8px;
+		}
+	}
 }
 
 header {
-	width: 100vw;
+	inline-size: 100vw;
 	position: fixed;
-	top: 0;
-	left: 0;
+	inset-block-start: 0;
+	inset-inline-start: 0;
 	z-index: 3;
-	padding: 24px calc((100vw - #{$mainWidth}) / 2) 20px;
+	padding-block: 24px 20px;
+	padding-inline: calc((100vw - $mainWidth) / 2);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	background: rgba($bgColor, .9);
-	#siteName {
-		border-bottom: none;
-		img {
-			height: 65px;
-		}
+	#siteLogo img {
+		block-size: 64px;
 	}
 	#hamburger {
-		width: 55px;
-		height: 60px;
+		inline-size: 45px;
+		block-size: 60px;
 		padding: 10px;
-		margin: auto -10px auto 0;
+		padding-inline-end: 0;
+		margin-block: auto;
 		cursor: pointer;
 		display: flex;
 		flex-flow: column;
 		justify-content: space-around;
 		div {
-			width: 100%;
-			height: 4px;
+			inline-size: 100%;
+			block-size: 4px;
 			background: $subColor;
 			box-shadow: 1px 2px 8px rgba(white, .25);
 			transition: all .3s ease;
@@ -93,9 +105,11 @@ header {
 }
 
 .pagesLinks {
-	width: 100%;
-	margin: 32px auto;
-	padding: 16px 24px;
+	inline-size: 100%;
+	margin-block: 32px;
+	margin-inline: auto;
+	padding-block: 16px;
+	padding-inline: 24px;
 	border-radius: 60px;
 	background: white;
 	display: flex;
@@ -107,20 +121,23 @@ header {
 		font-size: 1.5rem;
 		color: $themeColor;
 		margin: 16px;
-		// border-bottom: none;
 		text-decoration: none;
+		&.this {
+			color: $subColor;
+		}
 	}
 }
 
 nav {
-	width: 100vw;
-	height: 100vh;
+	inline-size: 100vw;
+	block-size: 100vh;
 	position: fixed;
-	top: 0;
-	left: 0;
+	inset-block-start: 0;
+	inset-inline-start: 0;
 	z-index: 2;
 	background: $bgColor;
-	padding: 100px calc((100vw - #{$mainWidth}) / 2) 40px;
+	padding-block: 100px 40px;
+	padding-inline: calc((100vw - $mainWidth) / 2);
 	transition: all .3s ease;
 	opacity: 1;
 	&.hide {
@@ -129,9 +146,9 @@ nav {
 		opacity: 0;
 	}
 	.pagesLinks {
-		margin-top: 24px;
+		margin-block-start: 24px;
 		div {
-			width: 100%;
+			inline-size: 100%;
 		}
 		input.focus-visible + label {
 			outline: auto;
@@ -143,9 +160,10 @@ nav {
 }
 
 main {
-	width: $mainWidth;
-	margin: 100px auto auto;
-	padding-top: 8px;
+	inline-size: $mainWidth;
+	margin-block: 100px auto;
+	margin-inline: auto;
+	padding-block-start: 8px;
 }
 
 img {
@@ -154,19 +172,17 @@ img {
 
 a {
 	color: $themeColor;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: pxToRem(1);
 	text-underline-offset: 0.12em;
 	transition: all .3s ease;
 	&[target=_blank]::after {
 		content: "";
 		background: url(../img/link-icon.svg) center/0.8em auto no-repeat;
 		display: inline-block;
-		width: 0.9em;
-		height: 0.9em;
-		vertical-align: -1px;
-		margin-left: 0.1em;
-		margin-right: 0.15em;
-		padding: 0;
+		inline-size: 0.9em;
+		block-size: 0.9em;
+		vertical-align: pxToRem(-1);
+		margin-inline: 0.15em;
 	}
 }
 body {
@@ -187,23 +203,27 @@ body {
 }
 
 h1, h2, h3 {
-	border-left: 4px solid $subColor;
-	padding-left: 16px;
+	border-inline-start: pxToRem(4) solid $subColor;
+	padding-inline-start: 1rem;
 	line-height: 1.8;
 	font-weight: 500;
+	&.noBorder {
+		border-inline-start: none;
+		padding-inline-start: 0;
+	}
 }
 
 h3 {
 	line-height: 1.4;
-	margin: 1.3em 0 0.7em;
+	margin-block: 1.3em 0.7em;
 }
 
 p, ul, li {
-	margin: 0.7em 0;
+	margin-block: 0.7em;
 }
 
 section {
-	margin: 32px 0;
+	margin-block: 32px;
 }
 
 input {
@@ -217,8 +237,8 @@ input {
 }
 body {
 	&.safari input[type=checkbox] {
-		width: 1.2em;
-		height: 1.2em;
+		inline-size: 1.2em;
+		block-size: 1.2em;
 	}
 	&.chromium input[type=checkbox] {
 		vertical-align: -0.1em;
@@ -228,7 +248,7 @@ body {
 	}
 }
 
-:is(input, button) span {
+input, button {
 	font-family: $sansSerif;
 }
 
@@ -236,16 +256,21 @@ button, label {
 	cursor: pointer;
 }
 
-button {
-	padding: 12px 16px;
-	border-radius: 8px;
+button, .button {
+	display: inline-block;
+	padding-block: 12px;
+	padding-inline: 16px;
+	margin-inline-end: 12px;
+	margin-block-end: 12px;
+	border-radius: pxToRem(8);
 	border: 2px solid $themeColor;
 	background: $themeColor;
-	color: white;
 	font-size: 1rem;
+	color: white;
+	text-decoration: none;
 	transition: all .3s ease;
 	&:hover {
-		box-shadow: 0 2px 4px rgba(black, 0.3);
+		box-shadow: 0 2px 2px rgba(black, 0.3);
 	}
 }
 
@@ -255,8 +280,8 @@ summary {
 
 .hidden {
 	position: absolute;
-	width: 1px;
-	height: 1px;
+	inline-size: 1px;
+	block-size: 1px;
 	margin: -1px;
 	border: 0;
 	overflow: hidden;
@@ -266,50 +291,48 @@ summary {
 
 li {
 	h4, dl {
-		margin: 0;
+		margin-block: 0;
 	}
 	h4 {
 		font-size: 1.1rem;
 	}
 	dd {
-		margin-left: 24px;
+		margin-inline-start: 2rem;
 	}
 }
 
 dt {
-	margin-top: 8px;
+	margin-block-start: 8px;
 	font-size: 1.05rem;
 }
 
 dd {
-	margin-bottom: 12px;
-	margin-left: 32px;
+	margin-block-end: 12px;
+	margin-inline-start: 32px;
 }
 
 h4 {
-	margin: 8px 0;
+	margin-block: 8px;
 	font-weight: normal;
-	& + ul {
-		margin: 0;
-	}
 }
 
 table {
-	width: 100%;
-	min-width: 780px;
+	inline-size: 100%;
+	min-inline-size: 780px;
 	ul {
-		padding-left: 0;
+		padding-inline-start: 0;
 		li {
 			display: block;
 		}
 	}
 	thead :is(th, td) {
-		border-top: 1px solid #333;
+		border-block-start: 1px solid #333;
 	}
 	th, td {
 		text-align: center;
-		border-bottom: 1px solid #333;
-		padding: 8px 16px;
+		border-block-end: 1px solid #333;
+		padding-block: 8px;
+		padding-inline: 16px;
 	}
 	th {
 		font-weight: 500;
@@ -325,7 +348,8 @@ footer {
 		padding: 0;
 		li {
 			display: inline;
-			margin: 0 16px;
+			margin-block: 0;
+			margin-inline: 16px;
 		}
 	}
 }

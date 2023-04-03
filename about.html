@@ -2,7 +2,7 @@
 <html lang="ja" prefix="og: http://ogp.me/ns#">
 <head>
 	<meta charset="utf-8">
-	<title data-ja="このサイトについて - やさしい小学漢字" data-en="About this site - Learning Kanji for elementary school students">このサイトについて - やさしい小学漢字</title>
+	<title>このサイトについて - やさしい小学漢字</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta property="og:title" content="このサイトについて - やさしい小学漢字">
 	<meta property="og:type" content="article">
@@ -23,65 +23,48 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="img/logo.png">
 </head>
 <body>
-<noscript>JavaScriptを有効にしてください。<br>Please enable JavaScript.</noscript>
 <div>
+	<noscript>JavaScriptを有効にしてください。</noscript>
+	<dialog id="moveToYourLang">
+		<p id="text"></p>
+		<menu>
+			<button id="cancel"></button>
+			<a href="about-en.html" id="move" class="button"></a>
+		</menu>
+	</dialog>
 	<header>
-		<a href="index.html" id="siteName">
-			<img src="img/logo.png" alt="やさしい小学漢字のロゴ">
+		<a href="../" id="siteLogo">
+			<img src="../img/logo.png" alt="やさしい小学漢字のロゴ">
 		</a>
 		<div id="hamburger" tabindex="0"><div></div><div></div><div></div></div>
 	</header>
 	<nav class="hide">
 		<div class="pagesLinks">
 			<div>
-				<a href="origin/" class="inner" tabindex="-1"><span lang="ja">漢字の成り立ち</span><span lang="en" hidden>The origin of Kanji</span></a>
-				<a href="test/" class="inner" tabindex="-1"><span lang="ja">漢字テストの作成</span><span lang="en" hidden>Create a Kanji test</span></a>
-				<a href="about.html" class="inner" tabindex="-1"><span lang="ja">このサイトについて</span><span lang="en" hidden>About this site</span></a>
+				<a href="../origin/" class="inner" tabindex="-1">漢字の成り立ち</a>
+				<a href="../test/" class="inner" tabindex="-1">漢字テストの作成</a>
+				<a href="" class="inner" tabindex="-1">このサイトについて</a>
 			</div>
 			<div>
-				<input type="radio" class="hidden" name="selectLang" id="ja" value="ja" tabindex="-1">
-				<label class="inner" for="ja">日本語</label>
-				<input type="radio" class="hidden" name="selectLang" id="en" value="en" tabindex="-1">
-				<label class="inner" for="en">English</label>
+				<a href="" class="inner this" tabindex="-1">日本語</a>
+				<a href="about-en.html" class="inner" tabindex="-1">English</a>
 			</div>
 		</div>
 	</nav>
 	<main>
-		<h1>
-			<span lang="ja">このサイトについて</span>
-			<span lang="en" hidden>About this site</span>
-		</h1>
+		<h1>このサイトについて</h1>
 		<section>
-			<h2>
-				<span lang="ja">サイトマップ</span>
-				<span lang="en" hidden>Sitemap</span>
-			</h2>
+			<h2>サイトマップ</h2>
 			<ul>
-				<li><a href="index.html">
-					<span lang="ja">ホーム</span><span lang="en" hidden>Home</span></a></li>
-				<li><a href="test/">
-					<span lang="ja">漢字テストの作成</span>
-					<span lang="en" hidden>Create a Kanji test</span>
-				</a></li>
-				<li><a href="origin/">
-					<span lang="ja">漢字の成り立ち</span>
-					<span lang="en" hidden>The origin of Kanji</span>
-				</a></li>
-				<li><a href="">
-					<span lang="ja">このサイトについて</span>
-					<span lang="en" hidden>About this site</span>
-				</a></li>
+				<li><a href="index.html">ホーム</a></li>
+				<li><a href="test/">漢字テストの作成</a></li>
+				<li><a href="origin/">漢字の成り立ち</a></li>
+				<li><a href="">このサイトについて</a></li>
 			</ul>
 		</section>
 		<section>
-			<h2>
-				<span lang="ja">サイトの推奨環境</span>
-				<span lang="en" hidden>Recommended browser</span>
-			</h2>
-			<p>
-				<span lang="ja">このサイトは以下の環境で利用されることを想定しています。このほかの環境下（Internet Explorerなど）ではサイトが正しく表示されない可能性があります。また、JavaScriptが使用できる状態でご利用ください。</span>
-				<span lang="en" hidden>This site supposes to use in browsers in below. This site may not be displayed correctly if you use other browsers (such as Internet Explorer). Also please use this site in a state where JavaScript can be used.</span>
-			</p>
+			<h2>サイトの推奨環境</h2>
+			<p>このサイトは以下の環境で利用されることを想定しています。このほかの環境下（Internet</p>
 			<div class="js-scrollable">
 				<table>
 					<thead>
@@ -95,10 +78,7 @@
 					</thead>
 					<tbody>
 						<tr>
-							<th>
-								<span lang="ja">ブラウザ<br>（それぞれ最新版）</span>
-								<span lang="en" hidden>Browsers<br>(Latest version)</span>
-							</th>
+							<th>ブラウザ</th>
 							<td>
 								<ul>
 									<li>Microsoft Edge</li>
@@ -130,58 +110,30 @@
 			</div>
 		</section>
 		<section>
-			<h2>
-				<span lang="ja">参考文献・利用情報</span>
-				<span lang="en" hidden>References / Usage Information</span>
-			</h2>
+			<h2>参考文献・利用情報</h2>
 			<ul>
 				<li>
 					<h4>
 						<a href="https://www.mext.go.jp/a_menu/shotou/new-cs/youryou/syo/koku/001.htm" target="_blank" rel="noopener noreferrer">別表　学年別漢字配当表</a>
 					</h4>
 					<dl>
-						<dt>
-							<span lang="ja">参考・利用先ページ</span>
-							<span lang="en" hidden>Pages using that information / technology</span>
-						</dt>
-						<dd><a href="test/">
-							<span lang="ja">漢字テストの作成</span>
-							<span lang="en" hidden>Create a Kanji test</span>
-						</a></dd>
-						<dt>
-							<span lang="ja">許可の取得方法</span>
-							<span lang="en" hidden>How to get permission</span>
-						</dt>
+						<dt>参考・利用先ページ</dt>
+						<dd><a href="test/">漢字テストの作成</a></dd>
+						<dt>許可の取得方法</dt>
 						<dd>
-							<span lang="ja">
-								利用規定に基づき使用<br>
-								<a href="https://www.mext.go.jp/b_menu/1351168.htm" target="_blank" rel="noopener noreferrer">文部科学省ウェブサイト利用規約</a>
-							</span>
-							<span lang="en" hidden>
-								We used it based acceptable use policy.<br>
-								<a href="https://www.mext.go.jp/en/other/title01/detail01/1375290.htm" target="_blank" rel="noopener noreferrer">MEXT Website Usage Policy</a>
-							</span>
+							利用規定に基づき使用<br>
+							<a href="https://www.mext.go.jp/b_menu/1351168.htm" target="_blank" rel="noopener noreferrer">文部科学省ウェブサイト利用規約</a>
 						</dd>
 					</dl>
 				</li>
 				<li>
 					<h4><a href="https://github.com/WICG/focus-visible" target="_blank" rel="noopener noreferrer">focus-visible.js</a></h4>
 					<dl>
-						<dt>
-							<span lang="ja">参考・利用先ページ</span>
-							<span lang="en" hidden>Pages using that information / technology</span>
-						</dt>
+						<dt>参考・利用先ページ</dt>
+						<dd>全ページ</dd>
+						<dt>許可の取得方法</dt>
 						<dd>
-							<span lang="ja">全ページ</span>
-							<span lang="en" hidden>All pages</span>
-						</dd>
-						<dt>
-							<span lang="ja">許可の取得方法</span>
-							<span lang="en" hidden>How to get permission</span>
-						</dt>
-						<dd>
-							<span lang="ja">利用規定に基づき使用</span>
-							<span lang="en" hidden>We used it based acceptable use policy.</span>
+							利用規定に基づき使用
 							<br><a href="https://github.com/WICG/focus-visible/blob/main/LICENSE.md" target="_blank" rel="noopener noreferrer">LICENSE.md</a>
 						</dd>
 					</dl>
@@ -189,101 +141,57 @@
 				<li>
 					<h4><a href="https://appleple.github.io/scroll-hint/" target="_blank" rel="noopener noreferrer">ScrollHint</a></h4>
 					<dl>
-						<dt>
-							<span lang="ja">参考・利用先ページ</span>
-							<span lang="en" hidden>Pages using that information / technology</span>
-						</dt>
+						<dt>参考・利用先ページ</dt>
 						<dd>
-							<a href="">
-								<span lang="ja">このサイトについて</span>
-								<span lang="en" hidden>About this site</span>
-							</a>
+							<a href="">このサイトについて</a>
 						</dd>
-						<dt>
-							<span lang="ja">許可の取得方法</span>
-							<span lang="en" hidden>How to get permission</span>
-						</dt>
+						<dt>許可の取得方法</dt>
 						<dd>
-							<span lang="ja">利用規定に基づき使用</span>
-							<span lang="en" hidden>We used it based acceptable use policy.</span>
+							利用規定に基づき使用
 							<br><a href="https://github.com/appleple/scroll-hint/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">LICENSE</a>
 						</dd>
 					</dl>
 				</li>
 				<li>
-					<h4>
-						<span lang="ja">Google Fonts（<a href="https://fonts.google.com/specimen/Klee+One" target="_blank" rel="noopener noreferrer">Klee One</a>、<a href="https://fonts.google.com/specimen/Zen+Maru+Gothic" target="_blank" rel="noopener noreferrer">Zen Maru Gothic</a>）</span>
-						<span lang="en" hidden>Google Fonts (<a href="https://fonts.google.com/specimen/Klee+One" target="_blank" rel="noopener noreferrer">Klee One</a>, <a href="https://fonts.google.com/specimen/Zen+Maru+Gothic" target="_blank" rel="noopener noreferrer">Zen Maru Gothic</a>)</span>
-					</h4>
+					<h4>Google Fonts（<a href="https://fonts.google.com/specimen/Klee+One" target="_blank" rel="noopener noreferrer">Klee One</a>、<a href="https://fonts.google.com/specimen/Zen+Maru+Gothic" target="_blank" rel="noopener noreferrer">Zen Maru Gothic</a>、<a href="https://fonts.google.com/specimen/Nunito" target="_blank" rel="noopener noreferrer">Nunito</a>）</h4>
 					<dl>
-						<dt>
-							<span lang="ja">参考・利用先ページ</span>
-							<span lang="en" hidden>Pages using that information / technology</span>
-						</dt>
+						<dt>参考・利用先ページ</dt>
 						<dd>
-							<a href="test/"><span lang="ja">漢字テストの作成</span><span lang="en" hidden>Create a Kanji test</span></a><span lang="ja">（Klee One）</span><span lang="en" hidden> (Klee One)</span>
-							<br>
-							<span lang="ja">全ページ（Zen Maru Gothic）</span><span lang="en" hidden>All pages (Zen Maru Gothic)</span>
+							<a href="test/">漢字テストの作成</a>（Klee One）<br>
+							全ページ（Zen Maru Gothic、Nunito）
+						</span>
 						</dd>
-						<dt>
-							<span lang="ja">許可の取得方法</span>
-							<span lang="en" hidden>How to get permission</span>
-						</dt>
+						<dt>許可の取得方法</dt>
 						<dd>
-							<span lang="ja">利用規定に基づき使用</span>
-							<span lang="en" hidden>We used it based acceptable use policy.</span>
+							利用規定に基づき使用
 							<br><a href="https://fonts.google.com/about" target="_blank" rel="noopener noreferrer">Google Fonts</a>
 						</dd>
 					</dl>
 				</li>
 				<li>
-					<h4>
-						<a href="https://www.dl.is.ritsumei.ac.jp/Shirakawa/search/index.php" target="_blank" rel="noopener noreferrer">白川フォント</a><span lang="ja">（白川 甲骨文字、白川 金文、白川 篆文）</span><span lang="en" hidden> (白川 甲骨文字, 白川 金文, 白川 篆文)</span>
-					</h4>
+					<h4><a href="https://www.dl.is.ritsumei.ac.jp/Shirakawa/search/index.php" target="_blank" rel="noopener noreferrer">白川フォント</a>（白川 甲骨文字、白川 金文、白川 篆文）</h4>
 					<dl>
-						<dt>
-							<span lang="ja">参考・利用先ページ</span>
-							<span lang="en" hidden>Pages using that information / technology</span>
-						</dt>
+						<dt>参考・利用先ページ</dt>
 						<dd>
-							<a href="origin/">
-								<span lang="ja">漢字の成り立ち</span>
-								<span lang="en" hidden>The origin of Kanji</span>
-							</a>
+							<a href="origin/">漢字の成り立ち</a>
 						</dd>
-						<dt>
-							<span lang="ja">許可の取得方法</span>
-							<span lang="en" hidden>How to get permission</span>
-						</dt>
+						<dt>許可の取得方法</dt>
 						<dd>
-							<span lang="ja">利用規定に基づき使用</span>
-							<span lang="en" hidden>We used it based acceptable use policy.</span>
+							利用規定に基づき使用
 							<br><a href="http://www.ritsumei.ac.jp/acd/re/k-rsc/sio/shirakawa/" target="_blank" rel="noopener noreferrer">白川フォント</a>
 						</dd>
 					</dl>
 				</li>
 				<li>
-					<h4>
-						<a href="https://www.hakusyu.com/download_education.htm" target="_blank" rel="noopener noreferrer">白舟書体</a><span lang="ja">（白舟隷書教漢、白舟楷書教漢、白舟行書教漢、白舟草書教漢）</span><span lang="en" hidden> (白舟隷書教漢, 白舟楷書教漢, 白舟行書教漢, 白舟草書教漢)</span>
-					</h4>
+					<h4><a href="https://www.hakusyu.com/download_education.htm" target="_blank" rel="noopener noreferrer">白舟書体</a>（白舟隷書教漢、白舟楷書教漢、白舟行書教漢、白舟草書教漢）</h4>
 					<dl>
-						<dt>
-							<span lang="ja">参考・利用先ページ</span>
-							<span lang="en" hidden>Pages using that information / technology</span>
-						</dt>
+						<dt>参考・利用先ページ</dt>
 						<dd>
-							<a href="origin/">
-								<span lang="ja">漢字の成り立ち</span>
-								<span lang="en" hidden>The origin of Kanji</span>
-							</a>
+							<a href="origin/">漢字の成り立ち</a>
 						</dd>
-						<dt>
-							<span lang="ja">許可の取得方法</span>
-							<span lang="en" hidden>How to get permission</span>
-						</dt>
+						<dt>許可の取得方法</dt>
 						<dd>
-							<span lang="ja">利用規定に基づき使用</span>
-							<span lang="en" hidden>We used it based acceptable use policy.</span>
+							利用規定に基づき使用
 							<br><a href="https://www.hakusyu.com/licensing.htm" target="_blank" rel="noopener noreferrer">使用許諾について┃白舟書体</a>
 						</dd>
 					</dl>
@@ -293,21 +201,10 @@
 	</main>
 	<footer>
 		<ul>
-			<li>
-				<a href="index.html">
-					<span lang="ja">ホーム</span><span lang="en" hidden>Home</span></a>
-			</li>
-			<li>
-				<a href="">
-					<span lang="ja">このサイトについて</span>
-					<span lang="en" hidden>About this site</span>
-				</a>
-			</li>
+			<li><a href="../">ホーム</a></li>
+			<li><a href="../about.html">このサイトについて</a></li>
 		</ul>
-		<p>
-			<span lang="ja">このサイトは<a href="http://webcon.japias.jp" target="_blank" rel="noopener noreferrer">第24回全国中学高校Webコンテスト</a>に参加していました。</span>
-			<span lang="en" hidden>This site participated in <a href="http://webcon.japias.jp" target="_blank" rel="noopener noreferrer">the 24'th Japan Junior high school/high school Web contest</a>.</span>
-		</p>
+		<p>このサイトは<a href="http://webcon.japias.jp" target="_blank" rel="noopener noreferrer">第24回全国中学高校Webコンテスト</a>に参加していました。</p>
 	</footer>
 </div>
 </body>

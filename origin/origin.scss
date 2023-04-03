@@ -1,13 +1,12 @@
-@import "../../scss/var";
+@import "../css/var";
 
 figure {
 	margin: 0;
 	img {
-		width: 100%;
+		inline-size: 100%;
 	}
 	figcaption {
-		// border-bottom: 2px solid $themeColor;
-		margin: 4px 0 0;
+		margin-block-start: 4px;
 	}
 }
 
@@ -33,40 +32,39 @@ figure {
 				grid-row: 1 / 3;
 			}
 			figcaption {
-				margin: 0;
+				margin-block-start: 0;
 			}
 		}
 	}
 	display: grid;
 	grid-template-columns: repeat(var(--column), 1fr);
 	grid-gap: 16px 32px;
-	margin: 1.3rem 0;
+	margin-block: 1.3rem;
 }
 
 .column {
 	border: 1px solid #b3b3b3;
 	border-radius: 16px;
-	padding: 8px 24px;
-	margin: 16px 0;
+	padding-block: 8px;
+	padding-inline: 24px;
+	margin-block: 16px;
 	h2 {
-		border-left: none;
-		margin-top: 8px;
-		margin-bottom: 12px;
-		padding-left: 0;
+		margin-block: 8px 12px;
 	}
 }
 #kusabiKakikata {
 	figure {
-		margin: 8px 24px 16px 0;
-		float: left;
+		margin-block: 8px 16px;
+		margin-inline: 0 24px;
+		float: inline-start;
 		@media (max-width: 500px) {
-			margin-right: 0;
+			margin-inline-end: 0;
 		}
 		img {
-			width: 200px;
+			inline-size: 200px;
 			border-radius: 8px;
 			@media (max-width: 500px) {
-				width: 100%;
+				inline-size: 100%;
 			}
 		}
 	}
@@ -74,17 +72,18 @@ figure {
 		content: ".";
 		display: block;
 		clear: both;
-		height: 0;
+		block-size: 0;
 		visibility: hidden;
 	}
 }
 
 #syotai dd {
-	min-height: 104px;
+	min-block-size: 104px;
 	img {
-		width: 100px;
-		height: 100px;
-		float: right;
-		margin: 4px 0 16px 16px;
+		inline-size: 100px;
+		block-size: 100px;
+		float: inline-end;
+		margin-block-end: 16px;
+		margin-inline-start: 16px;
 	}
 }

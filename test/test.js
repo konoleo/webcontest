@@ -1,645 +1,568 @@
-function getMultiple(elems) {
+const filterKanji = (object, condition, option) => {
+	const res = {};
+	Object.entries(object).filter(([kanji, value]) => {
+		const [condKey, condValue] = Object.entries(condition)[0];
+		if (value[condKey] === condValue || Array.isArray(condValue) && condValue.includes(value[condKey])) {
+			res[kanji] = value;
+		}
+	});
+	switch (option) {
+		case "keys":
+			return Object.keys(res);
+		case "values":
+			return Object.values(res);
+		default:
+			return res;
+	}
+};
+
+const getChecked = (elems) => {
 	const values = [];
-	for (let i = 0; i < elems.length; i++) {
-		if (elems[i].checked) {
-			const num = Number(elems[i].value);
-			if (Number.isNaN(num)) {
-				values.push(elems[i].value);
+	for (const elem of elems) {
+		if (elem.checked) {
+			if (isNaN(elem.value)) {
+				values.push(elem.value);
 			} else {
-				values.push(Number(elems[i].value));
+				values.push(Number(elem.value));
 			}
 		}
 	}
 	return values;
-}
+};
 
-function ordinalSuffix(num) {
-	var j = num % 10,
-		k = num % 100;
-	if (j == 1 && k != 11) {
-		return num + "st";
-	}
-	if (j == 2 && k != 12) {
-		return num + "nd";
-	}
-	if (j == 3 && k != 13) {
-		return num + "rd";
-	}
-	return num + "th";
-}
-function addNensei(grade, lang) {
-	switch (lang) {
-		case "ja":
-			// return `${grade}年生${grade === 4 ? "（前期）" : ""}`;
-			return `${grade}年生`;
-		case "en":
-			// return `${ordinalSuffix(grade)} grade${grade === 4 ? " (first semester)" : ""}`;
-			return `${ordinalSuffix(grade)} grade`;
+const addOrdNumWords = (num) => {
+	const onesPlace = num % 10;
+	const tensPlace = num % 100;
+	switch (tensPlace) {
+		case 11:
+		case 12:
+		case 13:
+			return `${num}th`;
 		default:
-			break;
-	}
-}
-function addNenseiToElem(grade, elem, query) {
-	supportedLang.forEach(lang => {
-		elem.querySelector(`${query || ""}:lang(${lang})`).textContent = addNensei(grade, lang);
-	});
-}
-
-function filterBy(data, options, keyValueAll) {
-	const filtered = Object.keys(data).filter(key => {
-		let bools = [];
-		Object.entries(options).forEach(([optKey, optValue]) => {
-			let bool = "";
-			switch (typeOf(optValue)) {
-				case "string":
-				case "boolean":
-				case "number":
-					bool = data[key][optKey] === optValue;
-					break;
-				case "array":
-					bool = optValue.includes(data[key][optKey]);
-					break;
+			switch (onesPlace) {
+				case 1:
+					return `${num}st`;
+				case 2:
+					return `${num}nd`;
+				case 3:
+					return `${num}rd`;
 				default:
-					break;
+					return `${num}th`;
 			}
-			bools.push(bool);
-		});
-		if (!bools.includes(false)) {
-			return true;
-		}
-	});
-	switch (keyValueAll) {
-		case "key":
-			var result = filtered;
-			break;
-		case "value":
-			var result = filtered.map(key => {data[key]});
-			break;
-		case "all":
-			var result = {};
-			filtered.forEach(key => {
-				result[key] = data[key];
-			});
-			break;
-		default:
-			break;
 	}
-	return result;
-}
+};
 
-function shuffle(array) {
-	const newArray = Array(array.length);
-	array.forEach(elem => {
-		const key = Math.floor(Math.random() * (array.length + 1));
-		newArray.splice(key, 0, elem);
+const multilingual = (texts) => {
+	return texts[pageLang];
+};
+
+const addNensei = (grade) => {
+	return multilingual({
+		"ja": `${grade}年生`,
+		"en": `${addOrdNumWords(grade)} grade`
 	});
-	return newArray.filter(value => value);
-}
+};
 
-function typeOf(obj) {
-	return Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
-}
+const shuffle = (array) => {
+	for (let i = array.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1)); // 0 から i のランダムなインデックス
+		[array[i], array[j]] = [array[j], array[i]]; // 要素を入れ替える
+	}
+	return array;
+};
 
-function sliceByNum(array, num) {
-	let newArr = new Array(Math.ceil(array.length / num)).fill([]);
-	newArr = newArr.map((_, i) => array.slice(num * i, num * (i + 1)));
-	return newArr;
-}
+const sliceByNum = (array, num) => {
+	const blankArray = new Array(Math.ceil(array.length / num)).fill([]);
+	return blankArray.map((_, i) => array.slice(num * i, num * (i + 1)));
+};
 
-let fragment = document.createDocumentFragment();
+const removeNewline = (html) => html.replace(/[\n\t]/g, "");
 
-fetch("../data/kanjidata.json").then(response => {
-	if (response.ok) {
-		return response.json();
+fetch("../data/kanjidata.json").then(res => {
+	if (res.ok) {
+		return res.json();
 	} else {
-		return Promise.reject(new Error("JSONファイルにアクセスできません。"));
+		return Promise.reject(new Error("Failed to fetch a json file."));
 	}
-}).then(jsonData => {
-	const newData = {};
-	Object.entries(jsonData).forEach(([kanji, data1]) => {
-		if (data1.readings) {
-			data1.readings.forEach(data2 => {
-				data2.strokesNum = data1.strokesNum;
-				data2.readingForSort = data1.readingForSort;
-				const key = `${kanji}${data2.reading ? "（" + data2.reading + "）" : ""}`;
-				newData[key] = data2;
+}).then(json => {
+	const newJson = {};
+	Object.entries(json).forEach(([kanji, data]) => {
+		if (data.hasOwnProperty("studies")) {
+			// 複数年で学習される漢字の場合
+			data.studies.forEach(study => {
+				study.strokesNum = data.strokesNum;
+				study.readingForSort = data.readingForSort;
+				newJson[`${kanji}${study.reading ? `（${study.reading}）` : ""}`] = study;
 			});
 		} else {
-			if (data1.isUniqueReading && data1.noNeedToSplit !== true) {
-				const newQuizzes = [];
-				data1.quizzes.forEach(quiz => {
-					quiz.phrase.forEach((item, i) => {
-						if (item.answer) {
-							const answer = item.answer;
-							const kanjis = [...item.answer.matchAll(/[一-龠]/g)];
-							kanjis.forEach(matched => {
-								const newQuiz = JSON.parse(JSON.stringify(quiz));
-								const newAnswerArr = [];
-								const before = answer.substr(0, matched.index);
-								const newAnswer = answer.substr(matched.index, matched.index + 1);
-								const after = answer.substr(matched.index + 1);
-								if (before !== "") {
-									newAnswerArr.push({"text": before});
-								}
-								newAnswerArr.push({"answer": newAnswer});
-								if (after !== "") {
-									newAnswerArr.push({"text": after});
-								}
-								newQuiz.phrase[i].answer = newAnswerArr;
-								newQuizzes.push(newQuiz);
-							});
+			if (data.isUniqueReading === true && data.noNeedToSplit !== true) {
+				// 特別な読み方の場合
+				const newQuestionsAll = [];
+				data.questions.forEach(question => {
+					const ansObjIndex = question.phrase.findIndex(text => text.hasOwnProperty("answer"));
+					const ansObj = question.phrase[ansObjIndex];
+					const kanjis = [...ansObj.answer.matchAll(/\p{sc=Han}/gu)];
+					const newQuestions = kanjis.map(kanjiInAns => {
+						const newQuestion = structuredClone(question);
+						const newAns = [];
+						if (kanjiInAns.index !== 0) {
+							// 答えの前の文字列
+							newAns.push(ansObj.answer.slice(0, kanjiInAns.index));
 						}
+						newAns.push({"answer": kanjiInAns[0]});
+						if (kanjiInAns.index + 1 !== ansObj.answer.length) {
+							// 答えの後の文字列
+							newAns.push(ansObj.answer.slice(kanjiInAns.index + 1));
+						}
+						newQuestion.phrase[ansObjIndex].answer = newAns;
+						return newQuestion;
 					});
+					newQuestionsAll.push(...newQuestions);
 				});
-				data1.quizzes = newQuizzes;
+				data.questions = newQuestionsAll;
 			}
-			newData[kanji] = data1;
+			newJson[kanji] = data;
 		}
 	});
-	return newData;
-}).then(kanjiData => {
-
-	const makeTestBtn = document.getElementById("makeTest");
-	const testSectionE = document.getElementById("testSection");
+	return newJson;
+}).then(json => {
+	Object.values(json).forEach(data => {
+		if (data.hasOwnProperty("annotation")) {
+			// 注釈を各questionに追加
+			data.questions.forEach(question => {
+				question.annotation = data.annotation;
+			});
+			delete data.annotation;
+		}
+	});
+	return json;
+}).then(json => {
+	const fragment = new DocumentFragment();
+	let hasMadeQuiz = false;
 
 	// 全ての学習年をデータから取得
-	const allGrades = [...new Set(Object.values(kanjiData).map(elem => elem.studyGrade))].sort((a, b) => a - b);
+	const allGrades = [...new Set(Object.values(json).map(data => data.grade))].sort((a, b) => a - b);
 
-	// 学習年の選択肢を作る
-	const studyGradesOptTemp = document.getElementById("studyGradesOptTemp");
-	fragment = document.createDocumentFragment();
+	// 学習年の選択肢を作成
+	const gradeOptTemp = document.getElementById("gradeOptTemp");
 	allGrades.forEach(grade => {
-		const clone = studyGradesOptTemp.content.cloneNode(true);
-		const studyGradesOptE = clone.querySelector("[name=studyGradesOpt]")
-		studyGradesOptE.value = grade;
-		studyGradesOptE.addEventListener("change", reselectGrades);
-		addNenseiToElem(grade, clone);
-		fragment.append(clone);
+		const clone = gradeOptTemp.content.cloneNode(true);
+		const checkbox = clone.querySelector(".gradeOpt");
+		checkbox.value = grade;
+		checkbox.insertAdjacentText("afterend", addNensei(grade));
+		fragment.appendChild(clone);
 	});
-	studyGradesOptTemp.parentElement.append(fragment);
-	const studyGradesOpts = document.getElementsByName("studyGradesOpt");
-
-	// 「漢字を選択」タブの中を作る
-	const detailsTemp = document.getElementById("detailsTemp");
-	const strokeNumTitleTemp = document.getElementById("strokeNumTitleTemp");
-	const kanjiChoicesTemp = document.getElementById("kanjiChoicesTemp");
-	fragment = document.createDocumentFragment();
-	allGrades.forEach(grade => {
-		const clone1 = detailsTemp.content.cloneNode(true);
-		const detailsE = clone1.querySelector("details");
-		detailsE.id = `details${grade}`;
-		addNenseiToElem(grade, clone1, "h2 > ");
-		// 「全て選択」ボタン
-		const selectAllBtn = clone1.querySelector(".selectAllBtn");
-		selectAllBtn.addEventListener("click", () => {
-			const inputs = detailsE.querySelectorAll("[name=kanjiChoices]");
-			const wantToSelect = selectAllBtn.classList.contains("select");
-			for (const input of inputs) {
-				input.checked = wantToSelect;
-				input.dispatchEvent(new Event("change"));
-			}
-			selectAllBtn.classList.toggle("select");
-			const text = {
-				ja: {wantToSelect: "選択", wantToDeselect: "選択解除"},
-				en: {wantToSelect: "Select", wantToDeselect: "Deselect"}
-			};
-			Object.entries(text).forEach(([lang, value]) => {
-				const elem = selectAllBtn.querySelector(`:lang(${lang})`);
-				elem.textContent = elem.textContent.replace(wantToSelect ? value.wantToSelect : value.wantToDeselect, wantToSelect ? value.wantToDeselect : value.wantToSelect);
-			});
-		});
-		// その年に学習した漢字を取得
-		const kanjis = filterBy(kanjiData, {studyGrade: grade}, "all");
-		// 画数ごとに分ける
-		const strokeNums = [...new Set(Object.values(kanjis).map(elem => elem.strokesNum))]
-		strokeNums.sort((a, b) => a - b);
-		strokeNums.forEach(strokeNum => {
-			let filteredByStrokeNum;
-			const clone2 = strokeNumTitleTemp.content.cloneNode(true);
-			if (strokeNum === undefined) {
-				filteredByStrokeNum = filterBy(kanjis, {isUniqueReading: true}, "key");
-				clone2.querySelector(":lang(ja)").textContent = "特別な読み方";
-				clone2.querySelector(":lang(en)").textContent = "Unique readings";
-			} else {
-				filteredByStrokeNum = filterBy(kanjis, {strokesNum: strokeNum}, "key");
-				clone2.querySelector(":lang(ja)").textContent = `${strokeNum}画`;
-				clone2.querySelector(":lang(en)").textContent = `${strokeNum} stroke${strokeNum !== 1 ? "s" : ""}`;
-			}
-			const kanjiChoicesDiv = clone2.querySelector(".kanjiChoicesDiv");
-			detailsE.append(clone2);
-			// 読みで並び替え
-			filteredByStrokeNum.sort((a, b) => {
-				const readingA = kanjiData[a].readingForSort;
-				const readingB = kanjiData[b].readingForSort;
-				if (readingA <= readingB) {
-					return -1;
-				} else {
-					return 1;
-				}
-			});
-			filteredByStrokeNum.forEach(kanji => {
-				const clone3 = kanjiChoicesTemp.content.cloneNode(true);
-				clone3.querySelector("[name=kanjiChoices]").value = kanji;
-				const kanjiChoicesLabelE = clone3.querySelector(".kanjiChoices");
-				let html = kanjiChoicesLabelE.innerHTML;
-				html = html.trim();
-				html += kanji;
-				kanjiChoicesLabelE.innerHTML = html;
-				kanjiChoicesDiv.append(clone3);
-			});
-		});
-		fragment.append(clone1);
-	});
-	detailsTemp.parentElement.append(fragment);
-
-	// ボタンをfooterMenuにコピー
-	const btnsE = document.getElementById("btns");
-	const footerMenu = document.getElementById("footerMenu");
-	const parent = document.createElement("div");
-	parent.classList.add("btns");
-	const btns = {};
-	for (const btn of btnsE.children) {
-		const clone = btn.cloneNode(true);
-		clone.classList.add(`${clone.id}Clone`);
-		btns[clone.id] = [btn, clone];
-		clone.removeAttribute("id");
-		parent.append(clone);
-	}
-	footerMenu.append(parent);
-
-	// 漢字の選択が変更された時
-	const kanjiChoicesEs = document.getElementsByName("kanjiChoices");
-	const qCounterEs = document.getElementsByClassName("qCounter");
-	const sheetsCounterEs = document.getElementsByClassName("sheetsCounter");
-	const beVerb = document.getElementById("beVerb");
-	const nouns = document.getElementsByClassName("nouns");
-	for (const elem of kanjiChoicesEs) {
-		elem.addEventListener("change", () => {
-			if (elem.checked) {
-				elem.parentElement.classList.add("checked");
-			} else {
-				elem.parentElement.classList.remove("checked");
-			}
-			// カウンター表示変更
-			const qNum = getMultiple(kanjiChoicesEs).length;
-			const sheetsNum = qNum === 0 ? 0 : Math.ceil(Math.ceil((qNum - 16) / 8) / 3) + 1;
-			for (let i = 0; i < qCounterEs.length; i++) {
-				qCounterEs[i].textContent = qNum;
-				sheetsCounterEs[i].textContent = sheetsNum;
-				beVerb.textContent = qNum === 1 ? "is" : "are";
-				for (const noun of nouns) {
-					if ((noun.classList.contains("qNum") ? qNum : sheetsNum) === 1) {
-						noun.textContent = noun.textContent.replace(/s$/, "");
-					} else {
-						noun.textContent += /s$/.test(noun.textContent) ? "" : "s";
-					}
-				}
-			}
-		});
-		elem.addEventListener("click", () => {
-			// テストの更新
-			if (!testSectionE.hasAttribute("hidden")) {
-				makeTestBtn.click();
-			}
-		});
-	}
-
-	// 「ランダムに選択」ボタン
-	const randomSelectBtn = document.getElementById("randomSelect");
-	const qNumE = document.getElementById("qNum");
-	randomSelectBtn.addEventListener("click", randomSelect);
-	qNumE.addEventListener("focus", () => {
-		randomSelectBtn.removeEventListener("click", randomSelect);
-	});
-	qNumE.addEventListener("blur", () => {
-		randomSelectBtn.addEventListener("click", randomSelect);
-	});
-	qNumE.addEventListener("change", randomSelect);
-	function randomSelect() {
-		for (const choiceE of document.querySelectorAll("[name=kanjiChoices]:checked")) {
-			choiceE.checked = false;
-			choiceE.dispatchEvent(new Event("change"));
-		}
-		const shuffled = shuffle([...document.querySelectorAll(".gradeDetails:not([hidden]) [name=kanjiChoices]")]).slice(0, qNumE.value);
-		shuffled.forEach(choiceE => {
-			choiceE.checked = true;
-			choiceE.dispatchEvent(new Event("change"));
-		});
-		// テストの更新
-		if (!testSectionE.hasAttribute("hidden")) {
-			makeTestBtn.click();
-		}
-	}
-
-	// カウンター表示
-	const r1 = footerMenu.getBoundingClientRect();
-	window.addEventListener("scroll", () => {
-		const r2 = makeTestBtn.getBoundingClientRect().top + window.pageYOffset - 600;
-		if (r2 < r1.top + window.pageYOffset) {
-			footerMenu.setAttribute("hidden", "");
-		} else {
-			footerMenu.removeAttribute("hidden");
-		}
-	});
+	document.getElementById("gradeOpts").appendChild(fragment);
 
 	// 学習年を選び直した時
-	function reselectGrades() {
-		// 問題数の最大値を漢字の数に合わせる
-		const selectedGrades = getMultiple(studyGradesOpts);
-		const maxKanjiNum = filterBy(kanjiData, {"studyGrade": selectedGrades}, "key").length;
-		qNumE.max = maxKanjiNum;
-
-		// 入力された問題数を変更
-		if (qNumE.value === "0") {
-			qNumE.value = 40;
+	const randomQNum = document.getElementById("randomQNum");
+	const gradeOptElems = document.getElementsByClassName("gradeOpt");
+	// 「ランダムに選択」ボタンの問題数の最大値を設定
+	const setMaxValue = () => {
+		const selectedGrades = getChecked(gradeOptElems);
+		randomQNum.max = filterKanji(json, {"grade": selectedGrades}, "keys").length;
+		if (randomQNum.value === "0") {
+			randomQNum.value = 40;
 		}
-		if (Number(qNumE.value) > Number(qNumE.max)) {
-			qNumE.value = qNumE.max;
+		if (Number(randomQNum.value) > Number(randomQNum.max)) {
+			randomQNum.value = randomQNum.max;
 		}
-
-		// 「n年生の漢字が全て出るテストを作ります。」を変更
-		const text = {ja: "", en: ""};
-		selectedGrades.forEach((grade, i) => {
-			text.ja += addNensei(grade, "ja");
-			text.en += addNensei(grade, "en");
-			if (selectedGrades.length !== i + 1) {
-				text.ja += "、";
-				text.en += selectedGrades.length === i + 2 ? " and " : ", ";
+	};
+	setMaxValue();
+	for (const gradeOpt of gradeOptElems) {
+		gradeOpt.addEventListener("change", () => {
+			// 「ランダムに選択」ボタンの最大値変更
+			setMaxValue();
+			// gradeDetails表示切り替え
+			const selectedGrades = getChecked(gradeOptElems);
+			allGrades.forEach(grade => {
+				document.querySelector(`#gradeDetails${grade}`).hidden = !selectedGrades.includes(grade);
+			});
+			// テストを更新
+			if (hasMadeQuiz) {
+				updateQuiz();
 			}
 		});
-		document.querySelector(":lang(ja) > .selectedGrades").textContent = text.ja;
-		document.querySelector(":lang(en) > .selectedGrades").textContent = text.en;
-
-		// 「漢字を選択」タブの中の表示する学年を変更
-		allGrades.forEach(grade => {
-			const details = document.getElementById(`details${grade}`);
-			if (selectedGrades.includes(grade)) {
-				details.removeAttribute("hidden", "");
-			} else {
-				details.setAttribute("hidden", "");
-			}
-		});
-
-		// 選択解除された学年の問題の選択解除
-		const deselectedGradeChoicesEs = document.querySelectorAll(".gradeDetails[hidden] [name=kanjiChoices]:checked");
-		for (const choiceE of deselectedGradeChoicesEs) {
-			choiceE.checked = false;
-			choiceE.dispatchEvent(new Event("change"));
-		}
-
-		// テストを更新
-		if (!testSectionE.hasAttribute("hidden")) {
-			makeTestBtn.click();
-		}
 	}
-	reselectGrades();
+
+	// 「漢字を選択」タブ内
+	// 漢字の選択肢
+	const gradeDetailsTemp = document.getElementById("gradeDetailsTemp");
+	const strokesNumGroupTemp = document.getElementById("strokesNumGroupTemp");
+	const kanjiChoiceTemp = document.getElementById("kanjiChoiceTemp");
+	allGrades.forEach(grade => {
+		const detailsClone = gradeDetailsTemp.content.cloneNode(true);
+		const detailsElem = detailsClone.querySelector("details");
+		detailsElem.id = `gradeDetails${grade}`;
+		detailsClone.querySelector("h2").textContent = addNensei(grade);
+
+		// 「全て選択」ボタン
+		const selectAllInput = detailsClone.querySelector(".selectAll");
+		selectAllInput.addEventListener("change", () => {
+			const isSelect = selectAllInput.checked;
+			detailsElem.querySelectorAll(".kanjiChoice").forEach(choice => {
+				choice.checked = !isSelect;
+				choice.dispatchEvent(new Event("change"));
+			});
+			selectAllInput.nextSibling.textContent = multilingual(
+				isSelect ?
+				{"ja": "全て選択", "en": "Select all"} :
+				{"ja": "全て選択解除", "en": "Deselect all"}
+			);
+			// テストを更新
+			if (hasMadeQuiz) {
+				updateQuiz();
+			}
+		});
+
+		// 画数ごと
+		const filteredByGrade = filterKanji(json, {"grade": grade});
+		const strokesNums = [...new Set(Object.values(filteredByGrade).map(value => value.strokesNum))].sort((a, b) => a - b);
+		strokesNums.forEach(strokesNum => {
+			const strokeClone = strokesNumGroupTemp.content.cloneNode(true);
+			strokeClone.querySelector("h3").textContent = multilingual(
+				strokesNum === undefined ?
+				{"ja": "特別な読み方", "en": "Unique readings"} :
+				{"ja": `${strokesNum}画`, "en": `${strokesNum} stroke${strokesNum !== 1 ? "s" : ""}`}
+			);
+			const filteredByStroke = filterKanji(filteredByGrade,
+				strokesNum === undefined ?
+				{"isUniqueReading": true} :
+				{"strokesNum": strokesNum},
+				"keys"
+			).sort((a, b) => json[a].readingForSort.localeCompare(json[b].readingForSort, "ja"));
+			const choicesDiv = strokeClone.querySelector(".kanjiChoicesDiv");
+			// 選択肢追加
+			filteredByStroke.forEach(kanji => {
+				const choiceClone = kanjiChoiceTemp.content.cloneNode(true);
+				const choiceElem = choiceClone.querySelector(".kanjiChoice");
+				choiceElem.value = kanji;
+				choiceElem.insertAdjacentText("afterend", kanji);
+				choicesDiv.appendChild(choiceClone);
+			});
+			detailsElem.appendChild(strokeClone);
+		});
+		fragment.appendChild(detailsClone);
+	});
+	gradeDetailsTemp.parentElement.appendChild(fragment);
+
+	gradeOptElems[0].dispatchEvent(new Event("change"));
+
+	// ランダムに何問選択
+	const selectRandomlyBtn = document.getElementById("selectRandomlyBtn");
+	const selectRandomly = () => {
+		for (const choice of document.querySelectorAll(".kanjiChoice:checked")) {
+			choice.checked = false;
+			choice.dispatchEvent(new Event("change"));
+		}
+		const choices = document.querySelectorAll(".gradeDetails:not([hidden]) .kanjiChoice");
+		for (const choice of shuffle(Array.from(choices)).slice(0, randomQNum.value)) {
+			choice.checked = true;
+			choice.dispatchEvent(new Event("change"));
+		}
+		// テストを更新
+		if (hasMadeQuiz) {
+			updateQuiz();
+		}
+	};
+	selectRandomlyBtn.addEventListener("click", selectRandomly);
+	randomQNum.addEventListener("focus", () => {
+		selectRandomlyBtn.removeEventListener("click", selectRandomly);
+	});
+	randomQNum.addEventListener("blur", () => {
+		selectRandomlyBtn.addEventListener("click", selectRandomly);
+	});
+	randomQNum.addEventListener("change", selectRandomly);
+
+	// 漢字を選び直した時
+	const kanjiChoiceElems = document.getElementsByClassName("kanjiChoice");
+	const qCounterInPanel = document.getElementById("qCounter");
+	for (const choice of kanjiChoiceElems) {
+		choice.addEventListener("change", () => {
+			if (choice.checked) {
+				choice.parentElement.classList.add("checked");
+			} else {
+				choice.parentElement.classList.remove("checked");
+			}
+			// カウンター変更
+			const selectedNum = getChecked(kanjiChoiceElems).length;
+			const sheetsNum = selectedNum === 0 ? 0 : Math.ceil((selectedNum - 16) / 24) + 1;
+			qCounterInPanel.textContent = multilingual({
+				"ja": `${selectedNum}問（A4 ${sheetsNum}枚）`,
+				"en": `${selectedNum} question${selectedNum === 1 ? "" : "s"}（${sheetsNum} A4 sheet${sheetsNum === 1 ? "" : "s"}）`
+			});
+		});
+		choice.addEventListener("click", () => {
+			// 手動時 テストを更新
+			if (hasMadeQuiz) {
+				updateQuiz();
+			}
+		});
+	}
+
+	// パネルにボタン追加
+	const originalBtns = document.getElementById("originalBtns");
+	for (const btn of originalBtns.children) {
+		const btnClone = btn.cloneNode(true);
+		btnClone.id = `${btn.id}Clone`;
+		btnClone.addEventListener("click", () => {
+			btn.click();
+		});
+		fragment.appendChild(btnClone);
+	}
+	document.getElementById("copiedBtns").appendChild(fragment);
+
+	// パネルの表示切り替え
+	const panel = document.getElementById("panel");
+	window.addEventListener("scroll", () => {
+		panel.hidden = originalBtns.getBoundingClientRect().top < window.innerHeight;
+	});
 
 	// テストを作る
-	const printTestBtn = document.getElementById("printTest");
-	const printAnswerBtn = document.getElementById("printAnswer");
-	btns.makeTest.forEach(btn => {
-		btn.addEventListener("click", makeTest);
+	const makeQuizBtn = document.getElementById("makeQuizBtn");
+	const printQuizBtn = document.getElementById("printQuizBtn");
+	const printAnsBtn = document.getElementById("printAnsBtn");
+	const quizSection = document.getElementById("quizSection");
+	const quizPrint = document.getElementById("quizPrint");
+	const kanjiHiraElems = document.getElementsByClassName("kanjiHira");
+	const qRowsElem = document.getElementById("qRows");
+	const qRow = document.getElementsByClassName("qRow");
+	const qTemps = {
+		"okurigana": document.getElementById("okuriganaTemp"),
+		"tango": document.getElementById("tangoTemp")
+	};
+	const quizDesc = document.getElementById("quizDesc");
+	quizDesc.innerHTML = removeNewline(quizDesc.innerHTML);
+	const maxScore = document.getElementById("maxScore");
+	makeQuizBtn.addEventListener("click", () => {
+		updateQuiz();
 	});
-	const tabContent = document.querySelectorAll("#tab01 .tabContents .tabWrapper");
-	const testPrintE = document.getElementById("testPrint");
-	const maxScoreE = document.getElementById("maxScore");
-	const okuriganaTemp = document.getElementById("okuriganaTemp");
-	const tangoTemp = document.getElementById("tangoTemp");
-	function makeQuestions(clone, textData, i, basisNum, basisE, kind) {
-		if (textData.answer) {
-			// 問題部分
-			const reading = clone.querySelector(".reading");
-			reading.textContent += textData.reading || "";
-			const answer = clone.querySelector(".answer");
-			if (kind === "okurigana" && textData.answer.length >= 4) {
-				// 送り仮名問題 && 答えが長い場合
-				answer.classList.add("long");
-			}
-			if (typeOf(textData.answer) === "array") {
-				// 特別な読み方の場合
-				basisE.classList.add("unique");
-				const basisNum2 = textData.answer.findIndex(elem => elem.answer);
-				const basisE2 = clone.querySelector(".blank");
-				textData.answer.forEach((textData2, i2) => {
-					makeQuestions(clone, textData2, i2, basisNum2, basisE2, "unique");
-				});
-				if (textData.reading.length <= textData.answer.length) {
-					// 読みが短い場合2
-					reading.classList.add("short2");
-				} else if (textData.reading.length <= textData.answer.length + 1) {
-					// 読みが短い場合1
-					reading.classList.add("short1");
-				} else if (textData.reading.length >= textData.answer.length + 3) {
-					// 読みが長い場合
-					reading.classList.add("long");
-				}
-			} else {
-				// 通常の読み方の場合
-				answer.textContent = textData.answer;
-				if (kind === "tango" && textData.reading.length >= 3) {
-					// 単語問題 && 読みが長い場合
-					reading.classList.add("long");
-				}
-			}
-		} else {
-			// テキスト部分
-			switch (i) {
-				case basisNum - 1:
-					basisE.before(textData.text);
-					break;
-				case basisNum + 1:
-					basisE.after(textData.text);
-					break;
-				default:
-					break;
-			}
+	const addAnnotation = (annotation) => {
+		switch (annotation.type) {
+			case "isnot":
+				return `「${annotation.value}」ではない`;
 		}
-	}
-	function makeTest() {
-		// ランダムか漢字の選択か判定
-		const kind = [...tabContent].filter(elem => elem.classList.contains("activeContent"))[0].id;
+	};
+	function updateQuiz() {
+		// テストの種類をタブから判定
+		const quizType = document.querySelector("#tab01 .tabContents .tabWrapper.activeContent").id.replace("Tab", "");
 
 		// テストが作れるか判定
-		const selectedGrades = getMultiple(studyGradesOpts);
-		if (!selectedGrades.length) {
-			alert("学習年をひとつ以上選択してください。");
-			return;
-		}
-		if (kind === "select" && !getMultiple(kanjiChoicesEs).length) {
-			alert("漢字をひとつ以上選択してください。");
-			return;
-		}
+		const [selected, selectedMaxGrade] = (() => {
+			try {
+				switch (quizType) {
+					case "grade":
+						const selectedGrades = getChecked(gradeOptElems);
+						if (selectedGrades.length === 0) {
+							alert(multilingual({"ja": "学習年を一つ以上選択してください。", "en": "Please select one or more study grades."}));
+							throw new Error("Not selected");
+						} else {
+							return [selectedGrades, Math.max(...selectedGrades)];
+						};
+					case "select":
+						const selectedKanji = getChecked(kanjiChoiceElems);
+						if (selectedKanji.length === 0) {
+							alert(multilingual({"ja": "漢字を一つ以上選択してください。", "en": "Please select one or more Kanji."}));
+							throw new Error("Not selected");
+						} else {
+							return [selectedKanji, Math.max(...selectedKanji.map(kanji => json[kanji].grade))];
+						};
+				}
+			} catch (error) {
+				return [null, null];
+			}
+		})();
+		if (selected === null) return false;
 
-		// 今ある問題を削除
-		const rows = document.getElementsByClassName("row");
-		while (rows[0]) {
-			rows[0].remove();
+		// テスト内の漢字を学年に合わせる
+		for (const kanjiHiraElem of kanjiHiraElems) {
+			const gradeAttrs = Array.from(kanjiHiraElem.children).map(elem => [elem.dataset.grade, elem]);
+			gradeAttrs.forEach(([attr, elem]) => {
+				const [start, end] = attr.split("-").map(num => num === "" ? "" : Number(num));
+				elem.hidden = !(() => {
+					if (attr.match("-")) {
+						if (end === "") {
+							return start <= selectedMaxGrade;
+						} else {
+							return start <= selectedMaxGrade && selectedMaxGrade <= end;
+						}
+					} else {
+						return start === selectedMaxGrade;
+					}
+				})();
+			});
 		}
 
 		// 漢字を決定
-		let qKanji;
-		switch (kind) {
-			case "grade":
-				qKanji = filterBy(kanjiData, {studyGrade: selectedGrades}, "key");
-				qKanji = shuffle(qKanji);
-				break;
-			case "select":
-				qKanji = shuffle(getMultiple(kanjiChoicesEs));
-				break;
-			default:
-				break;
-		}
-		const qNum = qKanji.length;
-		maxScoreE.textContent = qNum;
-
-		qKanji = sliceByNum(qKanji, 8);
-		fragment = document.createDocumentFragment();
-		qKanji.forEach(kanjis => {
-			const div = document.createElement("div");
-			div.classList.add("row");
-			kanjis.forEach(kanji => {
-				const quizzes = kanjiData[kanji].quizzes;
-				const phraseData = quizzes[Math.floor(Math.random() * quizzes.length)];
-				let clone, basisE, kind;
-				if (phraseData.hasOkurigana) {
-					// 送り仮名を書かせる問題
-					clone = okuriganaTemp.content.cloneNode(true);
-					basisE = clone.querySelector(".reading");
-					kind = "okurigana";
-				} else {
-					// 単語内の漢字を書かせる問題
-					clone = tangoTemp.content.cloneNode(true);
-					basisE = clone.querySelector(".main");
-					kind = "tango";
-				}
-				const basisNum = phraseData.phrase.findIndex(elem => elem.answer);
-				phraseData.phrase.forEach((textData, i) => {
-					makeQuestions(clone, textData, i, basisNum, basisE, kind);
-				});
-				clone.children[0].innerHTML = clone.children[0].innerHTML.replace(/[\n\t]/g, "");
-				div.append(clone);
-			});
-			fragment.append(div);
-		});
-		testPrintE.append(fragment);
-
-		// テスト内の漢字を学年に合わせる
-		const maxGrade = Math.max(...selectedGrades);
-		const maxGradeEs = document.querySelectorAll(`[data-grade="${maxGrade}"]`);
-		for (const maxGradeE of maxGradeEs) {
-			maxGradeE.removeAttribute("hidden");
-		}
-		const otherGrades = allGrades.filter(num => num !== maxGrade);
-		otherGrades.forEach(grade => {
-			const otherGradesEs = document.querySelectorAll(`[data-grade="${grade}"]`);
-			for (const otherGradesE of otherGradesEs) {
-				otherGradesE.setAttribute("hidden", "");
+		const kanjiToUse = (() => {
+			switch (quizType) {
+				case "select":
+					return shuffle(selected);
+				case "grade":
+					return shuffle(filterKanji(json, {"grade": selected}, "keys"));
 			}
-		});
+		})();
 
-		// 解答を表示
-		showAnswer();
+		// 問題数を取得
+		const qNum = kanjiToUse.length;
+		maxScore.textContent = qNum;
 
-		// テスト要素の親の高さを変更
-		changeHeightOfTestSection();
-
-		// 最初のみ
-		if (testSectionE.hasAttribute("hidden")) {
-			btns.makeTest.forEach(btn => {
-				// テスト部分を表示
-				testSectionE.removeAttribute("hidden");
-				// テキスト変更
-				const text = {
-					ja: "問題を更新",
-					en: "Update questions"
-				};
-				btn.querySelector(":lang(ja)").textContent = text.ja;
-				btn.querySelector(":lang(en)").textContent = text.en;
-				// ボタンを表示
-				[printTestBtn, printAnswerBtn].forEach(btn => {
-					btns[btn.id].forEach(btn2 => {
-						btn2.removeAttribute("hidden");
-					});
-				});
-			});
-
-			// スケールを変更
-			changeScaleOfPrint();
+		// 今の問題を削除
+		while (qRow[0]) {
+			qRow[0].remove();
 		}
-	}
 
-	// 画面上のプリントのサイズを画面幅に合わせる
+		// 問題を追加
+		const slicedKanji = sliceByNum(kanjiToUse, 8);
+		slicedKanji.forEach(kanjis => {
+			const div = document.createElement("div");
+			div.classList.add("qRow");
+			kanjis.forEach(kanji => {
+				const questions = json[kanji].questions;
+				const question = questions[Math.floor(Math.random() * questions.length)];
+				const qType = question.hasOkurigana ? "okurigana" : "tango";
+				const clone = qTemps[qType].content.cloneNode(true);
+				const phraseElem = clone.querySelector(".phrase");
+				const nodesToAdd = question.phrase.map((text, i) => {
+					if (text.hasOwnProperty("answer")) {
+						const readingElem = clone.querySelector(".reading");
+						readingElem.textContent = text.reading;
+						const ansElem = clone.querySelector(".answer");
+						if (qType === "okurigana") {
+							ansElem.textContent = text.answer;
+							if (text.answer.length >= 5) {
+								// 答えが5文字以上の場合
+								ansElem.classList.add("long");
+							}
+							return readingElem;
+						} else {
+							const mainElem = clone.querySelector(".main");
+							if (i === 0) {
+								mainElem.classList.add("firstNode")
+							}
+							if (Array.isArray(text.answer)) {
+								// 特別な読みの場合
+								mainElem.classList.add("unique");
+								const blankElem = clone.querySelector(".blank");
+								const ansNodeToAdd = text.answer.map((ans, k) => {
+									if (ans.hasOwnProperty("answer")) {
+										if (k === 0) {
+											blankElem.classList.add("firstNode")
+										}
+										ansElem.textContent = ans.answer;
+										return blankElem;
+									} else {
+										return ans;
+									}
+								});
+								mainElem.append(...ansNodeToAdd);
+								const ansLength = text.answer.reduce((prev, curr) => prev + (typeof curr === "object" ? curr.answer.length : curr.length), 0);
+								if (text.reading.length <= ansLength) {
+									// 読みが答えより短い/同じ場合
+									readingElem.classList.add("short");
+								} else if (text.reading.length === ansLength + 1) {
+									// 読みが答えより1文字長い場合
+									readingElem.classList.add("long1");
+								} else if (text.reading.length >= ansLength + 3) {
+									// 読みが答えより3文字以上長い場合
+									readingElem.classList.add("long2");
+								}
+							} else {
+								ansElem.textContent = text.answer;
+								if (text.reading.length >= 3) {
+									// 読み3文字以上の場合
+									readingElem.classList.add("long");
+								}
+							}
+							return mainElem;
+						}
+					} else if (text.hasOwnProperty("furigana")) {
+						const rubyElem = document.createElement("span");
+						rubyElem.classList.add("ruby");
+						rubyElem.textContent = text.text;
+						rubyElem.dataset.ruby = text.furigana;
+						return rubyElem;
+					} else {
+						return text;
+					}
+				});
+				phraseElem.append(...nodesToAdd);
+				if (question.hasOwnProperty("annotation")) {
+					const annotationElem = document.createElement("span");
+					annotationElem.classList.add("annotation");
+					annotationElem.textContent = `※${addAnnotation(question.annotation)}`;
+					clone.querySelector(".question").appendChild(annotationElem);
+				}
+				div.appendChild(clone);
+			});
+			fragment.appendChild(div);
+		});
+		qRowsElem.appendChild(fragment);
+
+		if (hasMadeQuiz === false) {
+			// 最初にテストを作る時
+			hasMadeQuiz = true;
+			quizSection.removeAttribute("hidden");
+			[printQuizBtn, printAnsBtn].forEach(btn => {
+				btn.removeAttribute("hidden");
+				document.getElementById(`${btn.id}Clone`).removeAttribute("hidden");
+			});
+			const newText = multilingual({"ja": "問題を更新", "en": "Update questions"});
+			makeQuizBtn.textContent = newText;
+			document.getElementById("makeQuizBtnClone").textContent = newText;
+		}
+
+		// 幅・高さを変更
+		changeScaleOfPrint();
+	};
+
+	// 答えの表示切り替え
+	const showAnsBtn = document.getElementById("showAnsBtn");
+	showAnsBtn.addEventListener("change", () => {
+		if (showAnsBtn.checked) {
+			quizPrint.classList.add("showingAns");
+		} else {
+			quizPrint.classList.remove("showingAns");
+		}
+	});
+
+	// 幅・高さを変更
 	window.addEventListener("resize", changeScaleOfPrint);
 	function changeScaleOfPrint() {
-		const scale = testPrintE.parentElement.offsetWidth / testPrintE.offsetWidth;
-		testPrintE.style.setProperty("--scale", scale);
-		changeHeightOfTestSection();
-	}
-	function changeHeightOfTestSection() {
+		const scale = quizSection.offsetWidth / quizPrint.offsetWidth;
+		quizPrint.style.setProperty("--scale", scale);
 		let height = 0;
-		for (const sibling of testPrintE.parentElement.children) {
-			if (sibling !== testPrintE) {
+		for (const sibling of quizSection.children) {
+			if (sibling !== quizPrint) {
 				height += sibling.offsetHeight;
 			}
 		}
-		testPrintE.parentElement.style.height = testPrintE.offsetHeight * testPrintE.style.getPropertyValue("--scale") + height + "px";
+		quizSection.style.height = quizPrint.offsetHeight * quizPrint.style.getPropertyValue("--scale") + height + "px";
 	}
 
-	// 解答を表示
-	const answerBtn = document.getElementById("answer");
-	answerBtn.addEventListener("change", showAnswer);
-	function showAnswer() {
-		const answerEs = document.getElementsByClassName("answer");
-		for (const elem of answerEs) {
-			elem.removeAttribute("hidden");
-		}
-		if (answerBtn.checked) {
-			for (const elem of answerEs) {
-				elem.removeAttribute("hidden");
-			}
-		} else {
-			for (const elem of answerEs) {
-				elem.setAttribute("hidden", "");
-			}
-		}
-	}
-
-	// 印刷ボタン
-	[printTestBtn, printAnswerBtn].forEach(btn => {
-		const wantToShowAnswer = btn === printAnswerBtn;
-		btns[btn.id].forEach(btn2 => {
-			btn2.addEventListener("click", () => {
-				window.onbeforeprint = function() {
-					answerBtn.checked = wantToShowAnswer;
-					showAnswer();
-				};
-				const original = answerBtn.checked;
-				window.onafterprint = function() {
-					answerBtn.checked = original;
-					showAnswer();
-				};
-				window.print();
-			});
-		});
-	});
-
+	// 印刷時
+	const printQuiz = (e) => {
+		const original = showAnsBtn.checked;
+		showAnsBtn.checked = e.currentTarget.id === "printAnsBtn";
+		showAnsBtn.dispatchEvent(new Event("change"));
+		window.print();
+		showAnsBtn.checked = original;
+		showAnsBtn.dispatchEvent(new Event("change"));
+	};
+	printQuizBtn.addEventListener("click", printQuiz);
+	printAnsBtn.addEventListener("click", printQuiz);
 	window.addEventListener("beforeprint", () => {
 		const printArea = document.createElement("div");
-		printArea.setAttribute("id", "printArea");
+		printArea.id = "printArea";
 		document.body.appendChild(printArea);
-		printArea.appendChild(testPrintE.cloneNode(true));
+		printArea.appendChild(quizPrint.cloneNode(true));
 		document.body.firstElementChild.setAttribute("hidden", "");
 	});
 	window.addEventListener("afterprint", () => {
 		const elem = document.body.firstElementChild;
-		if (elem.hasAttribute("hidden")) {
-			elem.removeAttribute("hidden");
+		if (elem.hidden === true) {
+			elem.hidden = false;
 			document.getElementById("printArea").remove();
 		}
 	});
-
-	lang();
-
-}).catch(e => {
-	console.error(e.message);
 });

@@ -6,8 +6,12 @@ $subColor: #b68e55;
 
 // フォント
 @import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap");
-$sansSerif: "Zen Maru Gothic", "筑紫A丸ゴシック", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@550&display=swap");
+$sansSerif: "Nunito", "Zen Maru Gothic", "筑紫A丸ゴシック", sans-serif;
 $textbookTypeface: "Klee One", "游教科書体", "HG教科書体", sans-serif;
+@function pxToRem($px) {
+	@return $px / 16 * 1rem
+}
 
 // 横幅
 $mainWidth: unquote("min(85vw, 800px)");

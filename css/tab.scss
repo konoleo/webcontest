@@ -3,28 +3,22 @@
 .tabs {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 32px;
+	margin-block-start: 32px;
 	.tabLabels {
-		width: 100%;
+		inline-size: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		.tabWrapper {
 			flex: 1;
 			padding: 16px;
-			margin: 0 8px;
-			border: 1px solid $themeColor;
-			border-bottom: 0;
+			margin-inline: 8px;
+			border: pxToRem(1) solid $themeColor;
+			border-block-end: none;
 			text-align: center;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			&:first-of-type {
-				margin-left: 8px;
-			}
-			&:last-of-type {
-				margin-right: 8px;
-			}
 			&:not(.activeLabel) {
 				cursor: pointer;
 			}
@@ -37,14 +31,14 @@
 		}
 	}
 	hr {
-		width: 100%;
-		border: 1px solid $themeColor;
-		border-bottom: none;
-		margin-top: -1px;
+		inline-size: 100%;
+		border: pxToRem(1) solid $themeColor;
+		border-block-end: none;
+		margin-block-start: pxToRem(-1);
 		z-index: -1;
 	}
 	.tabContents {
-		width: 100%;
+		inline-size: 100%;
 		.tabWrapper {
 			display: none;
 			&.activeContent {
