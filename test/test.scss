@@ -145,7 +145,7 @@ $counterHeight: pxToRem(32);
 	#quizHeader {
 		$titleSize: 40;
 		display: grid;
-		grid-template-columns: pxToRem(7 * $titleSize) 1fr pxToRem(200);
+		grid-template-columns: pxToRem(8 * $titleSize) 1fr pxToRem(200);
 		border: pxToRem(1) solid $textColor;
 		border-radius: pxToRem(16);
 		#quizTitle {

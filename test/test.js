@@ -176,7 +176,15 @@ fetch("../data/kanjidata.json").then(res => {
 			// gradeDetails表示切り替え
 			const selectedGrades = getChecked(gradeOptElems);
 			allGrades.forEach(grade => {
-				document.querySelector(`#gradeDetails${grade}`).hidden = !selectedGrades.includes(grade);
+				const details = document.querySelector(`#gradeDetails${grade}`);
+				details.hidden = !selectedGrades.includes(grade);
+				if (!selectedGrades.includes(grade)) {
+					// 選択されていない学年の場合
+					for (const choice of details.querySelectorAll(".kanjiChoice:checked")) {
+						choice.checked = false;
+						choice.dispatchEvent(new Event("change"));
+					}
+				}
 			});
 			// テストを更新
 			if (hasMadeQuiz) {
@@ -295,7 +303,7 @@ fetch("../data/kanjidata.json").then(res => {
 		choice.addEventListener("click", () => {
 			// 手動時 テストを更新
 			if (hasMadeQuiz) {
-				updateQuiz();
+				updateQuiz("manual");
 			}
 		});
 	}
@@ -335,7 +343,7 @@ fetch("../data/kanjidata.json").then(res => {
 	quizDesc.innerHTML = removeNewline(quizDesc.innerHTML);
 	const maxScore = document.getElementById("maxScore");
 	makeQuizBtn.addEventListener("click", () => {
-		updateQuiz();
+		updateQuiz("manual");
 	});
 	const addAnnotation = (annotation) => {
 		switch (annotation.type) {
@@ -343,10 +351,10 @@ fetch("../data/kanjidata.json").then(res => {
 				return `「${annotation.value}」ではない`;
 		}
 	};
-	function updateQuiz() {
+	function updateQuiz(manual) {
 		// テストの種類をタブから判定
 		const quizType = document.querySelector("#tab01 .tabContents .tabWrapper.activeContent").id.replace("Tab", "");
-
+		
 		// テストが作れるか判定
 		const [selected, selectedMaxGrade] = (() => {
 			try {
@@ -354,21 +362,26 @@ fetch("../data/kanjidata.json").then(res => {
 					case "grade":
 						const selectedGrades = getChecked(gradeOptElems);
 						if (selectedGrades.length === 0) {
-							alert(multilingual({"ja": "学習年を一つ以上選択してください。", "en": "Please select one or more study grades."}));
-							throw new Error("Not selected");
+							if (manual) {
+								alert(multilingual({"ja": "学習年を一つ以上選択してください。", "en": "Please select one or more study grades."}));
+							}
+							throw new Error("Not selected grades");
 						} else {
 							return [selectedGrades, Math.max(...selectedGrades)];
 						};
 					case "select":
 						const selectedKanji = getChecked(kanjiChoiceElems);
 						if (selectedKanji.length === 0) {
-							alert(multilingual({"ja": "漢字を一つ以上選択してください。", "en": "Please select one or more Kanji."}));
-							throw new Error("Not selected");
+							if (manual) {
+								alert(multilingual({"ja": "漢字を一つ以上選択してください。", "en": "Please select one or more Kanji."}));
+							}
+							throw new Error("Not selected Kanji");
 						} else {
 							return [selectedKanji, Math.max(...selectedKanji.map(kanji => json[kanji].grade))];
 						};
 				}
 			} catch (error) {
+				console.log(error);
 				return [null, null];
 			}
 		})();
