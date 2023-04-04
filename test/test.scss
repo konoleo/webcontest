@@ -194,9 +194,6 @@ $counterHeight: pxToRem(32);
 			}
 		}
 	}
-	&:not(.showingAns) .answer {
-		visibility: hidden;
-	}
 }
 [dir=rtl] {
 	#quizPrint {

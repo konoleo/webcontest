@@ -515,17 +515,7 @@ fetch("../data/kanjidata.json").then(res => {
 		// 幅・高さを変更
 		changeScaleOfPrint();
 	};
-
-	// 答えの表示切り替え
-	const showAnsBtn = document.getElementById("showAnsBtn");
-	showAnsBtn.addEventListener("change", () => {
-		if (showAnsBtn.checked) {
-			quizPrint.classList.add("showingAns");
-		} else {
-			quizPrint.classList.remove("showingAns");
-		}
-	});
-
+	
 	// 幅・高さを変更
 	window.addEventListener("resize", changeScaleOfPrint);
 	function changeScaleOfPrint() {
@@ -540,17 +530,33 @@ fetch("../data/kanjidata.json").then(res => {
 		quizSection.style.height = quizPrint.offsetHeight * quizPrint.style.getPropertyValue("--scale") + height + "px";
 	}
 
-	// 印刷時
+	// 答えの表示切り替え
+	const showAnsBtn = document.getElementById("showAnsBtn");
+	function showAns() {
+		const answerEs = document.getElementsByClassName("answer");
+		for (const elem of answerEs) {
+			elem.hidden = !showAnsBtn.checked;
+		}
+	}
+	showAnsBtn.addEventListener("change", showAns);
+
+	// 印刷ボタン
 	const printQuiz = (e) => {
+		const wantToShowAnswer = e.currentTarget.id === "printAnsBtn";
+		window.onbeforeprint = function() {
+			showAnsBtn.checked = wantToShowAnswer;
+			showAns();
+		};
 		const original = showAnsBtn.checked;
-		showAnsBtn.checked = e.currentTarget.id === "printAnsBtn";
-		showAnsBtn.dispatchEvent(new Event("change"));
+		window.onafterprint = function() {
+			showAnsBtn.checked = original;
+			showAns();
+		};
 		window.print();
-		showAnsBtn.checked = original;
-		showAnsBtn.dispatchEvent(new Event("change"));
 	};
 	printQuizBtn.addEventListener("click", printQuiz);
 	printAnsBtn.addEventListener("click", printQuiz);
+
 	window.addEventListener("beforeprint", () => {
 		const printArea = document.createElement("div");
 		printArea.id = "printArea";
