@@ -21506,12 +21506,11 @@
 				"hasOkurigana": false
 			},{
 				"phrase": [
-					"一",
+					"本のだい一",
 					{
 						"reading": "しょう",
 						"answer": "章"
-					},
-					"のはじめ"
+					}
 				],
 				"hasOkurigana": false
 			}
