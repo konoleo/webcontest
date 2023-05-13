@@ -58,8 +58,10 @@ const multilingual = (texts) => {
 
 const addNensei = (grade) => {
 	return multilingual({
-		"ja": `${grade}年生`,
-		"en": `${addOrdNumWords(grade)} grade`
+		// ${grade === 5 ? "（前期）" : ""}
+		// ${grade === 5 ? " (first semester)" : ""}
+		"ja": `${grade}年生${grade === 5 ? "（前期）" : ""}`,
+		"en": `${addOrdNumWords(grade)} grade${grade === 5 ? " (first semester)" : ""}`
 	});
 };
 
@@ -96,7 +98,7 @@ fetch("../data/kanjidata.json").then(res => {
 			});
 		} else {
 			if (data.isUniqueReading === true && data.noNeedToSplit !== true) {
-				// 特別な読み方の場合
+				// 特別な読み方の場合（送り仮名を書かない）
 				const newQuestionsAll = [];
 				data.questions.forEach(question => {
 					const ansObjIndex = question.phrase.findIndex(text => text.hasOwnProperty("answer"));

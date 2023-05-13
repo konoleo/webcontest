@@ -1,6 +1,6 @@
 .DS_Store
 /not_upload
-/data/grade5.json
+/data/grade5*.json
 /data/test.json
 /data/readings.json
 checkdata.html
