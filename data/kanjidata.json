@@ -131,6 +131,42 @@
 						"hasOkurigana": false
 					}
 				]
+			},{
+				"grade": 5,
+				"reading": "ゆう",
+				"questions": [
+					{
+						"phrase": [
+							"さ",
+							{
+								"reading": "ゆう",
+								"answer": "右"
+							},
+							"反転"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"さ",
+							{
+								"reading": "ゆう",
+								"answer": "右"
+							},
+							"対しょう"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"さ",
+							{
+								"reading": "ゆう",
+								"answer": "右"
+							},
+							"を見る"
+						],
+						"hasOkurigana": false
+					}
+				]
 			}
 		]
 	},
@@ -1704,37 +1740,76 @@
 		]
 	},
 	"左": {
-		"grade": 1,
 		"strokesNum": 5,
 		"readingForSort": "さ",
-		"questions": [
+		"studies": [
 			{
-				"phrase": [
+				"grade": 1,
+				"questions": [
 					{
-						"reading": "ひだり",
-						"answer": "左"
-					},
-					"て"
-				],
-				"hasOkurigana": false
+						"phrase": [
+							{
+								"reading": "ひだり",
+								"answer": "左"
+							},
+							"て"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "ひだり",
+								"answer": "左"
+							},
+							"がわ"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "ひだり",
+								"answer": "左"
+							},
+							"のみち"
+						],
+						"hasOkurigana": false
+					}
+				]
 			},{
-				"phrase": [
+				"grade": 5,
+				"reading": "さ",
+				"questions": [
 					{
-						"reading": "ひだり",
-						"answer": "左"
-					},
-					"がわ"
-				],
-				"hasOkurigana": false
-			},{
-				"phrase": [
-					{
-						"reading": "ひだり",
-						"answer": "左"
-					},
-					"のみち"
-				],
-				"hasOkurigana": false
+						"phrase": [
+							"川の",
+							{
+								"reading": "さ",
+								"answer": "左"
+							},
+							"岸"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "さ",
+								"answer": "左"
+							},
+							"せつした車"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"右おう",
+							{
+								"reading": "さ",
+								"answer": "左"
+							},
+							"おう"
+						],
+						"hasOkurigana": false
+					}
+				]
 			}
 		]
 	},
@@ -2583,37 +2658,77 @@
 		]
 	},
 	"女": {
-		"grade": 1,
 		"strokesNum": 3,
 		"readingForSort": "じょ",
-		"questions": [
+		"studies": [
 			{
-				"phrase": [
+				"grade": 1,
+				"questions": [
 					{
-						"reading": "おんな",
-						"answer": "女"
-					},
-					"のこ"
-				],
-				"hasOkurigana": false
+						"phrase": [
+							{
+								"reading": "おんな",
+								"answer": "女"
+							},
+							"のこ"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "おんな",
+								"answer": "女"
+							},
+							"のこたち"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "おんな",
+								"answer": "女"
+							},
+							"のひと"
+						],
+						"hasOkurigana": false
+					}
+				]
 			},{
-				"phrase": [
+				"grade": 5,
+				"reading": "じょ",
+				"questions": [
 					{
-						"reading": "おんな",
-						"answer": "女"
-					},
-					"のこたち"
-				],
-				"hasOkurigana": false
-			},{
-				"phrase": [
-					{
-						"reading": "おんな",
-						"answer": "女"
-					},
-					"のひと"
-				],
-				"hasOkurigana": false
+						"phrase": [
+							"元気な",
+							{
+								"reading": "じょ",
+								"answer": "女"
+							},
+							"子"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"大人の",
+							{
+								"reading": "じょ",
+								"answer": "女"
+							},
+							"せい"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"三人の",
+							{
+								"reading": "じょ",
+								"answer": "女"
+							},
+							"子"
+						],
+						"hasOkurigana": false
+					}
+				]
 			}
 		]
 	},
@@ -3153,6 +3268,39 @@
 								"answer": "正"
 							},
 							"門を出る"
+						],
+						"hasOkurigana": false
+					}
+				]
+			},{
+				"grade": 5,
+				"reading": "まさ",
+				"questions": [
+					{
+						"phrase": [
+							{
+								"reading": "まさ",
+								"answer": "正"
+							},
+							"ゆめになる"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "まさ",
+								"answer": "正"
+							},
+							"に名案だ"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "まさ",
+								"answer": "正"
+							},
+							"ゆめだった"
 						],
 						"hasOkurigana": false
 					}
@@ -4486,37 +4634,77 @@
 		]
 	},
 	"男": {
-		"grade": 1,
 		"strokesNum": 7,
 		"readingForSort": "だん",
-		"questions": [
+		"studies": [
 			{
-				"phrase": [
+				"grade": 1,
+				"questions": [
 					{
-						"reading": "おとこ",
-						"answer": "男"
-					},
-					"のこ"
-				],
-				"hasOkurigana": false
+						"phrase": [
+							{
+								"reading": "おとこ",
+								"answer": "男"
+							},
+							"のこ"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "おとこ",
+								"answer": "男"
+							},
+							"のこたち"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "おとこ",
+								"answer": "男"
+							},
+							"のひと"
+						],
+						"hasOkurigana": false
+					}
+				]
 			},{
-				"phrase": [
+				"grade": 5,
+				"reading": "だん",
+				"questions": [
 					{
-						"reading": "おとこ",
-						"answer": "男"
-					},
-					"のこたち"
-				],
-				"hasOkurigana": false
-			},{
-				"phrase": [
-					{
-						"reading": "おとこ",
-						"answer": "男"
-					},
-					"のひと"
-				],
-				"hasOkurigana": false
+						"phrase": [
+							"元気な",
+							{
+								"reading": "だん",
+								"answer": "男"
+							},
+							"子"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"大人の",
+							{
+								"reading": "だん",
+								"answer": "男"
+							},
+							"せい"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"三人の",
+							{
+								"reading": "だん",
+								"answer": "男"
+							},
+							"子"
+						],
+						"hasOkurigana": false
+					}
+				]
 			}
 		]
 	},
@@ -7404,6 +7592,39 @@
 						"hasOkurigana": false
 					}
 				]
+			},{
+				"grade": 5,
+				"reading": "つの",
+				"questions": [
+					{
+						"phrase": [
+							"鹿の",
+							{
+								"reading": "つの",
+								"answer": "角"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"おにの",
+							{
+								"reading": "つの",
+								"answer": "角"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"サイの",
+							{
+								"reading": "つの",
+								"answer": "角"
+							}
+						],
+						"hasOkurigana": false
+					}
+				]
 			}
 		]
 	},
@@ -8079,47 +8300,84 @@
 		]
 	},
 	"魚": {
-		"grade": 2,
 		"strokesNum": 11,
 		"readingForSort": "ぎょ",
-		"questions": [
+		"studies": [
 			{
-				"phrase": [
+				"grade": 2,
+				"questions": [
 					{
-						"reading": "さかな",
-						"answer": "魚"
-					},
-					"をつる"
-				],
-				"hasOkurigana": false
-			},{
-				"phrase": [
-					"小さな",
-					{
-						"reading": "さかな",
-						"answer": "魚"
+						"phrase": [
+							{
+								"reading": "さかな",
+								"answer": "魚"
+							},
+							"をつる"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"小さな",
+							{
+								"reading": "さかな",
+								"answer": "魚"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"金",
+							{
+								"reading": "ぎょ",
+								"answer": "魚"
+							},
+							"をかう"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"にん",
+							{
+								"reading": "ぎょ",
+								"answer": "魚"
+							}
+						],
+						"hasOkurigana": false
 					}
-				],
-				"hasOkurigana": false
+				]
 			},{
-				"phrase": [
-					"金",
+				"grade": 5,
+				"reading": "うお",
+				"questions": [
 					{
-						"reading": "ぎょ",
-						"answer": "魚"
-					},
-					"をかう"
-				],
-				"hasOkurigana": false
-			},{
-				"phrase": [
-					"にん",
-					{
-						"reading": "ぎょ",
-						"answer": "魚"
+						"phrase": [
+							{
+								"reading": "うお",
+								"answer": "魚"
+							},
+							"市場"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "うお",
+								"answer": "魚"
+							},
+							"がし"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "うお",
+								"answer": "魚"
+							},
+							"ざをさがす"
+						],
+						"hasOkurigana": false
 					}
-				],
-				"hasOkurigana": false
+				]
 			}
 		]
 	},
@@ -8450,16 +8708,6 @@
 						"hasOkurigana": false
 					},{
 						"phrase": [
-							"三にん",
-							{
-								"reading": "きょう",
-								"answer": "兄"
-							},
-							"だい"
-						],
-						"hasOkurigana": false
-					},{
-						"phrase": [
 							{
 								"reading": "きょう",
 								"answer": "兄"
@@ -8475,6 +8723,7 @@
 				"questions": [
 					{
 						"phrase": [
+							"お",
 							{
 								"reading": "にい",
 								"answer": "兄"
@@ -8794,7 +9043,7 @@
 						"hasOkurigana": false
 					},{
 						"phrase": [
-							"学問の",
+							"油絵の",
 							{
 								"reading": "がん",
 								"answer": "元"
@@ -9282,6 +9531,41 @@
 								"answer": "後"
 							},
 							"半せん"
+						],
+						"hasOkurigana": false
+					}
+				]
+			},{
+				"grade": 5,
+				"reading": "のち",
+				"questions": [
+					{
+						"phrase": [
+							"晴れ",
+							{
+								"reading": "のち",
+								"answer": "後"
+							},
+							"くもり"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"その",
+							{
+								"reading": "のち",
+								"answer": "後"
+							},
+							"に"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "のち",
+								"answer": "後"
+							},
+							"に車を買う"
 						],
 						"hasOkurigana": false
 					}
@@ -10287,6 +10571,42 @@
 						"hasOkurigana": false
 					}
 				]
+			},{
+				"grade": 5,
+				"reading": "かっ",
+				"questions": [
+					{
+						"phrase": [
+							"関ヶ原の",
+							{
+								"reading": "かっ",
+								"answer": "合"
+							},
+							"戦"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"おうえん",
+							{
+								"reading": "がっ",
+								"answer": "合"
+							},
+							"戦"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"雪",
+							{
+								"reading": "がっ",
+								"answer": "合"
+							},
+							"戦"
+						],
+						"hasOkurigana": false
+					}
+				]
 			}
 		]
 	},
@@ -10945,6 +11265,7 @@
 				"questions": [
 					{
 						"phrase": [
+							"お",
 							{
 								"reading": "ねえ",
 								"answer": "姉"
@@ -13101,6 +13422,41 @@
 						"hasOkurigana": false
 					}
 				]
+			},{
+				"grade": 5,
+				"reading": "ふな",
+				"questions": [
+					{
+						"phrase": [
+							"長い",
+							{
+								"reading": "ふな",
+								"answer": "船"
+							},
+							"旅"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "ふな",
+								"answer": "船"
+							},
+							"底"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"新たな",
+							{
+								"reading": "ふな",
+								"answer": "船"
+							},
+							"出"
+						],
+						"hasOkurigana": false
+					}
+				]
 			}
 		]
 	},
@@ -13187,46 +13543,85 @@
 		]
 	},
 	"組": {
-		"grade": 2,
 		"strokesNum": 11,
 		"readingForSort": "そ",
-		"questions": [
+		"studies": [
 			{
-				"phrase": [
-					"かたを",
+				"grade": 2,
+				"questions": [
 					{
-						"reading": "くむ",
-						"answer": "組む"
+						"phrase": [
+							"かたを",
+							{
+								"reading": "くむ",
+								"answer": "組む"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "くみ",
+								"answer": "組み"
+							},
+							"立て"
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							"二年一",
+							{
+								"reading": "くみ",
+								"answer": "組"
+							}
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"ラジオばん",
+							{
+								"reading": "ぐみ",
+								"answer": "組"
+							}
+						],
+						"hasOkurigana": false
 					}
-				],
-				"hasOkurigana": true
+				]
 			},{
-				"phrase": [
+				"grade": 5,
+				"reading": "そ",
+				"questions": [
 					{
-						"reading": "くみ",
-						"answer": "組み"
-					},
-					"立て"
-				],
-				"hasOkurigana": true
-			},{
-				"phrase": [
-					"二年一",
-					{
-						"reading": "くみ",
-						"answer": "組"
+						"phrase": [
+							"会社の",
+							{
+								"reading": "そ",
+								"answer": "組"
+							},
+							"しき"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							"全国の",
+							{
+								"reading": "そ",
+								"answer": "組"
+							},
+							"しき"
+						],
+						"hasOkurigana": false
+					},{
+						"phrase": [
+							{
+								"reading": "そ",
+								"answer": "組"
+							},
+							"しき図"
+						],
+						"hasOkurigana": false
 					}
-				],
-				"hasOkurigana": false
-			},{
-				"phrase": [
-					"ラジオばん",
-					{
-						"reading": "ぐみ",
-						"answer": "組"
-					}
-				],
-				"hasOkurigana": false
+				]
 			}
 		]
 	},
@@ -16445,6 +16840,39 @@
 							}
 						],
 						"hasOkurigana": false
+					}
+				]
+			},{
+				"grade": 5,
+				"reading": "あゆむ",
+				"questions": [
+					{
+						"phrase": [
+							"茨の道を",
+							{
+								"reading": "あゆむ",
+								"answer": "歩む"
+							}
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							{
+								"reading": "あゆみ",
+								"answer": "歩み"
+							},
+							"よる"
+						],
+						"hasOkurigana": true
+					},{
+						"phrase": [
+							"同じ道を",
+							{
+								"reading": "あゆむ",
+								"answer": "歩む"
+							}
+						],
+						"hasOkurigana": true
 					}
 				]
 			}
@@ -34090,7 +34518,7 @@
 						"reading": "やぶれた",
 						"answer": "敗れた"
 					},
-					"し合"
+					"チーム"
 				],
 				"hasOkurigana": true
 			},{
@@ -36687,6 +37115,42 @@
 			}
 		]
 	},
+	"圧": {
+		"grade": 5,
+		"strokesNum": 5,
+		"readingForSort": "あつ",
+		"questions": [
+			{
+				"phrase": [
+					"高気",
+					{
+						"reading": "あつ",
+						"answer": "圧"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"重",
+					{
+						"reading": "あつ",
+						"answer": "圧"
+					},
+					"にたえる"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "あつ",
+						"answer": "圧"
+					},
+					"力をかける"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"囲": {
 		"grade": 5,
 		"strokesNum": 7,
@@ -36955,6 +37419,42 @@
 			}
 		]
 	},
+	"衛": {
+		"grade": 5,
+		"strokesNum": 16,
+		"readingForSort": "えい",
+		"questions": [
+			{
+				"phrase": [
+					"人工",
+					{
+						"reading": "えい",
+						"answer": "衛"
+					},
+					"星"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "えい",
+						"answer": "衛"
+					},
+					"生管理"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"正当ぼう",
+					{
+						"reading": "えい",
+						"answer": "衛"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"易": {
 		"grade": 5,
 		"strokesNum": 8,
@@ -37017,6 +37517,80 @@
 					"仕事"
 				],
 				"hasOkurigana": true
+			}
+		]
+	},
+	"益": {
+		"grade": 5,
+		"strokesNum": 10,
+		"readingForSort": "えき",
+		"questions": [
+			{
+				"phrase": [
+					"利",
+					{
+						"reading": "えき",
+						"answer": "益"
+					},
+					"をえる"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"有",
+					{
+						"reading": "えき",
+						"answer": "益"
+					},
+					"な話"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "えき",
+						"answer": "益"
+					},
+					"虫と害虫"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"液": {
+		"grade": 5,
+		"strokesNum": 11,
+		"readingForSort": "えき",
+		"questions": [
+			{
+				"phrase": [
+					"気体と",
+					{
+						"reading": "えき",
+						"answer": "液"
+					},
+					"体"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"消どく",
+					{
+						"reading": "えき",
+						"answer": "液"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"血",
+					{
+						"reading": "えき",
+						"answer": "液"
+					},
+					"がた"
+				],
+				"hasOkurigana": false
 			}
 		]
 	},
@@ -37213,6 +37787,88 @@
 			}
 		]
 	},
+	"仮": {
+		"grade": 5,
+		"strokesNum": 6,
+		"readingForSort": "か",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "か",
+						"answer": "仮"
+					},
+					"面をかぶる"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "か",
+						"answer": "仮"
+					},
+					"せつの建物"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "かり",
+						"answer": "仮"
+					},
+					"の名前"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "かり",
+						"answer": "仮"
+					},
+					"の住まい"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"価": {
+		"grade": 5,
+		"strokesNum": 8,
+		"readingForSort": "か",
+		"questions": [
+			{
+				"phrase": [
+					"商品の",
+					{
+						"reading": "か",
+						"answer": "価"
+					},
+					"かく"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"高",
+					{
+						"reading": "か",
+						"answer": "価"
+					},
+					"な商品"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"新たな",
+					{
+						"reading": "か",
+						"answer": "価"
+					},
+					"ち観"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"河": {
 		"grade": 5,
 		"strokesNum": 8,
@@ -37244,11 +37900,11 @@
 						"answer": "河"
 					}
 				],
-				"hasOkurigana": false,
 				"annotation": {
 					"value": "川",
 					"type": "isnot"
-				}
+				},
+				"hasOkurigana": false
 			},{
 				"phrase": [
 					"さんずいの",
@@ -37320,6 +37976,50 @@
 						"reading": "すごす",
 						"answer": "過ごす"
 					}
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
+	"快": {
+		"grade": 5,
+		"strokesNum": 7,
+		"readingForSort": "かい",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "かい",
+						"answer": "快"
+					},
+					"てきな生活"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "かい",
+						"answer": "快"
+					},
+					"晴の朝"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "こころよい",
+						"answer": "快い"
+					},
+					"海風"
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "こころよく",
+						"answer": "快く"
+					},
+					"ゆるす"
 				],
 				"hasOkurigana": true
 			}
@@ -37503,6 +38203,53 @@
 			}
 		]
 	},
+	"額": {
+		"grade": 5,
+		"strokesNum": 18,
+		"readingForSort": "がく",
+		"questions": [
+			{
+				"phrase": [
+					"金",
+					{
+						"reading": "がく",
+						"answer": "額"
+					},
+					"の計算"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"半",
+					{
+						"reading": "がく",
+						"answer": "額"
+					},
+					"セール"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"ねこの",
+					{
+						"reading": "ひたい",
+						"answer": "額"
+					},
+					"ほど"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ひたい",
+						"answer": "額"
+					},
+					"のあせ"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"刊": {
 		"grade": 5,
 		"strokesNum": 5,
@@ -37586,6 +38333,69 @@
 			}
 		]
 	},
+	"慣": {
+		"grade": 5,
+		"strokesNum": 14,
+		"readingForSort": "かん",
+		"questions": [
+			{
+				"phrase": [
+					"習",
+					{
+						"reading": "かん",
+						"answer": "慣"
+					},
+					"づける"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "かん",
+						"answer": "慣"
+					},
+					"用くを使う"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"新生活に",
+					{
+						"reading": "なれる",
+						"answer": "慣れる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "なれた",
+						"answer": "慣れた"
+					},
+					"手つき"
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"寒さに体を",
+					{
+						"reading": "ならす",
+						"answer": "慣らす"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"暗さに目を",
+					{
+						"reading": "ならす",
+						"answer": "慣らす"
+					}
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
 	"眼": {
 		"grade": 5,
 		"strokesNum": 11,
@@ -37618,6 +38428,79 @@
 						"answer": "眼"
 					},
 					"紙を使う"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"紀": {
+		"grade": 5,
+		"strokesNum": 9,
+		"readingForSort": "き",
+		"questions": [
+			{
+				"phrase": [
+					"二十一世",
+					{
+						"reading": "き",
+						"answer": "紀"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"作家の",
+					{
+						"reading": "き",
+						"answer": "紀"
+					},
+					"行文"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "き",
+						"answer": "紀"
+					},
+					"元前百年"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"基": {
+		"grade": 5,
+		"strokesNum": 11,
+		"readingForSort": "き",
+		"questions": [
+			{
+				"phrase": [
+					"計算の",
+					{
+						"reading": "き",
+						"answer": "基"
+					},
+					"本"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"ひみつ",
+					{
+						"reading": "き",
+						"answer": "基"
+					},
+					"地"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "き",
+						"answer": "基"
+					},
+					"じゅんち"
 				],
 				"hasOkurigana": false
 			}
@@ -37686,6 +38569,88 @@
 			}
 		]
 	},
+	"規": {
+		"grade": 5,
+		"strokesNum": 11,
+		"readingForSort": "き",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "き",
+						"answer": "規"
+					},
+					"定の形"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"定",
+					{
+						"reading": "ぎ",
+						"answer": "規"
+					},
+					"を使う"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"新",
+					{
+						"reading": "き",
+						"answer": "規"
+					},
+					"開店"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"喜": {
+		"grade": 5,
+		"strokesNum": 12,
+		"readingForSort": "き",
+		"questions": [
+			{
+				"phrase": [
+					"かん",
+					{
+						"reading": "き",
+						"answer": "喜"
+					},
+					"の声"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "き",
+						"answer": "喜"
+					},
+					"げき役者"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"達成を",
+					{
+						"reading": "よろこぶ",
+						"answer": "喜ぶ"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "よろこんで",
+						"answer": "喜んで"
+					},
+					"食べる"
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
 	"技": {
 		"grade": 5,
 		"strokesNum": 7,
@@ -37718,6 +38683,43 @@
 						"answer": "技"
 					},
 					"場"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"義": {
+		"grade": 5,
+		"strokesNum": 13,
+		"readingForSort": "ぎ",
+		"questions": [
+			{
+				"phrase": [
+					"民主主",
+					{
+						"reading": "ぎ",
+						"answer": "義"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"正",
+					{
+						"reading": "ぎ",
+						"answer": "義"
+					},
+					"感が強い"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"有意",
+					{
+						"reading": "ぎ",
+						"answer": "義"
+					},
+					"な時間"
 				],
 				"hasOkurigana": false
 			}
@@ -37831,6 +38833,87 @@
 			}
 		]
 	},
+	"旧": {
+		"grade": 5,
+		"strokesNum": 5,
+		"readingForSort": "きゅう",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "きゅう",
+						"answer": "旧"
+					},
+					"式の電話"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"新",
+					{
+						"reading": "きゅう",
+						"answer": "旧"
+					},
+					"交代"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"ふっ",
+					{
+						"reading": "きゅう",
+						"answer": "旧"
+					},
+					"工事"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"救": {
+		"grade": 5,
+		"strokesNum": 11,
+		"readingForSort": "きゅう",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "きゅう",
+						"answer": "救"
+					},
+					"急車"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "きゅう",
+						"answer": "救"
+					},
+					"出される"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"まよい犬を",
+					{
+						"reading": "すくう",
+						"answer": "救う"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"命を",
+					{
+						"reading": "すくう",
+						"answer": "救う"
+					}
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
 	"居": {
 		"grade": 5,
 		"strokesNum": 8,
@@ -37922,6 +39005,90 @@
 			}
 		]
 	},
+	"境": {
+		"grade": 5,
+		"strokesNum": 14,
+		"readingForSort": "きょう",
+		"questions": [
+			{
+				"phrase": [
+					"新しいかん",
+					{
+						"reading": "きょう",
+						"answer": "境"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"東側の",
+					{
+						"reading": "きょう",
+						"answer": "境"
+					},
+					"界"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"県",
+					{
+						"reading": "ざかい",
+						"answer": "境"
+					},
+					"をまたぐ"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"町の",
+					{
+						"reading": "さかい",
+						"answer": "境"
+					},
+					"目"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"均": {
+		"grade": 5,
+		"strokesNum": 7,
+		"readingForSort": "きん",
+		"questions": [
+			{
+				"phrase": [
+					"平",
+					{
+						"reading": "きん",
+						"answer": "均"
+					},
+					"の計算"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "きん",
+						"answer": "均"
+					},
+					"等に分ける"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"百円",
+					{
+						"reading": "きん",
+						"answer": "均"
+					},
+					"一の店"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"禁": {
 		"grade": 5,
 		"strokesNum": 13,
@@ -37991,6 +39158,52 @@
 						"answer": "句"
 					},
 					"をよむ"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"型": {
+		"grade": 5,
+		"strokesNum": 9,
+		"readingForSort": "けい",
+		"questions": [
+			{
+				"phrase": [
+					"車のも",
+					{
+						"reading": "けい",
+						"answer": "型"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"原",
+					{
+						"reading": "けい",
+						"answer": "型"
+					},
+					"を作る"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"新",
+					{
+						"reading": "がた",
+						"answer": "型"
+					},
+					"の機械"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "かた",
+						"answer": "型"
+					},
+					"やぶり"
 				],
 				"hasOkurigana": false
 			}
@@ -38079,6 +39292,91 @@
 			}
 		]
 	},
+	"件": {
+		"grade": 5,
+		"strokesNum": 6,
+		"readingForSort": "けん",
+		"questions": [
+			{
+				"phrase": [
+					"不思議な事",
+					{
+						"reading": "けん",
+						"answer": "件"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"大事な用",
+					{
+						"reading": "けん",
+						"answer": "件"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"furigana": "じ",
+						"text": "事"
+					},
+					"こ",
+					{
+						"reading": "けん",
+						"answer": "件"
+					},
+					"数"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"険": {
+		"grade": 5,
+		"strokesNum": 11,
+		"readingForSort": "けん",
+		"questions": [
+			{
+				"phrase": [
+					"健康ほ",
+					{
+						"reading": "けん",
+						"answer": "険"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"き",
+					{
+						"reading": "けん",
+						"answer": "険"
+					},
+					"な行動"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "けわしい",
+						"answer": "険しい"
+					},
+					"坂道"
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "けわしい",
+						"answer": "険しい"
+					},
+					"声"
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
 	"検": {
 		"grade": 5,
 		"strokesNum": 12,
@@ -38113,6 +39411,52 @@
 					"さ"
 				],
 				"hasOkurigana": false
+			}
+		]
+	},
+	"限": {
+		"grade": 5,
+		"strokesNum": 9,
+		"readingForSort": "げん",
+		"questions": [
+			{
+				"phrase": [
+					"期",
+					{
+						"reading": "げん",
+						"answer": "限"
+					},
+					"を守る"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"がまんの",
+					{
+						"reading": "げん",
+						"answer": "限"
+					},
+					"界"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"五才までに",
+					{
+						"reading": "かぎる",
+						"answer": "限る"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "かぎられた",
+						"answer": "限られた"
+					},
+					"時間"
+				],
+				"hasOkurigana": true
 			}
 		]
 	},
@@ -38179,6 +39523,106 @@
 			}
 		]
 	},
+	"減": {
+		"grade": 5,
+		"strokesNum": 12,
+		"readingForSort": "げん",
+		"questions": [
+			{
+				"phrase": [
+					"人口",
+					{
+						"reading": "げん",
+						"answer": "減"
+					},
+					"少"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"五点の",
+					{
+						"reading": "げん",
+						"answer": "減"
+					},
+					"点"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"水が",
+					{
+						"reading": "へる",
+						"answer": "減る"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"おなかが",
+					{
+						"reading": "へる",
+						"answer": "減る"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"水を",
+					{
+						"reading": "へらす",
+						"answer": "減らす"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"回数を",
+					{
+						"reading": "へらす",
+						"answer": "減らす"
+					}
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
+	"故": {
+		"grade": 5,
+		"strokesNum": 9,
+		"readingForSort": "こ",
+		"questions": [
+			{
+				"phrase": [
+					"交通事",
+					{
+						"reading": "こ",
+						"answer": "故"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "こ",
+						"answer": "故"
+					},
+					"きょう"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"車の",
+					{
+						"reading": "こ",
+						"answer": "故"
+					},
+					"しょう"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"個": {
 		"grade": 5,
 		"strokesNum": 10,
@@ -38215,6 +39659,90 @@
 			}
 		]
 	},
+	"護": {
+		"grade": 5,
+		"strokesNum": 20,
+		"readingForSort": "ご",
+		"questions": [
+			{
+				"phrase": [
+					"動物のほ",
+					{
+						"reading": "ご",
+						"answer": "護"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"べん",
+					{
+						"reading": "ご",
+						"answer": "護"
+					},
+					"し"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"かん",
+					{
+						"reading": "ご",
+						"answer": "護"
+					},
+					"し"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"効": {
+		"grade": 5,
+		"strokesNum": 8,
+		"readingForSort": "こう",
+		"questions": [
+			{
+				"phrase": [
+					"大きな",
+					{
+						"reading": "こう",
+						"answer": "効"
+					},
+					"果"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"有",
+					{
+						"reading": "こう",
+						"answer": "効"
+					},
+					"な方法"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"いたみに",
+					{
+						"reading": "きく",
+						"answer": "効く"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"薬の",
+					{
+						"reading": "きき",
+						"answer": "効き"
+					},
+					"目"
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
 	"厚": {
 		"grade": 5,
 		"strokesNum": 9,
@@ -38248,6 +39776,52 @@
 					"着の季節"
 				],
 				"hasOkurigana": false
+			}
+		]
+	},
+	"耕": {
+		"grade": 5,
+		"strokesNum": 10,
+		"readingForSort": "こう",
+		"questions": [
+			{
+				"phrase": [
+					"晴",
+					{
+						"reading": "こう",
+						"answer": "耕"
+					},
+					"雨読"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"農地の",
+					{
+						"reading": "こう",
+						"answer": "耕"
+					},
+					"作"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"あれ地を",
+					{
+						"reading": "たがやす",
+						"answer": "耕す"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"田を",
+					{
+						"reading": "たがやす",
+						"answer": "耕す"
+					}
+				],
+				"hasOkurigana": true
 			}
 		]
 	},
@@ -38436,6 +40010,43 @@
 			}
 		]
 	},
+	"講": {
+		"grade": 5,
+		"strokesNum": 17,
+		"readingForSort": "こう",
+		"questions": [
+			{
+				"phrase": [
+					"学者の",
+					{
+						"reading": "こう",
+						"answer": "講"
+					},
+					"えん"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "こう",
+						"answer": "講"
+					},
+					"習を受ける"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"大学の",
+					{
+						"reading": "こう",
+						"answer": "講"
+					},
+					"どう"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"告": {
 		"grade": 5,
 		"strokesNum": 7,
@@ -38616,6 +40227,70 @@
 			}
 		]
 	},
+	"再": {
+		"grade": 5,
+		"strokesNum": 6,
+		"readingForSort": "さい",
+		"questions": [
+			{
+				"phrase": [
+					"先生との",
+					{
+						"reading": "さい",
+						"answer": "再"
+					},
+					"会"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"動画の",
+					{
+						"reading": "さい",
+						"answer": "再"
+					},
+					"生"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "さ",
+						"answer": "再"
+					},
+					"来年"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "さ",
+						"answer": "再"
+					},
+					"来週"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ふたたび",
+						"answer": "再び"
+					},
+					"行う"
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "ふたたび",
+						"answer": "再び"
+					},
+					"練習する"
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
 	"災": {
 		"grade": 5,
 		"strokesNum": 7,
@@ -38696,6 +40371,60 @@
 					"と出会う"
 				],
 				"hasOkurigana": false
+			}
+		]
+	},
+	"採": {
+		"grade": 5,
+		"strokesNum": 11,
+		"readingForSort": "さい",
+		"questions": [
+			{
+				"phrase": [
+					"答案の",
+					{
+						"reading": "さい",
+						"answer": "採"
+					},
+					"点"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"化石の",
+					{
+						"reading": "さい",
+						"answer": "採"
+					},
+					"集"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"木の実を",
+					{
+						"reading": "とる",
+						"answer": "採る"
+					}
+				],
+				"annotation": {
+					"value": "取る",
+					"type": "isnot"
+				},
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"山菜を",
+					{
+						"reading": "とる",
+						"answer": "採る"
+					}
+				],
+				"annotation": {
+					"value": "取る",
+					"type": "isnot"
+				},
+				"hasOkurigana": true
 			}
 		]
 	},
@@ -38866,6 +40595,50 @@
 			}
 		]
 	},
+	"殺": {
+		"grade": 5,
+		"strokesNum": 10,
+		"readingForSort": "さつ",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "さっ",
+						"answer": "殺"
+					},
+					"風景な街"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "さっ",
+						"answer": "殺"
+					},
+					"虫ざい"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"きんを",
+					{
+						"reading": "ころす",
+						"answer": "殺す"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"息を",
+					{
+						"reading": "ころす",
+						"answer": "殺す"
+					}
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
 	"雑": {
 		"grade": 5,
 		"strokesNum": 14,
@@ -38943,6 +40716,42 @@
 						"answer": "酸"
 					},
 					"味"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"賛": {
+		"grade": 5,
+		"strokesNum": 15,
+		"readingForSort": "さん",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "さん",
+						"answer": "賛"
+					},
+					"成と反対"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"大ぜっ",
+					{
+						"reading": "さん",
+						"answer": "賛"
+					},
+					"する"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "さん",
+						"answer": "賛"
+					},
+					"同をえる"
 				],
 				"hasOkurigana": false
 			}
@@ -39129,6 +40938,80 @@
 			}
 		]
 	},
+	"枝": {
+		"grade": 5,
+		"strokesNum": 8,
+		"readingForSort": "し",
+		"questions": [
+			{
+				"phrase": [
+					"木の",
+					{
+						"reading": "えだ",
+						"answer": "枝"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "えだ",
+						"answer": "枝"
+					},
+					"豆ご飯"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"話の",
+					{
+						"reading": "えだ",
+						"answer": "枝"
+					},
+					"葉"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"師": {
+		"grade": 5,
+		"strokesNum": 10,
+		"readingForSort": "し",
+		"questions": [
+			{
+				"phrase": [
+					"教",
+					{
+						"reading": "し",
+						"answer": "師"
+					},
+					"を目指す"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"漁",
+					{
+						"reading": "し",
+						"answer": "師"
+					},
+					"になる"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"医",
+					{
+						"reading": "し",
+						"answer": "師"
+					},
+					"になる"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"資": {
 		"grade": 5,
 		"strokesNum": 13,
@@ -39264,11 +41147,12 @@
 		"questions": [
 			{
 				"phrase": [
-					"形が",
+					"サケに",
 					{
-						"reading": "にる",
-						"answer": "似る"
-					}
+						"reading": "にた",
+						"answer": "似た"
+					},
+					"魚"
 				],
 				"hasOkurigana": true
 			},{
@@ -39434,6 +41318,42 @@
 						"answer": "謝"
 					},
 					"ざい会見"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"授": {
+		"grade": 5,
+		"strokesNum": 11,
+		"readingForSort": "じゅ",
+		"questions": [
+			{
+				"phrase": [
+					"理科の",
+					{
+						"reading": "じゅ",
+						"answer": "授"
+					},
+					"業"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "じゅ",
+						"answer": "授"
+					},
+					"しょう式"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"大学の教",
+					{
+						"reading": "じゅ",
+						"answer": "授"
+					}
 				],
 				"hasOkurigana": false
 			}
@@ -39685,6 +41605,44 @@
 			}
 		]
 	},
+	"証": {
+		"grade": 5,
+		"strokesNum": 12,
+		"readingForSort": "しょう",
+		"questions": [
+			{
+				"phrase": [
+					"無実の",
+					{
+						"reading": "しょう",
+						"answer": "証"
+					},
+					"明"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"卒業",
+					{
+						"reading": "しょう",
+						"answer": "証"
+					},
+					"書"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"大事な",
+					{
+						"reading": "しょう",
+						"answer": "証"
+					},
+					"言"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"象": {
 		"grade": 5,
 		"strokesNum": 12,
@@ -39762,6 +41720,79 @@
 						"answer": "賞"
 					},
 					"味期げん"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"条": {
+		"grade": 5,
+		"strokesNum": 7,
+		"readingForSort": "じょう",
+		"questions": [
+			{
+				"phrase": [
+					"か",
+					{
+						"reading": "じょう",
+						"answer": "条"
+					},
+					"書き"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "じょう",
+						"answer": "条"
+					},
+					"けんを守る"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "じょう",
+						"answer": "条"
+					},
+					"約を守る"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"状": {
+		"grade": 5,
+		"strokesNum": 7,
+		"readingForSort": "じょう",
+		"questions": [
+			{
+				"phrase": [
+					"げん",
+					{
+						"reading": "じょう",
+						"answer": "状"
+					},
+					"を知る"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"良い",
+					{
+						"reading": "じょう",
+						"answer": "状"
+					},
+					"たい"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"細長い形",
+					{
+						"reading": "じょう",
+						"answer": "状"
+					}
 				],
 				"hasOkurigana": false
 			}
@@ -39858,6 +41889,50 @@
 			}
 		]
 	},
+	"織": {
+		"grade": 5,
+		"strokesNum": 18,
+		"readingForSort": "しょく",
+		"questions": [
+			{
+				"phrase": [
+					"大きなそ",
+					{
+						"reading": "しき",
+						"answer": "織"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"会社のそ",
+					{
+						"reading": "しき",
+						"answer": "織"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"ぬのを",
+					{
+						"reading": "おる",
+						"answer": "織る"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "おり",
+						"answer": "織"
+					},
+					"物"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"職": {
 		"grade": 5,
 		"strokesNum": 18,
@@ -39888,6 +41963,79 @@
 						"answer": "職"
 					},
 					"人のわざ"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"制": {
+		"grade": 5,
+		"strokesNum": 8,
+		"readingForSort": "せい",
+		"questions": [
+			{
+				"phrase": [
+					"新たな",
+					{
+						"reading": "せい",
+						"answer": "制"
+					},
+					"度"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "せい",
+						"answer": "制"
+					},
+					"げん時間"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "せい",
+						"answer": "制"
+					},
+					"服を着る"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"性": {
+		"grade": 5,
+		"strokesNum": 8,
+		"readingForSort": "せい",
+		"questions": [
+			{
+				"phrase": [
+					"こ",
+					{
+						"reading": "せい",
+						"answer": "性"
+					},
+					"を出す"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"空気の",
+					{
+						"reading": "せい",
+						"answer": "性"
+					},
+					"しつ"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "せい",
+						"answer": "性"
+					},
+					"かくが合う"
 				],
 				"hasOkurigana": false
 			}
@@ -40046,6 +42194,87 @@
 					"の車"
 				],
 				"hasOkurigana": false
+			}
+		]
+	},
+	"税": {
+		"grade": 5,
+		"strokesNum": 12,
+		"readingForSort": "ぜい",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "ぜい",
+						"answer": "税"
+					},
+					"金がかかる"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"消ひ",
+					{
+						"reading": "ぜい",
+						"answer": "税"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"関",
+					{
+						"reading": "ぜい",
+						"answer": "税"
+					},
+					"を上げる"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"責": {
+		"grade": 5,
+		"strokesNum": 11,
+		"readingForSort": "せき",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "せき",
+						"answer": "責"
+					},
+					"にんをとる"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"重",
+					{
+						"reading": "せき",
+						"answer": "責"
+					},
+					"をになう"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"自分を",
+					{
+						"reading": "せめる",
+						"answer": "責める"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"間ちがいを",
+					{
+						"reading": "せめる",
+						"answer": "責める"
+					}
+				],
+				"hasOkurigana": true
 			}
 		]
 	},
@@ -40372,6 +42601,60 @@
 			}
 		]
 	},
+	"造": {
+		"grade": 5,
+		"strokesNum": 10,
+		"readingForSort": "ぞう",
+		"questions": [
+			{
+				"phrase": [
+					"木",
+					{
+						"reading": "ぞう",
+						"answer": "造"
+					},
+					"のお寺"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"せい",
+					{
+						"reading": "ぞう",
+						"answer": "造"
+					},
+					"工場"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"道路を",
+					{
+						"reading": "つくる",
+						"answer": "造る"
+					}
+				],
+				"annotation": {
+					"value": "作る",
+					"type": "isnot"
+				},
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"家を",
+					{
+						"reading": "つくる",
+						"answer": "造る"
+					}
+				],
+				"annotation": {
+					"value": "作る",
+					"type": "isnot"
+				},
+				"hasOkurigana": true
+			}
+		]
+	},
 	"像": {
 		"grade": 5,
 		"strokesNum": 14,
@@ -40404,6 +42687,123 @@
 						"answer": "像"
 					},
 					"データ"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"増": {
+		"grade": 5,
+		"strokesNum": 14,
+		"readingForSort": "ぞう",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "ぞう",
+						"answer": "増"
+					},
+					"加する"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"人口の急",
+					{
+						"reading": "ぞう",
+						"answer": "増"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"水かさが",
+					{
+						"reading": "ます",
+						"answer": "増す"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"きょう味を",
+					{
+						"reading": "ます",
+						"answer": "増す"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"人が",
+					{
+						"reading": "ふえる",
+						"answer": "増える"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"魚の数が",
+					{
+						"reading": "ふえる",
+						"answer": "増える"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"人数を",
+					{
+						"reading": "ふやす",
+						"answer": "増やす"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"野菜の量を",
+					{
+						"reading": "ふやす",
+						"answer": "増やす"
+					}
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
+	"則": {
+		"grade": 5,
+		"strokesNum": 9,
+		"readingForSort": "そく",
+		"questions": [
+			{
+				"phrase": [
+					"理科の法",
+					{
+						"reading": "そく",
+						"answer": "則"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"き",
+					{
+						"reading": "そく",
+						"answer": "則"
+					},
+					"を守る"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"反",
+					{
+						"reading": "そく",
+						"answer": "則"
+					},
+					"のルール"
 				],
 				"hasOkurigana": false
 			}
@@ -40492,6 +42892,89 @@
 			}
 		]
 	},
+	"率": {
+		"grade": 5,
+		"strokesNum": 11,
+		"readingForSort": "そつ",
+		"questions": [
+			{
+				"phrase": [
+					"かく",
+					{
+						"reading": "りつ",
+						"answer": "率"
+					},
+					"の計算"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"勝",
+					{
+						"reading": "りつ",
+						"answer": "率"
+					},
+					"が高い"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"チームを",
+					{
+						"reading": "ひきいる",
+						"answer": "率いる"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"児童を",
+					{
+						"reading": "ひきいる",
+						"answer": "率いる"
+					}
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
+	"損": {
+		"grade": 5,
+		"strokesNum": 13,
+		"readingForSort": "そん",
+		"questions": [
+			{
+				"phrase": [
+					"水道管のは",
+					{
+						"reading": "そん",
+						"answer": "損"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"車の",
+					{
+						"reading": "そん",
+						"answer": "損"
+					},
+					"しょう"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"大きな",
+					{
+						"reading": "そん",
+						"answer": "損"
+					},
+					"失"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"貸": {
 		"grade": 5,
 		"strokesNum": 12,
@@ -40560,6 +43043,169 @@
 						"answer": "態"
 					},
 					"を調べる"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"団": {
+		"grade": 5,
+		"strokesNum": 6,
+		"readingForSort": "だん",
+		"questions": [
+			{
+				"phrase": [
+					"おうえん",
+					{
+						"reading": "だん",
+						"answer": "団"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"一ち",
+					{
+						"reading": "だん",
+						"answer": "団"
+					},
+					"結"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "だん",
+						"answer": "団"
+					},
+					"体行動"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"断": {
+		"grade": 5,
+		"strokesNum": 11,
+		"readingForSort": "だん",
+		"questions": [
+			{
+				"phrase": [
+					"決",
+					{
+						"reading": "だん",
+						"answer": "断"
+					},
+					"をせまる"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"ケーキの",
+					{
+						"reading": "だん",
+						"answer": "断"
+					},
+					"面"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"さそいを",
+					{
+						"reading": "ことわる",
+						"answer": "断る"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"先に",
+					{
+						"reading": "ことわる",
+						"answer": "断る"
+					}
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
+	"築": {
+		"grade": 5,
+		"strokesNum": 16,
+		"readingForSort": "ちく",
+		"questions": [
+			{
+				"phrase": [
+					"新",
+					{
+						"reading": "ちく",
+						"answer": "築"
+					},
+					"の建物"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"建",
+					{
+						"reading": "ちく",
+						"answer": "築"
+					},
+					"物"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"ていぼうを",
+					{
+						"reading": "きずく",
+						"answer": "築く"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"家庭を",
+					{
+						"reading": "きずく",
+						"answer": "築く"
+					}
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
+	"貯": {
+		"grade": 5,
+		"strokesNum": 12,
+		"readingForSort": "ちょ",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "ちょ",
+						"answer": "貯"
+					},
+					"金する"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ちょ",
+						"answer": "貯"
+					},
+					"水池の近く"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ちょ",
+						"answer": "貯"
+					},
+					"金箱"
 				],
 				"hasOkurigana": false
 			}
@@ -40684,6 +43330,42 @@
 			}
 		]
 	},
+	"程": {
+		"grade": 5,
+		"strokesNum": 12,
+		"readingForSort": "てい",
+		"questions": [
+			{
+				"phrase": [
+					"三日間の日",
+					{
+						"reading": "てい",
+						"answer": "程"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"大きさの",
+					{
+						"reading": "てい",
+						"answer": "程"
+					},
+					"度"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"開発のか",
+					{
+						"reading": "てい",
+						"answer": "程"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"適": {
 		"grade": 5,
 		"strokesNum": 14,
@@ -40714,6 +43396,80 @@
 						"answer": "適"
 					},
 					"当な返事"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"統": {
+		"grade": 5,
+		"strokesNum": 12,
+		"readingForSort": "とう",
+		"questions": [
+			{
+				"phrase": [
+					"伝",
+					{
+						"reading": "とう",
+						"answer": "統"
+					},
+					"行事"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"国の",
+					{
+						"reading": "とう",
+						"answer": "統"
+					},
+					"計"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"大",
+					{
+						"reading": "とう",
+						"answer": "統"
+					},
+					"りょう"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"堂": {
+		"grade": 5,
+		"strokesNum": 11,
+		"readingForSort": "どう",
+		"questions": [
+			{
+				"phrase": [
+					"食",
+					{
+						"reading": "どう",
+						"answer": "堂"
+					},
+					"のご飯"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"国会議事",
+					{
+						"reading": "どう",
+						"answer": "堂"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "どう",
+						"answer": "堂"
+					},
+					"々と言う"
 				],
 				"hasOkurigana": false
 			}
@@ -40753,6 +43509,52 @@
 					"ぞう"
 				],
 				"hasOkurigana": false
+			}
+		]
+	},
+	"導": {
+		"grade": 5,
+		"strokesNum": 15,
+		"readingForSort": "どう",
+		"questions": [
+			{
+				"phrase": [
+					"新機械の",
+					{
+						"reading": "どう",
+						"answer": "導"
+					},
+					"入"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"半",
+					{
+						"reading": "どう",
+						"answer": "導"
+					},
+					"体の工場"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"会場へ",
+					{
+						"reading": "みちびく",
+						"answer": "導く"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"結ろんを",
+					{
+						"reading": "みちびく",
+						"answer": "導く"
+					}
+				],
+				"hasOkurigana": true
 			}
 		]
 	},
@@ -40952,6 +43754,69 @@
 			}
 		]
 	},
+	"燃": {
+		"grade": 5,
+		"strokesNum": 16,
+		"readingForSort": "ねん",
+		"questions": [
+			{
+				"phrase": [
+					"新たな",
+					{
+						"reading": "ねん",
+						"answer": "燃"
+					},
+					"料"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"人気のさい",
+					{
+						"reading": "ねん",
+						"answer": "燃"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"炭が",
+					{
+						"reading": "もえる",
+						"answer": "燃える"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"いかりに",
+					{
+						"reading": "もえる",
+						"answer": "燃える"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"紙を",
+					{
+						"reading": "もやす",
+						"answer": "燃やす"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"対こう心を",
+					{
+						"reading": "もやす",
+						"answer": "燃やす"
+					}
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
 	"能": {
 		"grade": 5,
 		"strokesNum": 10,
@@ -41048,6 +43913,125 @@
 					}
 				],
 				"hasOkurigana": true
+			}
+		]
+	},
+	"犯": {
+		"grade": 5,
+		"strokesNum": 5,
+		"readingForSort": "はん",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "はん",
+						"answer": "犯"
+					},
+					"人をさがす"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"ぼう",
+					{
+						"reading": "はん",
+						"answer": "犯"
+					},
+					"ブザー"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "はん",
+						"answer": "犯"
+					},
+					"ざいそうさ"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"判": {
+		"grade": 5,
+		"strokesNum": 7,
+		"readingForSort": "はん",
+		"questions": [
+			{
+				"phrase": [
+					"正しい",
+					{
+						"reading": "はん",
+						"answer": "判"
+					},
+					"だん"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"事実が",
+					{
+						"reading": "はん",
+						"answer": "判"
+					},
+					"明"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"大",
+					{
+						"reading": "ばん",
+						"answer": "判"
+					},
+					"の写真"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"ねこに小",
+					{
+						"reading": "ばん",
+						"answer": "判"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"版": {
+		"grade": 5,
+		"strokesNum": 8,
+		"readingForSort": "はん",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "はん",
+						"answer": "版"
+					},
+					"画を刷る"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"本の出",
+					{
+						"reading": "ぱん",
+						"answer": "版"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"初",
+					{
+						"reading": "はん",
+						"answer": "版"
+					},
+					"を買う"
+				],
+				"hasOkurigana": false
 			}
 		]
 	},
@@ -41211,6 +44195,43 @@
 			}
 		]
 	},
+	"費": {
+		"grade": 5,
+		"strokesNum": 12,
+		"readingForSort": "ひ",
+		"questions": [
+			{
+				"phrase": [
+					"旅行の",
+					{
+						"reading": "ひ",
+						"answer": "費"
+					},
+					"用"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"食",
+					{
+						"reading": "ひ",
+						"answer": "費"
+					},
+					"がかさむ"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"生活",
+					{
+						"reading": "ひ",
+						"answer": "費"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"備": {
 		"grade": 5,
 		"strokesNum": 12,
@@ -41278,6 +44299,168 @@
 					}
 				],
 				"hasOkurigana": true
+			}
+		]
+	},
+	"評": {
+		"grade": 5,
+		"strokesNum": 12,
+		"readingForSort": "ひょう",
+		"questions": [
+			{
+				"phrase": [
+					"大好",
+					{
+						"reading": "ひょう",
+						"answer": "評"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"高い",
+					{
+						"reading": "ひょう",
+						"answer": "評"
+					},
+					"か"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"品",
+					{
+						"reading": "ひょう",
+						"answer": "評"
+					},
+					"会を開く"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"貧": {
+		"grade": 5,
+		"strokesNum": 11,
+		"readingForSort": "ひん",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "びん",
+						"answer": "貧"
+					},
+					"ぼうになる"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ひん",
+						"answer": "貧"
+					},
+					"富の差"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "まずしい",
+						"answer": "貧しい"
+					},
+					"くらし"
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "まずしい",
+						"answer": "貧しい"
+					},
+					"想ぞう力"
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
+	"布": {
+		"grade": 5,
+		"strokesNum": 5,
+		"readingForSort": "ふ",
+		"questions": [
+			{
+				"phrase": [
+					"毛",
+					{
+						"reading": "ふ",
+						"answer": "布"
+					},
+					"をかぶる"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"手紙の配",
+					{
+						"reading": "ふ",
+						"answer": "布"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"青い",
+					{
+						"reading": "ぬの",
+						"answer": "布"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ぬの",
+						"answer": "布"
+					},
+					"切れ"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"婦": {
+		"grade": 5,
+		"strokesNum": 11,
+		"readingForSort": "ふ",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "ふ",
+						"answer": "婦"
+					},
+					"人服売り場"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"にた物夫",
+					{
+						"reading": "ふ",
+						"answer": "婦"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"にん",
+					{
+						"reading": "ぷ",
+						"answer": "婦"
+					},
+					"さん"
+				],
+				"hasOkurigana": false
 			}
 		]
 	},
@@ -41443,6 +44626,71 @@
 			}
 		]
 	},
+	"粉": {
+		"grade": 5,
+		"strokesNum": 10,
+		"readingForSort": "ふん",
+		"questions": [
+			{
+				"phrase": [
+					"花",
+					{
+						"reading": "ふん",
+						"answer": "粉"
+					},
+					"が飛ぶ"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"細かい",
+					{
+						"reading": "ふん",
+						"answer": "粉"
+					},
+					"末"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"小麦",
+					{
+						"reading": "こ",
+						"answer": "粉"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"米",
+					{
+						"reading": "こ",
+						"answer": "粉"
+					},
+					"パン"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "こな",
+						"answer": "粉"
+					},
+					"ミルク"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "こな",
+						"answer": "粉"
+					},
+					"雪がまう"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"編": {
 		"grade": 5,
 		"strokesNum": 15,
@@ -41525,6 +44773,97 @@
 			}
 		]
 	},
+	"保": {
+		"grade": 5,
+		"strokesNum": 9,
+		"readingForSort": "ほ",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "ほ",
+						"answer": "保"
+					},
+					"育園に行く"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"家で",
+					{
+						"reading": "ほ",
+						"answer": "保"
+					},
+					"管する"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"一定に",
+					{
+						"reading": "たもつ",
+						"answer": "保つ"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"高く",
+					{
+						"reading": "たもつ",
+						"answer": "保つ"
+					}
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
+	"墓": {
+		"grade": 5,
+		"strokesNum": 13,
+		"readingForSort": "ぼ",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "ぼ",
+						"answer": "墓"
+					},
+					"地の近く"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ぼ",
+						"answer": "墓"
+					},
+					"けつをほる"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"お",
+					{
+						"reading": "はか",
+						"answer": "墓"
+					},
+					"参り"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"船の",
+					{
+						"reading": "はか",
+						"answer": "墓"
+					},
+					"場"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
 	"報": {
 		"grade": 5,
 		"strokesNum": 12,
@@ -41558,6 +44897,50 @@
 					}
 				],
 				"hasOkurigana": false
+			}
+		]
+	},
+	"豊": {
+		"grade": 5,
+		"strokesNum": 13,
+		"readingForSort": "ほう",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "ほう",
+						"answer": "豊"
+					},
+					"漁をいのる"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ほう",
+						"answer": "豊"
+					},
+					"富なしげん"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ゆたか",
+						"answer": "豊か"
+					},
+					"なけい験"
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					{
+						"reading": "ゆたか",
+						"answer": "豊か"
+					},
+					"な国"
+				],
+				"hasOkurigana": true
 			}
 		]
 	},
@@ -41686,6 +45069,104 @@
 			}
 		]
 	},
+	"脈": {
+		"grade": 5,
+		"strokesNum": 10,
+		"readingForSort": "みゃく",
+		"questions": [
+			{
+				"phrase": [
+					"交通の大動",
+					{
+						"reading": "みゃく",
+						"answer": "脈"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"アルプス山",
+					{
+						"reading": "みゃく",
+						"answer": "脈"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"文",
+					{
+						"reading": "みゃく",
+						"answer": "脈"
+					},
+					"を読む"
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"務": {
+		"grade": 5,
+		"strokesNum": 11,
+		"readingForSort": "む",
+		"questions": [
+			{
+				"phrase": [
+					"重大なにん",
+					{
+						"reading": "む",
+						"answer": "務"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"わが社の業",
+					{
+						"reading": "む",
+						"answer": "務"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"司会を",
+					{
+						"reading": "つとめる",
+						"answer": "務める"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"主役を",
+					{
+						"reading": "つとめる",
+						"answer": "務める"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"主が",
+					{
+						"reading": "つとまらない",
+						"answer": "務まらない"
+					}
+				],
+				"hasOkurigana": true
+			},{
+				"phrase": [
+					"代表が",
+					{
+						"reading": "つとまる",
+						"answer": "務まる"
+					}
+				],
+				"hasOkurigana": true
+			}
+		]
+	},
 	"夢": {
 		"grade": 5,
 		"strokesNum": 13,
@@ -41765,6 +45246,87 @@
 					}
 				],
 				"hasOkurigana": true
+			}
+		]
+	},
+	"綿": {
+		"grade": 5,
+		"strokesNum": 14,
+		"readingForSort": "めん",
+		"questions": [
+			{
+				"phrase": [
+					{
+						"reading": "めん",
+						"answer": "綿"
+					},
+					"おり物"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "めん",
+						"answer": "綿"
+					},
+					"花をつむ"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "わた",
+						"answer": "綿"
+					},
+					"毛がまう"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"ふとんの",
+					{
+						"reading": "わた",
+						"answer": "綿"
+					}
+				],
+				"hasOkurigana": false
+			}
+		]
+	},
+	"輸": {
+		"grade": 5,
+		"strokesNum": 16,
+		"readingForSort": "ゆ",
+		"questions": [
+			{
+				"phrase": [
+					"米の",
+					{
+						"reading": "ゆ",
+						"answer": "輸"
+					},
+					"出"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"石油の",
+					{
+						"reading": "ゆ",
+						"answer": "輸"
+					},
+					"入"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					{
+						"reading": "ゆ",
+						"answer": "輸"
+					},
+					"血する"
+				],
+				"hasOkurigana": false
 			}
 		]
 	},
@@ -41986,6 +45548,43 @@
 					"ぬ"
 				],
 				"hasOkurigana": true
+			}
+		]
+	},
+	"領": {
+		"grade": 5,
+		"strokesNum": 14,
+		"readingForSort": "りょう",
+		"questions": [
+			{
+				"phrase": [
+					"大とう",
+					{
+						"reading": "りょう",
+						"answer": "領"
+					}
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"国の",
+					{
+						"reading": "りょう",
+						"answer": "領"
+					},
+					"土"
+				],
+				"hasOkurigana": false
+			},{
+				"phrase": [
+					"要",
+					{
+						"reading": "りょう",
+						"answer": "領"
+					},
+					"が良い人"
+				],
+				"hasOkurigana": false
 			}
 		]
 	},

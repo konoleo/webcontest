@@ -60,8 +60,8 @@ const addNensei = (grade) => {
 	return multilingual({
 		// ${grade === 5 ? "（前期）" : ""}
 		// ${grade === 5 ? " (first semester)" : ""}
-		"ja": `${grade}年生${grade === 5 ? "（前期）" : ""}`,
-		"en": `${addOrdNumWords(grade)} grade${grade === 5 ? " (first semester)" : ""}`
+		"ja": `${grade}年生`,
+		"en": `${addOrdNumWords(grade)} grade`
 	});
 };
 
@@ -550,7 +550,7 @@ fetch("../data/kanjidata.json").then(res => {
 	function showAns() {
 		const answerEs = document.getElementsByClassName("answer");
 		for (const elem of answerEs) {
-			elem.hidden = !showAnsBtn.checked;
+			elem.dataset.hidden = !showAnsBtn.checked;
 		}
 	}
 	showAnsBtn.addEventListener("change", showAns);

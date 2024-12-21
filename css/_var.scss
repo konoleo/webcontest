@@ -6,12 +6,18 @@ $subColor: #b68e55;
 
 // フォント
 @import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@550&display=swap");
-$sansSerif: "Nunito", "Zen Maru Gothic", "筑紫A丸ゴシック", sans-serif;
+$sansSerif: "Customed Nunito", "Zen Maru Gothic", "筑紫A丸ゴシック", sans-serif;
 $textbookTypeface: "Klee One", "游教科書体", "HG教科書体", sans-serif;
-@function pxToRem($px) {
-	@return $px / 16 * 1rem
+@font-face {
+	font-family: "Customed Nunito";
+	src: url("Nunito-Medium.woff2");
+	font-weight: 500;
+	size-adjust: 108%;
 }
 
 // 横幅
 $mainWidth: unquote("min(85vw, 800px)");
+
+@function pxToRem($px) {
+	@return $px / 16 * 1rem
+}

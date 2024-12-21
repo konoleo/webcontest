@@ -252,7 +252,7 @@ input, button {
 	font-family: $sansSerif;
 }
 
-button, label {
+button, input[type=checkbox], label {
 	cursor: pointer;
 }
 
